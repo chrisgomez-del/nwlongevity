@@ -1,0 +1,23 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@using EMS.Areas.ems.Helper
+@{
+    var item = SitecoreAccess.getSiteSettingItem() ?? RenderingContext.Current.Rendering.Item;
+
+}
+
+@if (item != null)
+{
+    <ul class="list-unstyled small main-nav-text color-white">
+        <li>@Html.Sitecore().Field("Address", item)</li>
+
+    </ul>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <ul class="list-unstyled small text-right color-white">
+        <li>Select Data Source for Header</li>
+
+    </ul>
+}

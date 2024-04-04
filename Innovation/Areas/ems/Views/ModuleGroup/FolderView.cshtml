@@ -1,0 +1,95 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using EMS.Areas.ems.Helper
+@using EMS.Areas.ems.Models
+@using Sitecore.Resources.Media
+@model EMS.Areas.ems.Models.FolderGroup
+
+@{
+    Layout = null;
+}
+@if (Model != null)
+{
+    <div class="container-fluid">
+        <ul>
+            <li>
+                <img src='http://www.sfvemss.com/theme/image.php/standard/folder/1476978769/icon' alt=''>@Model.Name
+                <ul>
+                    @if (Model.Subitems != null && Model.Subitems.Count > 0)
+                    {
+                        int count = Model.Subitems.Count;
+                        var previouslevel = Model.Level;
+                        var list = Model.Subitems;
+                        var html = String.Empty;
+                        for (int i = 0; i < count; i++)
+                        {
+                            var CurrentLevel = list[i].Level;
+                            if (CurrentLevel == previouslevel)
+                            {
+                                if (list[i].Type == "F")
+                                {
+
+                                    html += "<li><img src='http://www.sfvemss.com/theme/image.php/standard/folder/1476978769/icon' alt=''>" + @list[i].Name + @list[i].Level + "<ul>";
+                                    previouslevel = CurrentLevel;
+                                }
+                                else
+                                {
+                                    html += "<li><a href='" + StringUtil.EnsurePrefix('/', MediaManager.GetMediaUrl(@list[i].Item)) + "'>" + @list[i].Name + "</a></li>";
+                                    previouslevel = CurrentLevel;
+
+                                }
+
+                            }
+
+                            else if (CurrentLevel < previouslevel)
+                            {
+                                int leveldiff = previouslevel - CurrentLevel;
+                                for (int c = 0; c < leveldiff; c++)
+                                { html += "</ul></li>"; }
+                                if (list[i].Type == "F")
+                                {
+
+                                    html += "<li><img src='http://www.sfvemss.com/theme/image.php/standard/folder/1476978769/icon' alt=''>" + @list[i].Name + "<ul>";
+                                    previouslevel = CurrentLevel;
+                                }
+                                else
+                                {
+                                    html += "<li><a href='" + StringUtil.EnsurePrefix('/', MediaManager.GetMediaUrl(@list[i].Item)) + "'>" + @list[i].Name + "</a></li>";
+                                    previouslevel = CurrentLevel;
+
+                                }
+
+                            }
+                            else if (CurrentLevel > previouslevel)
+                            {
+                                if (list[i].Type == "F")
+                                {
+
+                                    html += "<li><img src='http://www.sfvemss.com/theme/image.php/standard/folder/1476978769/icon' alt=''>" + @list[i].Name + "<ul>";
+                                    previouslevel = CurrentLevel;
+                                }
+                                else
+                                {
+                                    html += "<li><a href='" + StringUtil.EnsurePrefix('/', MediaManager.GetMediaUrl(@list[i].Item)) + "'>" + @list[i].Name + "</a></li>";
+                                    previouslevel = CurrentLevel;
+
+                                }
+
+                            }
+                        }
+                        int Adjustdiff = previouslevel - 1;
+                        for (int d = 0; d < Adjustdiff; d++)
+                        { html += "</ul></li>"; }
+                        @Html.Raw(html)
+                    }
+                </ul>
+            </li>
+        </ul>
+    </div>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}
+

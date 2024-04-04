@@ -1,0 +1,363 @@
+﻿header {
+    min-height: 380px;
+
+    @media only screen and (min-width:768px) {
+        min-height: 431px;
+    }
+
+    color: $secondary-color;
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    .contact {
+        background: center / cover no-repeat url('../../img/header/Glass-Gradient-Header-AI-Mulitply.svg');
+
+        .position-title {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+            .title-card {
+                background-color: #fff;
+                overflow: hidden;
+                display: inline-block;
+                padding: 35px;
+                color: transparent;
+                opacity: 0.5;
+                max-width: 700px;
+
+                @media only screen and (max-width: 767px) {
+                    padding: 15px;
+                }
+
+                @media only screen and (min-width: 768px) {
+                    font-size: 4vw;
+                }
+
+                @media only screen and (min-width: 1500px) {
+                    font-size: $font-size-h2;
+                }
+            }
+
+            .h1, h1 {
+
+                span {
+                    background: center / cover no-repeat url('../../img/header/Glass-Gradient-Header-AI-Mulitply.svg');
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    display: block;
+                    text-transform: uppercase;
+                    color: transparent;
+                    font-weight: $headings-font-weight-extra-bold;
+                }
+            }
+        }
+
+        &.header-home {
+            background: center / cover no-repeat url('/-/media/innovation/background/header-home-bg.png');
+
+            .header-content {
+                @media only screen and (min-width:576px) {
+                    height: 100vh;
+                }
+
+                @media only screen and (max-width:577px) {
+                    margin-top: 8rem;
+                }
+            }
+
+            .navbar {
+
+                .navbar-brand {
+                    padding-top: 40px;
+                }
+
+                .btn-primary {
+
+                    &.menu {
+                        padding: .55em 0 .5em .55em;
+                    }
+                }
+            }
+
+            .title-card {
+                background-color: unset;
+                overflow: hidden;
+                display: contents;
+                padding: 35px;
+                color: $secondary-color;
+                opacity: 1;
+                text-align: center;
+                font-size: $font-size-h1;
+
+                @media only screen and (max-width: 768px) {
+                    font-size: $font-size-h4;
+                }
+            }
+
+            .h1, h1 {
+
+                @media only screen and (min-width: 768px) {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+                }
+
+                span {
+                    background: none;
+                    -webkit-text-fill-color: $secondary-color;
+                    -webkit-background-clip: unset;
+                    color: $secondary-color;
+                    padding-bottom: 35px;
+                }
+            }
+
+            .animated-overlay {
+                @media only screen and (min-width:567px) {
+                    width: 100%;
+
+                    &.top-left {
+                        background: linear-gradient(320deg, rgba(255,255,255,0) 90%, rgba(90,202,217,1) 100%);
+                        animation: gradient-animation 10s ease infinite;
+                        -webkit-animation: gradient-animation 10s ease infinite;
+                        background-size: 400% 400%;
+                    }
+
+                    &.top-right {
+                        background: linear-gradient(45deg, rgba(255,255,255,0) 65%, rgba(90,202,217,1) 100%);
+                        animation: gradient-animation 10s ease infinite;
+                        -webkit-animation: gradient-animation 10s ease infinite;
+                        animation-delay: 2.5s;
+                        -webkit-animation-delay: 2.5s;
+                    }
+
+                    &.bottom-right {
+                        background: linear-gradient(135deg, rgba(255,255,255,0) 65%, rgba(90,202,217,1) 100%);
+                        animation: gradient-animation 10s ease infinite;
+                        -webkit-animation: gradient-animation 10s ease infinite;
+                        animation-delay: 3.5s;
+                        -webkit-animation-delay: 3.5s;
+                    }
+
+                    &.bottom-left {
+                        background: linear-gradient(225deg, rgba(255,255,255,0) 65%, rgba(90,202,217,1) 100%);
+                        animation: gradient-animation 10s ease infinite;
+                        -webkit-animation: gradient-animation 10s ease infinite;
+                        animation-delay: 4s;
+                        -webkit-animation-delay: 4s;
+                    }
+                }
+            }
+
+            .additional-content {
+                @media only screen and (min-width:1024px) {
+                    justify-content: space-evenly !important;
+                }
+
+                justify-content: center !important;
+
+                .stat-component {
+                    background: none;
+                    height: auto;
+                    width: auto;
+
+                    .stat-section-content {
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        &.header-image {
+
+            .position-title {
+
+                .title-card {
+                    background-color: unset;
+                    color: $secondary-color;
+                    opacity: 1;
+
+                    span {
+                        background: none;
+                        -webkit-text-fill-color: $secondary-color;
+                        -webkit-background-clip: unset;
+                        color: $secondary-color;
+                        padding-bottom: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .about {
+        background: inherit;
+    }
+
+    .portfolio {
+        background: inherit;
+    }
+
+    .form {
+        background: inherit;
+    }
+
+    .navbar-brand {
+        color: inherit;
+        font-size: $font-size-large;
+        font-weight: $headings-font-weight-extra-bold;
+        text-transform: uppercase;
+        white-space: unset;
+        max-width: 286px;
+        padding-top: 15px;
+
+        @media only screen and (min-width: 480px) {
+            max-width: 75vw;
+        }
+
+        @media only screen and (max-width: 480px) {
+            margin-right: .5rem;
+            font-size: 4vw;
+        }
+
+        &:hover {
+            color: $primary-cta-hover;
+        }
+
+
+        .logo-full {
+            display: block;
+            width: 225px;
+            height: 45px;
+            background: transparent url('/-/media/innovation/images/northwestern-medicine-logo-white.png') no-repeat 0 0;
+            background-size: 100%;
+            opacity: 1;
+        }
+    }
+
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: $font-weight-extra-bold;
+    }
+
+    .btn-primary {
+        &.menu {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            padding: 0 0 .5em .55em;
+            position: absolute;
+            right: 3rem;
+            top: 7px;
+
+            @media only screen and (max-width: 767px) {
+                right: 15px;
+            }
+
+            &:hover {
+                color: $primary-cta-hover;
+            }
+        }
+
+        &:focus {
+            box-shadow: none !important;
+            border: none;
+            outline: none !important;
+        }
+    }
+
+    .btn-close {
+        @include close-icon;
+        min-width: 20px;
+        align-self: flex-start !important;
+        margin-top: 10px;
+        filter: invert(100%) sepia(0%) saturate(7426%) hue-rotate(338deg) brightness(95%) contrast(116%);
+
+        &:hover {
+            filter: invert(23%) sepia(15%) saturate(5971%) hue-rotate(157deg) brightness(96%) contrast(101%);
+        }
+    }
+
+    .offcanvas {
+        background-image: linear-gradient(#B57EEF, #5ACAD9);
+
+        .nav-container {
+
+            @media only screen and (max-width: 767px) {
+                min-height: 100px;
+            }
+
+            .navbar-brand {
+                padding-top: 5px;
+            }
+        }
+
+        p {
+            font-size: $font-size-extra-large;
+            font-weight: bold;
+        }
+
+        ul.navbar-nav {
+
+            @media only screen and (max-width:767px) {
+                font-size: $font-size-h3;
+            }
+
+            @media only screen and (max-width:1200px) {
+                padding-left: 2rem !important;
+            }
+
+            @media only screen and (max-width:400px) {
+                padding-left: 0 !important;
+            }
+
+            font-size: $font-size-h2;
+            font-weight: $headings-font-weight-extra-bold;
+        }
+
+        ul.disclaimer {
+            font-size: $font-size-h5;
+            margin-bottom: 1rem;
+            justify-content: space-evenly;
+
+            @media only screen and (max-width:480px) {
+                flex-direction: column;
+            }
+        }
+
+        .social.icon-links a {
+
+            .bi {
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 2rem;
+                }
+
+                font-size: 2.5rem;
+            }
+        }
+
+        .secondary-nav {
+            padding-top: 20px;
+
+            .social {
+                flex-wrap: wrap;
+                gap: 50px;
+
+                .list-inline-item {
+
+                    @media only screen and (min-width: 1023px) and (max-width:1200px) {
+                        margin-right: 2rem !important;
+                    }
+                }
+            }
+        }
+    }
+}

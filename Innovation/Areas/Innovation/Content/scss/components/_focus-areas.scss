@@ -1,0 +1,51 @@
+﻿.focus-areas {
+    padding: 20px 0 0;
+
+    .panel-header {
+        margin-top: 80px;
+        margin-bottom: 34px;
+
+        @media only screen and (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    .section-content {
+        margin-left: 0;
+        margin-right: 0;
+
+        .copy-block-cards {
+            padding-left: 0;
+            padding-right: 0;
+
+            .card {
+                flex: 0 1 calc(40% - 1em);
+                background: none;
+                border: 0.5px solid $glass-bg;
+                border-radius: 0;
+                margin-bottom: 100px;
+
+                @media only screen and (max-width:768px) {
+                    flex: 0 1 100%;
+                }
+
+                img {
+                    margin-bottom: -20px;
+                    object-fit: cover;
+                }
+
+                h4 {
+                    color: #333;
+                }
+
+                .card-content {
+                    padding: 40px 20px 20px;
+                    backdrop-filter: blur(7px) brightness(100%);
+                    -webkit-backdrop-filter: blur(7px) brightness(100%);
+                    position: relative;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}

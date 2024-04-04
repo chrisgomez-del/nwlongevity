@@ -1,0 +1,15 @@
+﻿@using Innovation.Areas.Innovation.Helpers
+@model Innovation.Areas.Innovation.Models.Components.ContactInformation
+@{
+    string lon = "-87.61982845913398";
+    string lat = "41.89230862536248";
+    string mapurl = @Maps.GetMapBoxUrl(lon, lat, 14, 900, 1050, 0, true);
+}
+<!--Contact Information Data goes here-->
+<div class="contact-container d-flex" style="background-image: url('@mapurl');">
+    <div class="container-fluid contact-info">
+        <div class="row">
+            @Model.ContactsInformation
+        </div>
+    </div>
+</div>

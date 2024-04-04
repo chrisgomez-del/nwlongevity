@@ -1,0 +1,29 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.NewsFeedCard
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+@if (Model != null)
+{
+    <div class="card glass-bg">
+        <div class="card-content flex flex-column">
+               
+                    <div class="heading">
+                        @Model.Heading
+                    </div>
+                
+                    <div class="content-link-container">
+                        @if (Model.CTAText != null && !String.IsNullOrWhiteSpace(Model.CTAText.ToString()))
+                        {
+                            @Html.Sitecore().BeginField("CTALink", Model.SourceItem, new { haschildren = true, @class = "link" })
+                            @Model.CTAText
+                            @Html.Sitecore().EndField()
+                        }
+                    </div>
+                <h5 class="sub-heading">
+                    @Model.SubHeading
+                </h5>
+        </div>
+    </div>
+
+}

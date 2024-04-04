@@ -1,0 +1,9 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.BasePanel
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+<section>
+        <div class="d-flex flex-nowrap news-feed">
+            @Html.Sitecore().DynamicPlaceholder("News_Feed_Panel")
+        </div>
+</section>

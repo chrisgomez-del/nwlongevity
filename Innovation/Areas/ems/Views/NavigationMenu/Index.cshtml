@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EMS.ems.Models.NavigationItem>
+
+@{
+    Layout = null;
+    var active = "active";
+}
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="navbar-collapse collapse" id="navbarCollapse" style="margin-left: 20px;">
+    <ul class="navbar-nav mr-auto">
+        @foreach (var item in Model)
+        {
+            if (item.Children == null || !(item.Children.Any()))
+            {
+                <li class="nav-item @(item.Active?active:"")">
+                    <a class="nav-link h3-bold" href="@item.URL">@item.Title </a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item dropdown  @(item.Active?active:"")">
+                    <a class="nav-link h3-bold color-white dropdown-toggle" href="javascript:void(0);" id="@item.itemid" role="button"  -aria-haspopup="true" aria-expanded="false">
+                        @item.Title
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="@item.itemid">
+                        <li> <a class="dropdown-item" href="@item.URL">@item.Title</a></li>
+                        @foreach (var subitem in item.Children)
+                        {
+                            <li> <a class="dropdown-item" href="@subitem.URL">@subitem.Title</a></li>
+                        }
+
+                    </ul>
+                </li>
+            }
+
+
+        }
+    </ul>
+</div>
+

@@ -1,0 +1,25 @@
+﻿#message {
+    div {
+        p {
+            margin: 50px 10px 0 0;
+            font-size: 18px;
+            color: $base-color;
+        }
+
+        &.error {
+            span {
+                margin: 0 0 50px;
+                font-size: 24px;
+                color: $primary-error;
+            }
+        }
+
+        &.success {
+            span {
+                margin: 0 0 50px;
+                font-size: 24px;
+                color: $success-message;
+            }
+        }
+    }
+}

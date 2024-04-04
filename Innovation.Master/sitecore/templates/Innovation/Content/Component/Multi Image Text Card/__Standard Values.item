@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {F3B835D2-FCC6-4303-9587-6B5D7B26D89E}
+database: master
+path: /sitecore/templates/Innovation/Content/Component/Multi Image Text Card/__Standard Values
+parent: {B87F9BE5-557C-4E78-9A2E-2AC5F96232F8}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {B87F9BE5-557C-4E78-9A2E-2AC5F96232F8}
+templatekey: Multi Image Text Card
+created: 20220623T132730Z
+
+----version----
+language: en
+version: 1
+revision: a4cbeef4-b723-44ca-8d40-dd331629309c
+
+----field----
+field: {132B2E19-DE08-4288-A332-6CFB1E7FD794}
+name: VerticalSection Title
+key: verticalsection title
+content-length: 0
+
+
+----field----
+field: {106846F3-8CB7-4D9C-B404-BE85721BF89B}
+name: VerticalSection_BackgroundImage
+key: verticalsection_backgroundimage
+content-length: 18
+
+Results Management
+----field----
+field: {0518EA32-F8FC-4689-B963-CA422F2248EB}
+name: VerticalSection_LinkTitle
+key: verticalsection_linktitle
+content-length: 0
+
+
+----field----
+field: {204FC88C-2B79-4006-BF14-DB9F40C01D51}
+name: HorizontalSection_Title
+key: horizontalsection_title
+content-length: 5
+
+$name
+----field----
+field: {B4D9C196-F647-43E0-9A1A-D7188AE2C6A7}
+name: FirstImage
+key: firstimage
+content-length: 0
+
+
+----field----
+field: {BBAD215C-BF8E-4AD8-B27D-6AA3CD2008BF}
+name: SecondImage
+key: secondimage
+content-length: 0
+
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20220622T212723Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a4cbeef4-b723-44ca-8d40-dd331629309c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20220623T133615Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

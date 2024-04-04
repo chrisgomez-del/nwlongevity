@@ -1,0 +1,35 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.Tabs.TabPanel
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+<script src="~/Areas/Innovation/Scripts/_libs/easyresponsivetab/easy-responsive-tabs.js"></script>
+
+<section id="tabs_list" class="section section-bottom-padding section-tab-panel">
+    <div class="">
+            @if (Model != null)
+            {
+        <div id="focus-tabs">
+
+                <div class="section-header">
+                    <h3 class="section-title">@Model.Title</h3>
+                </div>
+
+                <ul class="resp-tabs-list justify-content-center">
+                    @Html.Sitecore().Placeholder("component_tab_panel_navigation")
+                </ul>
+
+                <div class="resp-tabs-container tab-panel-container justify-content-center">
+                    @Html.Sitecore().Placeholder("component_tab_panel_container")
+                </div>
+
+                <div class="focus-link">
+                    @Html.Sitecore().BeginField("Link", Model.SourceItem, new { haschildren = true, @class = "" })
+                    @Model.LinkTitle
+                    @Html.Sitecore().EndField()
+
+                </div>
+        </div>
+            }
+    </div>
+</section>

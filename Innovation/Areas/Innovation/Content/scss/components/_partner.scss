@@ -1,0 +1,117 @@
+﻿.partner {
+    .partner-container {
+        background: white;
+        padding: 10rem 8rem;
+        justify-content: center;
+
+        @media only screen and (max-width: 1523px) {
+            padding: 10rem 4rem;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            padding: 10rem 2rem;
+        }
+
+        @media only screen and (max-width: 992px) {
+            padding: 0;
+        }
+
+        .content-card-image {
+            width: 40%;
+            aspect-ratio: 4/3;
+            border-right: 1.5rem solid white;
+            max-width: 691px;
+
+            @media only screen and (max-width: 992px) {
+                display: none;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content-card {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            max-width: 885px;
+
+            @media only screen and (max-width: 992px) {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .story-card {
+                background: linear-gradient(188deg, rgba(99,89,158,1) 0%, rgba(127,109,242,1) 55%, rgba(22, 184, 202, 0.75) 100%);
+                font-size: $font-size-h4;
+                color: white;
+                padding: 5rem;
+                border-bottom: 1.5rem solid white;
+                flex-grow: 2;
+
+                @media only screen and (max-width: 992px) {
+                    background: none;
+                    color: #333;
+                    text-align: center;
+                    height: auto;
+                    font-size: 24px;
+                    padding: 2rem;
+                }
+            }
+
+            .partner-bio {
+                flex-direction: row;
+                text-transform: uppercase;
+                flex-grow: 1;
+
+                @media only screen and (max-width: 992px) {
+                    flex-direction: column;
+                    margin-bottom: 5rem;
+                    align-self: center;
+                }
+
+                p {
+                    font-size: 24px;
+                }
+
+                & p, h4 {
+
+                    @media only screen and (max-width: 992px) {
+                        font-size: 14px;
+                    }
+                }
+
+                * > div {
+                    @media only screen and (max-width: 992px) {
+                        text-align: center;
+                        font-weight: bold;
+                        padding-top: 1rem;
+                    }
+                }
+
+                .partner-name {
+                    font-weight: 600;
+                }
+
+                .img-container {
+                    border-right: 1.5rem solid white;
+                    aspect-ratio: 4/3;
+                    max-width: 296px;
+
+                    @media only screen and (max-width: 992px) {
+                        border: none;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

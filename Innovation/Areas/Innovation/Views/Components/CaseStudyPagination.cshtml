@@ -1,0 +1,48 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.CaseStudyPagination
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    bool displayPrevLink = !String.IsNullOrWhiteSpace(Model.PreviousUrl);
+    bool displayNextLink = !String.IsNullOrWhiteSpace(Model.NextUrl);
+}
+@if (Model.ShowonPage)
+{
+    <div class="cs-pagination">
+        <ul class="list-group list-group-horizontal text-uppercase">
+            <li class="list-group-item flex-fill text-center d-none d-md-block">
+                @if (displayPrevLink)
+                {
+                    <a href="@Model.PreviousUrl">
+                        <span class="icon bi bi-arrow-left" aria-hidden="true"></span>
+                        <span class="ps-2">Previous case study</span>
+                    </a>
+                }
+            </li>
+
+            <li class="list-group-item flex-fill text-center">
+                <a href="@Model.PortfolioUrl">
+                    <span class="icon bi bi-columns-gap" aria-hidden="true">
+                    </span>
+                    <span class="ps-2">Portfolio Overview</span>
+                </a>
+            </li>
+
+            <li class="list-group-item flex-fill text-center d-none d-md-block">
+                @if (displayNextLink)
+                {<a href="@Model.NextUrl">
+                        <span class="pe-2">Next case study</span>
+                        <span class="icon bi bi-arrow-right" aria-hidden="true"></span>
+                    </a>
+                }
+            </li>
+
+
+        </ul>
+    </div>
+}
+else
+{
+    if (isEditMode)
+    {
+        <p> Please remove this component from this page as this should only be on Case Study Pages.</p>
+    }
+}

@@ -1,0 +1,296 @@
+﻿.section-stats {
+    text-align: center;
+
+    .stat-number {
+        width: 100%;
+        font-size: 30px;
+        color: $secondary-color;
+        font-weight: 700;
+        min-height: 60px;
+
+        @media print {
+            font-size: 40px;
+            min-height: 0;
+        }
+
+        sup, sub {
+            font-size: 30px;
+            font-style: italic;
+
+            &.sub-animate {
+                opacity: 0;
+                -webkit-transition: opacity 1s ease .75s;
+                transition: opacity 1s .75s;
+
+                &.fade-in {
+                    opacity: 1;
+                }
+            }
+
+            @media print {
+                font-size: 18px;
+            }
+        }
+
+        sup {
+            top: -1.2em;
+
+            @media print {
+                top: -.9em;
+            }
+        }
+
+        sub {
+            bottom: 0;
+            font-size: 40%;
+        }
+
+        @media only screen and (max-width: 1400px) {
+
+            sup {
+                font-size: 40%;
+                top: -0.9em;
+            }
+        }
+
+        @media only screen and (max-width: 1023px) {
+            min-height: 60px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            min-height: 50px;
+        }
+
+        @media only screen and (max-width: 479px) {
+            min-height: 50px;
+        }
+    }
+
+    .stat-data {
+        @include flex(1 0 auto);
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 0;
+
+        @media only screen and (max-width: 1023px) {
+            font-size: $font-size-small;
+        }
+
+        @media print {
+            font-size: $font-size-small;
+        }
+
+        .line {
+            display: block;
+        }
+    }
+
+    .stat-data-info {
+        display: block;
+        font-style: italic;
+        font-size: $font-size-small;
+        margin: 0;
+    }
+
+    .btn-link {
+        margin-top: 1em;
+        line-height: 1.3;
+        margin: -10px 0 20px;
+
+        @media only screen and (max-width: 1023px) {
+            font-size: 11px;
+        }
+    }
+
+    &.stat-component {
+        padding: 24px 6px;
+        background: rgb(99,89,158);
+        background: linear-gradient(219deg, rgba(102,91,166,1) 0%, rgba(116,101,211,1) 35%, rgba(117,116,239,1) 63%, rgba(62,155,218,1) 100%);
+        height: 100vh;
+
+        @media only screen and (max-width: 1023px) {
+            height: 100%;
+        }
+
+        .panel-title {
+            padding-left: 17px;
+            color: $secondary-color;
+        }
+
+        .stat-section-content {
+
+            @media only screen and (min-width: 1023px) {
+                display: flex;
+                align-items: center;
+                height: 90vh;
+            }
+
+            .panel-content {
+
+                .group-cards {
+                    @media only screen and (min-width: 1023px) {
+                        flex-wrap: nowrap;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+            }
+
+            .group-cards {
+                justify-content: center;
+
+                .no-wrap-big {
+                    flex-wrap: wrap;
+                }
+
+                .card-content {
+                    align-items: flex-start;
+                    padding: 10px 20px 0;
+
+                    @media only screen and (min-width: 1023px) {
+                        padding: 0 20px;
+                    }
+
+                    .img-wrapper {
+                        img {
+                            @media only screen and (max-width:1023px) {
+                                max-height: none;
+                                padding: 20px 0;
+                                margin: auto !important;
+                            }
+                        }
+                    }
+
+                    .stat-title {
+                        color: $secondary-color;
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 1.2;
+                    }
+
+                    .stat-subtitle {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $secondary-color;
+                    }
+
+                    .stat-right {
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column;
+                        max-width: 75%;
+                        text-align: left;
+                        padding: 20px 20px 0 20px;
+                        word-break: break-word;
+
+                        @media only screen and (max-width: 1023px) {
+                            text-align: center;
+                            max-width: 100%;
+                            padding: 20px 0 0 0;
+                        }
+
+                        .btn {
+                            text-align: left;
+                            padding-left: 0;
+                            font-weight: bold;
+
+                            @media only screen and (max-width: 1023px) {
+                                text-align: center;
+                            }
+
+                            @media only screen and (min-width: 1023px) {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .stat-info {
+                        padding: 0 20px;
+
+                        .btn {
+                            padding: 0.75em 1.5em;
+                        }
+                    }
+
+                    .stat-body {
+                        font-size: $font-size-h5;
+                        color: $secondary-color;
+                        font-weight: $headings-font-weight-extra-bold;
+                        margin-bottom: 30px;
+
+                        @media only screen and (min-width: 1023px) and (max-width: 1045px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .stat-number {
+
+                        span {
+                            font-size: $font-size-h3;
+                            font-weight: $headings-font-weight-extra-bold;
+                        }
+                    }
+                }
+
+                .card {
+                    border-bottom: 1px solid #d4d5d6;
+                    background: transparent;
+                    border: none;
+                    max-width: 100%;
+                    border-radius: unset;
+                    border-bottom: 1px solid #d4d5d6;
+                    flex: 1 1 auto;
+
+                    @media only screen and (min-width: 1023px) {
+                        border-bottom: none;
+                        border-right: 4px solid #d4d5d6;
+                        padding: 0 5px;
+                        max-width: 55%;
+                        min-width: 20%;
+                    }
+
+                    &.image-card {
+
+                        @media only screen and (max-width:1023px) {
+                            max-width: 100%;
+                        }
+
+                        .card-content {
+
+                            @media only screen and (min-width:1023px) {
+                                display: flex;
+                            }
+
+                            img {
+                                @media only screen and (max-width:1023px) {
+                                    max-width: 100px;
+                                    max-height: 100px;
+                                    display: inline-block;
+                                }
+
+                                max-width: 160px;
+                                min-width: 80px;
+                                max-height: 160px;
+                                min-height: 80px;
+                            }
+                        }
+                    }
+
+                    &.data-card {
+
+                        @media only screen and (max-width: 1023px) {
+                            min-width: 300px;
+                        }
+                    }
+                }
+
+                .card:last-of-type {
+                    border-right: none;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

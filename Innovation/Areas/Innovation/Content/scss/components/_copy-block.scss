@@ -1,0 +1,66 @@
+﻿.callout-list-panel {
+    padding: 3rem 4rem;
+    background-color: $glass-bg;
+    backdrop-filter: blur(2px);
+
+    &.gray-glass-background {
+        background-color: $gray-glass-bg !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 2rem 2rem;
+    }
+
+    .copy-block-cards {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .copy-block-card {
+            flex: 1 1 0px;
+            margin-right: 10px;
+            flex-wrap: wrap;
+            max-width: 45%;
+            margin-right: 50px;
+
+            @media only screen and (max-width: 768px) {
+                margin-right: 0;
+                max-width: none;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            .block-card-title {
+                min-height: 50px;
+                margin-bottom: 50px;
+
+                @media only screen and (min-width: 768px) {
+                    font-size: 4vw;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 60px;
+                }
+            }
+
+            .block-card-subtitle {
+                margin-bottom: 50px;
+
+                @media only screen and (min-width: 768px) {
+                    font-size: 3vw;
+                }
+            }
+
+            .block-card-content {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

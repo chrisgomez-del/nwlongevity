@@ -1,0 +1,79 @@
+﻿html {
+    cursor: default;
+    font-size: 100%;
+
+    @media only screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    @media only screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.reduced {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        padding-left: 0;
+    }
+}
+
+/* Backrgounds */
+.glass-background {
+    background-color: $gray-glass-bg;
+}
+
+.gray-glass-background {
+    background-color: $gray-glass-bg;
+}
+
+/* Containers */
+.row-narrow {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Card Widths */
+
+.group-cards.four-column {
+
+    .card {
+        width: 25%;
+
+        @media only screen and (max-width: 1023px) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+        }
+
+        @media print {
+            width: 49%;
+        }
+    }
+}

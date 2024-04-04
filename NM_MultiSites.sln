@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NM_MultiSites", "Innovation\NM_MultiSites.csproj", "{E4215B68-A5BC-4EB7-909B-C748873D1C3A}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "NMMultiSites.nm.org,Master", "Innovation.Master\NMMultiSites.nm.org,Master.scproj", "{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "NMMultiSites.nm.org.Content", "Innovation.nm.org.content\NMMultiSites.nm.org.Content.scproj", "{F4B9C558-CBEE-4B97-9759-301CB7541493}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{4645322E-5D57-4D23-BB94-A3EBD10FB306}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "az-pipelines", "az-pipelines", "{63995CAF-04E4-41D8-A2E8-B9A76F5B2B32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UAT", "UAT", "{A236CC38-80CA-4F4E-AC46-410351319200}"
+	ProjectSection(SolutionItems) = preProject
+		Config\az-pipelines\UAT_NEW.yml = Config\az-pipelines\UAT_NEW.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PROD", "PROD", "{232898E3-4367-44F5-BC1C-968DCD40F803}"
+	ProjectSection(SolutionItems) = preProject
+		Config\az-pipelines\PROD_NEW.yml = Config\az-pipelines\PROD_NEW.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		prod.innovation.nm.org|Any CPU = prod.innovation.nm.org|Any CPU
+		Release|Any CPU = Release|Any CPU
+		uat.innovation.nm.org|Any CPU = uat.innovation.nm.org|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.prod.innovation.nm.org|Any CPU.ActiveCfg = prod.innovation.nm.org|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.prod.innovation.nm.org|Any CPU.Build.0 = prod.innovation.nm.org|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.uat.innovation.nm.org|Any CPU.ActiveCfg = uat.innovation.nm.org|Any CPU
+		{E4215B68-A5BC-4EB7-909B-C748873D1C3A}.uat.innovation.nm.org|Any CPU.Build.0 = uat.innovation.nm.org|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.prod.innovation.nm.org|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C95FBFB2-3F48-4736-9013-ABDFF96EE64B}.uat.innovation.nm.org|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.prod.innovation.nm.org|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F4B9C558-CBEE-4B97-9759-301CB7541493}.uat.innovation.nm.org|Any CPU.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63995CAF-04E4-41D8-A2E8-B9A76F5B2B32} = {4645322E-5D57-4D23-BB94-A3EBD10FB306}
+		{A236CC38-80CA-4F4E-AC46-410351319200} = {63995CAF-04E4-41D8-A2E8-B9A76F5B2B32}
+		{232898E3-4367-44F5-BC1C-968DCD40F803} = {63995CAF-04E4-41D8-A2E8-B9A76F5B2B32}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45C7C6B7-CA32-40D7-9594-9AF6A79D6376}
+	EndGlobalSection
+EndGlobal

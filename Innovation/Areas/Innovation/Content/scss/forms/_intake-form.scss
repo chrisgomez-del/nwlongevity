@@ -1,0 +1,211 @@
+﻿.intake-form-section {
+    background: none;
+    padding-top: 3rem !important;
+
+    @media only screen and (max-width:768px) {
+        padding: 2rem 0;
+
+        .partnership-intake {
+            padding: 0rem;
+        }
+    }
+}
+
+.pi-text-container {
+    padding: 5em 5em 0em 5em;
+
+    @media only screen and (max-width:768px) {
+        padding: 2em;
+    }
+
+    p.pi-heading {
+        margin: 0px 0px 50px 0px;
+        font-size: 24px;
+        max-width: 46.5em;
+    }
+
+    p.pi-subheading {
+        font-size: 18px;
+    }
+}
+
+.partnership-intake {
+    width: 100%;
+    background-color: $glass-bg;
+    padding-right: 50px;
+    padding-left: 50px;
+
+
+
+    form {
+
+        @media only screen and (min-width:991px) {
+            width: 100%;
+        }
+
+        ul.tabs_hor {
+            margin: 0 1em !important;
+        }
+
+        .resp-tabs-list {
+            border-bottom: 3px solid $primary-cta !important;
+
+            .resp-tab-active {
+                border-bottom: 4px solid $primary-cta !important;
+            }
+
+            li {
+                width: 25%;
+                text-align: center;
+                margin: 0 0 -1px 0 !important;
+                color: $primary-cta;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-base;
+                pointer-events: none;
+
+                span {
+                    display: none;
+
+                    @media only screen and (min-width:768px) {
+                        display: block;
+                        font-weight: 600 !important;
+                        font-size: 26px;
+                        line-height: 2;
+                        position: relative;
+                    }
+                }
+
+                &.finish {
+                    pointer-events: auto;
+
+                    .bi {
+
+                        &::after {
+                            content: "";
+                            width: 103%;
+                            border: 2px solid #00778a;
+                            position: absolute;
+                            top: 1em;
+                            background: #00778a;
+                            margin-top: -3px;
+
+                            @media only screen and (min-width:1200px) {
+                                width: 102%;
+                            }
+                        }
+                    }
+
+                    &.resp-tab-active {
+                        pointer-events: auto;
+
+                        .bi {
+
+                            &::after {
+                                width: 102%;
+
+                                @media only screen and (min-width:1200px) {
+                                    width: 101%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .resp-accordion {
+            pointer-events: none;
+            text-transform: uppercase !important;
+
+            &.finish {
+                pointer-events: auto;
+            }
+        }
+
+        .resp-tab-content {
+            @media only screen and (max-width:768px) {
+                padding: 30px;
+            }
+        }
+
+
+        .required {
+
+            > label {
+                font-size: 14px;
+                width: 100%;
+
+                &:after {
+                    content: " *";
+                }
+            }
+        }
+
+        .form-section {
+
+            fieldset {
+
+                legend {
+                    font-size: $font-size-h4;
+                    font-weight: $headings-font-weight-extra-bold;
+                }
+            }
+
+            .count-remaining {
+                text-align: right;
+                font-size: 12px;
+                margin-top: 15px;
+            }
+
+            .form-check, .form-group {
+                @media only screen and (min-width: 992px) {
+                    width: 50% !important;
+                }
+            }
+        }
+
+
+        select.priority {
+            width: 100%;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+            background: transparent;
+            border-color: black;
+        }
+
+        ul.seeking-investment {
+            list-style-type: none;
+
+            li {
+                margin-top: 15px;
+
+                .form-check-input {
+                    background: transparent;
+                }
+            }
+        }
+
+        button {
+            margin-right: 20px;
+        }
+
+        button ~ button {
+            margin-right: 0;
+        }
+
+        button {
+            @media only screen and (min-width: 992px) {
+                width: 9em !important;
+            }
+
+            @media only screen and (max-width: 992px) {
+                width: 6em !important;
+                height: 3em;
+                border-radius: 24px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+    }
+}

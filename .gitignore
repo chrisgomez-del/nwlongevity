@@ -1,0 +1,49 @@
+
+
+# Here is a good sample gitignore file: https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+# User-specific files
+# -------------------
+*.[Dd]ebug.config
+*.[Ll]ocal.json
+*-[Ll]ocal.json
+*.pubxml
+*.rsuser
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.userprefs
+
+
+# Build results
+# -------------
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+
+# Nuget
+# -----
+**/[Pp]ackages/*
+
+
+# Others
+# ------
+*.dbmdl
+*.jfm
+*.vssscc
+.vs
+/UpgradeLog.htm
+
+
+
+
+# Innovation-Specific files
+# -----------------
+node_modules
+/Innovation/obj/debug
+/Innovation/obj/uat.innovation.nm.org
+.vs
+/Innovation.Master/sitecore/layout/Placeholder Settings/Innovation

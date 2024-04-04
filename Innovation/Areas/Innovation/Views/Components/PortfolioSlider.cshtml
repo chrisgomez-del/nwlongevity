@@ -1,0 +1,46 @@
+﻿@using Innovation.Areas.Innovation.Helpers
+@model Innovation.Areas.Innovation.Models.Components.CaseStudyList
+
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+
+<section class="card-list-block swiper portfolio-slider">
+
+    @*<div class="card-list-header">
+        <h2 class="card-title">@Model.Title</h2>
+    </div>*@
+
+    <div id="card-slider" class="swiper-wrapper card-container row flex-nowrap">
+
+            @if (Model.CaseStudies != null && Model.CaseStudies.Any())
+            {
+                foreach (var card in @Model.CaseStudies)
+                {
+
+            <div class="swiper-slide card">
+                <div class="card-content-body" style="background-image:url('@card.BackgroundImage')">
+                </div>
+                <div class="content-card-text">
+                    <span class="h3 title-card">@card.Title</span>
+                    <a class="btn btn-secondary" href="@card.Link">@card.CTATitle</a>
+                </div>
+
+            </div>
+
+                }
+            }
+            else
+            {
+
+                <p class="no-events"><span class="h5 ps-4">There are no case studies at this time.</span></p>
+
+            }
+
+    </div>
+    @*navigation buttons*@
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</section>

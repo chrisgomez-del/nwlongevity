@@ -1,0 +1,19 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+@if (Model != null)
+{
+    <section>
+        <div class="container marketing">
+            @Html.Sitecore().DynamicPlaceholder("features",seed:10)
+        </div>
+
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}

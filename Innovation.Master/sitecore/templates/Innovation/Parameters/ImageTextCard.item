@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {5B21C483-10BC-4BBE-9764-83C73FD673A1}
+database: master
+path: /sitecore/templates/Innovation/Parameters/ImageTextCard
+parent: {8417AE53-1821-40E8-A105-E2FBF5DAE059}
+name: ImageTextCard
+master: {00000000-0000-0000-0000-000000000000}
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
+created: 20220622T144931Z
+
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 38
+
+{AB86861A-6030-46C5-B394-E8F99E8B87DB}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{94387AA9-92DE-4247-88E5-FC934B3D3205}
+----version----
+language: en
+version: 1
+revision: abf9a205-a688-450f-b360-77f74abb84c3
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20220622T144931Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+abf9a205-a688-450f-b360-77f74abb84c3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20220622T215103Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
