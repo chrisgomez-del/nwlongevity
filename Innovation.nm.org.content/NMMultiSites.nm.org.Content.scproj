@@ -25,14 +25,14 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreWebUrl>https://rmg10sc.dev.local/</SitecoreWebUrl>
+    <SitecoreWebUrl>https://nmmultisitessc.dev.local</SitecoreWebUrl>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <LightningDeployMode>False</LightningDeployMode>
     <EnableContainerDeployment>False</EnableContainerDeployment>
     <ConnectorTimeoutSeconds>120</ConnectorTimeoutSeconds>
-    <SitecoreDeployFolder>C:\inetpub\wwwroot\rmg10sc.dev.local</SitecoreDeployFolder>
-    <SitecoreAccessGuid>1f73afa7-3aed-43fc-8488-9df803547948</SitecoreAccessGuid>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\nmmultisitessc.dev.local</SitecoreDeployFolder>
+    <SitecoreAccessGuid>3b81ddd7-1fa8-4754-ac37-0f6761984d33</SitecoreAccessGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>

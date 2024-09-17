@@ -27,14 +27,14 @@
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Innovation.nm.org,Master_Debug.xml</ValidationSettingsFilePath>
-    <SitecoreDeployFolder>C:\inetpub\wwwroot\rmg10sc.dev.local</SitecoreDeployFolder>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\nmmultisitessc.dev.local</SitecoreDeployFolder>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <LightningDeployMode>False</LightningDeployMode>
     <EnableContainerDeployment>False</EnableContainerDeployment>
     <ConnectorTimeoutSeconds>60</ConnectorTimeoutSeconds>
-    <SitecoreWebUrl>https://rmg10sc.dev.local/</SitecoreWebUrl>
-    <SitecoreAccessGuid>d5d3b142-05ff-44ef-a279-3a38aee4732d</SitecoreAccessGuid>
+    <SitecoreWebUrl>https://nmmultisitessc.dev.local</SitecoreWebUrl>
+    <SitecoreAccessGuid>fc95bc32-0f46-478a-944a-20c74d09af8b</SitecoreAccessGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
