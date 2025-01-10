@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {64153ECE-168D-4BF6-9CCE-524713307EE5}
+database: master
+path: /sitecore/media library/Innovation/nm-symbol-logo-purple
+parent: {C5C96A96-7474-4F45-AC52-99FB9EF0D6CC}
+name: nm-symbol-logo-purple
+master: {00000000-0000-0000-0000-000000000000}
+template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
+templatekey: Image
+created: 20220228T212218Z
+
+----field----
+field: {40E50ED9-BA07-4702-992E-A912738D32DC}
+name: Blob
+key: blob
+content-length: 1160
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTgycHgi
+IGhlaWdodD0iMTI5cHgiIHZpZXdCb3g9IjAgMCAxODIgMTI5IiB2ZXJzaW9uPSIxLjEiIHhtbG5z
+PSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu
+b3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPkxPR08gLyBMT0dPTUFSSyAvIExBUkdFIC8gUFVS
+UExFPC90aXRsZT4KICAgIDxnIGlkPSJMT0dPUyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9
+IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkxvZ29z
+IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTg4LjAwMDAwMCwgLTQ0OC4wMDAwMDApIiBmaWxsPSIj
+M0YzMzc2Ij4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgx
+ODguMDAwMDAwLCA0NDguMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmls
+bC0yNiIgcG9pbnRzPSIxODIgMTI5IDE4MiAwIDE1Mi45NjA4MDMgMCAxMTguNzcyMjU1IDYxLjM1
+MzM1NTYgODYuMjUyOTEyIDAgNTMgMCAxMDkuNjg3ODY5IDEwNi44NjM2IDE1Mi45NjA4MDMgMjgu
+OTc1MzExMSAxNTIuOTExOTYyIDEyOSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHln
+b24gaWQ9IkZpbGwtMjQiIHBvaW50cz0iNzMuMTYwODg5NCAxMjkgMTA2IDEyOSAzNy43MTM5NTAz
+IDAgMCAwIDAgMTI5IDE0LjAzMzgzMjUgMTI5IDE0LjAzMzgzMjUgMTkuNDQzNjQ0NCI+PC9wb2x5
+Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
+----field----
+field: {C06867FE-9A43-4C7D-B739-48780492D06F}
+name: Extension
+key: extension
+content-length: 3
+
+svg
+----field----
+field: {6F47A0A5-9C94-4B48-ABEB-42D38DEF6054}
+name: Mime Type
+key: mime type
+content-length: 13
+
+image/svg+xml
+----field----
+field: {6954B7C7-2487-423F-8600-436CB3B6DC0E}
+name: Size
+key: size
+content-length: 3
+
+848
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 61
+
+-/media/64153ece168d4bf69cce524713307ee5.ashx?h=16&thn=1&w=16
+----version----
+language: en
+version: 1
+revision: d4e1241c-ad59-48b9-a01f-5d01c9e2c185
+
+----field----
+field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
+name: Alt
+key: alt
+content-length: 26
+
+Northwestern Medicine Logo
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20220228T212218Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d4e1241c-ad59-48b9-a01f-5d01c9e2c185
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20220228T212706Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

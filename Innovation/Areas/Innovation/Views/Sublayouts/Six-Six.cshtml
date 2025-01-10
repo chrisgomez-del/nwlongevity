@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+  Layout = null;
+}
+
+<div class="section row row-narrow me-0">
+    <div class="col-lg-6 col-sm-12 no-padding">
+        @Html.Sitecore().Placeholder("six-six_content-a")
+    </div>
+    <div class="col-lg-6 col-sm-12 no-padding">
+        @Html.Sitecore().Placeholder("six-six_content-b")
+    </div>
+</div>

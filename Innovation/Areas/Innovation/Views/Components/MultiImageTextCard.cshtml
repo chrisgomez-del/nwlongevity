@@ -1,0 +1,67 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.MultiImageTextCard
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    var ImageonLeft = RenderingContext.Current.Rendering.Parameters["Image on Left"];
+    var PaddingTop = RenderingContext.Current.Rendering.Parameters["Padding Top"];
+    bool IsImageonLeft = ImageonLeft == "1" ? true : false;
+    string cssImageonLeft = ImageonLeft == "1" ? "image-text-left" : String.Empty;
+    string cssPaddingTop = PaddingTop == "1" ? "border-top" : String.Empty;
+}
+<section class="d-flex flex-row image-text-cards @cssImageonLeft multi-card @cssPaddingTop">
+
+    <div class="vertical-card content-card" style="background-image:url('@Model.VerticalSection_BackgroundImage')">
+                @if (isEditMode)
+                {
+            <div class="content-card-text">
+                <div class="image-card-link"><span class="h3 title-card">@Model.VerticalSection_Title</span></div>
+                @Html.Sitecore().BeginField("VerticalSection Link", Model.SourceItem, new { haschildren = true, @class = "btn btn-secondary" })
+                @Model.VerticalSection_LinkTitle
+                @Html.Sitecore().EndField()
+            </div> }
+                        else
+                        {
+            <div class="content-card-text">
+                <div class="image-card-link"><span class="h3 title-card">@Model.VerticalSection_Title</span></div>
+                @Html.Sitecore().BeginField("VerticalSection Link", Model.SourceItem, new { haschildren = true, @class = "btn btn-secondary" })
+                @Model.VerticalSection_LinkTitle
+                @Html.Sitecore().EndField()
+            </div>            }
+    </div>
+    <div class="d-flex flex-column justify-content-stretch horizontal-card content-card multi-card">
+        <div class="content-card-image" style="background-image:url('@Model.HorizontalSection_BackgroundImage')">
+                @if (isEditMode)
+                {
+                <div class="content-card-text">
+                    <div class="image-card-link">
+                        <span class="h3 title-card">@Model.HorizontalSection_Title</span>
+                        @Html.Sitecore().BeginField("HorizontalSection Link", Model.SourceItem, new { haschildren = true, @class = "btn btn-secondary" })
+                        @Model.HorizontalSection_LinkTitle
+                        @Html.Sitecore().EndField()
+                    </div>
+                </div> 
+                }
+                else
+                {
+                <div class="content-card-text">
+                    <div class="image-card-link">
+                        <span class="h3 title-card">@Model.HorizontalSection_Title</span>
+                        @Html.Sitecore().BeginField("HorizontalSection Link", Model.SourceItem, new { haschildren = true, @class = "btn btn-secondary" })
+                        @Model.HorizontalSection_LinkTitle
+                        @Html.Sitecore().EndField()
+                    </div>
+                </div>            
+                }
+        </div>
+
+        <div class="d-flex flex-row horizontal-image">
+            <div class="image-card first-image">
+                @Model.FirstImage
+            </div>
+            <div class="image-card">
+                @Model.SecondImage
+            </div>
+        </div>
+    </div>
+
+</section>

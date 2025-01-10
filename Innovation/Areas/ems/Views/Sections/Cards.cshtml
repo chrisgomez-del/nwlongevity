@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+
+@if (Model != null)
+{
+    <section class="education section">
+        <header class="h4 title-padding">
+            @Html.Sitecore().Field("GroupTitle")
+        </header>
+        <ul class="list-unstyled">
+            <li class="card">
+                <div class="row no-gutters">
+                    @Html.Sitecore().DynamicPlaceholder("cards",seed:10)
+
+                </div>
+            </li>
+
+        </ul>
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}
+

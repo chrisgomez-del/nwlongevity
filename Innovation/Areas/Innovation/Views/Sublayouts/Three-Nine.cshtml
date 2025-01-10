@@ -1,0 +1,16 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+<div class="section row row-narrow">
+    <div class="col md-3 left-sidebar">
+        @Html.Sitecore().Placeholder("three-nine_content-a")
+    </div>
+    <div class="col md-9 main-content">
+        @Html.Sitecore().Placeholder("three-nine_content-b")
+        @Html.Sitecore().Placeholder("northwestern_after_main_fixed")
+    </div>
+</div>

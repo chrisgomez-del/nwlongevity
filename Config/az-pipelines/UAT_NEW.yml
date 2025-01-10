@@ -1,0 +1,93 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: UAT
+
+# Link: https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#ci-triggers
+trigger:
+  branches:
+    include:
+    - UAT
+
+# Links: https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#pr-triggers
+#        https://docs.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops#build-validation
+pr:
+  branches:
+    exclude:
+    - '*'  # must quote since "*" is a YAML reserved character; we want a string
+
+pool:
+  name: default
+  demands:
+  - npm
+  - msbuild
+  - visualstudio
+
+# Script variables
+variables:
+  buildPlatform: 'any cpu'
+  buildConfiguration: 'uat.innovation.nm.org'
+
+steps:
+# Restore Nuget Packages
+# Link: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/nuget?view=azure-devops
+- task: NuGetCommand@2
+  displayName: 'NuGet Restore'
+  inputs:
+    restoreSolution: '$(build.sourcesDirectory)\Innovation.sln'
+
+# Using 'npm ci' should be preferred because it is meant for automated environments and respects the package-lock.json file. Unlike 'npm install', which rewrites the file and always installs new versions.
+# This could be problematic if the pipeline every uses/implements cacheing.
+# Links: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/npm?view=azure-devops
+#        https://docs.npmjs.com/cli/ci.html#:~:text=In%20short%2C%20the%20main%20differences,have%20an%20existing%20package%2Dlock.&text=json%20%2C%20npm%20ci%20will%20exit,be%20added%20with%20this%20command.    
+- task: Npm@1
+  displayName: 'Npm Ci Build'
+  inputs:
+    command: custom
+    workingDir: '$(Build.SourcesDirectory)\Innovation'
+    verbose: false
+    customCommand: 'ci'
+
+# Build Gulp
+- task: Npm@1
+  displayName: 'Npm Gulp Build'
+  inputs:
+    command: custom
+    workingDir: '$(Build.SourcesDirectory)\Innovation'
+    verbose: false
+    customCommand: 'run build'
+
+# Build Solution
+# Link: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops
+- task: VSBuild@1
+  displayName: 'Solution Build ($(buildConfiguration))'
+  inputs:
+    solution: '$(build.sourcesDirectory)\Innovation.sln'
+    msbuildArgs: '/p:DeployOnBuild=false /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation=$(build.artifactstagingdirectory)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+
+# Copies the NM custom PublishWebDeploy.ps1 script to the artificate directory
+# Link: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/copy-files?view=azure-devops&tabs=yaml
+- task: CopyFiles@2
+  displayName: 'Copy Deployment Files'
+  inputs:
+    sourceFolder: '$(build.sourcesDirectory)\Innovation\'
+    contents: |
+      bin\**Innovation**
+      Areas\Innovation\Content\**
+      Areas\Innovation\Scripts\**
+      Areas\Innovation\Views\**
+      App_Config\**
+    targetFolder: '$(build.artifactstagingdirectory)'
+
+# Publish
+# Link: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: '$(Build.DefinitionName)_BUILD'

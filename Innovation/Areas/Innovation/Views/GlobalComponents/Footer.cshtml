@@ -1,0 +1,54 @@
+﻿@model Innovation.Areas.Innovation.Models.Global.Footer
+
+<!-- FOOTER -->
+<div class="footer-container">
+    <div class="row mt-5">
+        <div class="col-lg-7 col-md-6">
+            <h5 class="text-uppercase">Northwestern Medicine<br />Mansueto Innovation Institute</h5>
+            <div class="d-flex flex-row footer-links">
+                <div>
+                    @if (Model.MainNavLinks != null && Model.MainNavLinks.Any())
+                    {
+                    <ul class="list-unstyled text-uppercase footer-nav-links">
+                        @foreach (var link in Model.MainNavLinks)
+                        {
+                            <li><a href="@link.CTALink">@link.Title</a></li>
+                        }
+                    </ul>
+                    }
+                    </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 footer-logo">
+            <a href="/" class="block northwestern-logo">
+                <img class="logo" src="@Model.NMImage" alt="Northwestern Medicine Logo">
+            </a>
+            <ul class="list-unstyled list-inline icon-links social">
+                <li class="list-inline-item"><a href="https://www.youtube.com/user/NMHChicago" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/NorthwesternMed" target="_blank"><span class="bi bi-twitter"></span></a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/company/northwestern-medicine" target="_blank"><span class="bi bi-linkedin"></span></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/northwesternmedicine" target="_blank"><span class="bi bi-facebook"></span></a></li>
+                <li class="list-inline-item"><a href="https://instagram.com/northwesternmedicine" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                <li class="list-inline-item"><a href="https://www.tiktok.com/@("@northwesternmedicine")" target="_blank"><span class="bi bi-tiktok"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-lg-5 mt-md-3 pt-4 sub-footer border-top">
+        <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
+            @Html.Raw(Model.GenericContent.ToString())
+        </div>
+        @if (Model.AdditionalNavLinks != null && Model.AdditionalNavLinks.Any())
+        {
+            <div class="col-md-6 col-lg-4 text-end utility-links">
+                <ul class="p-0 list-unstyled list-inline text-uppercase">
+                    @foreach (var link in Model.AdditionalNavLinks)
+                    {
+                        <li class="list-inline-item"><a href="@link.CTALink">@link.Title</a></li>
+                    }
+                </ul>
+            </div>
+        }
+        </div>
+</div>
+<!-- END FOOTER -->

@@ -1,0 +1,185 @@
+﻿.contact-us-form-section {
+    height: 100%;
+    background-color: white;
+    padding: 2rem;
+
+    @media only screen and (min-width:768px) {
+        padding: 5rem;
+    }
+
+    @media only screen and (max-width:768px){
+        padding-bottom: 7rem;
+    }
+    .contact-info {
+        height: max-content;
+
+        div#contact-formPanel p {
+            font-size: $font-size-extra-large;
+            width: 28em;
+        }
+
+        p {
+            font-size: $font-size-large;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+
+            @media only screen and (min-width: 992px) {
+                width: 60%;
+            }
+
+            label {
+                font-size: $font-size-small;
+                font-weight: $font-weight-bold-label;
+
+                &.error {
+                    color: $primary-error;
+                    font-size: $font-size-small !important;
+                }
+            }
+
+            .form-check-label {
+                font-size: 18px !important;
+                font-weight: 500 !important;
+            }
+
+            span.field-validation-error {
+                color: $primary-error;
+                display: block;
+                font-size: 12px;
+            }
+
+            .loader-icon-wrapper {
+                z-index: 4;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.75);
+                transition: opacity 200ms ease-in-out;
+                border-radius: 4px;
+            }
+
+            input[type=text], textarea {
+                border: none;
+                border-radius: 0;
+                border-bottom: 2px solid #000 !important;
+                width: 100%;
+                background: 0 0;
+                resize: none;
+                padding: 15px 0 !important;
+
+
+                &:focus {
+                    background: transparent;
+                    border-color: black;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: $base-color;
+                    font-weight: 400;
+                    font-size: 18px;
+                    font-family: inherit;
+                    //font-style: italic;
+                }
+            }
+
+            .input-hidden {
+                height: 0;
+                width: 0px !important;
+                visibility: hidden;
+                padding: 0;
+                margin: 0;
+                float: right;
+            }
+
+            .form-group {
+                margin: 40px 0;
+
+
+                input, textarea {
+                    background: transparent;
+                    resize: none;
+
+                &.form-control {
+
+                    &.border-bottom {
+                        border: none;
+                        border-bottom: 1px solid black;
+                        border-bottom: 2px solid black !important;
+                        border-radius: 0;
+
+                    
+                        }
+                    &.error, &.input-validation-error {
+                        border-bottom: 3px solid $error-red;
+                    }
+                }
+
+                    &:focus {
+                        border-color: none;
+                        box-shadow: none;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+
+            .form-check {
+                margin: 15px 0 0 0;
+
+                input[type="radio"] {
+                    cursor: pointer;
+                    color: $primary-cta;
+
+                    &:checked {
+                        background-color: $primary-cta;
+                        background-image: none;
+                    }
+
+                    &:disabled {
+                        color: $primary-cta-disabled;
+                }
+            }
+        }
+
+        .form-section {
+            .error, .input-validation-error {
+                color: $error-red;
+                font-weight: $font-weight-bold;
+                font-size:12px;
+            }
+                }
+
+            .captcha-error {
+                border: 1px solid $primary-error !important
+            }
+
+            button {
+                width: 50%;
+                height: 65px;
+                border-radius: 51px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .input-hidden {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+                padding: 0;
+                margin: 0;
+                float: right;
+            }
+        }
+    }
+}

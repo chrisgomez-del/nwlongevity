@@ -1,0 +1,22 @@
+﻿@using Innovation.Areas.Innovation.Helpers
+@model Innovation.Areas.Innovation.Models.Components.BasePanel
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    string BgImage = SitecoreAccess.GetMediaUrl(Model.SourceItem, "BackgroundImage");
+    bool IsImageAvailable = !String.IsNullOrWhiteSpace(BgImage);
+    string stylestring = IsImageAvailable ? String.Format("background-image: url('{0}')", BgImage) : String.Empty;
+}
+
+
+<section class="callout-panel" style='@stylestring'>
+    @if (!String.IsNullOrWhiteSpace(Model.Title.ToString()) || !String.IsNullOrWhiteSpace(Model.Subtitle.ToString()))
+    {
+    <div class="callout-panel-header">
+        <h2 class="callout-panel-title">@Model.Title</h2>
+        <p class="callout-panel-content">
+            @Model.Subtitle
+        </p>
+    </div>
+    }
+
+</section>

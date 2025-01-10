@@ -1,0 +1,35 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.Partner
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    
+}
+<section class="partner">
+    <div class="d-flex flex-row partner-container">
+        <div class="content-card-image">
+            @Html.Sitecore().Field("PartnerImage", Model.SourceItem, new { @loading = "lazy" })
+        </div>
+
+        <div class="content-card">
+            <div class="story-card">
+                <p>@Model.CallOutBody</p>
+            </div>
+
+            <div class="d-flex partner-bio">
+                <div class="img-container">
+                    @Html.Sitecore().Field("PartnerBioImage", Model.SourceItem, new { @loading = "lazy" })
+                </div>
+                <div class="d-flex flex-column justify-content-end">
+                    <div class="partner-name">
+                        <p>@Model.PartnerName</p>
+                    </div>
+
+                    <div class="partner-company">
+                        <h4>@Model.PartnerCompany</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

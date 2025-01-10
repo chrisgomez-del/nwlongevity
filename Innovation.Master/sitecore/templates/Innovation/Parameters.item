@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {8417AE53-1821-40E8-A105-E2FBF5DAE059}
+database: master
+path: /sitecore/templates/Innovation/Parameters
+parent: {3071F814-2239-43F3-8F07-47016593DFE9}
+name: Parameters
+master: {00000000-0000-0000-0000-000000000000}
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
+created: 20220217T152128Z
+
+----version----
+language: en
+version: 1
+revision: d125dab9-17f8-468c-8ff6-fd6954a3b0ac
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20220217T152128Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d125dab9-17f8-468c-8ff6-fd6954a3b0ac
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20220217T152128Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

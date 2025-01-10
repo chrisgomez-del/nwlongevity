@@ -1,0 +1,48 @@
+﻿@model Innovation.Areas.Innovation.Models.Components.BasePanel
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    var bgColorValue = RenderingContext.Current.Rendering.Parameters["Enable Background Color"];
+    string grayBg = bgColorValue == "1" ? "gray-glass-background" : String.Empty;
+}
+<section class="callout-list-panel @grayBg">
+    @if (isEditMode)
+    {
+        <div class="panel-header">
+            <h2 class="panel-title">@Model.Title</h2>
+            <p class="panel-content">
+                @Model.Subtitle
+            </p>
+            <p class="panel-content">
+                @Model.Body
+            </p>
+        </div>
+    }
+    else
+    {
+        <div class="panel-header">
+            @if (!String.IsNullOrWhiteSpace(Model.Title.ToString()))
+            {
+                <h2 class="panel-title">@Model.Title</h2>
+            }
+            @if (!String.IsNullOrWhiteSpace(Model.Subtitle.ToString()))
+            {
+                <p class="panel-content">
+                    @Model.Subtitle
+                </p>
+            }
+            @if (!String.IsNullOrWhiteSpace(Model.Body.ToString()))
+            {
+                <p class="panel-content">
+                    @Model.Body
+                </p>
+            }
+        </div>
+    }
+    <div class="section-content row">
+        <div class="copy-block-cards">
+            @Html.Sitecore().DynamicPlaceholder("Headline_Copy_Block")
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,141 @@
+﻿//== base
+body {
+    font-size: $font-size-base;
+    font-family: $primary-font-family;
+    line-height: $line-height-base;
+    font-weight: $font-weight-base;
+    color: $base-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $headings-font-family;
+    line-height: $headings-line-height;
+    font-weight: $headings-font-weight-extra-bold;
+    margin: $headings-margin;
+    color: $base-color;
+}
+
+// links (default)
+a {
+    color: $link-color;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    &:hover, &:active, &:focus {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+
+    &:disabled {
+        color: $link-disabled-color;
+        text-decoration: underline;
+    }
+}
+
+//== headings
+h1, .h1 {
+    font-size: $font-size-h1;
+    ;
+
+    @media only screen and (max-width: 767px) {
+        font-size: $font-mobile-h1;
+        font-weight: $headings-font-weight;
+    }
+}
+
+h2, .h2 {
+    font-size: $font-size-h2;
+
+    @media only screen and (max-width: 767px) {
+        font-size: $font-mobile-h2;
+        font-weight: $headings-font-weight;
+    }
+}
+
+h3, .h3 {
+    font-size: $font-size-h3;
+
+    @media only screen and (max-width: 767px) {
+        font-size: $font-mobile-h3;
+        font-weight: $headings-font-weight
+    }
+}
+
+h4, .h4 {
+    font-size: $font-size-h4;
+
+    @media only screen and (max-width: 767px) {
+        font-size: $font-mobile-h4;
+        font-weight: $headings-font-weight
+    }
+}
+
+h5, .h5 {
+    font-size: $font-size-h5;
+
+    @media only screen and (max-width: 767px) {
+        font-size: $font-mobile-h5;
+        font-weight: $headings-font-weight
+    }
+}
+
+h6, .h6 {
+    font-size: $font-size-h6;
+
+    @media only screen and (max-width: 767px) {
+        font-weight: $headings-font-weight
+    }
+}
+
+
+.color-base {
+    color: $base-color;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.transform-none {
+    text-transform: none !important;
+}
+
+.assistive-text {
+position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    color: #000;
+}
+
+
+//-- light theme
+.light-theme {
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        color: $secondary-color;
+    }
+    // links (default)
+    a {
+        color: $secondary-color;
+
+        &:hover {
+            color: $primary-cta-hover;
+        }
+    }
+}

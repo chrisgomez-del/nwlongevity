@@ -1,0 +1,49 @@
+﻿@using EMS.ems.Models
+@model ModuleGroup
+@using Sitecore.Mvc.Extensions
+@{
+    Layout = null;
+}
+@if (Model != null && Model.modules != null && Model.modules.Count() > 0)
+{
+    <section>
+        <h2 class="content-align-left paddingnobottom">@Model.GroupTitle</h2>
+        <div class="container marketing">
+            @foreach (var item in Model.modules)
+            {
+                <div class="row featurette">
+                    @if (item.ImagePosition)
+                    {
+                        <div class="col-md-5">
+                            <img class="feature-img" src="@item.Image" />
+
+                        </div>
+                    }
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">@item.Title<span class="text-muted">@item.ShortText</span></h2>
+                        <p class="lead">@item.MainContent</p>
+                        @if (item.CTALink != null && item.CTATitle != null)
+                        {
+                            <p><a class="btn btn-lg btn-primary" href="@item.CTALink.ToString()" role="button">@item.CTATitle</a></p>
+                        }
+                    </div>
+                    @if (!item.ImagePosition)
+                    {
+                        <div class="col-md-5">
+                            <img class="feature-img" src="@item.Image" />
+
+                        </div>
+                    }
+                </div>
+
+                <hr class="featurette-divider">
+            }
+
+        </div>
+
+    </section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}

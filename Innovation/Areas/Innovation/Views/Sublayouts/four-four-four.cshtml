@@ -1,0 +1,19 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+  Layout = null;
+}
+
+<div class="section row row-narrow">
+    <div class="col md-4">
+        @Html.Sitecore().Placeholder("four-four-four_content-a")
+    </div>
+    <div class="col md-4">
+        @Html.Sitecore().Placeholder("four-four-four_content-b")
+    </div>
+    <div class="col md-4">
+        @Html.Sitecore().Placeholder("four-four-four_content-c")
+    </div>
+</div>
