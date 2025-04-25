@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {AC276380-802E-4D4C-8682-DEAEC1C6FF75}
+database: master
+path: /sitecore/layout/Placeholder Settings/Innovation/Panels/Accordion-Panel
+parent: {C71F1E73-9DF4-43DF-847D-C6E9BB32B026}
+name: Accordion-Panel
+master: {00000000-0000-0000-0000-000000000000}
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+created: 20220805T213115Z
+
+----field----
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 15
+
+Accordion_Panel
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
+content-length: 38
+
+{26AF68FE-5403-45E4-BAAA-E95A7E7FFD06}
+----version----
+language: en
+version: 1
+revision: 2bfce4f8-01cc-4691-bba7-886fbf4e9ae2
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20220714T133133Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2bfce4f8-01cc-4691-bba7-886fbf4e9ae2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20220805T213217Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
