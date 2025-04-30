@@ -1,5 +1,5 @@
-﻿using Innovation.Areas.Innovation.Helpers;
-using Innovation.Areas.Innovation.Models.Components;
+﻿using NM_MultiSites.Areas.Innovation.Helpers;
+using NM_MultiSites.Areas.Innovation.Models.Components;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Mappers.Components
+namespace NM_MultiSites.Areas.Innovation.Mappers.Components
 {
     public interface IStatsComponentService
     {

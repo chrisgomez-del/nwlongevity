@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Innovation</RootNamespace>
-    <AssemblyName>Innovation</AssemblyName>
+    <RootNamespace>NM_MultiSites</RootNamespace>
+    <AssemblyName>NM_MultiSites</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -366,6 +366,7 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sitecore\api\passwordrecovery\ConfirmRecoveryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\ems\Content\bootstrap-new.css" />
@@ -388,6 +389,7 @@
     <Content Include="App_Config\include\EmailSettings.config" />
     <Content Include="App_Config\include\globalSettings.config" />
     <Content Include="App_Config\include\passwordRecovery.config" />
+    <Content Include="App_Config\include\RegisterApiRoutes.config" />
     <None Include="Areas\ems\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.min.js" />
@@ -608,6 +610,9 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

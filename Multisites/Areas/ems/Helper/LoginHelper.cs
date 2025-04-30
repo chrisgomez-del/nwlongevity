@@ -6,7 +6,7 @@ using Sitecore.Security.Accounts;
 using Sitecore.Security.Authentication;
 using Sitecore.Web.Authentication;
 
-namespace EMS.Areas.ems.Helper
+namespace NM_MultiSites.Areas.ems.Helper
 {
     public static class LoginHelper
     {

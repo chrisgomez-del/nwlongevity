@@ -9,7 +9,7 @@ using System.Web.Mvc;
 // Slightly modified version of:
 // https://stackoverflow.com/a/33175234
 //
-namespace Innovation.Areas.Innovation.Infrastructure.Attributes
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Attributes
 {
     public enum DateRangeType
     {

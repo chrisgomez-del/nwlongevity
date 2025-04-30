@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Logging
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Logging
 {
     public class DebugLogger
     {

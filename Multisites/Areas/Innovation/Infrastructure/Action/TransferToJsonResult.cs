@@ -1,7 +1,7 @@
 ﻿using System.Collections.Specialized;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Action
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Action
 {
     public class TransferToJsonResult : ActionResult
     {

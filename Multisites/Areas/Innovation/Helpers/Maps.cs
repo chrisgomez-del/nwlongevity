@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Helpers
+namespace NM_MultiSites.Areas.Innovation.Helpers
 {
     public static class Maps
     {

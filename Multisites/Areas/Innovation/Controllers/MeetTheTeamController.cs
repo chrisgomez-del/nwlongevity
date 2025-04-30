@@ -1,11 +1,11 @@
-﻿using Innovation.Areas.Innovation.Mappers.Components;
+﻿using NM_MultiSites.Areas.Innovation.Mappers.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Controllers
+namespace NM_MultiSites.Areas.Innovation.Controllers
 {
     public class MeetTheTeamController : Controller
     {

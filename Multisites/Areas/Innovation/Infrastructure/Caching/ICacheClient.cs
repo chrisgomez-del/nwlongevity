@@ -2,7 +2,7 @@
 using System.Collections.Generic;
  
 
-namespace Innovation.Areas.Innovation.Infrastructure.Caching
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Caching
 {
     public interface ICacheClient
     {

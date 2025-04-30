@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.Data.Items;
 
-namespace Innovation.Areas.Innovation.Models.Components
+namespace NM_MultiSites.Areas.Innovation.Models.Components
 {
     public class Partner
     {

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace EMS.Areas.ems.Pipelines
+namespace NM_MultiSites.Areas.ems.Pipelines
 {
     public class RegisterHttpRoutes
     {

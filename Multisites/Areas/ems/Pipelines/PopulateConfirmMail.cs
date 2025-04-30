@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace EMS.Areas.ems.Pipelines
+namespace NM_MultiSites.Areas.ems.Pipelines
 {
     public class PopulateConfirmMail : PopulateMail
     {

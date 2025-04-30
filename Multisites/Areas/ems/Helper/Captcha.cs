@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 using System.Web;
 using System.Web.Mvc;
 
-namespace EMS.Areas.ems.Helper
+namespace NM_MultiSites.Areas.ems.Helper
 {
     public static class Captcha
     {

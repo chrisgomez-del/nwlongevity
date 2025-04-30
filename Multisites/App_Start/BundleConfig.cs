@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace Innovation
+namespace NM_MultiSites
 {
     public class BundleConfig
     {

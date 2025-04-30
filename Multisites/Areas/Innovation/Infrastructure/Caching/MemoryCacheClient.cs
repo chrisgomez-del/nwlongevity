@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Caching;
 
 
-namespace Innovation.Areas.Innovation.Infrastructure.Caching
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Caching
 {
     public class MemoryCacheClient : ICacheClient
     {

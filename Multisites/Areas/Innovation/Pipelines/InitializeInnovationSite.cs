@@ -1,10 +1,10 @@
 ﻿using System.Web.Routing;
-using Innovation.App_Start;
+using NM_MultiSites.App_Start;
 using Sitecore.Pipelines;
 using System.Web.Mvc;
 
 
-namespace Innovation.Areas.Innovation.Pipelines
+namespace NM_MultiSites.Areas.Innovation.Pipelines
 {
     public class InitializeInnovationSite
     {

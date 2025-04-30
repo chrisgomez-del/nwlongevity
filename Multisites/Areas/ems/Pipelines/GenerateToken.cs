@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EMS.Areas.ems.Pipelines
+namespace NM_MultiSites.Areas.ems.Pipelines
 {
     public class GenerateToken : PasswordRecoveryProcessor
     {

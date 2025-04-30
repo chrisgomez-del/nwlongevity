@@ -1,10 +1,10 @@
-﻿using Innovation.Areas.Innovation.Models.Components;
+﻿using NM_MultiSites.Areas.Innovation.Models.Components;
 using Sitecore.Data.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Innovation.Areas.Innovation.Helpers;
+using NM_MultiSites.Areas.Innovation.Helpers;
 using Sitecore.Data.Fields;
 using Sitecore.Mvc;
 using Sitecore.Mvc.Helpers;
@@ -12,7 +12,7 @@ using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Globalization;
 
-namespace Innovation.Areas.Innovation.Mappers.Components
+namespace NM_MultiSites.Areas.Innovation.Mappers.Components
 {
     public interface ICardListService
     {

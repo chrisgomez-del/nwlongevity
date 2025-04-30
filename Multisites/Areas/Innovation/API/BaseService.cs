@@ -1,7 +1,7 @@
-﻿using Innovation.Areas.Innovation.Infrastructure.Caching;
+﻿using NM_MultiSites.Areas.Innovation.Infrastructure.Caching;
 
 
-namespace Innovation.Areas.Innovation
+namespace NM_MultiSites.Areas.Innovation
 {
     public class BaseService
     {

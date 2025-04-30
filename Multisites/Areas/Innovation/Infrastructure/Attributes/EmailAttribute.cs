@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Attributes
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Attributes
 {
     public class EmailAttribute : RegularExpressionAttribute, IClientValidatable
     {

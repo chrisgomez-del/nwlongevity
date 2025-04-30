@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Attributes
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Attributes
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class FileSizeAttribute : ValidationAttribute, IClientValidatable

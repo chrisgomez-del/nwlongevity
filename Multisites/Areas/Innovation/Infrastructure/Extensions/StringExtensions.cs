@@ -12,7 +12,7 @@ using SC = Sitecore.Context;
 using HtmlAgilityPack;
 using Sitecore.StringExtensions;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Extensions
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Extensions
 {
     public static class StringExtensions
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Caching.CacheKeys
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Caching.CacheKeys
 {
     public partial class CacheKeys
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation
+namespace NM_MultiSites.Areas.Innovation
 {
     public class InnovationAreaRegistration : AreaRegistration 
     {

@@ -1,7 +1,7 @@
-﻿using Innovation.Areas.Innovation.API.Youtube.Models;
+﻿using NM_MultiSites.Areas.Innovation.API.Youtube.Models;
 using System.Collections.Generic;
 
-namespace Innovation.Areas.Innovation.API.Youtube.Interfaces
+namespace NM_MultiSites.Areas.Innovation.API.Youtube.Interfaces
 {
     public interface IYoutubeService
     {

@@ -1,4 +1,4 @@
-﻿using Innovation.Areas.Innovation.Helpers;
+﻿using NM_MultiSites.Areas.Innovation.Helpers;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
@@ -6,7 +6,7 @@ using System.Web.Http.Dispatcher;
 using System.Web.Routing;
 using WebApiContrib.Formatting.Jsonp;
 
-namespace Innovation.App_Start
+namespace NM_MultiSites.App_Start
 {
     public class RegisterWebApiRoutes
     {

@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Innovation.App_Start
+namespace NM_MultiSites.App_Start
 {
     public class RouteConfig
     {

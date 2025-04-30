@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Attributes
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Attributes
 {
     public class RequiredIfAttribute : RequiredAttribute, IClientValidatable
     {

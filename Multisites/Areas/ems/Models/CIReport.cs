@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EMS.Areas.ems.Models
+namespace NM_MultiSites.Areas.ems.Models
 {
     public class CIReport : List<CIItem>
     {

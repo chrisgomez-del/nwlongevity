@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Models.Components
+namespace NM_MultiSites.Areas.Innovation.Models.Components
 {
     public interface ITextBlock
     {

@@ -1,7 +1,7 @@
 ﻿using Google.Apis.YouTube.v3.Data;
-using Innovation.Areas.Innovation.API.Youtube.Interfaces;
+using NM_MultiSites.Areas.Innovation.API.Youtube.Interfaces;
 
-namespace Innovation.Areas.Innovation.API.Youtube.Models
+namespace NM_MultiSites.Areas.Innovation.API.Youtube.Models
 {
     public class YoutubeCategory
     {

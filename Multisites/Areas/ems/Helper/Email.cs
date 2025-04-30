@@ -6,7 +6,7 @@ using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace EMS.Areas.ems.Helper
+namespace NM_MultiSites.Areas.ems.Helper
 {
     public class Email
     {

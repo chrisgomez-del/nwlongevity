@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Models
+namespace NM_MultiSites.Areas.Innovation.Models
 {
     public class GeneralLink
     {

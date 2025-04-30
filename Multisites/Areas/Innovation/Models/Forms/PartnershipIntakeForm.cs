@@ -1,4 +1,4 @@
-﻿using Innovation.Areas.Innovation.Infrastructure.Attributes;
+﻿using NM_MultiSites.Areas.Innovation.Infrastructure.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Models.Forms
+namespace NM_MultiSites.Areas.Innovation.Models.Forms
 {
     public class PartnershipIntakeForm
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace Innovation.Areas.Innovation.Models.Components.Tabs
+namespace NM_MultiSites.Areas.Innovation.Models.Components.Tabs
 {
     public class ContentTab
     {

@@ -1,4 +1,4 @@
-﻿using Innovation.Areas.Innovation.Helpers;
+﻿using NM_MultiSites.Areas.Innovation.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +9,13 @@ using Sitecore.Mvc;
 using Sitecore.Mvc.Helpers;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
-using Innovation.Areas.Innovation.Models;
-using Innovation.Areas.Innovation.Models.Components;
-using Innovation.Areas.Innovation.API.Youtube.Models;
-using Innovation.Areas.Innovation.Infrastructure.Extensions;
-using Innovation.Areas.Innovation.API.Youtube;
+using NM_MultiSites.Areas.Innovation.Models;
+using NM_MultiSites.Areas.Innovation.Models.Components;
+using NM_MultiSites.Areas.Innovation.API.Youtube.Models;
+using NM_MultiSites.Areas.Innovation.Infrastructure.Extensions;
+using NM_MultiSites.Areas.Innovation.API.Youtube;
 
-namespace Innovation.Areas.Innovation.Mappers.Components
+namespace NM_MultiSites.Areas.Innovation.Mappers.Components
 {
     public interface IMissionInformationService
     {

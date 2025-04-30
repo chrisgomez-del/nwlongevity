@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Innovation.Areas.Innovation.API.Youtube.Models;
-using Innovation.Areas.Innovation.Helpers;
+using NM_MultiSites.Areas.Innovation.API.Youtube.Models;
+using NM_MultiSites.Areas.Innovation.Helpers;
 using Sitecore.Data.Items;
 
-namespace Innovation.Areas.Innovation.Models.Components
+namespace NM_MultiSites.Areas.Innovation.Models.Components
 {
     public class MissionInformation
     {

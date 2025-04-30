@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Sitecore.Web.UI.WebControls;
-using EMS.ems.Models;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Links;
-using EMS.Areas.ems.Helper;
-using EMS.Areas.ems.Models;
+using NM_MultiSites.Areas.ems.Helper;
+using NM_MultiSites.Areas.ems.Models;
 
-namespace EMS.Controllers
+namespace NM_MultiSites.Areas.ems.Controllers
 {
     public class EventsController : Controller
     {

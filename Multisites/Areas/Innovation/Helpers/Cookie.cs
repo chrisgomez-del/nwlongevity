@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Helpers
+namespace NM_MultiSites.Areas.Innovation.Helpers
 {
     public static class Cookie
     {

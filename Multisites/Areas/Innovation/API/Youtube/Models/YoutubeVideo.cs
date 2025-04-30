@@ -2,7 +2,7 @@
 using Google.Apis.YouTube.v3.Data;
 
 
-namespace Innovation.Areas.Innovation.API.Youtube.Models
+namespace NM_MultiSites.Areas.Innovation.API.Youtube.Models
 {
     public class YoutubeVideo
     {

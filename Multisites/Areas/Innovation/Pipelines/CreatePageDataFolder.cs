@@ -11,7 +11,7 @@ using Sitecore.Pipelines.GetRenderingDatasource;
 using Sitecore.SecurityModel;
 using Sitecore.Text;
 
-namespace Innovation.Areas.Innovation.Pipelines
+namespace NM_MultiSites.Areas.Innovation.Pipelines
 {
     public class CreatePageDataFolder
     {

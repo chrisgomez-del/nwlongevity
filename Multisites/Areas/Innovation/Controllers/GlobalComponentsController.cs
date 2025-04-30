@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Innovation.Areas.Innovation.Mappers.Global;
-using Innovation.Areas.Innovation.Models.Global;
+using NM_MultiSites.Areas.Innovation.Mappers.Global;
+using NM_MultiSites.Areas.Innovation.Models.Global;
 
-namespace Innovation.Areas.Innovation.Controllers
+namespace NM_MultiSites.Areas.Innovation.Controllers
 {
     public class GlobalComponentsController : Controller
     {

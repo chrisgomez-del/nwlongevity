@@ -1,4 +1,4 @@
-﻿using Innovation.Areas.Innovation.Helpers;
+﻿using NM_MultiSites.Areas.Innovation.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ using Sitecore.Mvc;
 using Sitecore.Mvc.Helpers;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
-using Innovation.Areas.Innovation.Models.Global;
-using Innovation.Areas.Innovation.Models;
+using NM_MultiSites.Areas.Innovation.Models.Global;
+using NM_MultiSites.Areas.Innovation.Models;
 
-namespace Innovation.Areas.Innovation.Mappers.Global
+namespace NM_MultiSites.Areas.Innovation.Mappers.Global
 {
     public interface IHeaderService
     {

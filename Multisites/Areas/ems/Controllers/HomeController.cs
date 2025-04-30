@@ -1,5 +1,5 @@
-﻿using EMS.Areas.ems.Helper;
-using EMS.Areas.ems.Models.User;
+﻿using NM_MultiSites.Areas.ems.Helper;
+using NM_MultiSites.Areas.ems.Models.User;
 using Sitecore.Pipelines;
 using Sitecore.Pipelines.PasswordRecovery;
 using Sitecore.Security.Accounts;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace EMS.Controllers
+namespace NM_MultiSites.Areas.ems.Controllers
 {
     public class HomeController : Controller
     {

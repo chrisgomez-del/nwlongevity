@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Innovation.Areas.Innovation.Models.Forms
+namespace NM_MultiSites.Areas.Innovation.Models.Forms
 {
     public class ContactUsForm
     {

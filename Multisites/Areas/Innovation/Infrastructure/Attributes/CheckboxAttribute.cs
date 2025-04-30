@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Innovation.Areas.Innovation.Infrastructure.Attributes
+namespace NM_MultiSites.Areas.Innovation.Infrastructure.Attributes
 {
     public class CheckboxAttribute : ValidationAttribute
     {

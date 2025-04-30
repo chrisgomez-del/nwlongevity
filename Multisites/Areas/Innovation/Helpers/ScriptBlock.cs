@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Innovation.Areas.Innovation.Helpers
+namespace NM_MultiSites.Areas.Innovation.Helpers
 {
 	public static class HtmlHelpers
 	{

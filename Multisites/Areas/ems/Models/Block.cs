@@ -9,7 +9,7 @@ using Sitecore.Mvc.Helpers;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 
-namespace EMS.ems.Models  
+namespace NM_MultiSites.Areas.ems.Models  
 {
     public class Block : RenderingModel
     {

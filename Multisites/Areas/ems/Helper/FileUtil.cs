@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Data.OleDb;
 
-namespace EMS.Areas.ems.Helper
+namespace NM_MultiSites.Areas.ems.Helper
 {
     public static class FileUtil
     {

@@ -1,5 +1,5 @@
-﻿using EMS.Areas.ems.Helper;
-using EMS.Areas.ems.Models;
+﻿using NM_MultiSites.Areas.ems.Helper;
+using NM_MultiSites.Areas.ems.Models;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Mvc.Presentation;
@@ -14,7 +14,7 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 
-namespace EMS.Areas.ems.API
+namespace NM_MultiSites.Areas.ems.API
 {
     public class ReportDataController : ApiController
     {

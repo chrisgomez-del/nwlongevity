@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Mvc;
 
-namespace EMS.Areas.ems.Helper
+namespace NM_MultiSites.Areas.ems.Helper
 {
     public class AuthorizeComponent : FilterAttribute
     {
