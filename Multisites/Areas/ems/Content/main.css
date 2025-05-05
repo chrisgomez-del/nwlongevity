@@ -1418,7 +1418,7 @@ body {
 
 .carouselimage {
     width: 100%;
-    max-height: 30em;
+    max-height: 25em;
 }
 
 .btn-sm {
@@ -2827,7 +2827,7 @@ table tbody th {
 .card-img {
     width: 100%;
     border-radius: calc(.25rem - 1px);
-    height: 25em;
+    height: 22em;
     padding: .25rem;
     background-color: #fff;
     border: 1px solid #dee2e6;
@@ -2836,7 +2836,7 @@ table tbody th {
 .feature-img {
     width: 100%;
     border-radius: calc(.25rem - 1px);
-    height: 25em;
+    height: 20em;
     padding: .25rem;
     background-color: #fff;
     border: 1px solid #dee2e6;
@@ -2998,4 +2998,8 @@ footer.container {
     .paddingnobottom {
         padding: 16px 16px 0px 16px;
     }
+}
+
+.documentlinkfontsize{
+    font-size:16px;
 }

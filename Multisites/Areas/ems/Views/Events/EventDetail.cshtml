@@ -18,16 +18,16 @@
                 <img src="@Model.Image" class="card-img" alt="...">
             }
 
-        <p class="card-text">
-            @Model.MainContent
-            @Model.AdditionalContent
-        </p>
+            <p class="card-text">
+                @Model.MainContent
+                @Model.AdditionalContent
+            </p>
 
             @if (Model.CTALink != null && Model.CTATitle != null)
             {
                 <p><a class="btn btn-lg btn-primary" href="@Model.CTALink.ToString()" role="button">@Model.CTATitle</a></p>
             }
-            <p><a href="@Model.Item.Parent.Paths.ContentPath" role="button">Back To Events</a></p>
+            <p><a href="@Model.Item.Parent.Paths.ContentPath" role="button"><i class="fa fa-chevron-left" style="font-size:10px" aria-hidden="true"></i> Back To Events</a></p>
         </div>
     </div>
 

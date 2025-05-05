@@ -273,6 +273,7 @@
     <Compile Include="Areas\ems\Models\EventCollection.cs" />
     <Compile Include="Areas\ems\Models\EventDetail.cs" />
     <Compile Include="Areas\ems\Models\FolderGroup.cs" />
+    <Compile Include="Areas\ems\Models\FormMessage.cs" />
     <Compile Include="Areas\ems\Models\Module.cs" />
     <Compile Include="Areas\ems\Models\ModuleGroup.cs" />
     <Compile Include="Areas\ems\Models\NavigationItem.cs" />
@@ -286,6 +287,7 @@
     <Compile Include="Areas\ems\Pipelines\GenerateToken.cs" />
     <Compile Include="Areas\ems\Pipelines\PopulateConfirmMail.cs" />
     <Compile Include="Areas\ems\Pipelines\RegisterHttpRoutes.cs" />
+    <Compile Include="Areas\ems\Pipelines\SendEmail.cs" />
     <Compile Include="Areas\Innovation\API\BaseService.cs" />
     <Compile Include="Areas\Innovation\API\CaptchaController.cs" />
     <Compile Include="Areas\Innovation\API\Youtube\Interfaces\IYoutubeService.cs" />
@@ -366,7 +368,6 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sitecore\api\passwordrecovery\ConfirmRecoveryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\ems\Content\bootstrap-new.css" />
@@ -374,6 +375,7 @@
     <Content Include="Areas\ems\Content\bootstrap.min.css" />
     <Content Include="Areas\ems\Content\login.css" />
     <Content Include="Areas\ems\Content\main.css" />
+    <Content Include="Areas\ems\Content\nmpmain.css" />
     <Content Include="Areas\ems\Content\nmpnmain.css" />
     <Content Include="Areas\ems\Content\Site.css" />
     <Content Include="Areas\ems\fonts\glyphicons-halflings-regular.svg" />
@@ -400,6 +402,7 @@
     <Content Include="Areas\ems\Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Areas\ems\Scripts\Login.js" />
     <Content Include="Areas\ems\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Areas\ems\Scripts\nmpnsite.js" />
     <Content Include="Areas\ems\Scripts\respond.js" />
     <Content Include="Areas\ems\Scripts\respond.min.js" />
     <Content Include="Areas\ems\Scripts\searchbar.js" />
@@ -497,6 +500,9 @@
     <Content Include="Areas\ems\Views\Sections\Features.cshtml" />
     <Content Include="Areas\ems\Views\Utilities\SearchBar.cshtml" />
     <Content Include="Areas\ems\Views\web.config" />
+    <Content Include="Areas\ems\Views\Home\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Areas\ems\Views\Admin\Unauthorized.cshtml" />
+    <Content Include="Areas\ems\Views\Forms\FormMessage.cshtml" />
     <None Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.intellisense.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.min.js" />
@@ -577,6 +583,12 @@
     <Content Include="Areas\Innovation\Views\Components\NewsFeedCard.cshtml" />
     <Content Include="Areas\Innovation\Views\Components\Partner.cshtml" />
     <Content Include="Areas\Innovation\Views\Shared\_loaderIcon.cshtml" />
+    <Content Include="Areas\Innovation\Views\Components\CardListBlock.cshtml" />
+    <Content Include="Areas\Innovation\Views\Components\StatsComponentWithDataPoint.cshtml" />
+    <Content Include="Areas\Innovation\Views\Components\StatsComponentWithImage.cshtml" />
+    <Content Include="Areas\Innovation\Views\Components\StatsComponentWithPanel.cshtml" />
+    <Content Include="Areas\Innovation\Views\CustomForms\ContactUsThankYou.cshtml" />
+    <Content Include="Areas\Innovation\Views\CustomForms\PartnershipIntakeFormThankYou.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -610,6 +622,7 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="sitecore\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

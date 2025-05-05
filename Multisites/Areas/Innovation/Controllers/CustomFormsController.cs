@@ -102,9 +102,7 @@ namespace NM_MultiSites.Areas.Innovation.Controllers
             var values = new Dictionary<string, string> {
                 { "{{name}}",form.FullName },
                 { "{{email}}", form.EmailAddress },
-                { "{{msg}}", form.FormMessage },
-                { "{{role}}", form.SelectedCurrentRole},
-                { "{{topic}}",form.SelectedTopic }
+                { "{{msg}}", form.FormMessage }
         };
             string message = msg.Body.ToString();
             foreach (var key in values.Keys)

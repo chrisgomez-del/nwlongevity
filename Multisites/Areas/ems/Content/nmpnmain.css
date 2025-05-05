@@ -298,7 +298,7 @@ td, th {
 }
 
 .card-body p {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .list-stacked, .row {
@@ -1049,11 +1049,14 @@ body {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     line-height: 1.25;
-    font-weight: 600;
-    color: #63599e;
+    /*font-weight: 600;
+    color: #63599e;*/
+    color: #232526;
     margin: 0 0 16px
 }
-
+.card-title {
+    color: #00778a;
+}
 .h1, h1 {
     font-size: 1.875rem
 }
@@ -1066,6 +1069,17 @@ body {
 
 .h2, h2 {
     font-size: 1.5rem
+}
+
+p.h2 {
+    color: black;
+    font-weight: 400;
+    color: black;
+}
+p.h1 {
+    color: black;
+    font-weight: 500;
+    color: black;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1187,9 +1201,9 @@ cite {
 }
 
 body {
-    font-size: 14px;
-    font-family: Open Sans,Helvetica,Arial,sans-serif;
-    line-height: 1.75;
+    font-size: 16px;
+    /*font-family: Open Sans,Helvetica,Arial,sans-serif;*/
+    line-height: 1.4286;
     font-weight: 400;
     color: #333
 }
@@ -1201,13 +1215,16 @@ body {
 
 .loginbar {
     background: #514689 !important;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 767px) {
     body {
         overflow-x: hidden;
         font-size: 14px;
+    }
+    .loginbar {
+        font-size: 13px;
     }
 }
 
@@ -2239,6 +2256,10 @@ dl, ol, ul {
     margin: 0 0 1em
 }
 
+ul.nodisc {
+    list-style-type: none;
+}
+
 li {
     margin: 0 0 .5em;
     padding: 0 0 0 1em
@@ -2958,8 +2979,8 @@ table tbody th {
     text-transform: uppercase;
     line-height: inherit;
     letter-spacing: .0375em;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: .8rem;
+    font-weight: 500;
     color: #00778a;
     background: transparent;
     border-color: transparent;
@@ -3116,10 +3137,32 @@ li.nav-item a{
     color: black;
     font-weight: bold;
 }
+
+ul.documentlist li {
+    list-style: none;
+}
+
+ul.documentlist li strong{
+    font-weight:600;
+}
+.documentlinkfontsize {
+    font-size: 14px;
+}
+
+.main-header {
+    width: 200px;
+    padding-top: 10px;
+}
+
 @media only screen and (max-width: 767px) {
-    .carousel-item img {
-        height: 125px;
+
+    .main-header {
+        width: 150px;
+        padding-top: 10px;
     }
+    /*.carousel-item img {
+        height: 125px;
+    }*/
     h2.featurette-heading {
         margin-top: 16px;
     }
@@ -3127,6 +3170,14 @@ li.nav-item a{
     .paddingnobottom {
         padding: 16px 16px 0px 16px;
     }
+    ul.documentlist {
+        padding: 0px;
+    }
+
+    ul.documentlist li strong{
+    font-weight:400;
+    }
+
 }
 
 .nomargin{
@@ -3142,10 +3193,31 @@ li.nav-item a{
 .carousel-caption {
     position: absolute;
     right: 35%;
-    bottom: 120px;
+    bottom: 230px;
     left: 5%;
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
+}
+.nonboldh1 {
+    font-weight: 400;
+    color:black;
+}
+
+
+@media only screen and (min-width: 991px) and (max-width:1200px) {
+    .carousel-caption {
+        bottom: 180px;
+    }
+}
+
+@media only screen and (min-width: 786px) and (max-width:991px) {
+    .carousel-caption {
+        bottom: 120px;
+    }
+
+    .nonboldh1 {
+        font-size: 20px;
+    }
 }

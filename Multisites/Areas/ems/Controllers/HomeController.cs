@@ -72,13 +72,28 @@ namespace NM_MultiSites.Areas.ems.Controllers
         [HttpPost]
         public ActionResult ChangePassword(PasswordUpdate lg)
         {
-            lg.UserName = UserInfo().UserName;
+            if (lg == null)
+            {
+                Sitecore.Diagnostics.Log.Warn("ChangePassword: PasswordUpdate object is null.", this);
+                return View("Error");
+            }
+
+            var currentUser = UserInfo();
+            if (currentUser == null)
+            {
+                lg.Message = "Error: Unable to retrieve user information.";
+                return View(lg);
+            }
+
+            lg.UserName = currentUser.UserName;
             lg.Success = false;
-            if (lg.NewPassword.Equals(lg.ConfirmPassword) && LoginHelper.ValidateUserPassword(lg.UserName, lg.OldPassword))
+
+            if (string.Equals(lg.NewPassword, lg.ConfirmPassword, StringComparison.Ordinal) && LoginHelper.ValidateUserPassword(lg.UserName, lg.OldPassword))
             {
                 lg.Success = LoginHelper.ChangePassword(lg.UserName, lg.NewPassword);
             }
-            lg.Message = lg.Success ? "Success : Password has been changed." : "Error : Failed to update password ";
+
+            lg.Message = lg.Success ? "Success: Password has been changed." : "Error: Failed to update password.";
             return View(lg);
         }
 

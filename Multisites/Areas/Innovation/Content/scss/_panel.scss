@@ -1,0 +1,11 @@
+﻿.panel {
+
+    &.panel-alt {
+        background-color: $secondary-color;
+        padding: 2rem 3rem;
+
+        .panel-title {
+            text-align: center;
+        }
+    }
+}

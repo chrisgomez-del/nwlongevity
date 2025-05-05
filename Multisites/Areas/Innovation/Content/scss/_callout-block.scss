@@ -1,0 +1,27 @@
+﻿.callout-panel {
+    background: rgb(99,89,158);
+    background: linear-gradient(135deg, rgba(99,89,158,1) 0%, rgba(127,109,242,1) 55%, rgba(22, 184, 202, 0.75) 100%);
+    color: $secondary-color;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 3rem;
+
+    @media only screen and (min-width: 768px) {
+        background-size: 100%;
+    }
+
+    .callout-panel-title {
+        color: $secondary-color;
+    }
+
+    .callout-panel-content {
+        font-size: 2.625rem;
+        line-height: 1.5;
+        padding: 0 5rem;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 1.375rem;
+            padding: 0;
+        }
+    }
+}

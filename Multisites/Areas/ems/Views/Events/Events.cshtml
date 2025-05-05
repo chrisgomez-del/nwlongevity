@@ -21,8 +21,15 @@
                             <div class="card-body">
 
                                 <h4 class="card-title">@item.Title</h4>
-                                <p>Event Start: @item.StartDate</p>
-                                <p>Event End: @item.EndDate</p>
+                                @if (item.StartDate != null && !String.IsNullOrWhiteSpace(item.StartDate.ToString()))
+                                {
+                                    <p>Event Start: @item.StartDate.ToString().Replace("AM", "am").Replace("PM", "pm")</p>
+                                }
+                                @if (item.EndDate != null && !String.IsNullOrWhiteSpace(item.EndDate.ToString()))
+                                {
+                                    <p>Event End: @item.EndDate.ToString().Replace("AM", "am").Replace("PM", "pm")</p>
+                                }
+
                                 @if (@item.Image != null && @item.Image.Trim().Length > 0)
                                 {
                                     <img src="@item.Image" class="card-img" alt="...">
@@ -36,6 +43,7 @@
                                 {
                                     <p><a class="btn btn-lg btn-primary" href="@item.CTALink.ToString()" role="button">@item.CTATitle</a></p>
                                 }
+
                             </div>
                         </div>
                         <img src="/images/horizgradientrule.jpg" style="width:100%;" height="3">

@@ -6,10 +6,12 @@
 @{
     var item = SitecoreAccess.getSiteSettingItem() ?? RenderingContext.Current.Rendering.Item;
     String url = String.Empty;
+    string imagewidth = "auto";
     String imageFullPath = String.Empty;
     if (item != null && item.Fields["Image"] != null && item.Fields["Image"].HasValue)
     {
         Sitecore.Data.Fields.ImageField imgField = ((Sitecore.Data.Fields.ImageField)item.Fields["Image"]);
+        imagewidth = String.IsNullOrWhiteSpace(imgField.HSpace) ? "auto" : imgField.HSpace + "px";
         url = imgField != null ? Sitecore.Resources.Media.MediaManager.GetMediaUrl(imgField.MediaItem) : String.Empty;
         imageFullPath = item.Paths.FullPath;
     }
@@ -20,8 +22,7 @@
         @if (url != null)
         {
             <a href="/" class="link-home">
-                <img src="@url" class="logo image" />
-
+                <img src="@url" class="logo image" style="width:@(imagewidth);" />
             </a>
         }
         else if (Sitecore.Context.PageMode.IsExperienceEditor)

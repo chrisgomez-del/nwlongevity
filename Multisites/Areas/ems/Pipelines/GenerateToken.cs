@@ -1,38 +1,22 @@
 ﻿using Sitecore.Data;
-using Sitecore.Diagnostics;
 using Sitecore.Pipelines.PasswordRecovery;
 using Sitecore.Security.Accounts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace NM_MultiSites.Areas.ems.Pipelines
 {
-    public class GenerateToken : PasswordRecoveryProcessor
+    public class GenerateToken
     {
-        public override void Process(PasswordRecoveryArgs args)
+        public void Process(PasswordRecoveryArgs args)
         {
-            Assert.ArgumentNotNull(args, "args");
             var user = User.FromName(args.Username, true);
-            if (user == null)
-            {
-                args.AbortPipeline();
-                return;
-            }
-            var token = ID.NewID.ToShortID().ToString();
-            StoreTokenOnUser(user, token);
-            args.CustomData.Add(Constants.ConfirmTokenKey, token);
-        }
+            if (user == null) return;
 
-        private void StoreTokenOnUser(User user, string confirmToken)
-        {
-            user.Profile.SetCustomProperty(Constants.ConfirmTokenKey, confirmToken);
+            // Fix: Replace 'ShortID.NewID' with 'ShortID.NewId()' as per the provided type signature.
+            var token = ShortID.NewId().ToString();
+            user.Profile.SetCustomProperty("ResetToken", token);
             user.Profile.Save();
+
+            args.CustomData["ResetToken"] = token;
         }
-    }
-    internal struct Constants
-    {
-        internal const string ConfirmTokenKey = "PasswordToken";
     }
 }

@@ -37,20 +37,20 @@
         height: 100%;
 
         .heading {
-            font-size: 14px;
+            font-size: $font-mobile-h7;
             font-weight: bold;
         }
 
         .content-link-container {
 
             a {
-                font-size: 30px;
+                font-size: $font-size-h3;
                 font-weight: 800;
             }
         }
 
         .sub-heading {
-            font-size: 24px;
+            font-size: $font-size-h4;
             font-weight: 800;
         }
 

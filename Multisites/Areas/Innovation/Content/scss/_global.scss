@@ -1,0 +1,120 @@
+﻿html, body {
+    width: 100%;
+    /* height: 100%; */
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.glass-bg {
+    background-color: $glass-bg;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $btn-font-size;
+    font-weight: 600;
+    color: $btn-color;
+    background: $btn-bg;
+    padding: $btn-padding;
+    border: $btn-border;
+
+    @media print {
+        display: none;
+    }
+
+    &:hover, &:active, &:focus {
+        background: $btn-hover-bg;
+        color: $btn-color;
+        box-shadow: none !important;
+        text-decoration: none !important;
+    }
+}
+
+.btn-primary {
+    background-color: $btn-primary-bg;
+    border-color: $btn-primary-border-color;
+    border-radius: 51px;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-primary-active-bg;
+        border-color: $primary-cta-hover;
+    }
+
+    &:disabled {
+        background-color: $btn-disabled-bg;
+        border-color: $btn-disabled-bg;
+    }
+}
+
+.btn-secondary {
+    background-color: $btn-secondary-bg;
+    border-color: $btn-secondary-bg;
+    color: $btn-secondary-color;
+    border-radius: 51px;
+    padding: 7px 20px;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-secondary-hover-bg;
+        border-color: $btn-secondary-hover-bg;
+        color: $btn-primary-color;
+    }
+
+    &:disabled {
+        background-color: $btn-disabled-bg;
+        border-color: $btn-disabled-bg;
+        color: $btn-primary-color;
+    }
+}
+
+.btn-lg {
+    font-size: $btn-lg-font-size;
+    padding: 15px 25px;
+}
+
+.btn-sm {
+    font-size: $btn-sm-font-size;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.social {
+
+    &.icon-links {
+
+
+        a {
+            padding: 15px 0 15px 12px;
+
+            @media only screen and (max-width: 768px) {
+                padding: 10px 0 10px 15px;
+
+                &:first-child {
+                    padding-left: 0 !important;
+                }
+            }
+        }
+
+        .bi {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        li {
+            margin-left: 0;
+        }
+    }
+}

@@ -136,11 +136,24 @@
                     padding: 3em 1em 3em 4em;
                 }
 
+                @media only screen and (max-width: 400px) {
+                    padding: 3em 1em 3em 2em;
+                }
+
                 .title-card {
                     color: white;
                     display: block;
                     margin-bottom: 50px;
                     font-size: 36px;
+
+                    @media only screen and (max-width:1200px) {
+                        font-size: 32px;
+                        font-weight: 700;
+                    }
+
+                    @media only screen and (max-width:992px) {
+                        font-size: 30px;
+                    }
                 }
             }
         }

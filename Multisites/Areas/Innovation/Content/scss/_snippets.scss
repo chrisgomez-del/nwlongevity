@@ -1,0 +1,60 @@
+﻿.panel {
+    // benefits cards snippet
+    .panel-content-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .panel-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            .panel-card-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 0;
+
+                .panel-card-icon {
+                    font-size: 60px;
+                    margin-bottom: 10px;
+                    background: -moz-linear-gradient(184deg, rgba(99,89,158,1) 0%, rgba(127,109,242,1) 50%, rgba(22,184,202,1) 100%);
+                    background: -webkit-linear-gradient(184deg, rgba(99,89,158,1) 0%, rgba(127,109,242,1) 50%, rgba(22,184,202,1) 100%);
+                    background: linear-gradient(184deg, rgba(99,89,158,1) 0%, rgba(127,109,242,1) 50%, rgba(22,184,202,1) 100%);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    &::before {
+                        display: initial;
+                    }
+                }
+
+                .panel-card-content {
+                    text-align: center;
+                    max-width: calc(100% - 20px);
+
+                    .h4 {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-fixed-width {
+        flex: 0 0 100%;
+
+        @media only screen and (min-width: 480px) {
+            flex: 0 0 50%;
+        }
+
+        @media only screen and (min-width: 768px) {
+            flex: 0 0 33.333333%;
+        }
+    }
+}

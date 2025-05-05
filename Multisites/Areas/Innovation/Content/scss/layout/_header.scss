@@ -351,7 +351,25 @@
                 flex-wrap: wrap;
                 gap: 50px;
 
+                @media only screen and (max-width:515px) {
+                    gap: 0px;
+
+                    .list-inline-item {
+                        flex: 0 0 30%;
+                        margin-bottom: 25px;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) and (max-width:1510px) {
+                    gap: 0px;
+                }
+
                 .list-inline-item {
+
+                    @media only screen and (min-width: 1200px) and (max-width:1510px) {
+                        flex: 0 0 30%;
+                        margin-bottom: 25px;
+                    }
 
                     @media only screen and (min-width: 1023px) and (max-width:1200px) {
                         margin-right: 2rem !important;

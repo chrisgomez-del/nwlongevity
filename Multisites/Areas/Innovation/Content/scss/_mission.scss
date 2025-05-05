@@ -1,0 +1,33 @@
+﻿.mission-information {
+    background: $glass-bg;
+
+    @media only screen and (max-width:992px) {
+        flex-direction: column-reverse !important;
+
+        .glass-bg {
+            backdrop-filter: blur(7px) brightness(100%);
+        }
+    }
+
+    img {
+        box-shadow: -8px 0px 10px -4px rgba(97,93,93,0.75);
+        -webkit-box-shadow: -8px 0px 10px -4px rgba(97,93,93,0.75);
+        -moz-box-shadow: -8px 0px 10px -4px rgba(97,93,93,0.75);
+
+        @media only screen and (max-width:992px) {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            margin-bottom: -20px;
+        }
+    }
+
+    &.flex-row-reverse {
+
+        img {
+            box-shadow: 8px 0px 10px -4px rgba(97,93,93,0.75);
+            -webkit-box-shadow: 8px 0px 10px -4px rgba(97,93,93,0.75);
+            -moz-box-shadow: 8px 0px 10px -4px rgba(97,93,93,0.75);
+        }
+    }
+}

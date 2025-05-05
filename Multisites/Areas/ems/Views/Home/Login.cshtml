@@ -19,8 +19,12 @@
             }
             <!-- Login Form -->
             <form method="post" class="topmargin35">
-                <input type="text" id="login" class="fadeIn second" name="username" placeholder="User Name" autocomplete="off">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" autocomplete="off">
+                <input required="required" type="text" id="login" class="fadeIn second form-required"
+                       oninvalid="this.setCustomValidity('Please Enter User Name')" oninput="setCustomValidity('')"
+                       name="username" placeholder="User Name" autocomplete="off" title="Please enter user name">
+                <input required="required" type="password" id="password" class="fadeIn third form-required"
+                       oninvalid="this.setCustomValidity('Please Enter Password')" oninput="setCustomValidity('')"
+                       name="password" placeholder="Password" autocomplete="off">
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
             <ul class="menu nav">
@@ -32,7 +36,7 @@
             <form method="post">
                 <input type="text" id="logout" class="fadeIn third" name="logout" placeholder="password" value="logout" hidden>
                 <strong>@Model.UserName  </strong><input type="submit" class="fadeIn fourth" value="Log Out"> <br />
-                Email : @Model.Email <br /> Npis: @Model.NPIs
+                Email : @Model.Email <br /> Npi ID: @Model.NPIs
             </form>
         }
     </div>

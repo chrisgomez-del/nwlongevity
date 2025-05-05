@@ -12,7 +12,7 @@ $(function () {
             $('#SelectedCurrentRole').valid();
             FormHelper.errorStateRadio("CurrentRole", 1);
         });
-        
+
         $('input[name="Topic"]').on("change", function () {
             $('#SelectedTopic').val($(this).val());
             $('#SelectedTopic').valid();
@@ -28,7 +28,7 @@ $(function () {
             else {
                 FormHelper.errorStateRadio(fieldname, 0);
             }
-            
+
         });
 
         $('.contact-submit').on('click', function (e) {
@@ -37,7 +37,7 @@ $(function () {
             $captchaelement.removeClass("captcha-error");
             var formid = "#" + formname;
             var validator = $(formid).validate();
-            if ($(formid).valid() && FormHelper.IsradiobuttonValid('CurrentRole') && FormHelper.IsradiobuttonValid('Topic')) {
+            if ($(formid).valid() ) {
                 let success = (async () => await FormHelper.validateCaptcha())();
                 success.then(function (data) {
                     if (data) {
@@ -51,7 +51,7 @@ $(function () {
                         $captchaelement.addClass("captcha-error");
                         return false;
                     }
-                    
+
                 });
             }
             else {
