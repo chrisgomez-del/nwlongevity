@@ -58,7 +58,7 @@ namespace NM_MultiSites.Areas.ems.Pipelines
             body += "\n\nPlease return to the site and log in using the following information:";
             body += $"\nNew Password: {newPassword}";
 
-            var fromAddress = "donotreply@mysitecoresite.net"; 
+            var fromAddress = "donotreply@nm.org"; 
 
             var mailMessage = new MailMessage
             {
