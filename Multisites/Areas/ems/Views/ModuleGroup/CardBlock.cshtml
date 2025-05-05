@@ -1,0 +1,49 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using NM_MultiSites.Areas.ems.Helper
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+@{
+    int colSplit = 1;
+    var colSplitItem = SitecoreAccess.getRenderingparameterDroplinkSelectedItem("Columns");
+    if (colSplitItem != null)
+    {
+        int colStyle = Int32.Parse(colSplitItem.Fields["Value"].Value);
+        colSplit = 12 / colStyle;
+    }
+
+}
+
+@if (Model != null && Model.Item != null)
+{
+
+    <div class="col-md-@colSplit">
+        <div class="card-body">
+
+            <h4 class="card-title">@Html.Sitecore().Field("Title")</h4>
+            @if (Model.Item.Fields["Image"] != null && !(String.IsNullOrWhiteSpace(Model.Item.Fields["Image"].Value)))
+            {
+                @Html.Sitecore().Field("Image",new { @class="card-img" , @alt="..."})
+            }
+
+        <p class="card-text">
+            @Html.Sitecore().Field("MainContent")
+        </p>
+
+            @if (Model.Item.Fields["CTALink"] != null && !(String.IsNullOrWhiteSpace(Model.Item.Fields["CTALink"].Value)))
+            {
+        <p>
+            @Html.Sitecore().BeginField("CTALink")
+            @Html.Sitecore().BeginField("CTATitle")
+            @Html.Sitecore().EndField()
+        </p>
+            }
+        </div>
+    </div>
+
+
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}

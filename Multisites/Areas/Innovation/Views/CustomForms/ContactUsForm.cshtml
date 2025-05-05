@@ -1,0 +1,72 @@
+﻿@using NM_MultiSites.Areas.Innovation.Helpers
+@model NM_MultiSites.Areas.Innovation.Models.Forms.ContactUsForm
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<div class="contact-us-form-section d-flex">
+    <div class="container-fluid contact-info">
+        <div id="contact-formPanel" class="row h-100">
+
+            <p>Use this form to submit a question or request to learn more about the Northwestern Medicine Mansueto Innovation Institute.</p>
+            @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post, new { id = "contact-form", @class = "contact-us-form d-flex flex-column justify-content-evenly", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                HtmlHelper.ClientValidationEnabled = true;
+                HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+
+                <div class="form-section">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.FullName)
+                        @Html.TextBoxFor(x => x.FullName, new
+                   {
+
+                       @class = "form-control border-bottom",
+                       @id = "fullname",
+                       maxlength = 50,
+                       required = "required"
+                   })
+
+                        @Html.ValidationMessageFor(x => x.FullName)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.EmailAddress)
+                        @Html.TextBoxFor(x => x.EmailAddress, new
+                   {
+                       @class = "form-control border-bottom",
+                       @id = "email",
+                       maxlength = 50,
+                       required = "required"
+                   })
+
+                        @Html.ValidationMessageFor(x => x.EmailAddress)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.FormMessage)
+                        @Html.TextAreaFor(x => x.FormMessage, new
+                   {
+                       @placeholder = "Enter message here",
+                       @class = "form-control border-bottom",
+                       @rows = "5",
+                       @id = "formmessage",
+                       required = "required",
+                       maxlength = 500
+                   })
+
+                        @Html.ValidationMessageFor(x => x.FormMessage)
+                    </div>
+                </div>
+                <div class="g-recaptcha py-3 border border-light" data-sitekey="@Sitecore.Configuration.Settings.GetSetting("SiteKey")" data-size="compact"></div>
+
+                @Html.Partial("~/Areas/Innovation/Views/Shared/_loaderIcon.cshtml")
+
+                <div class="mt-5">
+                    <button id="formsubmit" type="submit" class="btn btn-primary contact-submit">Submit</button>
+                </div>
+            }
+        </div>
+        <div style="display:none;" id="formConfirmation" class="pi-text-container">
+            <div id="message"></div>
+        </div>
+    </div>
+</div>

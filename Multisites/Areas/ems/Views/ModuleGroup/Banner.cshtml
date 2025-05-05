@@ -1,0 +1,38 @@
+﻿@using NM_MultiSites.Areas.ems.Models
+@model Module
+@using Sitecore.Mvc.Extensions
+@{
+    Layout = null;
+
+}
+
+    <carousel>
+        @if (Model != null)
+        {
+        <div id="banner" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="@Model.Image" />
+
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>@Model.Title</h1>
+                            <p>@Model.ShortText</p>
+                            @if (Model.CTALink != null && Model.CTATitle != null)
+                            {
+                            <p><a class="btn btn-lg btn-primary" href="@Model.CTALink.ToString()" role="button">@Model.CTATitle</a></p>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        }
+        else if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+        <div style="width:100%;border:1px solid;"> Select Data Source for Banner</div>
+        }
+    </carousel>

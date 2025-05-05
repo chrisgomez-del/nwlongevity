@@ -1,0 +1,11 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.StatComponentPanel
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+@if (Model != null)
+{
+    @Model.Title
+
+
+    @Html.Sitecore().DynamicPlaceholder("StatComponentPanel")
+}

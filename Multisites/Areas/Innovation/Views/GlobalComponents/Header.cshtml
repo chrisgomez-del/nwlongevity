@@ -1,0 +1,114 @@
+﻿@using NM_MultiSites.Areas.Innovation.Helpers
+@model NM_MultiSites.Areas.Innovation.Models.Global.Header
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    string cssHomePage = Model.IsHomePageHeader ? "header-home" : String.Empty;
+    string BgImage = SitecoreAccess.GetMediaUrl(Model.SourceItem, "CaseStudy Header Image");
+    bool IsImageAvailable = !String.IsNullOrWhiteSpace(BgImage);
+    string stylestring = IsImageAvailable ? String.Format("background-image: linear-gradient(190deg,rgba(99, 89, 158, .75) 0,rgba(127, 109, 242, .75) 55%,rgba(22,184,202,.75) 100%), url('{0}')", BgImage) : String.Empty;
+    string cssImageBg = IsImageAvailable ? "header-image" : String.Empty;
+}
+
+@if (Model != null)
+{
+
+<section class="w-100 d-flex flex-column justify-content-center contact @cssHomePage @cssImageBg" style="@stylestring">
+
+    @if (!isEditMode) 
+    { 
+    <span class="d-flex flex-row align-items-center justify-content-between w-100 px-md-5 navbar" style="z-index:3;">
+        @if (Model.IsHomePageHeader)
+        {
+            <a href="/" class="navbar-brand">
+                <span class="assistive-text">Northwestern Medicine</span>
+                <span class="logo-full"></span>
+            </a>
+        }
+        else
+        {
+            <a class="navbar-brand" href="/">Northwestern Medicine<br />Mansueto Innovation Institute</a>
+        }
+        <button class="btn btn-primary menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><span class="bi bi-list"></span></button>
+    </span>
+    }
+    <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="d-flex flex-row justify-content-between w-100 px-3 px-sm-5 mt-3 mt-sm-5 nav-container">
+            <a class="navbar-brand" href="/" id="offcanvasTopLabel">Northwestern Medicine<br />Mansueto Innovation Institute</a>
+            <button type="button" class="btn-close align-self-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row col-xs-12" id="">
+                <div class="col-lg-7 col-md-12 px-sm-0 px-xl-5">
+                    @if (Model.MainNavLinks != null && Model.MainNavLinks.Any())
+                    {
+                        <ul class="navbar-nav ps-4">
+                            @foreach (var link in Model.MainNavLinks)
+                            {
+                                <li class="nav-item py-3 px-sm-3 px-xl-5"><a href="@link.CTALink">@link.Title</a></li>
+                            }
+                        </ul>
+                    }
+                </div>
+                <div class="col-lg-5 col-md-12 py-sm-4 px-sm-5 py-xl-0 px-xl-0 d-flex flex-column justify-content-center align-items-start">
+                    @Html.Raw(Model.GenericContent.ToString())
+                </div>
+            </div>
+            <div class="row align-items-center col-xs-12 secondary-nav">
+                @if (Model.AdditionalNavLinks != null && Model.AdditionalNavLinks.Any())
+                {
+                    <ul class="list-unstyled d-flex col-md-12 col-lg-7 px-sm-0 px-xl-5 disclaimer">
+                        @foreach (var link in Model.AdditionalNavLinks)
+                        {
+                            <li class="nav-item px-md-5 col-lg-6"><a href="@link.CTALink">@link.Title</a></li>
+                        }
+                    </ul>
+                }
+                <div class="mt-auto col-lg-5 col-xs-12">
+                    <ul class="list-inline d-flex justify-content-start px-sm-4 px-xl-0 mt-sm-5 mt-xl-0 icon-links social">
+                        <li class="list-inline-item"><a href="https://www.youtube.com/user/NMHChicago" target="_blank"><span class="bi bi-youtube"></span></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/NorthwesternMed" target="_blank"><span class="bi bi-twitter"></span></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/northwestern-medicine" target="_blank"><span class="bi bi-linkedin"></span></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/northwesternmedicine" target="_blank"><span class="bi bi-facebook"></span></a></li>
+                        <li class="list-inline-item"><a href="https://instagram.com/northwesternmedicine" target="_blank"><span class="bi bi-instagram"></span></a></li>
+                        <li class="list-inline-item"><a href="https://www.tiktok.com/@("@northwesternmedicine")" target="_blank"><span class="bi bi-tiktok"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (!isEditMode)
+    {
+            <span class="animated-overlay top-left" style="height:100%; width:100%; position:absolute; top:0; z-index:1;"></span>
+            <span class="animated-overlay top-right" style="height:100%; width:100%; position:absolute; top:0; z-index:1;"></span>
+            <span class="animated-overlay bottom-right" style="height:100%; width:100%; position:absolute; top:0; z-index:1;"></span>
+            <span class="animated-overlay bottom-left" style="height:100%; width:100%; position:absolute; top:0; z-index:1;"></span>
+    }
+
+    <div class="d-flex position-title header-content @(Model.AdditionalContent != null ? "additional-content" : String.Empty)" style="z-index:2;">
+        <div>
+        <h1 class="title-card">
+            @if (Model.IsHomePageHeader)
+            {
+                <span>Northwestern Medicine<br />@Model.Title</span>
+            }
+            else
+            {
+                <span>@Model.Title</span>
+            }
+        </h1>
+        @if (Model.IsHomePageHeader)
+        {
+            <p class="subtitle">
+                @Model.SubTitle
+            </p>
+
+        }
+        </div>
+            @if (Model.IsHomePageHeader)
+            {
+                @Model.AdditionalContent
+            }
+    </div>
+    </section>
+}

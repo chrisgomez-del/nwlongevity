@@ -1,0 +1,33 @@
+﻿.cs-pagination {
+    color: $primary-cta;
+
+    li {
+        border: 0 none;
+
+        &.bg-color-inherit {
+            background-color: inherit !important;
+        }
+
+        a {
+            color: $primary-cta;
+            text-decoration: none;
+        }
+
+        span {
+            &.icon {
+                font-size: 20px;
+                line-height: 8em;
+                color: #fff;
+                font-style: normal;
+                background: #00778a;
+                border-radius: 50%;
+                transition: all .5s ease 0s;
+                padding: 16px 12px 16px 16px;
+
+                &.bi-columns-gap {
+                    padding-right: 10px !important;
+                }
+            }
+        }
+    }
+}

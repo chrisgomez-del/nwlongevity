@@ -1,0 +1,43 @@
+﻿html {
+    cursor: default;
+    font-size: 100%;
+
+    @media only screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
+}
+
+body {
+    background: linear-gradient(#b57eef,#5acad9);
+
+    @media only screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Card Widths */
+
+.group-cards.four-column {
+
+    .card {
+        width: 25%;
+
+        @media only screen and (max-width: 1023px) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+        }
+
+        @media print {
+            width: 49%;
+        }
+    }
+}

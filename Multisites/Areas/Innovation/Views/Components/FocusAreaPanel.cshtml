@@ -1,0 +1,17 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.BasePanel
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+<section class="card-list-panel focus-areas">
+    <div class="panel-header">
+        <h3 class="panel-title">@Model.Title</h3>
+        <p class="panel-content">
+            @Model.Subtitle
+        </p>
+    </div>
+    <div class="section-content row">
+        <div class="d-flex flex-wrap justify-content-evenly copy-block-cards mb-5">
+            @Html.Sitecore().DynamicPlaceholder("Focus_Area_Panel")
+        </div>
+    </div>
+</section>

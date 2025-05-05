@@ -1,0 +1,26 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.StatCardsImage
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+@if (Model != null)
+{
+    <div class="card card-callout image-card">
+        <div class="card-content grow flex flex-row no-wrap-big">
+            @Html.Sitecore().Field("Image", Model.SourceItem, new { @class = "card-top-img" })
+            <div class="stat-right">
+
+                <h3 class="stat-title">
+                    @Model.Title
+                </h3>
+                <div class="stat-body">
+                    @Model.Body
+                </div>
+                @Html.Sitecore().BeginField("Action", Model.SourceItem, new { haschildren = true, @class = "btn btn-link" })
+                @Model.CTAText
+                @Html.Sitecore().EndField()
+            </div>
+        </div>
+    </div>
+
+}

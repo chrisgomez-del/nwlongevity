@@ -1,0 +1,35 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.StatCardsDataPoint
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+@if (Model != null)
+{
+    <div class="card card-callout data-card">
+        <div class="card-content grow flex flex-row no-wrap-big">
+            <div class="stat-content">
+                @if (Model.SubTitle != null && !String.IsNullOrWhiteSpace(Model.SubTitle.ToString()))
+                {
+                    <h3 class="stat-subtitle">
+                        @Model.SubTitle
+                    </h3>
+                }
+                <div class="stat-number">
+                    <span class="counter-target">
+                        @Model.Number
+                    </span>
+                </div>
+                <div class="stat-body">
+                    @Model.Body
+                </div>
+                @if (Model.CTAText != null && !String.IsNullOrWhiteSpace(Model.CTAText.ToString()))
+                {
+                    @Html.Sitecore().BeginField("Action", Model.SourceItem, new { haschildren = true, @class = "btn btn-link" })
+                    @Model.CTAText
+                    @Html.Sitecore().EndField()
+                }
+            </div>
+            </div>
+        </div>
+   
+}

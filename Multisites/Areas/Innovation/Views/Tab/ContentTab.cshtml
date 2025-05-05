@@ -1,0 +1,29 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.Tabs.ContentTab
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+@if (Model != null)
+{
+   
+<div class="card-content">
+    <div class="d-flex flex-wrap">
+
+        <div class="d-sm-none d-md-block title-card">
+            <h2>@Model.Title</h2>
+            <div class="body-content">
+                <p>@Model.Body</p>
+            </div>
+            
+        </div>
+
+
+        <div class="tabs-content">
+            <div class="image-card">
+                @Html.Sitecore().Field("Image", Model.SourceItem, new { @class = "card-top-img" })
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+}

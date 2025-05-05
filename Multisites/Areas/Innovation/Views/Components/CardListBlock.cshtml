@@ -1,0 +1,26 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.EventList
+
+<section class="card-list-block">
+    <div class="card-list-header">
+        <div class="card-header">
+            <h5 class="card-title">@Model.Title</h5>
+        </div>
+    </div>
+    <div class="card-list-content row">
+        <div class="group-cards">
+            @foreach (var card in @Model.Events)
+            {
+                <div class="card">
+                    <div class="card-flex">
+                        <div class="card-content">
+                            <p class="card-title text-uppercase">@card.Type</p>
+                            <h4 class="card-link"><a href="@card.Link">@card.LinkTitle</a></h4>
+                            <h5 class="card-subtitle text-uppercase">@card.DateString</h5>
+                            <p class="card-alt-subtitle">@card.Location</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

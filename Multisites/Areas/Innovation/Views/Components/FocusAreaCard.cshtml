@@ -1,0 +1,13 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.FocusAreaCard
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+<div class="card">
+    <div>
+        @Html.Sitecore().Field("Image", Model.SourceItem, new { @class = "card-top-img" })
+    </div>
+    <div class="card-content">
+        <h4>@Model.Title</h4>
+        @Model.Body
+    </div>
+</div>

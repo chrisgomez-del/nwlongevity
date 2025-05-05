@@ -1,0 +1,18 @@
+﻿@model NM_MultiSites.Areas.Innovation.Models.Components.BasePanel
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+    var borderTop = RenderingContext.Current.Rendering.Parameters["Border Top"];
+    string cssBorderTop = borderTop == "1" ? "border-top" : String.Empty;
+}
+<section class="accordion-panel @cssBorderTop">
+    <div class="panel-header">
+        <h2 class="panel-title">@Model.Title</h2>
+        <p class="panel-content">
+            @Model.Subtitle
+        </p>
+    </div>
+    <div class="accordion">
+        @Html.Sitecore().DynamicPlaceholder("Accordion_Panel")
+    </div>
+</section>

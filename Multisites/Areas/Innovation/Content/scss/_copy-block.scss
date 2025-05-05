@@ -1,0 +1,43 @@
+﻿.callout-list-panel {
+    padding: 2rem 3rem;
+    background-color: $glass-bg;
+
+    @media only screen and (max-width: 768px) {
+        padding: 2rem 2rem;
+    }
+
+    .copy-block-cards {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .copy-block-card {
+            flex: 1 1 0px;
+            margin-right: 10px;
+            flex-wrap: wrap;
+            max-width: 50%;
+
+            @media only screen and (max-width: 1024px) {
+                margin-right: 30px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin-right: 0;
+                max-width: none;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            .block-card-title {
+                min-height: 50px;
+            }
+        }
+    }
+}

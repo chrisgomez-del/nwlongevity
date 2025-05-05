@@ -1,0 +1,50 @@
+﻿@using NM_MultiSites.Areas.ems.Models
+@model ModuleGroup
+@using Sitecore.Mvc.Extensions
+@{
+    Layout = null;
+}
+
+@if (Model != null && Model.modules != null && Model.modules.Count() > 0)
+{
+<section class="education section">
+    <header class="h4 title-padding">
+       @Model.GroupTitle
+    </header>
+    <ul class="list-unstyled">
+        <li class="card">
+            <div class="row no-gutters">
+                @foreach (var item in Model.modules)
+                {
+                    
+                    <div class="col-md-@Model.ColumnStyle">
+                        <div class="card-body">
+
+                            <h4 class="card-title">@item.Title</h4>
+                            @if (@item.Image!=null &&  @item.Image.Trim().Length>0)
+                            {
+                                <img src="@item.Image" class="card-img" alt="...">
+                            }
+                           
+                            <p class="card-text">
+                              @item.MainContent
+                            </p>
+
+                           @if (item.CTALink != null && item.CTATitle != null)
+                           {
+                                <p><a class="btn btn-lg btn-primary" href="@item.CTALink.ToString()" role="button">@item.CTATitle</a></p>
+                            }
+                        </div>
+                    </div>
+                }               
+
+            </div>
+        </li>
+       
+    </ul>
+</section>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <span style="width:100%;border:1px solid;"> Select Data Source</span>
+}

@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace NM_MultiSites.Areas.Innovation.Models.Components
+{
+    public class ContactInformation
+    {
+        public HtmlString ContactsInformation { get; set; }
+    }
+}

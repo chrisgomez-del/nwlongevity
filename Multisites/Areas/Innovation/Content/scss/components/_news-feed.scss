@@ -1,0 +1,65 @@
+﻿.news-feed {
+    padding: 5rem;
+    overflow-x: auto;
+
+    @media only screen and (max-width: 962px) {
+        padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 2.5rem;
+    }
+
+    .card {
+        background-color: transparent;
+        min-height: 516px;
+        min-width: 400px;
+        width: 400px !important;
+        border: none;
+
+        @media only screen and (max-width: 768px) {
+            max-height: 100vh;
+            min-width: 80vw;
+            overflow-y: auto;
+        }
+
+        &.glass-bg {
+            backdrop-filter: brightness(105%);
+        }
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    .card-content {
+        padding: 2.5rem;
+        height: 100%;
+
+        .heading {
+            font-size: $font-mobile-h7;
+            font-weight: bold;
+        }
+
+        .content-link-container {
+
+            a {
+                font-size: $font-size-h3;
+                font-weight: 800;
+            }
+        }
+
+        .sub-heading {
+            font-size: $font-size-h4;
+            font-weight: 800;
+        }
+
+        .heading, .sub-heading {
+            text-transform: uppercase;
+        }
+
+        > div {
+            margin-bottom: 2rem;
+        }
+    }
+}

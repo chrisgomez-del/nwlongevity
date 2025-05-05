@@ -1,0 +1,91 @@
+﻿.accordion-panel {
+    padding: 20px 20px;
+    background-color: $secondary-color;
+
+    @media only screen and (min-width: 768px) {
+        padding: 20px 150px;
+    }
+
+    &.border-top {
+        border-top: none !important;
+        position: relative;
+
+        &::before {
+            content: "";
+            background: #979797;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            height: 2px;
+            width: 90%;
+        }
+    }
+
+    .panel-header {
+        text-align: center;
+    }
+
+    .accordion-item {
+        border: none;
+        margin-bottom: 20px;
+
+        &:first-of-type, &:last-of-type {
+            border-radius: unset;
+
+            .accordion-button {
+                border-radius: unset;
+            }
+        }
+
+        .accordion-header {
+            margin-bottom: unset;
+
+            .accordion-button {
+                color: $base-color;
+                align-items: baseline;
+
+                &:focus {
+                    border-color: $secondary-color;
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    background-color: $secondary-color;
+                    color: $base-color;
+                    box-shadow: none;
+                    align-items: flex-start;
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300778a'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                    }
+                }
+
+                &::after {
+                    width: 1.625rem;
+                    height: 1.625rem;
+                    background-size: 1.625rem;
+                    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300778a'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                }
+
+                .accordion-title {
+
+                    @media only screen and (min-width: 768px) {
+                        padding-right: 10rem;
+                    }
+                }
+            }
+        }
+
+        .accordion-title {
+            font-size: $font-size-h5;
+            font-weight: $font-weight-extra-bold;
+        }
+
+        .accordion-body {
+
+            @media only screen and (min-width: 768px) {
+                padding-right: 10rem;
+            }
+        }
+    }
+}
