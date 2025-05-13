@@ -367,6 +367,7 @@
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
+    <Compile Include="Areas\westhealth\westhealthAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -589,6 +590,7 @@
     <Content Include="Areas\Innovation\Views\Components\StatsComponentWithPanel.cshtml" />
     <Content Include="Areas\Innovation\Views\CustomForms\ContactUsThankYou.cshtml" />
     <Content Include="Areas\Innovation\Views\CustomForms\PartnershipIntakeFormThankYou.cshtml" />
+    <Content Include="Areas\westhealth\Views\web.config" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -622,6 +624,9 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="Areas\westhealth\Controllers\" />
+    <Folder Include="Areas\westhealth\Data\" />
+    <Folder Include="Areas\westhealth\Views\Shared\" />
     <Folder Include="sitecore\" />
   </ItemGroup>
   <ItemGroup>
