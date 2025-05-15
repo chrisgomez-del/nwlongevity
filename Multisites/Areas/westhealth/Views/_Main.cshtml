@@ -1,0 +1,23 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+    <header id="site-header" class="d-flex">
+        @{ Html.Sitecore().RenderControllerRendering("GlobalComponents", "Header", new { area = "Innovation" }); }
+    </header>
+    <main>
+        <div class="main-contain">
+            @Html.Sitecore().Placeholder("site-main")
+        </div>
+    </main>
+    <footer id="site-footer" class="footer-container mb-5">
+        @{ Html.Sitecore().RenderControllerRendering("GlobalComponents", "Footer", new { area = "Innovation" }); }
+    </footer>
+</body>
+</html>
