@@ -625,7 +625,12 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="Areas\westhealth\Content\img\" />
+    <Folder Include="Areas\westhealth\Content\scss\" />
+    <Folder Include="Areas\westhealth\Content\_libs\" />
     <Folder Include="Areas\westhealth\Data\" />
+    <Folder Include="Areas\westhealth\Scripts\js\" />
+    <Folder Include="Areas\westhealth\Scripts\_libs\" />
     <Folder Include="Areas\westhealth\Views\Index\" />
     <Folder Include="Areas\westhealth\Views\Shared\" />
     <Folder Include="sitecore\" />
