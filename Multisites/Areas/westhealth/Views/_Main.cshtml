@@ -9,15 +9,15 @@
 <body>
 
     <header id="site-header" class="d-flex">
-        @{ Html.Sitecore().RenderControllerRendering("GlobalComponents", "Header", new { area = "Innovation" }); }
+        @{ Html.Sitecore().RenderControllerRendering("Navigation", "Header", new { area = "westhealth" }); }
     </header>
     <main>
         <div class="main-contain">
-            @Html.Sitecore().Placeholder("site-main")
+            @Html.Sitecore().Placeholder("westhealth-main")
         </div>
     </main>
     <footer id="site-footer" class="footer-container mb-5">
-        @{ Html.Sitecore().RenderControllerRendering("GlobalComponents", "Footer", new { area = "Innovation" }); }
+        @{ Html.Sitecore().RenderControllerRendering("Navigation", "Footer", new { area = "westhealth" }); }
     </footer>
 </body>
 </html>

@@ -367,7 +367,13 @@
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
+    <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
+    <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
+    <Compile Include="Areas\westhealth\Templates.cs" />
+    <Compile Include="Areas\westhealth\Controllers\ComponentController.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\TestimonialViewModel.cs" />
     <Compile Include="Areas\westhealth\westhealthAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -394,6 +400,8 @@
     <Content Include="App_Config\include\globalSettings.config" />
     <Content Include="App_Config\include\passwordRecovery.config" />
     <Content Include="App_Config\include\RegisterApiRoutes.config" />
+    <Content Include="App_Config\include\WestHealth-Settings.config" />
+    <Content Include="App_Config\include\WestHealth-Initialize.config" />
     <None Include="Areas\ems\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.min.js" />
@@ -592,6 +600,10 @@
     <Content Include="Areas\Innovation\Views\CustomForms\ContactUsThankYou.cshtml" />
     <Content Include="Areas\Innovation\Views\CustomForms\PartnershipIntakeFormThankYou.cshtml" />
     <Content Include="Areas\westhealth\Views\web.config" />
+    <Content Include="Areas\westhealth\Views\_Main.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Testimonial.cshtml" />
+    <Content Include="Areas\westhealth\Views\Navigation\Header.cshtml" />
+    <Content Include="Areas\westhealth\Views\Navigation\Footer.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -625,6 +637,7 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />
     <Folder Include="Areas\westhealth\Views\Index\" />
     <Folder Include="Areas\westhealth\Views\Shared\" />

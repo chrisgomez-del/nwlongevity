@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Sitecore.Shell.Applications.ContentManager.Panels;
 
 namespace NM_MultiSites.Areas.westhealth
 {
@@ -17,7 +18,8 @@ namespace NM_MultiSites.Areas.westhealth
             context.MapRoute(
                 "westhealth_default",
                 "westhealth/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "NM_MultiSites.Areas.westhealth.Controllers"}
             );
         }
     }
