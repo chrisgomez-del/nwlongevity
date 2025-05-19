@@ -22,6 +22,8 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string FooterNavigationLinks = "Footer Navigation Links";
                 public static string SocialNavigationLinks = "Social Links";
                 public static string FooterLogo = "Footer Logo";
+                public static string FooterUtilityNavigationLinks= "Footer Utility Navigation Links";
+                public static string Copy = "Copy";
 
             }
         }

@@ -14,4 +14,13 @@
             <a href="@navItem.LinkSource">@navItem.LinkText</a>
         }
     </ul>
+    <div>
+        @Model.Copy
+    </div>
+    <ul>
+        @foreach (var navItem in Model.FooterUtilityLinks)
+        {
+            <a href="@navItem.LinkSource">@navItem.LinkText</a>
+        }
+    </ul>
 </div>

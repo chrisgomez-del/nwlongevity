@@ -12,7 +12,7 @@ templatekey: Config
 ----version----
 language: en
 version: 1
-revision: e32a438e-2e79-42b3-a132-6647101a7f62
+revision: 4ef33e1a-7b08-4cec-90d3-420cba5ec9e1
 
 ----field----
 field: {2AB1D2A5-943A-4389-9457-8A0134FB15C7}
@@ -35,6 +35,20 @@ key: social links
 content-length: 155
 
 {78F39EF4-B905-45F9-816F-0ACADF510367}|{85BD5554-8260-427F-8E30-B58A606C683D}|{E6B25AA2-A058-425E-A83C-03311A280613}|{A827EECB-413B-4ACE-B30E-B67259747621}
+----field----
+field: {74BFFC3E-AE21-4A1E-A08E-27BB06F52CFF}
+name: Footer Utility Navigation Links
+key: footer utility navigation links
+content-length: 116
+
+{39C8C3DC-78E7-4FBD-9AE1-D3CD606F74E5}|{5812C21E-8D95-42F9-81CD-FDAE15AF8141}|{C332EEE4-907C-430C-98D4-EEBA3F2C82C8}
+----field----
+field: {7F9FFE6D-849F-4F46-9324-5B8058D6BB9C}
+name: Copy
+key: copy
+content-length: 24
+
+Here's some test copy!!!
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e32a438e-2e79-42b3-a132-6647101a7f62
+4ef33e1a-7b08-4cec-90d3-420cba5ec9e1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250516T145543Z
+20250519T174735Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -77,3 +91,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

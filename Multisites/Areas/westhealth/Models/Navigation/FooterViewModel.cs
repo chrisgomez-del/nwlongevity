@@ -10,6 +10,8 @@ namespace NM_MultiSites.Areas.westhealth.Models.Navigation
         public List<GenericLinkViewModel> Links { get; set; } = new List<GenericLinkViewModel>();
         public List<GenericLinkViewModel> SocialLinks{ get; set; } = new List<GenericLinkViewModel>();
         public string Logo { get; set; }
+        public IHtmlString Copy { get; set; }
+        public List<GenericLinkViewModel> FooterUtilityLinks { get; set; } = new List<GenericLinkViewModel>();
         public FooterViewModel() { }
     }
 }
