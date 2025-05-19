@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NM_MultiSites.Areas.westhealth.Services;
 
 namespace NM_MultiSites.Areas.westhealth.Controllers.Components
 {
     public class NavigationController : Controller
     {
+        private readonly INavigationService _navigationService;
+        public NavigationController()
+        {
+            _navigationService = new NavigationService();
+        }
         public ActionResult Header()
         {
-            return View();
+            var headerViewModel = _navigationService.GetHeader();
+            return View(headerViewModel);
         }
         public ActionResult Footer()
         {
-            return View();
+            var footerViewModel = _navigationService.GetFooter();
+            return View(footerViewModel);
         }
     }
 }

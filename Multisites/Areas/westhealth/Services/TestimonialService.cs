@@ -17,7 +17,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
         public TestimonialViewModel GetTestimonialViewModel()
         {
             var model = new TestimonialViewModel();
-            Item datasource = GetDataSourceItem();
+            Item datasource = WestHealthSitecoreService.GetDataSourceItem();
             if (datasource != null)
             {
                 model.SourceItem = datasource;
@@ -27,20 +27,6 @@ namespace NM_MultiSites.Areas.westhealth.Services
 
             }
             return model;
-        }
-        public Item GetDataSourceItem()
-        {
-            var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
-            return GetItemById(dataSourceId);
-        }
-
-        public Item GetItemById(ID id)
-        {
-            return Sitecore.Context.Database.GetItem(id);
-        }
-        public Item GetItemById(string path)
-        {
-            return Sitecore.Context.Database.GetItem(path);
         }
     }
 }

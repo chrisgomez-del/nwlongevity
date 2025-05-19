@@ -368,9 +368,14 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Navigation\FooterViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
     <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
+    <Compile Include="Areas\westhealth\Services\WestHealthSitecoreService.cs" />
     <Compile Include="Areas\westhealth\Templates.cs" />
     <Compile Include="Areas\westhealth\Controllers\ComponentController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TestimonialViewModel.cs" />
@@ -637,10 +642,10 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
-    <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Content\img\" />
     <Folder Include="Areas\westhealth\Content\scss\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />
+    <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />
     <Folder Include="Areas\westhealth\Scripts\js\" />
     <Folder Include="Areas\westhealth\Scripts\_libs\" />

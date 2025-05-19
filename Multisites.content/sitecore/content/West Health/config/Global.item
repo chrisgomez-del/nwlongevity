@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {013D630A-8F72-42DE-B47B-3DEF7135CBDE}
+database: master
+path: /sitecore/content/West Health/config/Global
+parent: {429AA421-9665-41C9-9507-232D3F152E05}
+name: Global
+master: {00000000-0000-0000-0000-000000000000}
+template: {9ABBC1E0-038F-4BBA-899A-75D5CB9233C6}
+templatekey: Config
+
+----version----
+language: en
+version: 1
+revision: e32a438e-2e79-42b3-a132-6647101a7f62
+
+----field----
+field: {2AB1D2A5-943A-4389-9457-8A0134FB15C7}
+name: Header Navigation Links
+key: header navigation links
+content-length: 194
+
+{90A9B73A-66E9-4B5D-BC45-24386C65F941}|{619E5693-0648-4CBB-B5AE-2B6DD4F761E0}|{55ECCC64-FF96-45B8-80C9-215E642D7717}|{0AC86DEC-6731-4245-8081-439F50E9372F}|{D1FE4653-2A5E-490F-BC6D-F8BB13166625}
+----field----
+field: {7CB30E37-DFB8-4BE6-8F31-071148BC432D}
+name: Footer Navigation Links
+key: footer navigation links
+content-length: 194
+
+{AFF9E915-DDCF-4CA0-B23E-C053F2350985}|{F8A3BFC4-0859-45B2-A529-4695E3495AAB}|{BD39FA88-95E8-45D0-B749-3201346EEA9A}|{4A141B06-BBA9-4CDB-A929-FFD89AFB66E4}|{9B890B3A-9618-46B1-8905-5945217AE8F0}
+----field----
+field: {1749EB93-87BC-4335-9961-9E262050F2C0}
+name: Social Links
+key: social links
+content-length: 155
+
+{78F39EF4-B905-45F9-816F-0ACADF510367}|{85BD5554-8260-427F-8E30-B58A606C683D}|{E6B25AA2-A058-425E-A83C-03311A280613}|{A827EECB-413B-4ACE-B30E-B67259747621}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250516T145532Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e32a438e-2e79-42b3-a132-6647101a7f62
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250516T145543Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

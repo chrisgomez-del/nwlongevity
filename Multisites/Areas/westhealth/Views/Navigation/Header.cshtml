@@ -1,3 +1,20 @@
-﻿<div>
+﻿@model NM_MultiSites.Areas.westhealth.Models.Navigation.HeaderViewModel
+
+<div>
     Header
+    <ul>
+        @foreach (var navItem in Model.Links)
+        {
+            <a href="@navItem.LinkSource">@navItem.LinkText</a>
+            if (navItem.Children != null && navItem.Children.Any())
+            {
+                foreach (var childItem in navItem.Children)
+                {
+                    <li>
+                        <a href="@childItem.LinkSource">@childItem.LinkText</a>
+                    </li>
+                }
+            }
+        }
+    </ul>
 </div>
