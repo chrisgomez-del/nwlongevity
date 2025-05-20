@@ -86,6 +86,8 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string Copy = "Copy";
+                public static string CtaText = "Cta Text";
+                public static string CtaSource = "Cta Source";
             }
         }
         public static class TeamContainer
