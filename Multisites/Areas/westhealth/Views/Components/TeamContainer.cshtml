@@ -1,0 +1,19 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TeamContainerViewModel
+
+<div>
+    <div>
+        @Model.Title
+    </div>
+    <div>
+        @Model.Logo
+    </div>
+    <div>
+        @Model.SubTitle
+    </div>
+    <div>
+        @Model.Copy
+    </div>
+    <div>
+        @Html.Sitecore().DynamicPlaceholder("TeamContainer")
+    </div>
+</div>
