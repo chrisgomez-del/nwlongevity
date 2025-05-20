@@ -13,9 +13,12 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
     {
         private readonly ITestimonialService _testimonialService;
         private readonly IAccordionPanelService _accordionPanelService;
+        private readonly IEnhancedCalloutService _enhancedCalloutService;
         public ComponentController() {
             _testimonialService = new TestimonialService();
             _accordionPanelService = new AccordionPanelService();
+            _enhancedCalloutService = new EnhancedCalloutService(); 
+
         }
         // GET: westhealth/Index
         public ActionResult Testimonial()
@@ -33,6 +36,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             AccordionItemViewModel data = _accordionPanelService.GetAccordionItemData();
             return View("~/Areas/westhealth/Views/Components/AccordionItem.cshtml",data);
+        }
+        public ActionResult EnhancedCallout()
+        {
+            var enhancedCalloutViewModel = _enhancedCalloutService.GetEnhancedCalloutViewModel();
+            return View("~/Areas/westhealth/Views/Components/EnhancedCallout.cshtml", enhancedCalloutViewModel);
         }
     }
 }

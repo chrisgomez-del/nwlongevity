@@ -36,6 +36,14 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Copy = "Copy";
             }
         }
+        public static class EnhancedCallout
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Copy = "Copy";
+            }
+        }
         public static class GenericLink
         {
             public static string TemplateID = "{2A2633CF-037B-40AE-9026-EEE2B4835D07}";
