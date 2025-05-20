@@ -368,10 +368,13 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\FooterViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
+    <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
     <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
@@ -609,6 +612,8 @@
     <Content Include="Areas\westhealth\Views\Components\Testimonial.cshtml" />
     <Content Include="Areas\westhealth\Views\Navigation\Header.cshtml" />
     <Content Include="Areas\westhealth\Views\Navigation\Footer.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\AccordionItem.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\AccordionPanel.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

@@ -1,0 +1,9 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.AccordionPanelViewModel
+<div>
+    <div>
+        <h2 class="panel-title">@Model.Title</h2>
+    </div>
+    <div>
+        @Html.Sitecore().DynamicPlaceholder("Accordion")
+    </div>
+</div>

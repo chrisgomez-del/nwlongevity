@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NM_MultiSites.Areas.Innovation.Models.Components;
 using NM_MultiSites.Areas.westhealth.Models.Components;
 using NM_MultiSites.Areas.westhealth.Services;
 
@@ -11,14 +12,27 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
     public class ComponentController : Controller
     {
         private readonly ITestimonialService _testimonialService;
+        private readonly IAccordionPanelService _accordionPanelService;
         public ComponentController() {
             _testimonialService = new TestimonialService();
+            _accordionPanelService = new AccordionPanelService();
         }
         // GET: westhealth/Index
         public ActionResult Testimonial()
         {
             var testimonialViewModel = _testimonialService.GetTestimonialViewModel();
             return View("~/Areas/westhealth/Views/Components/Testimonial.cshtml",testimonialViewModel); 
+        }
+        public ActionResult AccordionPanel()
+        {
+            AccordionPanelViewModel data = _accordionPanelService.GetAccordionPanelData();
+            return View("~/Areas/westhealth/Views/Components/AccordionPanel.cshtml",data);
+        }
+
+        public ActionResult AccordionItem()
+        {
+            AccordionItemViewModel data = _accordionPanelService.GetAccordionItemData();
+            return View("~/Areas/westhealth/Views/Components/AccordionItem.cshtml",data);
         }
     }
 }

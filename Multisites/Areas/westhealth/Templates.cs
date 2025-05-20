@@ -22,7 +22,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string FooterNavigationLinks = "Footer Navigation Links";
                 public static string SocialNavigationLinks = "Social Links";
                 public static string FooterLogo = "Footer Logo";
-                public static string FooterUtilityNavigationLinks= "Footer Utility Navigation Links";
+                public static string FooterUtilityNavigationLinks = "Footer Utility Navigation Links";
                 public static string Copy = "Copy";
 
             }
@@ -45,6 +45,22 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string LinkSource = "Link Source";
                 public static string LinkText = "Link Text";
                 public static string Icon = "Icon";
+            }
+        }
+        public static class AccordionItem
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Image = "Image";
+                public static string Copy = "Copy";
+            }
+        }
+        public static class AccordionPanel
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
             }
         }
         public static class NavigationLink
