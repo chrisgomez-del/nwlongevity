@@ -12,6 +12,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
 {
     public class ComponentController : Controller
     {
+        private readonly ITeamService _teamService;
         private readonly ITestimonialService _testimonialService;
         private readonly IAccordionPanelService _accordionPanelService;
         private readonly ICardService _cardService;
@@ -20,6 +21,8 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             _testimonialService = new TestimonialService();
             _accordionPanelService = new AccordionPanelService();
+            _teamService = new TeamService();
+            _cardService = new CardService();
             _enhancedCalloutService = new EnhancedCalloutService(_cardService);
             _cardService = new CardService();
 
@@ -46,11 +49,20 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var enhancedCalloutViewModel = _enhancedCalloutService.GetEnhancedCalloutViewModel();
             return View("~/Areas/westhealth/Views/Components/EnhancedCallout.cshtml", enhancedCalloutViewModel);
         }
-
         public ActionResult Card()
         {
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Card.cshtml", cardViewModel);
+	}
+        public ActionResult TeamContainer()
+        {
+            var teamContainerViewModel = _teamService.GetTeamContainer();
+            return View("~/Areas/westhealth/Views/Components/TeamContainer.cshtml", teamContainerViewModel);
+        }
+        public ActionResult TeamMember()
+        {
+            var teamMemberViewModel = _teamService.GetTeamMember();
+            return View("~/Areas/westhealth/Views/Components/TeamMember.cshtml", teamMemberViewModel);
         }
     }
 }

@@ -4,6 +4,8 @@ using System.EnterpriseServices.Internal;
 using System.Linq;
 using System.Web;
 using Sitecore.Data;
+using Sitecore.Mvc.Diagnostics;
+using Sitecore.Publishing;
 
 namespace NM_MultiSites.Areas.westhealth
 {
@@ -84,6 +86,30 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string SubTitle = "Sub Title";
+                public static string Copy = "Copy";
+                public static string CtaText = "Cta Text";
+                public static string CtaSource = "Cta Source";
+            }
+        }
+        public static class TeamContainer
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Logo = "Logo";
+                public static string SubTitle = "Sub-Title";
+                public static string Copy = "Copy";
+            }
+        }
+        public static class TeamMember
+        {
+            public static class Fields
+            {
+                public static string Name = "Name";
+                public static string Qualifications = "Qualifications";
+                public static string Titles = "Titles";
+                public static string Image = "Image";
+                public static string ProfileLink = "Profile Link";
                 public static string Copy = "Copy";
                 public static string CtaText = "Cta Text";
                 public static string CtaSource = "Cta Source";

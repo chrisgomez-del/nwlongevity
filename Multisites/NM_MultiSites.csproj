@@ -372,6 +372,8 @@
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\TeamMemberViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\TeamContainerViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\CardService.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
@@ -379,6 +381,7 @@
     <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
+    <Compile Include="Areas\westhealth\Services\TeamService.cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
     <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
@@ -620,6 +623,8 @@
     <Content Include="Areas\westhealth\Views\Components\AccordionItem.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\AccordionPanel.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Card.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\TeamContainer.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\TeamMember.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

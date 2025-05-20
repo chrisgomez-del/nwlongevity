@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {206B8EED-C8A8-4C95-B183-16FE9461C5D8}
+id: {0F801406-7737-4F57-8AFC-BF9315FC81DA}
 database: master
-path: /sitecore/layout/Placeholder Settings/West Health/WestHealth-Main
-parent: {F962D5AE-BE74-4B7C-A7B8-ADA8817A328F}
-name: WestHealth-Main
+path: /sitecore/layout/Placeholder Settings/West Health/Panels/TeamContainer
+parent: {AD2AB2A2-5880-4CE8-B103-DA4ADD2D2D03}
+name: TeamContainer
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
@@ -13,20 +13,20 @@ templatekey: Placeholder
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 15
+content-length: 13
 
-WestHealth-Main
+TeamContainer
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 116
+content-length: 38
 
-{BD241B31-7DEF-4CF2-A9A5-E144E50CAAB6}|{0F9994B3-6857-4653-9EDE-32191216BEF2}|{5058D9DB-0F88-499E-BC6A-7AD7E541A76D}
+{3F8E74FD-0872-4F44-A554-F816682C342E}
 ----version----
 language: en
 version: 1
-revision: 549f7034-7df1-4d40-8b37-7909da2d888d
+revision: 034ed8a5-9b56-4802-a37e-3573a9233338
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250515T191324Z
+20250520T170252Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-549f7034-7df1-4d40-8b37-7909da2d888d
+034ed8a5-9b56-4802-a37e-3573a9233338
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250520T170550Z
+20250520T170535Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
