@@ -25,13 +25,13 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreWebUrl>https://sc107sc.dev.local/</SitecoreWebUrl>
+    <SitecoreWebUrl>https://sc10sc.dev.local/</SitecoreWebUrl>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <LightningDeployMode>False</LightningDeployMode>
     <EnableContainerDeployment>False</EnableContainerDeployment>
-    <ConnectorTimeoutSeconds>120</ConnectorTimeoutSeconds>
-    <SitecoreDeployFolder>C:\inetpub\wwwroot\sc107sc.dev.local</SitecoreDeployFolder>
+    <ConnectorTimeoutSeconds>60</ConnectorTimeoutSeconds>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\sc10sc.dev.local</SitecoreDeployFolder>
     <SitecoreAccessGuid>3b81ddd7-1fa8-4754-ac37-0f6761984d33</SitecoreAccessGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

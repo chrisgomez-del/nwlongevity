@@ -368,6 +368,8 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
     <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
@@ -604,6 +606,7 @@
     <Content Include="Areas\westhealth\Views\Components\Testimonial.cshtml" />
     <Content Include="Areas\westhealth\Views\Navigation\Header.cshtml" />
     <Content Include="Areas\westhealth\Views\Navigation\Footer.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\EnhancedCallout.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -637,10 +640,10 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
-    <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Content\img\" />
     <Folder Include="Areas\westhealth\Content\scss\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />
+    <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />
     <Folder Include="Areas\westhealth\Scripts\js\" />
     <Folder Include="Areas\westhealth\Scripts\_libs\" />
