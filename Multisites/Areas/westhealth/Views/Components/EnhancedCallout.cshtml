@@ -2,18 +2,10 @@
 
 
 <div>
-    @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Title)
-    @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Title)</p>
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)</p>
 
+    <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-leftcard")</div>
+    <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-rightcard")</div>
 
-    @foreach (var card in Model.Cards)
-    {
-        <div>
-            <h3>@card.Title</h3>
-            <div>
-                @card.Copy
-            </div>
-            <a href="@card.CtaSource">@card.CtaText</a>
-        </div>
-    }
 </div>

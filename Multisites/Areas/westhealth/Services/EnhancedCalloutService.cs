@@ -34,12 +34,6 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.EnhancedCallout.Fields.Copy));
 
             }
-            var children = datasource.GetChildren();
-            model.Cards = new List<CardViewModel>();
-            foreach (Item child in children)
-            {
-                model.Cards.Add(_cardService.GetCardViewModel(child.ID));
-            } 
 
             return model;
         }

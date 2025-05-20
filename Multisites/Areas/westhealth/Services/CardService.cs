@@ -11,9 +11,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
     public interface ICardService
     {
         CardViewModel GetCardViewModel();
-        CardViewModel GetCardViewModel(ID id);
-
     }
+
     public class CardService : ICardService
     {
         public CardViewModel GetCardViewModel()
@@ -24,28 +23,12 @@ namespace NM_MultiSites.Areas.westhealth.Services
             {
                 model.SourceItem = datasource;
                 model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.Title));
+                model.SubTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.SubTitle));
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.Copy));
                 model.CtaText = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.CtaText));
                 model.CtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.Card.Fields.CtaSource].GetValue(true)) ?
                     null :
-                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.Card.Fields.CtaSource]);
-            }
-            return model;
-        }
-
-        public CardViewModel GetCardViewModel(ID id)
-        {
-            var model = new CardViewModel();
-            Item datasource = GetItemById(id);
-            if (datasource != null)
-            {
-                model.SourceItem = datasource;
-                model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.Title));
-                model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.Copy));
-                model.CtaText = new HtmlString(FieldRenderer.Render(datasource, Templates.Card.Fields.CtaText));
-                model.CtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.Card.Fields.CtaSource].GetValue(true)) ?
-                    null :
-                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.Card.Fields.CtaSource]);
+                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.Card.Fields.CtaSource]);                
             }
             return model;
         }

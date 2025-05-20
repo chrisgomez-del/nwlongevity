@@ -20,8 +20,8 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             _testimonialService = new TestimonialService();
             _accordionPanelService = new AccordionPanelService();
-            _cardService = new CardService();
             _enhancedCalloutService = new EnhancedCalloutService(_cardService);
+            _cardService = new CardService();
 
         }
         // GET: westhealth/Index
@@ -45,6 +45,12 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var enhancedCalloutViewModel = _enhancedCalloutService.GetEnhancedCalloutViewModel();
             return View("~/Areas/westhealth/Views/Components/EnhancedCallout.cshtml", enhancedCalloutViewModel);
+        }
+
+        public ActionResult Card()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Card.cshtml", cardViewModel);
         }
     }
 }

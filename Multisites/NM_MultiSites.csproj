@@ -619,6 +619,7 @@
     <Content Include="Areas\westhealth\Views\Components\EnhancedCallout.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\AccordionItem.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\AccordionPanel.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Card.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

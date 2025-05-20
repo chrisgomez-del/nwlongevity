@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {436B1E1C-C50C-4D9B-9B61-F1BE189C2726}
+database: master
+path: /sitecore/content/West Health/page_data/Test Enhanced Callout/Card 2
+parent: {0787938C-2A0A-4EAA-A59F-23CAE5835C4F}
+name: Card 2
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: 7de98750-10fc-4998-b13a-09101a56405c
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 6
+
+Card 2
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 113
+
+Ut sollicitudin commodo ante, eu elementum ligula viverra ac. Integer id ligula justo. Aliquam eu accumsan ipsum.
+----field----
+field: {7D7A5FAD-2414-459C-8CD6-36C8A5A49F02}
+name: CtaText
+key: ctatext
+content-length: 5
+
+Cta 2
+----field----
+field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
+name: CtaSource
+key: ctasource
+content-length: 72
+
+<link linktype="external" url="http://google.com" anchor="" target="" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250520T162844Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7de98750-10fc-4998-b13a-09101a56405c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250520T162934Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
