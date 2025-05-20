@@ -368,6 +368,8 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
