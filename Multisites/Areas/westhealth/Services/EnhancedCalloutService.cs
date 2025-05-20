@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using NM_MultiSites.Areas.westhealth.Models.Components;
 using Sitecore.Data;
 using Sitecore.Data.Items;
@@ -14,6 +16,13 @@ namespace NM_MultiSites.Areas.westhealth.Services
     }
     public class EnhancedCalloutService : IEnhancedCalloutService
     {
+        private readonly ICardService _cardService;
+
+        public EnhancedCalloutService(ICardService cardService)
+        {
+            _cardService = cardService;
+        }
+
         public EnhancedCalloutViewModel GetEnhancedCalloutViewModel()
         {
             var model = new EnhancedCalloutViewModel();
@@ -25,6 +34,13 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.EnhancedCallout.Fields.Copy));
 
             }
+            var children = datasource.GetChildren();
+            model.Cards = new List<CardViewModel>();
+            foreach (Item child in children)
+            {
+                model.Cards.Add(_cardService.GetCardViewModel(child.ID));
+            } 
+
             return model;
         }
         public Item GetDataSourceItem()

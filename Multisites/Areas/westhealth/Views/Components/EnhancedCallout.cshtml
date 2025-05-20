@@ -4,4 +4,16 @@
 <div>
     @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Title)
     @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)
+
+
+    @foreach (var card in Model.Cards)
+    {
+        <div>
+            <h3>@card.Title</h3>
+            <div>
+                @card.Copy
+            </div>
+            <a href="@card.CtaSource">@card.CtaText</a>
+        </div>
+    }
 </div>
