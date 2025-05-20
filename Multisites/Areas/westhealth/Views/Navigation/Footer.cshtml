@@ -1,3 +1,26 @@
-﻿<div>
+﻿@model NM_MultiSites.Areas.westhealth.Models.Navigation.FooterViewModel
+
+<div>
     Footer
+    <ul>
+        @foreach (var navItem in Model.Links)
+        {
+            <a href="@navItem.LinkSource">@navItem.LinkText</a>
+        }
+    </ul>
+    <ul>
+        @foreach (var navItem in Model.SocialLinks)
+        {
+            <a href="@navItem.LinkSource">@navItem.LinkText</a>
+        }
+    </ul>
+    <div>
+        @Model.Copy
+    </div>
+    <ul>
+        @foreach (var navItem in Model.FooterUtilityLinks)
+        {
+            <a href="@navItem.LinkSource">@navItem.LinkText</a>
+        }
+    </ul>
 </div>

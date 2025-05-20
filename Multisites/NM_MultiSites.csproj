@@ -370,9 +370,14 @@
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
+    <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Navigation\FooterViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
     <Compile Include="Areas\westhealth\Controllers\IndexController.cs" />
     <Compile Include="Areas\westhealth\Pipelines\InitializeWestHealthSite.cs" />
+    <Compile Include="Areas\westhealth\Services\WestHealthSitecoreService.cs" />
     <Compile Include="Areas\westhealth\Templates.cs" />
     <Compile Include="Areas\westhealth\Controllers\ComponentController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TestimonialViewModel.cs" />
