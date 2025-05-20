@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.EnterpriseServices.Internal;
 using System.Linq;
 using System.Web;
 using Sitecore.Data;
@@ -79,6 +80,14 @@ namespace NM_MultiSites.Areas.westhealth
             {
             }
         }
+        public static class Card
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Copy = "Copy";
+            }
+        }
         public static class TeamContainer
         {
             public static class Fields
@@ -98,6 +107,9 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Titles = "Titles";
                 public static string Image = "Image";
                 public static string ProfileLink = "Profile Link";
+                public static string Copy = "Copy";
+                public static string CtaText = "Cta Text";
+                public static string CtaSource = "Cta Source";
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.Mvc;
 using NM_MultiSites.Areas.Innovation.Models.Components;
@@ -14,30 +15,33 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly ITeamService _teamService;
         private readonly ITestimonialService _testimonialService;
         private readonly IAccordionPanelService _accordionPanelService;
+        private readonly ICardService _cardService;
         private readonly IEnhancedCalloutService _enhancedCalloutService;
-        public ComponentController() {
+        public ComponentController()
+        {
             _testimonialService = new TestimonialService();
             _accordionPanelService = new AccordionPanelService();
-            _enhancedCalloutService = new EnhancedCalloutService();
             _teamService = new TeamService();
+            _cardService = new CardService();
+            _enhancedCalloutService = new EnhancedCalloutService(_cardService);
 
         }
         // GET: westhealth/Index
         public ActionResult Testimonial()
         {
             var testimonialViewModel = _testimonialService.GetTestimonialViewModel();
-            return View("~/Areas/westhealth/Views/Components/Testimonial.cshtml",testimonialViewModel); 
+            return View("~/Areas/westhealth/Views/Components/Testimonial.cshtml", testimonialViewModel);
         }
         public ActionResult AccordionPanel()
         {
             AccordionPanelViewModel data = _accordionPanelService.GetAccordionPanelData();
-            return View("~/Areas/westhealth/Views/Components/AccordionPanel.cshtml",data);
+            return View("~/Areas/westhealth/Views/Components/AccordionPanel.cshtml", data);
         }
 
         public ActionResult AccordionItem()
         {
             AccordionItemViewModel data = _accordionPanelService.GetAccordionItemData();
-            return View("~/Areas/westhealth/Views/Components/AccordionItem.cshtml",data);
+            return View("~/Areas/westhealth/Views/Components/AccordionItem.cshtml", data);
         }
         public ActionResult EnhancedCallout()
         {
