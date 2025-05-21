@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {A774B4A8-DD57-4493-B99F-397E7EB5D406}
+database: master
+path: /sitecore/content/West Health/page_data/Test Two Column Image Stack
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Test Two Column Image Stack
+master: {00000000-0000-0000-0000-000000000000}
+template: {D574E17D-AE05-4F6A-8BA1-233D7EC2B677}
+templatekey: Two Column Image Stack
+
+----version----
+language: en
+version: 1
+revision: 3202600c-0f2e-4166-98f5-4c682710995f
+
+----field----
+field: {C35B6D8F-0B80-486E-A4C3-E466DE6A3666}
+name: Top Image
+key: top image
+content-length: 58
+
+<image mediaid="{CA741159-502B-48B4-BE1B-42B2A56F22BC}" />
+----field----
+field: {C138EA2A-D93A-456A-BB10-C5A558CED85E}
+name: Top Background
+key: top background
+content-length: 38
+
+{F73DB283-62B9-4B3A-AA4A-F49399FBD6E7}
+----field----
+field: {42CB5EB6-4A60-4DDC-8E76-AB3A4902701A}
+name: Bottom Image
+key: bottom image
+content-length: 58
+
+<image mediaid="{8DE6CE52-B7C2-45E2-A8AD-8CA18E0A416C}" />
+----field----
+field: {039626F2-1F8D-4A86-AF15-5797DE56B734}
+name: Bottom Background
+key: bottom background
+content-length: 38
+
+{9C62B150-C845-4CEF-8C5F-1177ABD32878}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250521T193218Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3202600c-0f2e-4166-98f5-4c682710995f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250521T193612Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

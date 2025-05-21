@@ -1,0 +1,11 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TwoColumnImageStackViewModel
+
+
+<div>
+    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnImageStack.Fields.TopImage)</div>
+    <div>@Model.TopBackground</div>
+    <div>@Html.Sitecore().DynamicPlaceholder("twocolumnimagestack-topcard")</div>
+    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnImageStack.Fields.BottomImage)</div>
+    <div>@Model.BottomBackground</div>
+    <div>@Html.Sitecore().DynamicPlaceholder("twocolumnimagestack-bottomcard")</div>
+</div>

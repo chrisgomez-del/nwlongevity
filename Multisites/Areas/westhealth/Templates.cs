@@ -136,5 +136,15 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string CTA = "CTA";
             }
         }
+        public static class TwoColumnImageStack
+        {
+            public static class Fields
+            {
+                public static string TopImage = "Top Image";
+                public static string TopBackground = "Top Background"; 
+                public static string BottomImage = "Bottom Image";
+                public static string BottomBackground = "Bottom Background";
+            }
+        }
     }
 }

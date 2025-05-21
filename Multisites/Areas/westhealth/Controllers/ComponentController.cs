@@ -19,6 +19,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly IEnhancedCalloutService _enhancedCalloutService;
         private readonly ITwoColumnWithImageService _twoColumnWithImageService;
         private readonly ISliderService _sliderService;
+        private readonly ITwoColumnImageStackService _twoColumnImageStackService;
 
         public ComponentController()
         {
@@ -30,6 +31,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _cardService = new CardService();
             _twoColumnWithImageService = new TwoColumnWithImageService();
             _sliderService = new SliderService();
+            _twoColumnImageStackService = new TwoColumnImageStackService();
 
         }
         // GET: westhealth/Index
@@ -83,6 +85,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var slideViewModel = _sliderService.GetSlideViewModel();
             return View("~/Areas/westhealth/Views/Components/Slide.cshtml", slideViewModel);
+        }
+        public ActionResult TwoColumnImageStack()
+        {
+            var twoColumnImageStackViewModel = _twoColumnImageStackService.GetTwoImageStackViewModel();
+            return View("~/Areas/westhealth/Views/Components/TwoColumnImageStack.cshtml", twoColumnImageStackViewModel);
         }
     }
 }
