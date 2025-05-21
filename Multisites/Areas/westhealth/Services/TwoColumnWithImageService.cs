@@ -7,28 +7,26 @@ using Sitecore.Web.UI.WebControls;
 
 namespace NM_MultiSites.Areas.westhealth.Services
 {
-    public interface IEnhancedCalloutService
+    public interface ITwoColumnWithImageService
     {
-        EnhancedCalloutViewModel GetEnhancedCalloutViewModel();
+        TwoColumnWithImageViewModel GetTwoColumnWithImageViewModel();
 
     }
-    public class EnhancedCalloutService : IEnhancedCalloutService
+    public class TwoColumnWithImageService : ITwoColumnWithImageService
     {
-        public EnhancedCalloutService()
+        public TwoColumnWithImageService()
         {
 
         }
 
-        public EnhancedCalloutViewModel GetEnhancedCalloutViewModel()
+        public TwoColumnWithImageViewModel GetTwoColumnWithImageViewModel()
         {
-            var model = new EnhancedCalloutViewModel();
+            var model = new TwoColumnWithImageViewModel();
             Item datasource = GetDataSourceItem();
             if (datasource != null)
             {
                 model.SourceItem = datasource;
-                model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.EnhancedCallout.Fields.Title));
-                model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.EnhancedCallout.Fields.Copy));
-
+                model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnWithImage.Fields.Image));
             }
 
             return model;
