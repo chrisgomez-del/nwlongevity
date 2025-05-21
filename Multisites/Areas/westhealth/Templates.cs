@@ -123,5 +123,18 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string ImageLocation = "Image Location";
             }
         }
+        public static class Slider
+        {
+
+        }
+        public static class Slide
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Copy = "Copy";
+                public static string CTA = "CTA";
+            }
+        }
     }
 }
