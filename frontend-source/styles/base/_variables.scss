@@ -1,0 +1,72 @@
+$brand-purple: #574497;
+$brand-green: #00668F;
+
+// Base colors
+$primary: $brand-purple; // The purple-blue used in "Our Research" and heading
+$secondary: #4e4e4e; // Muted dark gray (for body text or minor elements)
+$tertiary: $brand-green;
+$primaryDark: #322071;
+$info: #e4e7fb; // Very light purple background on the last section
+$light: #f8f9fc; // Cards or light backgrounds (used behind accordion)
+$dark: #363637; // Deep dark for contrast if needed
+$white: #FFF;
+$grey: #F7F6FA;
+
+// Custom theme colors (optional)
+$custom-purple: #5f64d8; // Alternate highlight shade
+$brand-blue: #004b84; // Used in the gradient banner
+$copy: #E8E5F3;
+
+// Font stack (adjust if using a web font)
+$font-family-sans-serif: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+
+// Headings
+$headings-font-weight: 700;
+$headings-color: $primary;
+
+// Body
+$body-color: #333333;
+$body-bg: #ffffff;
+
+// Lead text (used in hero)
+$lead-font-size: 1.25rem;
+$lead-font-weight: 400;
+
+$spacer: 1rem;
+$border-radius: .75rem;
+$border-radius-lg: 1.5rem;
+
+$link-color:                              $brand-green;
+$link-decoration:                         underline;
+$link-shade-percentage:                   20%;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration:                   null;
+
+$btn-font-weight: 600;
+$btn-border-radius: 0.5rem;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.5rem;
+
+$btn-primary-bg: $primary;
+$btn-primary-border-color: $primary;
+$btn-primary-color: #ffffff;
+
+$btn-hover-bg-shade-amount: 10%;
+
+$box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+
+$accordion-border-radius: 0.5rem;
+$accordion-icon-color: $primary;
+$accordion-button-active-bg: $info;
+$accordion-button-focus-box-shadow: none;
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": #198754,
+        "info": $info,
+        "warning": #ffc107,
+        "danger": #dc3545,
+        "light": $light,
+        "dark": $dark
+);

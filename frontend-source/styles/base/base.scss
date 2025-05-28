@@ -1,0 +1,19 @@
+@import "../fonts/_icons.scss";
+@import "../fonts/_titles.scss";
+@import "../fonts/_copy.scss";
+@import "cards";
+@import "swiper";
+@import "helpers";
+
+html {
+  //font-size: 62.5%; // 62.5% of 16px = 10px - 64px would be 6.4rem
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

@@ -1,0 +1,119 @@
+.resource-navigator {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  // SIDEBAR
+  &__sidebar {
+    position: sticky;
+    top: 2rem;
+    flex-shrink: 0;
+    min-width: 220px;
+
+    @media (max-width: 767px) {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      background: #fff;
+      color: #333;
+      text-align: left;
+      font-size: 1rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+
+      &:hover,
+      &:focus {
+        outline: 2px solid #005fa3;
+        outline-offset: 2px;
+      }
+
+      &.is-active {
+        background: #004c99;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // CONTENT PANEL
+  &__content {
+    flex: 1;
+    max-width: 800px;
+  }
+}
+
+// RESOURCE SECTION
+.resource-section {
+  display: none;
+
+  &.is-active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+// RESOURCE CARDS
+.resource-card {
+  margin-bottom: 2rem;
+
+  .resource-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #004c99;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #004c99;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// ANIMATION
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.color-red {
+  color:red;
+}
