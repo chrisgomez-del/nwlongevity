@@ -539,6 +539,8 @@
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.min.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.min.js" />
+    <Content Include="Areas\westhealth\Content\main.css" />
+    <Content Include="Areas\westhealth\Scripts\main.js" />
     <Content Include="gulpfile.js" />
     <Content Include="Areas\Innovation\Content\scss\forms\_form.scss" />
     <Content Include="App_Config\include\Innovation-Initialize.config" />
@@ -635,6 +637,10 @@
     <Content Include="Areas\westhealth\Views\Components\Slider.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Slide.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\TwoColumnImageStack.cshtml" />
+    <Content Include="Areas\westhealth\Content\assets\bootstrap-icons.woff" />
+    <Content Include="Areas\westhealth\Content\assets\bootstrap-icons.woff2" />
+    <Content Include="Areas\westhealth\Content\fonts\bootstrap-icons.woff" />
+    <Content Include="Areas\westhealth\Content\fonts\bootstrap-icons.woff2" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
