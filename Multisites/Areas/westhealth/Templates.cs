@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.EnterpriseServices.Internal;
 using System.Linq;
 using System.Web;
+using Google.Apis.Http;
 using Sitecore.Data;
 using Sitecore.Mvc.Diagnostics;
 using Sitecore.Publishing;
@@ -144,6 +145,19 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string TopBackground = "Top Background"; 
                 public static string BottomImage = "Bottom Image";
                 public static string BottomBackground = "Bottom Background";
+            }
+        }
+        public static class TwoColumnStaggeredList
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string ProviderList = "Provider List";
+                public static string PatientList = "Patient List";
+                public static string Image = "Image";
+                public static string ListBackgroundColor = "List Background Color";
+                public static string ProviderCtaSource = "Provider Cta Source";
+                public static string PatientCtaSource = "Patient Cta Source";
             }
         }
     }
