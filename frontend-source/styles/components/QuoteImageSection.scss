@@ -1,0 +1,25 @@
+.quote-image-section {
+  .quote-image-wrapper {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+
+    img.quote-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 700px;
+      display: block;
+    }
+  }
+
+  .quote-box {
+    margin-top: -100px;
+    background-color: #fff;
+    color: #212529;
+  }
+
+  .text-primary {
+    color: $primary !important;
+  }
+}

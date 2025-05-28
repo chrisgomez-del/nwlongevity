@@ -1,0 +1,65 @@
+// Custom, non-Bootstrap stuff.
+// Override Bootstrap variables here before the import if needed
+// $primary: #ff5733;
+//@import './base/bootstrap-overrides.scss';
+$bootstrap-icons-font-path: "/fonts/";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("/fonts/bootstrap-icons.woff2") format("woff2"),
+  url("/fonts/bootstrap-icons.woff") format("woff");
+}
+
+@import "./base/variables.scss";
+
+@import "bootstrap/scss/bootstrap";
+@import "./base/functions.scss";
+@import "./base/btns.scss";
+@import "./base/base.scss";
+
+
+@import "./components/SplitContentHero.scss";
+@import "./components/SplitContentSubtitle.scss";
+@import './components/ResourceNavigator.scss';
+@import "./components/ThreeCardCallout.scss";
+@import "./components/StatementContentWithCards.scss";
+@import "./components/QuoteImageSection.scss";
+
+:root {
+  --rem: 10px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color:$grey
+}
+
+.site-header {
+  background: #563D7C;
+  color: white;
+}
+
+.site-footer {
+  background-color: #3c3d41;
+  color: white;
+}
+
+.site-footer .footer-copyright {
+  background-color: #333333;
+  text-align: center;
+}
+.site-footer .footer-copyright p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #d2d1d1;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: none;
+  color: white;
+}

@@ -31,6 +31,13 @@ namespace NM_MultiSites.Areas.westhealth
 
             }
         }
+        public static class Global
+        {
+            public static class Fields
+            {
+                public static string MetaTitle = "Meta Title";
+            }
+        }
         public static class Testimonial
         {
             public static class Fields

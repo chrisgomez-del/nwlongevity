@@ -1,0 +1,64 @@
+.primary-title {
+  color: $white;
+  font-family: $font-family-sans-serif;
+  font-size: clamp(#{autorem(40)}, 2.5vw + 1rem, #{autorem(64)});
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 76.8px */
+}
+
+.secondary-title {
+  color: $primary;
+  font-size: clamp(#{autorem(28)}, 2.5vw + 1rem, #{autorem(40)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 56px */
+  
+  &:has(em), // accounting for sitecore editor output
+  &:has(b) {
+    font-weight: 400;
+    em, b {
+      font-weight: 700;
+      font-style: normal;
+    }
+  }
+  &--white {
+    color: $white;
+  }
+}
+
+.eyebrow-title {
+  color: $primaryDark;
+  font-size: clamp(#{autorem(14)}, 2.5vw + 1rem, #{autorem(18)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 3.6px;
+}
+
+.statement-title {
+  color: $white;
+  font-size: clamp(#{autorem(24)}, 2.5vw + 1rem, #{autorem(46)});
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 59.8px */
+  &--emphasis {
+    font-weight: 700;
+  }
+}
+
+.card-title {
+  //TODO: Replace with variable from @breed
+  color: #00668F;
+  font-size: clamp(#{autorem(18)}, 2.5vw + 1rem, #{autorem(28)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 39.2px */
+}
+
+.primary-text--gradient {
+  background: linear-gradient(110deg, #574497 0%, #007298 111.92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
