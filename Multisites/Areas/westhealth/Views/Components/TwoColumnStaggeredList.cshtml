@@ -1,0 +1,36 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TwoColumnStaggeredListViewModel
+
+<div>
+    <h1>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Title)</h1>
+    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Image)</div>
+    <div>
+        <h2>Providers</h2>
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderList)</div>
+        }
+        <ul>
+            @foreach (var bullet in Model.ProviderBullets)
+            {
+                <li>@bullet</li>
+            }
+        </ul>
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderCtaSource)
+    </div>
+    <div>
+        <h2>Patients</h2>
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientList)</div>
+        }
+        <ul>
+            @foreach (var bullet in Model.PatientBullets)
+            {
+                <li>@bullet</li>
+            }
+        </ul>
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientCtaSource)
+    </div>
+    <div>@Model.ListBackgroundColor</div>
+    <div>@Html.Sitecore().DynamicPlaceholder("twocolumnstaggeredlist-card")</div>
+</div>
