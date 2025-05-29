@@ -44,6 +44,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Image = "Image";
                 public static string Testimonial = "Testimonial";
                 public static string Copy = "Copy";
+                public static string TestimonialAuthor= "Testimonial Author";
             }
         }
         public static class EnhancedCallout
