@@ -2,3 +2,13 @@
 .ratio-11-10 {
  aspect-ratio: 11 / 10; 
 }
+
+.transition-opacity {
+ transition: opacity 0.3s ease-in-out;
+}
+
+.transition {
+ &--fast {
+  transition-duration: 0.2s;
+ }
+}

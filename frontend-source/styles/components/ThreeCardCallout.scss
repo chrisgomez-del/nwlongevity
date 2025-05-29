@@ -14,6 +14,7 @@
   width: 90%;
   height: 90%;
   transform: translate(-50%, -50%);
+  z-index: 0;
   
   > * {
     width: 100%;
@@ -26,4 +27,8 @@
       object-position: center;
     }
   }
+}
+
+.three-card-callout-content {
+  z-index: 1;
 }
