@@ -20,6 +20,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly ITwoColumnWithImageService _twoColumnWithImageService;
         private readonly ISliderService _sliderService;
         private readonly ITwoColumnImageStackService _twoColumnImageStackService;
+        private readonly ITwoColumnStaggeredListService _twoColumnStaggeredListService;
 
         public ComponentController()
         {
@@ -32,6 +33,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _twoColumnWithImageService = new TwoColumnWithImageService();
             _sliderService = new SliderService();
             _twoColumnImageStackService = new TwoColumnImageStackService();
+            _twoColumnStaggeredListService = new TwoColumnStaggeredListService();
 
         }
         // GET: westhealth/Index
@@ -90,6 +92,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var twoColumnImageStackViewModel = _twoColumnImageStackService.GetTwoImageStackViewModel();
             return View("~/Areas/westhealth/Views/Components/TwoColumnImageStack.cshtml", twoColumnImageStackViewModel);
+        }                
+        public ActionResult TwoColumnStaggeredList()
+        {
+            var twoColumnStaggeredListViewModel = _twoColumnStaggeredListService.GetTwoColumnStaggeredListViewModel();
+            return View("~/Areas/westhealth/Views/Components/TwoColumnStaggeredList.cshtml", twoColumnStaggeredListViewModel);
         }
     }
 }

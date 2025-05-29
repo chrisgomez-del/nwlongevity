@@ -1,0 +1,102 @@
+----item----
+version: 1
+id: {762EA6A6-BB0E-414D-9734-2AF9B6D703C5}
+database: master
+path: /sitecore/content/West Health/page_data/Test Two Column Staggered List
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Test Two Column Staggered List
+master: {00000000-0000-0000-0000-000000000000}
+template: {CC79CDA3-F693-4278-B34F-06B5BAEBB5E8}
+templatekey: Two Column Staggered List
+
+----version----
+language: en
+version: 1
+revision: 9fdbff65-180b-4cfa-a8b9-e5d89cbcfa6a
+
+----field----
+field: {B857D1BF-F0EC-4A73-84E0-46D673C1D5AE}
+name: Title
+key: title
+content-length: 30
+
+Test Two Column Staggered List
+----field----
+field: {355EC235-0F7F-4C30-A07B-992347F1D062}
+name: Provider List
+key: provider list
+content-length: 37
+
+asdf
+fghj
+asdfasdfasfdasfas
+qwer
+
+----field----
+field: {1EA8256C-9ABC-4045-95A2-AF8C5D76671F}
+name: Patient List
+key: patient list
+content-length: 25
+
+111
+222
+333
+444
+555
+
+----field----
+field: {54B20742-3236-464D-A751-0A6BF72E83F9}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{BFD1C4F2-C6D8-4AFD-860D-97483B1B602C}" />
+----field----
+field: {BDA7E390-8426-4039-93FB-4A2974067600}
+name: Provider Cta Source
+key: provider cta source
+content-length: 117
+
+<link linktype="internal" text="Download PDF" querystring="" target="" id="{470F7108-5E8C-446C-B5CA-910A774BDF09}" />
+----field----
+field: {DF562DC2-EBB6-452F-B1F9-A288573A146A}
+name: Patient Cta Source
+key: patient cta source
+content-length: 117
+
+<link linktype="internal" text="Download PDF" querystring="" target="" id="{470F7108-5E8C-446C-B5CA-910A774BDF09}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250527T203519Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9fdbff65-180b-4cfa-a8b9-e5d89cbcfa6a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250528T163729Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -48,7 +48,6 @@ namespace NM_MultiSites.Areas.westhealth.Services
         {
             return Sitecore.Context.Database.GetItem(path);
         }
-
         private string GetDroplinkValue(ReferenceField referenceField)
         {
             if (referenceField == null)
