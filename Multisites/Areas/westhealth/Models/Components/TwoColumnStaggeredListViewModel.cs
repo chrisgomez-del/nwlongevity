@@ -9,7 +9,9 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
     {
         public Item SourceItem { get; set; }
         public IHtmlString Title { get; set; }
+        public IHtmlString ProviderTitle { get; set; }
         public IHtmlString ProviderList { get; set; }
+        public IHtmlString PatientTitle { get; set; }
         public IHtmlString PatientList { get; set; }
         public IHtmlString Image { get; set; }
         public string ListBackgroundColor { get; set; }

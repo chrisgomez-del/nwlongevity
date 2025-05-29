@@ -4,7 +4,7 @@
     <h1>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Title)</h1>
     <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Image)</div>
     <div>
-        <h2>Providers</h2>
+        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderTitle)</h2>
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
             <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderList)</div>
@@ -18,7 +18,7 @@
         @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderCtaSource)
     </div>
     <div>
-        <h2>Patients</h2>
+        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientTitle)</h2>
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
             <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientList)</div>

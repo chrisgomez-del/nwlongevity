@@ -31,8 +31,10 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.SourceItem = datasource;
                 model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.Title));
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.Image));
+                model.ProviderTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.ProviderTitle));
                 model.ProviderList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.ProviderList));
                 model.ProviderString = datasource[Templates.TwoColumnStaggeredList.Fields.ProviderList];
+                model.PatientTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.PatientTitle));
                 model.PatientList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.PatientList));
                 model.PatientString = datasource[Templates.TwoColumnStaggeredList.Fields.PatientList];
                 model.ListBackgroundColor = GetDroplinkValue(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.ListBackgroundColor]);
