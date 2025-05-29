@@ -12,5 +12,6 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Image { get; set; }
         public IHtmlString Copy { get; set; }
         public IHtmlString Testimonial { get; set; }
+        public IHtmlString TestimonialAuthor { get; set; }
     }
 }

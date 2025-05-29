@@ -24,6 +24,10 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.Testimonial.Fields.Image));
                 model.Testimonial = new HtmlString(FieldRenderer.Render(datasource, Templates.Testimonial.Fields.Testimonial));
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.Testimonial.Fields.Copy));
+                model.TestimonialAuthor = string.IsNullOrEmpty(datasource.Fields[Templates.Testimonial.Fields.TestimonialAuthor].GetValue(true)) ?
+                    null:
+                    new HtmlString(FieldRenderer.Render(datasource, Templates.Testimonial.Fields.TestimonialAuthor));
+
 
             }
             return model;
