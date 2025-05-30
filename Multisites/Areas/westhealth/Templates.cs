@@ -47,10 +47,12 @@ namespace NM_MultiSites.Areas.westhealth
         }
         public static class NavigableSectionBase
         {
+            public static string TemplateId = "{3AD5F43C-69EC-493E-AC87-43D07211517F}";
             public static class Fields
             {
                 public static string SectionId = "Section ID";
                 public static string Title = "Title";
+                public static string IncludeInNavigation= "Include in Navigation";
             }
         }
         public static class Testimonial

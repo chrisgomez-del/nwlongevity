@@ -7,6 +7,7 @@ using NM_MultiSites.Areas.westhealth.Models.Navigation;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Data.Query;
+using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 
 namespace NM_MultiSites.Areas.westhealth.Services
@@ -50,10 +51,26 @@ namespace NM_MultiSites.Areas.westhealth.Services
         public InternalNavigationViewModel GetInternalNavigation()
         {
             InternalNavigationViewModel model = new InternalNavigationViewModel();
-            Item datasource = WestHealthSitecoreService.GetDataSourceItem();
-            model.Links.AddRange(MapMultiListItems<InternalNavigationLinkViewModel>(datasource, Templates.InternalNavigation.Fields.NavigationLinks, MapInternalNavigationViewModel));
+            var items = GetCurrentPageDataDirectoryItemsOfType(Templates.NavigableSectionBase.TemplateId);
+
+            foreach(var item in items)
+            {
+                model.Links.Add(MapInternalNavigationViewModel(item));
+            }
+
 
             return model;
+
+        }
+        public static List<Item> GetCurrentPageDataDirectoryItemsOfType(string type)
+        {
+            var root = RenderingContext.Current.ContextItem;
+            var pageData = root.Axes.GetDescendants()
+                .FirstOrDefault(x => x.Name == "page_data");
+
+            return pageData.Axes.GetDescendants()
+                .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId))                //&& x.Fields[Templates.NavigableSectionBase.Fields.IncludeInNavigation].Value(true) == true)''
+                .ToList();
 
         }
         private InternalNavigationLinkViewModel MapInternalNavigationViewModel(Item currentInternalNavigationItem)
