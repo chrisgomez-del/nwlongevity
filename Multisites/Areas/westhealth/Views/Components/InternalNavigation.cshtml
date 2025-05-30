@@ -1,0 +1,40 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TestimonialViewModel
+
+@{
+    bool isEditMode = Sitecore.Context.PageMode.IsExperienceEditor;
+}
+
+<section class="quote-image-section position-relative pb-5">
+    <div class="quote-image-wrapper">
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Testimonial.Fields.Image, new { @class = "quote-img" })
+    </div>
+
+    <div class="container position-relative z-1 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-11 col-lg-12 bg-white shadow-lg p-4 p-lg-5 rounded-4 d-lg-flex align-items-start quote-box">
+                <div class="row">
+                    <!-- Left Quote -->
+                    <div class="col-lg-7 pe-lg-4 mb-4 mb-lg-0">
+                        <h4 class="secondary-title primary-text--gradient mb-0">
+                            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Testimonial.Fields.Testimonial)
+                        </h4>
+                    </div>
+
+                    <!-- Right Attribution -->
+                    <div class="col-lg-5 ps-lg-4">
+                        <p class="mb-2 primary-copy primary-copy--dark">
+                            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Testimonial.Fields.Copy)
+                        </p>
+                        @if (Model.TestimonialAuthor != null || isEditMode)
+                        {
+                            <p class="fst-italic primary-copy primary-copy--dark mb-0">
+                                –
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Testimonial.Fields.TestimonialAuthor)
+                            </p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -38,6 +38,21 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string MetaTitle = "Meta Title";
             }
         }
+        public static class InternalNavigation
+        {
+            public static class Fields
+            {
+                public static string NavigationLinks = "Navigation Links";
+            }
+        }
+        public static class NavigableSectionBase
+        {
+            public static class Fields
+            {
+                public static string SectionId = "Section ID";
+                public static string Title = "Title";
+            }
+        }
         public static class Testimonial
         {
             public static class Fields

@@ -15,6 +15,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
     {
         FooterViewModel GetFooter();
         HeaderViewModel GetHeader();
+        InternalNavigationViewModel GetInternalNavigation();
     }
     public class NavigationService : INavigationService
     {
@@ -45,6 +46,23 @@ namespace NM_MultiSites.Areas.westhealth.Services
             header.Logo = WestHealthSitecoreService.GetMediaUrl(i, Templates.Config.Fields.HeaderLogo);
             return header;
 
+        }
+        public InternalNavigationViewModel GetInternalNavigation()
+        {
+            InternalNavigationViewModel model = new InternalNavigationViewModel();
+            Item datasource = WestHealthSitecoreService.GetDataSourceItem();
+            model.Links.AddRange(MapMultiListItems<InternalNavigationLinkViewModel>(datasource, Templates.InternalNavigation.Fields.NavigationLinks, MapInternalNavigationViewModel));
+
+            return model;
+
+        }
+        private InternalNavigationLinkViewModel MapInternalNavigationViewModel(Item currentInternalNavigationItem)
+        {
+            return new InternalNavigationLinkViewModel
+            {
+                SectionId = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.SectionId)),
+                Title = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.Title))
+            };
         }
         private List<T> MapMultiListItems<T>(Item item, string fieldName, Func<Item, T> MappingFunction)
             where T : class

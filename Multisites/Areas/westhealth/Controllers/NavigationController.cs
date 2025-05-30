@@ -24,5 +24,10 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var footerViewModel = _navigationService.GetFooter();
             return View(footerViewModel);
         }
+        public ActionResult InternalNavigation()
+        {
+            var navigationViewModel = _navigationService.GetInternalNavigation();
+            return View(navigationViewModel);
+        }
     }
 }

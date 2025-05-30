@@ -1,0 +1,12 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Navigation.InternalNavigationViewModel
+
+
+<div>
+    INTERNAL NAVIGATION
+    <ul>
+        @foreach (var navItem in Model.Links)
+        {
+            <a href="@navItem.SectionId">@navItem.Title</a>
+        }
+    </ul>
+</div>
