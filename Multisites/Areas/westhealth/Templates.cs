@@ -183,6 +183,15 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string ListBackgroundColor = "List Background Color";
                 public static string ProviderCtaSource = "Provider Cta Source";
                 public static string PatientCtaSource = "Patient Cta Source";
+                public static string ProviderTitle = "Provider Title";
+                public static string PatientTitle = "Patient Title";
+            }
+        }
+        public static class ResearchList
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
             }
         }
     }

@@ -47,6 +47,14 @@
   }
 }
 
+.emphasis-title {
+  color: $primaryDark;
+  font-size: #{autorem(20)};
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%;
+}
+
 .card-title {
   //TODO: Replace with variable from @breed
   color: #00668F;
@@ -61,4 +69,28 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.tab-title {
+  color:$brand-green;
+  font-size: clamp(#{autorem(24)}, 2.5vw + 1rem, #{autorem(32)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.accordion-item-title {
+  color:$brand-green;
+  font-size: clamp(#{autorem(18)}, 2.5vw + 1rem, #{autorem(24)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.introduction-title {
+  color: $primaryDark;
+  font-size: clamp(#{autorem(32)}, 2.5vw + 1rem, #{autorem(52)});
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
 }

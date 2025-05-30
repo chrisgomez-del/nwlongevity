@@ -372,6 +372,7 @@
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\ResearchListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SlideViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TeamMemberViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TeamContainerViewModel.cs" />
@@ -386,6 +387,7 @@
     <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
+    <Compile Include="Areas\westhealth\Services\ResearchListService.cs" />
     <Compile Include="Areas\westhealth\Services\SliderService.cs" />
     <Compile Include="Areas\westhealth\Services\TeamService.cs" />
     <Compile Include="Areas\westhealth\Services\TestimonialService.cs" />
@@ -647,6 +649,7 @@
     <Content Include="Areas\westhealth\Content\fonts\bootstrap-icons.woff2" />
     <Content Include="Areas\westhealth\Views\Components\InternalNavigation.cshtml" />
     <Content Include="Areas\westhealth\Views\Navigation\InternalNavigation.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\ResearchList.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

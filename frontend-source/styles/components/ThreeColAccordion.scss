@@ -1,0 +1,36 @@
+﻿.tabbed-container {
+  position: relative;
+  border-radius: 1rem;
+  .accordion-item {
+    border-radius: 0 1rem 1rem 1rem;
+  }
+}
+
+.accordion-header {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:$grey;
+  border-radius:1rem 1rem 0 0;
+  &.collapsed {
+    border-radius:1rem;
+  }
+}
+
+.accordion-icon .icon-bar-vertical {
+  //opacity: 0;
+  transform: rotate(90deg);
+  transition: transform 0.3s linear;
+  transform-origin:center;
+}
+
+.accordion-header.collapsed .accordion-icon .icon-bar-vertical {
+  transform: rotate(0deg);
+}
+
+
+.accordion-item {
+  border:none;
+  background:$grey;
+}

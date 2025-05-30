@@ -1,0 +1,18 @@
+﻿.utility-nav {
+  .btn {
+    i {
+      font-size: 2rem;
+      line-height: .2;
+    }
+    &:hover i, &:active i, &:focus i {
+      opacity: 1 !important;
+    }
+  }
+  .btn-outline-primary {
+    &:hover, &:active, &:focus {
+      font-weight:bold;
+      color:$primaryDark;
+      background:$white;
+    }
+  }
+}

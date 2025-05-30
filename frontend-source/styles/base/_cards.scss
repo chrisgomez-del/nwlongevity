@@ -4,8 +4,52 @@
   --bs-card-spacer-y: #{autorem(32)};
   --bs-card-cap-padding-x: #{autorem(32)};
   --bs-card-cap-padding-y: #{autorem(32)};
-  --bs-card-border-width: 0; 
+  --bs-card-border-width: 0;
+  &:before {
+    opacity:0;
+    content:'';
+    transition:opacity 0.3s linear;
+  }
+  &:hover {
+    &:before {
+      opacity:1;
+      width: 100%;
+      height: calc(100% + 4px);
+      position: absolute;
+      z-index: -1;
+      border-radius: inherit;
+      top: -2px;
+      left: -2px;
+      background: linear-gradient(258deg, rgba(87, 68, 151, 0) 30%, rgba(87, 68, 151, 0.4) 79% 79%, rgba(87, 68, 151, 0.5) 100%)
+    }
+  }
 }
+
+.card-row {
+  .col-6, .col-md-6, .col-lg-6, .col-5, .col-md-5, .col-lg-5 {
+    &:nth-child(odd) {
+      .card {
+        &:hover {
+          &:before {
+            left: -2.5px;
+          }
+        }
+      }
+    }
+  }
+  .col-4, .col-md-4, .col-lg-4 {
+    &:nth-child(3n + 1) {
+      .card {
+        &:hover {
+          &:before {
+            left: -2.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .card-img {
     aspect-ratio: 555 / 300;
     object-fit: cover; 
