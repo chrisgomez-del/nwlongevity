@@ -1,47 +1,47 @@
 ----item----
 version: 1
-id: {F73DB283-62B9-4B3A-AA4A-F49399FBD6E7}
+id: {3D530DD5-24B5-47E5-8F39-A89B953DA29F}
 database: master
-path: /sitecore/content/West Health/global_data/Background Color/Blue
-parent: {393C436D-7FA0-4C05-AA4F-E886614471CE}
-name: Blue
+path: /sitecore/templates/West Health/Content/Split Content Subtitle/Content
+parent: {0E45F19E-0857-4CB4-9E78-67FF8AA3DE33}
+name: Content
 master: {00000000-0000-0000-0000-000000000000}
-template: {89056EC1-5C3C-4677-92B6-D4CA7537D5C6}
-templatekey: Droplink Item
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
 
 ----version----
 language: en
 version: 1
-revision: 655ceb1f-87cb-468f-b83a-2ae9cf3a495d
+revision: 963913bd-b81b-4b22-b408-b30a11fa7658
 
 ----field----
-field: {FC2764E4-F090-4DB2-B8F6-CC4AD0239C5D}
-name: Name
-key: name
-content-length: 4
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
-Blue
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250521T191442Z
+20250530T164303Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-655ceb1f-87cb-468f-b83a-2ae9cf3a495d
+963913bd-b81b-4b22-b408-b30a11fa7658
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250521T191442Z
+20250530T165141Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

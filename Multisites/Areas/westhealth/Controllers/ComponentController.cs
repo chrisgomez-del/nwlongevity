@@ -22,7 +22,9 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly ITwoColumnImageStackService _twoColumnImageStackService;
         private readonly ITwoColumnStaggeredListService _twoColumnStaggeredListService;
         private readonly IResearchListService _researchListService;
-        
+        private readonly ISplitContentHeroService _splitContentHeroService;
+        private readonly ISplitContentSubtitleService _splitContentSubtitleService;
+
 
         public ComponentController()
         {
@@ -37,6 +39,8 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _twoColumnImageStackService = new TwoColumnImageStackService();
             _twoColumnStaggeredListService = new TwoColumnStaggeredListService();
             _researchListService = new ResearchListService();
+            _splitContentHeroService = new SplitContentHeroService(); 
+            _splitContentSubtitleService = new SplitContentSubtitleService();
 
         }
         // GET: westhealth/Index
@@ -65,7 +69,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Card.cshtml", cardViewModel);
-	}
+	    }
         public ActionResult TeamContainer()
         {
             var teamContainerViewModel = _teamService.GetTeamContainer();
@@ -106,5 +110,26 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var researchListViewModel = _researchListService.GetResearchListViewModel();
             return View("~/Areas/westhealth/Views/Components/ResearchList.cshtml", researchListViewModel);
         }
+        public ActionResult SplitContentHero()
+        {
+            var splitContentHeroViewModel = _splitContentHeroService.GetSplitContentHeroViewModel();
+            return View("~/Areas/westhealth/Views/Components/SplitContentHero.cshtml", splitContentHeroViewModel);
+        }
+        public ActionResult SplitContentSubtitle()
+        {
+            var splitContentSubtitleViewModel = _splitContentSubtitleService.GetSplitContentSubtitleViewModel();
+            return View("~/Areas/westhealth/Views/Components/SplitContentSubtitle.cshtml", splitContentSubtitleViewModel);
+        }
+        public ActionResult HeroCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/HeroCard.cshtml", cardViewModel);
+        }
+        public ActionResult SubtitleCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/SubtitleCard.cshtml", cardViewModel);
+        }
+
     }
 }
