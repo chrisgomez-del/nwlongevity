@@ -10,12 +10,6 @@ $bootstrap-icons-font-path: "/fonts/";
   url("/fonts/bootstrap-icons.woff") format("woff");
 }
 
-/*$primaryTertiary:#000000;
-$brand-green:#000000;
-$primaryDark:#000000;
-$copy:#000000;
-$grey:#000000;*/
-
 @import "./base/variables.scss";
 
 @import "bootstrap/scss/bootstrap";
