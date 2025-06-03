@@ -38,6 +38,23 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string MetaTitle = "Meta Title";
             }
         }
+        public static class InternalNavigation
+        {
+            public static class Fields
+            {
+                public static string NavigationLinks = "Navigation Links";
+            }
+        }
+        public static class NavigableSectionBase
+        {
+            public static string TemplateId = "{3AD5F43C-69EC-493E-AC87-43D07211517F}";
+            public static class Fields
+            {
+                public static string SectionId = "Section ID";
+                public static string Title = "Title";
+                public static string IncludeInNavigation= "Include in Navigation";
+            }
+        }
         public static class Testimonial
         {
             public static class Fields
@@ -45,6 +62,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Image = "Image";
                 public static string Testimonial = "Testimonial";
                 public static string Copy = "Copy";
+                public static string TestimonialAuthor= "Testimonial Author";
             }
         }
         public static class EnhancedCallout

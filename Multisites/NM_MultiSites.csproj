@@ -381,6 +381,7 @@
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnStaggeredListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnWithImageViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnImageStackViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Navigation\InternalNavigationViewModel.cs" />
     <Compile Include="Areas\westhealth\Services\CardService.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
@@ -650,6 +651,8 @@
     <Content Include="Areas\westhealth\Content\assets\bootstrap-icons.woff2" />
     <Content Include="Areas\westhealth\Content\fonts\bootstrap-icons.woff" />
     <Content Include="Areas\westhealth\Content\fonts\bootstrap-icons.woff2" />
+    <Content Include="Areas\westhealth\Views\Components\InternalNavigation.cshtml" />
+    <Content Include="Areas\westhealth\Views\Navigation\InternalNavigation.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\ResearchList.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\SplitContentHero.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\SplitContentSubtitle.cshtml" />
