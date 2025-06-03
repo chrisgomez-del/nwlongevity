@@ -77,7 +77,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
         {
             return new InternalNavigationLinkViewModel
             {
-                SectionId = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.SectionId)),
+                SectionId = currentInternalNavigationItem.Fields[Templates.NavigableSectionBase.Fields.SectionId].GetValue(true),
                 Title = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.Title))
             };
         }

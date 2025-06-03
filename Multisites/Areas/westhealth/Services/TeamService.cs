@@ -26,6 +26,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Logo = new HtmlString(FieldRenderer.Render(datasource, Templates.TeamContainer.Fields.Logo));
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.TeamContainer.Fields.Copy));
                 model.SubTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TeamContainer.Fields.SubTitle));
+                model.SectionId = datasource.Fields[Templates.TeamContainer.Fields.SectionId].GetValue(true) ?? string.Empty;
 
             }
             return model;
