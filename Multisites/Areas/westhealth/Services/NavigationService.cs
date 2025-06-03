@@ -59,9 +59,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Links.Add(MapInternalNavigationViewModel(item));
             }
 
-
             return model;
-
         }
         public static List<Item> GetCurrentPageDataDirectoryItemsOfType(string type)
         {
@@ -80,7 +78,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
             return new InternalNavigationLinkViewModel
             {
                 SectionId = currentInternalNavigationItem.Fields[Templates.NavigableSectionBase.Fields.SectionId].GetValue(true),
-                Title = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.Title))
+                Title = new HtmlString(FieldRenderer.Render(currentInternalNavigationItem, Templates.NavigableSectionBase.Fields.SectionTitle))
             };
         }
         private List<T> MapMultiListItems<T>(Item item, string fieldName, Func<Item, T> MappingFunction)

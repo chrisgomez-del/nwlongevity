@@ -51,7 +51,7 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string SectionId = "Section ID";
-                public static string Title = "Title";
+                public static string SectionTitle = "Section Title";
                 public static string IncludeInNavigation= "Include in Navigation";
             }
         }
