@@ -7,7 +7,7 @@
 <head>
     <title>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Global.Fields.MetaTitle)</title>
     <link href="https://fonts.googleapies.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
-    <link rel="stylesheet" href="~/Areas/westhealth/Content/main.css"/>
+    <link rel="stylesheet" href="~/Areas/westhealth/Content/dist/css/style.min.css"/>
 </head>
 <body>
 
@@ -22,6 +22,6 @@
     <footer id="site-footer" class="footer-container mb-5">
         @{ Html.Sitecore().RenderControllerRendering("Navigation", "Footer", new { area = "westhealth" }); }
     </footer>
-    <script src="~/Areas/westhealth/Scripts/main.js"/>
+    <script src="~/Areas/westhealth/Content/dist/js/bundle.min.js"/>
 </body>
 </html>
