@@ -29,7 +29,10 @@ namespace NM_MultiSites.Areas.westhealth.Services
             {
                 model.SourceItem = datasource;
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnWithImage.Fields.Image));
-                model.ImageLocation = GetDroplinkValue(datasource.Fields[Templates.TwoColumnWithImage.Fields.ImageLocation]);                 
+                model.ImageLocation = GetDroplinkValue(datasource.Fields[Templates.TwoColumnWithImage.Fields.ImageLocation]);
+                model.ImageLocationCssClass = WestHealthSitecoreService.GetDroplinkValue(datasource.Fields[Templates.SplitContentHero.Fields.ImageLocation], Templates.SplitContentHero.Fields.CssClass);
+                model.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
+                model.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
             }
 
             return model;

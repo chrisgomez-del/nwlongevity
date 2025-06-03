@@ -130,6 +130,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Cards/SubtitleCard.cshtml", cardViewModel);
         }
+        public ActionResult TwoColumnCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/TwoColumnCard.cshtml", cardViewModel);
+        }
 
     }
 }
