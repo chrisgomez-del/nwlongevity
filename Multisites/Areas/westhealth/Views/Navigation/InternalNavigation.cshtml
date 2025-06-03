@@ -1,12 +1,27 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Navigation.InternalNavigationViewModel
 
-
-<div>
-    INTERNAL NAVIGATION
-    <ul>
-        @foreach (var navItem in Model.Links)
-        {
-            <a href="@navItem.SectionId">@navItem.Title</a>
-        }
-    </ul>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <nav class="nav utility-nav gap-3">
+                @foreach (var navItem in Model.Links)
+                {
+                    <a class="d-flex align-items-center col text-start btn btn-outline-primary position-relative" href="#@navItem.SectionId" onclick="scrollToSection(event)">
+                       @navItem.Title 
+                        <i class="bi bi-arrow-down-short ms-3 opacity-0 transition-opacity transition--fast"></i>
+                    </a>
+                }
+            </nav>
+        </div>
+    </div>
 </div>
+
+<script>
+    function scrollToSection(event) {
+        event.preventDefault();
+        const target = document.querySelector(event.currentTarget.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+</script>

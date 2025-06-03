@@ -11,6 +11,6 @@ namespace NM_MultiSites.Areas.westhealth.Models.Navigation
     public class InternalNavigationLinkViewModel
     {
         public IHtmlString Title { get; set; }
-        public IHtmlString SectionId { get; set; }
+        public string SectionId { get; set; }
     }
 }

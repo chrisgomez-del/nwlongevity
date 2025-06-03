@@ -12,8 +12,29 @@ templatekey: Team Container
 ----version----
 language: en
 version: 1
-revision: abc010ca-6999-490b-ad00-265fa83fa1cf
+revision: 4a8a3ca9-2df8-4ad5-ac04-3a899bb653c1
 
+----field----
+field: {4CC0D6E9-77E9-433D-9FFF-1FA886127F0F}
+name: Section ID
+key: section id
+content-length: 2
+
+nm
+----field----
+field: {FE8E3D52-1E07-45D9-B76F-618DCE39FC7C}
+name: Section Title
+key: section title
+content-length: 12
+
+Northwestern
+----field----
+field: {C048B40B-65CA-4BCF-9239-D9D49F985E09}
+name: Include in Navigation
+key: include in navigation
+content-length: 1
+
+1
 ----field----
 field: {0FC18A7C-20B3-4A7A-AB1E-C9B880ABA4A9}
 name: Title
@@ -34,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-abc010ca-6999-490b-ad00-265fa83fa1cf
+4a8a3ca9-2df8-4ad5-ac04-3a899bb653c1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250520T181919Z
+20250603T154658Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
