@@ -16,22 +16,24 @@ function processArea(area) {
     return {
         styles: function() {
             return gulp.src(scssPath)
-                .pipe(sass().on('error', sass.logError))
-                .pip(gulp.dest(cssDest));
+                .pipe(sass({
+                    includePaths:['node_modules']
+                }).on('error', sass.logError))
+                .pipe(gulp.dest(cssDest));
         },
         minifyCss: function() {
-            return gulp.src(`${cssDest}style.css`)
-                .pipe(cleanCSS())
-                .pip(rename({ suffix: '.min' }))
+            return gulp.src(`${cssDest}style.css`, { allowEmpty: true })
+                .pipe(cleanCss())
+                .pipe(rename({ suffix: '.min' }))
                 .pipe(gulp.dest(cssDest));
         },
         scripts: function() {
             return gulp.src(jsPath)
-                .pip(concat('bundle.js'))
-                .pip(gulp.dest(jsDest));
+                .pipe(concat('bundle.js'))
+                .pipe(gulp.dest(jsDest));
         },
         minifyJs: function() {
-            return gulp.src(`${jsDest}bundle.js`)
+            return gulp.src(`${jsDest}bundle.js`, { allowEmpty: true })
                 .pipe(uglify())
                 .pipe(rename({ suffix: '.min' }))
                 .pipe(gulp.dest(jsDest));

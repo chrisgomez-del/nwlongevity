@@ -1,0 +1,36 @@
+// used for bled images in two col component
+.ratio-11-10 {
+ aspect-ratio: 11 / 10; 
+}
+
+.transition-opacity {
+ transition: opacity 0.3s ease-in-out;
+}
+
+.transition {
+ &--fast {
+  transition-duration: 0.2s;
+ }
+}
+.gap-32 {
+ gap: autorem(32);
+}
+.rounded-1-5 {
+ border-radius: calc(var(--bs-border-radius-sm) * 2) !important; 
+}
+
+.gradient-host {
+ position: relative;
+ --x: 40%;
+ --y: 50%;
+}
+.gradient-host::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-image: radial-gradient(circle at var(--x) var(--y), #574497, #00668f);
+ background-size: 300% 300%;
+ transition: none;
+ z-index: -1;
+ pointer-events: none;
+}

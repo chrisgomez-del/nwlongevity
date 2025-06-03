@@ -13,9 +13,13 @@
     "gulp-uglify": "^3.0.2",
     "sass": "^1.49.7"
   },
-  "dependencies": {
-    "mdb-ui-kit": "^3.10.2"
-  },
+    "dependencies": {
+        "mdb-ui-kit": "^3.10.2",
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.13.1",
+        "gsap": "^3.13.0",
+        "swiper": "^11.2.7"
+    },
   "scripts": {
     "build": "gulp"
   },

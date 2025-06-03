@@ -51,7 +51,7 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string SectionId = "Section ID";
-                public static string Title = "Title";
+                public static string SectionTitle = "Section Title";
                 public static string IncludeInNavigation= "Include in Navigation";
             }
         }
@@ -119,12 +119,13 @@ namespace NM_MultiSites.Areas.westhealth
         }
         public static class TeamContainer
         {
-            public static class Fields
+            public static class Fields 
             {
                 public static string Title = "Title";
                 public static string Logo = "Logo";
                 public static string SubTitle = "Sub-Title";
                 public static string Copy = "Copy";
+                public static string SectionId = "Section Id";
             }
         }
         public static class TeamMember

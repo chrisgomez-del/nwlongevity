@@ -1,0 +1,22 @@
+.content-section {
+  .object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  // If section follows another section with same block, remove margin
+  &[data-block="mental-health"] + &[data-block="mental-health-overview"] {
+    margin-top: 0;
+
+    @media (min-width: 768px) {
+      .mt-0-stack {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  // Default spacing if not stacked
+  &.mt-0-stack:not(:first-child) {
+    margin-top: 3rem !important;
+  }
+}
