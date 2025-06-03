@@ -658,6 +658,7 @@
     <Content Include="Areas\westhealth\Views\Components\SplitContentSubtitle.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\HeroCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\SubtitleCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Cards\TwoColumnCard.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
