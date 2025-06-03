@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using NM_MultiSites.Areas.Innovation.Infrastructure.Extensions;
 using NM_MultiSites.Areas.westhealth.Models;
 using NM_MultiSites.Areas.westhealth.Models.Navigation;
 using Sitecore.Data;
@@ -69,7 +70,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 .FirstOrDefault(x => x.Name == "page_data");
 
             return pageData.Axes.GetDescendants()
-                .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId))                //&& x.Fields[Templates.NavigableSectionBase.Fields.IncludeInNavigation].Value(true) == true)''
+                .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId) 
+                        && x.Fields[Templates.NavigableSectionBase.Fields.IncludeInNavigation].GetValue(true).ToBoolean() == true)
                 .ToList();
 
         }
