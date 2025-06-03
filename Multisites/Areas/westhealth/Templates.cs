@@ -195,5 +195,25 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Title = "Title";
             }
         }
+        public static class SplitContentHero
+        {
+            public static class Fields
+            {
+                public static string Image = "Image";
+                public static string ImageLocation = "Image Location";
+                public static string BackgroundColor = "Background Color";
+                public static string CssClass = "Css Class";
+            }
+        }
+        public static class SplitContentSubtitle
+        {
+            public static class Fields
+            {
+                public static string Image = "Image";
+                public static string ImageLocation = "Image Location";
+                public static string BackgroundColor = "Background Color";
+                public static string CssClass = "Css Class";
+            }
+        }
     }
 }

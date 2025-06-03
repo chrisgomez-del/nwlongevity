@@ -86,6 +86,26 @@ namespace NM_MultiSites.Areas.westhealth.Services
             return url;
         }
 
+        public static String GetMediaAltText(Item item, string field = "Image")
+        {
+            var alt = String.Empty;
+            if (item != null && item.Fields[field] != null)
+            {
+                Sitecore.Data.Fields.ImageField imgField = ((Sitecore.Data.Fields.ImageField)item.Fields[field]);
+                try
+                {
+                    alt = imgField?.Alt ?? string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    Sitecore.Diagnostics.Log.Error("Image not authoed", ex, "Innovation");
+                    return String.Empty;
+                }
+
+            }
+            return alt;
+        }
+
         public static List<Item> GetMultiListItems(Item dataItem, string fieldName)
         {
             if (dataItem != null && !string.IsNullOrEmpty(fieldName))
@@ -165,6 +185,22 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 return false;
 
             return TemplateManager.GetTemplate(template.ID, template.Database).DescendsFromOrEquals(baseTemplate.ID);
+        }
+
+        public static string GetDroplinkValue(ReferenceField referenceField, string field = "Name")
+        {
+            if (referenceField == null)
+            {
+                return string.Empty;
+            }
+            else if (referenceField.TargetItem == null)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return referenceField.TargetItem.Fields[field].Value;
+            }
         }
     }
 }
