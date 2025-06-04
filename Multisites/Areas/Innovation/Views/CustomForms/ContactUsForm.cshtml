@@ -1,7 +1,9 @@
 ﻿@using NM_MultiSites.Areas.Innovation.Helpers
 @model NM_MultiSites.Areas.Innovation.Models.Forms.ContactUsForm
 <script src='https://www.google.com/recaptcha/api.js'></script>
-
+@{
+    var secrets = NM_MultiSites.Areas.Innovation.Mappers.Forms.ContactUsFormService.GetSecureSecretSettings();
+}
 <div class="contact-us-form-section d-flex">
     <div class="container-fluid contact-info">
         <div id="contact-formPanel" class="row h-100">
@@ -56,7 +58,7 @@
                         @Html.ValidationMessageFor(x => x.FormMessage)
                     </div>
                 </div>
-                <div class="g-recaptcha py-3 border border-light" data-sitekey="@Sitecore.Configuration.Settings.GetSetting("SiteKey")" data-size="compact"></div>
+                <div class="g-recaptcha py-3 border border-light" data-sitekey="@secrets.GoogleCaptchaSiteKey" data-size="compact"></div>
 
                 @Html.Partial("~/Areas/Innovation/Views/Shared/_loaderIcon.cshtml")
 

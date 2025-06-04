@@ -11,6 +11,7 @@ using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using NM_MultiSites.Areas.Innovation.Models;
 using NM_MultiSites.Areas.Innovation.Models.Forms;
+using NM_MultiSites.Areas.Innovation.API.Youtube.Models;
 
 namespace NM_MultiSites.Areas.Innovation.Mappers.Forms
 {
@@ -37,6 +38,15 @@ namespace NM_MultiSites.Areas.Innovation.Mappers.Forms
 
             }
             return formmessages;
+        }
+
+        public static SecureSecretSettings GetSecureSecretSettings()
+        {
+            SecureSecretSettings secret = new SecureSecretSettings();
+            Item i = SitecoreAccess.getSiteSettingItem();
+            secret.GoogleCaptchaSiteKey = new HtmlString(FieldRenderer.Render(i, "Google Captcha SiteKey"));
+            secret.GoogleCaptchaSecretKey = new HtmlString(FieldRenderer.Render(i, "Google Captcha SecretKey"));
+            return secret;
         }
     }
 }

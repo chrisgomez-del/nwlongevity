@@ -1,4 +1,5 @@
-﻿using Sitecore.Configuration;
+﻿using NM_MultiSites.Areas.Innovation.API.Youtube;
+using Sitecore.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,7 +14,8 @@ namespace NM_MultiSites.Areas.Innovation.Helpers
     {
         public static string GetSignedUrl(string url)
         {
-            string keyString = ConfigurationManager.AppSettings["Google:PrivateKey"];
+            var secrets = YoutubeService.GetSecretSettings();
+            string keyString = secrets.GooglePrivateKey?.ToString();
 
             if (string.IsNullOrEmpty(keyString))
             {
