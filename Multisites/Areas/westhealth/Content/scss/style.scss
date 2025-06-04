@@ -1,7 +1,10 @@
 //$enable-cssgrid: true;
-$enable-negative-margins: true;
-$bootstrap-icons-font-path: "/fonts/";
+:root {
+  --rem: 10px;
+  --navbar-offset: 33px;
+}
 
+$bootstrap-icons-font-path: "/fonts/";
 @import "bootstrap-icons/font/bootstrap-icons";
 
 @font-face {
@@ -11,6 +14,7 @@ $bootstrap-icons-font-path: "/fonts/";
 }
 
 @import "./base/variables.scss";
+$enable-negative-margins: true;
 
 @import "bootstrap/scss/bootstrap";
 @import "./base/functions.scss";
@@ -31,15 +35,18 @@ $bootstrap-icons-font-path: "/fonts/";
 @import "./components/ToolsResources.scss";
 @import "./components/HeroCarousel.scss";
 
-:root {
-  --rem: 10px; 
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color:$grey
+  background-color:$grey;
+  margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
 }
 
 .site-header {

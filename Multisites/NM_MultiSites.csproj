@@ -548,6 +548,10 @@
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.min.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.min.js" />
+    <Content Include="Areas\westhealth\Content\dist\css\style.css" />
+    <Content Include="Areas\westhealth\Content\dist\css\style.min.css" />
+    <Content Include="Areas\westhealth\Content\dist\js\bundle.js" />
+    <Content Include="Areas\westhealth\Content\dist\js\bundle.min.js" />
     <Content Include="Areas\westhealth\Content\img\bg-collaborative-care%401.5x.jpg" />
     <Content Include="Areas\westhealth\Content\img\bg-collaborative-care.jpg" />
     <Content Include="Areas\westhealth\Content\img\bg-usa.png" />
@@ -667,6 +671,7 @@
     <Content Include="Areas\westhealth\Views\Components\Cards\HeroCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\SubtitleCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\TwoColumnCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Cards\TwoColumnCardStaggered.cshtml" />
     <Content Include="Areas\westhealth\Content\scss\base\base.scss" />
     <Content Include="Areas\westhealth\Content\scss\base\btns.scss" />
     <Content Include="Areas\westhealth\Content\scss\base\functions.scss" />

@@ -48,8 +48,7 @@ $border-radius-lg: 1.5rem;
 $link-color:                              $brand-green;
 $link-decoration:                         underline;
 $link-shade-percentage:                   20%;
-//TODO: Check transparentize value to make sure value is 20% not 80% or vice versa
-$link-hover-color:                        transparentize($link-color, 0.2);
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
 $link-hover-decoration:                   null;
 
 $btn-font-weight: 600;

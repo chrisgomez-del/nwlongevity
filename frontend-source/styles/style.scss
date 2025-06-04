@@ -1,7 +1,9 @@
-// Custom, non-Bootstrap stuff.
-// Override Bootstrap variables here before the import if needed
-// $primary: #ff5733;
-//@import './base/bootstrap-overrides.scss';
+//$enable-cssgrid: true;
+:root {
+  --rem: 10px;
+  --navbar-offset: 33px;
+}
+
 $bootstrap-icons-font-path: "/fonts/";
 @import "bootstrap-icons/font/bootstrap-icons";
 
@@ -12,6 +14,7 @@ $bootstrap-icons-font-path: "/fonts/";
 }
 
 @import "./base/variables.scss";
+$enable-negative-margins: true;
 
 @import "bootstrap/scss/bootstrap";
 @import "./base/functions.scss";
@@ -27,17 +30,23 @@ $bootstrap-icons-font-path: "/fonts/";
 @import "./components/QuoteImageSection.scss";
 @import "./components/OffsetContentWithTabs.scss";
 @import "./components/ThreeColAccordion.scss";
+@import "./components/SingleColAccordion.scss";
 @import "./components/UtilityNav.scss";
+@import "./components/ToolsResources.scss";
+@import "./components/HeroCarousel.scss";
 
-:root {
-  --rem: 10px;
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color:$grey
+  background-color:$grey;
+  margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
 }
 
 .site-header {

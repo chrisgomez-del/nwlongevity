@@ -1,0 +1,27 @@
+﻿.single-col-accordion {
+  .accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    background:$white;
+    &.collapsed {
+      border-radius: 0;
+    }
+  }
+
+  .accordion-item {
+    border-top:1px solid $dark;
+    background:$white;
+    border-radius:0;
+    &:last-of-type {
+      border-bottom:1px solid $dark;
+    }
+  }
+  
+  .accordion-icon {
+    min-width:32px;
+    min-height:32px;
+  }
+}

@@ -62,15 +62,7 @@ function handleBreakpointChange(e) {
     }
 }
 
-function StatCards(targetSelector) {
-    const els = document.querySelectorAll(targetSelector);
-    
-    if (!els) return;
-
+export const init = (targetSelector) => {
     breakpoint.addEventListener('change', handleBreakpointChange);
     handleBreakpointChange(breakpoint);
-
-    // console.log(els);
 }
-
-export default StatCards;
