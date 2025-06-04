@@ -10,6 +10,11 @@ using NM_MultiSites.Areas.Innovation.Infrastructure.Logging;
 using NM_MultiSites.Areas.Innovation.API.Youtube.Interfaces;
 using NM_MultiSites.Areas.Innovation.API.Youtube.Models;
 using Sitecore.Configuration;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using NM_MultiSites.Areas.Innovation.Helpers;
+using Sitecore.Web.UI.WebControls;
+using System.Web;
 
 namespace NM_MultiSites.Areas.Innovation.API.Youtube
 {
@@ -30,10 +35,21 @@ namespace NM_MultiSites.Areas.Innovation.API.Youtube
 
         public static YoutubeService CreateDefault()
         {
-            string ytApiKey = Settings.GetSetting("YoutubeApiKey");
-            string channelId = Settings.GetSetting("YoutubeChannelId");
+            var secrets = GetSecretSettings();
+            string ytApiKey = secrets.YoutubeApiKey?.ToString();
+            string channelId = secrets.YoutubeChannelId?.ToString();
 
             return new YoutubeService(ytApiKey, channelId);
+        }
+
+        public static Secrets GetSecretSettings()
+        {
+            Secrets secret = new Secrets();
+            Item i = SitecoreAccess.getSiteSettingItem();
+            secret.YoutubeApiKey = new HtmlString(FieldRenderer.Render(i, "Youtube ApiKey"));
+            secret.YoutubeChannelId = new HtmlString(FieldRenderer.Render(i, "Youtube ChannelId"));
+            secret.GooglePrivateKey = new HtmlString(FieldRenderer.Render(i, "Google PrivateKey"));
+            return secret;
         }
 
         public virtual List<YoutubeVideo> GetVideosForPlaylist(string plistId)

@@ -291,6 +291,7 @@
     <Compile Include="Areas\Innovation\API\BaseService.cs" />
     <Compile Include="Areas\Innovation\API\CaptchaController.cs" />
     <Compile Include="Areas\Innovation\API\Youtube\Interfaces\IYoutubeService.cs" />
+    <Compile Include="Areas\Innovation\API\Youtube\Models\Secrets.cs" />
     <Compile Include="Areas\Innovation\API\Youtube\Models\YoutubeCategory.cs" />
     <Compile Include="Areas\Innovation\API\Youtube\Models\YoutubePlaylist.cs" />
     <Compile Include="Areas\Innovation\API\Youtube\Models\YoutubeVideo.cs" />
@@ -362,6 +363,7 @@
     <Compile Include="Areas\Innovation\Models\Forms\PartnershipIntakeForm.cs" />
     <Compile Include="Areas\Innovation\Models\Forms\ContactUsForm.cs" />
     <Compile Include="Areas\Innovation\Models\Forms\FormMessages.cs" />
+    <Compile Include="Areas\Innovation\Models\Forms\SecureSecretSettings.cs" />
     <Compile Include="Areas\Innovation\Models\GeneralLink.cs" />
     <Compile Include="Areas\Innovation\Models\Global\Footer.cs" />
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />

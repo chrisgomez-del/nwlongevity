@@ -5,6 +5,7 @@ using System.Web;
 using Newtonsoft.Json;
 using System.Net;
 using System.Web.Http;
+using NM_MultiSites.Areas.Innovation.Mappers.Forms;
 
 namespace NM_MultiSites.Areas.Innovation
 {
@@ -19,12 +20,13 @@ namespace NM_MultiSites.Areas.Innovation
         [HttpPost]
         public bool ValidCaptchaResponse()
         {
+            var secrets = ContactUsFormService.GetSecureSecretSettings();
             string captchaResponse = Request.Content.ReadAsStringAsync().Result;
             if (captchaResponse != null && captchaResponse.Length > 0)
             {
                 using (var client = new WebClient())
                 {
-                    var validationResult = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", Sitecore.Configuration.Settings.GetSetting("SecretKey"), captchaResponse));
+                    var validationResult = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secrets.GoogleCaptchaSecretKey, captchaResponse));
                     return JsonConvert.DeserializeObject<RecaptchaResponse>(validationResult).Success;
                 }
             }
