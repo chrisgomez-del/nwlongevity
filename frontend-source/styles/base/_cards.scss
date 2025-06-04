@@ -9,18 +9,18 @@
     opacity:0;
     content:'';
     transition:opacity 0.3s linear;
+    width: 100%;
+    height: calc(100% + 4px);
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(258deg, rgba(87, 68, 151, 0) 30%, rgba(87, 68, 151, 0.4) 79% 79%, rgba(87, 68, 151, 0.5) 100%)
   }
   &:hover {
     &:before {
       opacity:1;
-      width: 100%;
-      height: calc(100% + 4px);
-      position: absolute;
-      z-index: -1;
-      border-radius: inherit;
-      top: -2px;
-      left: -2px;
-      background: linear-gradient(258deg, rgba(87, 68, 151, 0) 30%, rgba(87, 68, 151, 0.4) 79% 79%, rgba(87, 68, 151, 0.5) 100%)
     }
   }
 }
@@ -129,5 +129,25 @@
     .card-content-animate {
       
     }
+  }
+}
+
+.footer__source {
+  color: $dark;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.research-card {
+  &--default {
+    border: 1px solid rgba(87, 68, 151, 0.50);
+  }
+  &--dark {
+    background:$light;
+  }
+  &--shadow {
+    @extend .shadow-sm;
   }
 }

@@ -1,0 +1,40 @@
+﻿.tools-resources {
+  .nav-pills {
+    .nav-link {
+      padding: 1rem 1.25rem;
+      border: 1px solid rgba(87, 68, 151, 0.8);
+      color:$primaryTertiary;
+      &.active {
+        color:$white;
+        background: linear-gradient(92deg, #574497 -12%, #00668F 136.31%);
+      }
+    }
+  }
+  .accordion-button {
+    display:flex;
+    justify-content: space-between;
+    border-radius: 1rem !important;
+    border: 1px solid rgba(87, 68, 151, 0.80);
+    background: linear-gradient(92deg, #574497 -12%, #00668F 136.31%);
+    color:$white;
+    &:after {
+      content:none;
+    }
+    .accordion-icon {
+      
+    }
+    &.collapsed {
+      .accordion-icon {
+        
+      }
+    }
+  }
+}
+
+.resources__item-container {
+  border-bottom:1px solid $dark;
+  &:last-of-type {
+    border:none;
+    padding-bottom:0 !important;
+  }
+}

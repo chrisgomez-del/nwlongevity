@@ -2,17 +2,24 @@
   position: relative;
   border-radius: 1rem;
   .accordion-item {
-    border-radius: 0 1rem 1rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    @include media-breakpoint-up(md) {
+      border-radius: 0 1rem 1rem 1rem;
+
+    }
   }
 }
 
 .accordion-header {
-  width: 50%;
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background:$grey;
   border-radius:1rem 1rem 0 0;
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
   &.collapsed {
     border-radius:1rem;
   }
@@ -25,7 +32,7 @@
   transform-origin:center;
 }
 
-.accordion-header.collapsed .accordion-icon .icon-bar-vertical {
+.accordion-header.collapsed .accordion-icon .icon-bar-vertical, .accordion-button.collapsed .accordion-icon .icon-bar-vertical  {
   transform: rotate(0deg);
 }
 
