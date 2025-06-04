@@ -5,8 +5,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: 180%;
+  &--primary-dark {
+    color: $primary;
+  }
   &--dark {
     color:$dark;
+  }
+  &--lg {
+    font-size:1.25rem;
   }
 }
 

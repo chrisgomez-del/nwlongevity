@@ -1,4 +1,14 @@
 .hero-split {
+  .bg-white {
+    + .container {
+      .primary-title {
+        color: $primary;
+      }
+      .primary-copy {
+        color:$dark;
+      }
+    }
+  }
   .object-fit-cover {
     object-fit: cover;
   }
