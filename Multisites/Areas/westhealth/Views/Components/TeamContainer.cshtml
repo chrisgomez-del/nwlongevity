@@ -1,19 +1,69 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TeamContainerViewModel
 
-<div id="@Model.SectionId">
-    <div>
-        @Model.Title
-    </div>
-    <div>
-        @Model.Logo
-    </div>
-    <div>
-        @Model.SubTitle
-    </div>
-    <div>
-        @Model.Copy
-    </div>
-    <div>
-        @Html.Sitecore().DynamicPlaceholder("TeamContainer")
+@{ 
+    string teamAccordionId = Model.SectionId+"-teamAccordion";
+    string teamAccordionCollapseId = Model.SectionId+"-collapse";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <section id="@Model.SectionId" class="my-3 bg-light">
+                <div class="container bg-white rounded-3 p-4 py-5 shadow-sm">
+                    <!-- Header -->
+                    <div class="row mb-4">
+                        <div class="col-md-10 offset-md-1 mb-3">
+                            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TeamContainer.Fields.Logo, new { @class = "img-fluid" })
+                        </div>
+                        <div class="col-md-10 offset-md-1">
+                            <h2 class="introduction-title mb-5">@Model.Title</h2>
+                            <div class="multi-column-copy primary-copy primary-copy--dark">
+                                <p class="emphasis-title">
+                                    @Model.SubTitle
+                                </p>
+                                @Model.Copy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h2 class="accordion-header pe-3"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#@teamAccordionCollapseId"
+                                aria-expanded="true"
+                                aria-controls="@teamAccordionCollapseId">
+                                <span class="tab-title rounded-top p-4">
+                                    The team
+                                </span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                    <circle cx="16" cy="16.199" r="15" stroke="#574497" stroke-width="2" />
+                                    <!-- Horizontal Bar -->
+                                    <rect class="icon-bar-horizontal" x="6.58789" y="17.1404" width="1.88235" height="18.8235" transform="rotate(-90 6.58789 17.1404)" fill="#574497" />
+                                    <!-- Vertical Bar (hidden by default) -->
+                                    <rect class="icon-bar-vertical" x="15.0586" y="7" width="1.88235" height="18.8235" fill="#574497" />
+                                </svg>
+
+                            </h2>
+                            <div class="accordion tabbed-container position-relative rounded" id="@teamAccordionId">
+                                <div class="accordion-item border-0">
+                                    <!-- Custom styled tab -->
+                                    <div id="@teamAccordionCollapseId" class="accordion-collapse show" data-bs-parent="#@teamAccordionId">
+                                        <div class="accordion-body p-5">
+                                            <div class="row g-5">
+                                                <!-- Example team member -->
+
+                                                @Html.Sitecore().DynamicPlaceholder("TeamContainerPlaceholder")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
+
