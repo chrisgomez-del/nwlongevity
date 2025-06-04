@@ -1,36 +1,94 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TwoColumnStaggeredListViewModel
 
-<div>
-    <h1>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Title)</h1>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Image)</div>
-    <div>
-        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderTitle)</h2>
+<section class="offset-content-with-tabs mb-5">
+    <div class="offset-content-with-tabs-bg">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderList)</div>
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.Image)
         }
-        <ul>
-            @foreach (var bullet in Model.ProviderBullets)
-            {
-                <li>@bullet</li>
-            }
-        </ul>
-        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.ProviderCtaSource)
-    </div>
-    <div>
-        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientTitle)</h2>
-        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        else
         {
-            <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientList)</div>
+            <img src="@Model.ImageUrl" alt="@Model.ImageAltText">
         }
-        <ul>
-            @foreach (var bullet in Model.PatientBullets)
-            {
-                <li>@bullet</li>
-            }
-        </ul>
-        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.PatientCtaSource)
     </div>
-    <div>@Model.ListBackgroundColor</div>
-    <div>@Html.Sitecore().DynamicPlaceholder("twocolumnstaggeredlist-card")</div>
-</div>
+    <div class="container-fluid container-lg position-relative">
+        <div class="row align-items-end justify-content-center">
+            @Html.Sitecore().DynamicPlaceholder("twocolumnstaggeredlist-card")
+            <div class="col-lg-4 offset-lg-1">
+                <div class="benefit-tabs">
+                    <h3 class="benefit-tabs-title active">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.LeftListTitle)</h3>
+                    <h3 class="benefit-tabs-title">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.RightListTitle)</h3>
+                    <ul class="nav nav-tabs" id="benefitCareTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="provider-tab" data-title="Providers"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#provider-tab-pane" type="button" role="tab"
+                                    aria-controls="provider-tab-pane" aria-selected="true">
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.LeftListTab)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="patient-tab" data-title="Patients" data-bs-toggle="tab"
+                                    data-bs-target="#patient-tab-pane" type="button" role="tab"
+                                    aria-controls="patient-tab-pane" aria-selected="false">
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.RightListTab)
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="benefitTabContent">
+                        <div class="tab-pane fade show active" id="provider-tab-pane" role="tabpanel"
+                             aria-labelledby="provider-tab" tabindex="0">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.LeftList)
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource, new { @class = "btn btn-light mt-4 w-100" })
+                            }
+                            else
+                            {
+                                <ul class="list-unstyled">
+                                    @foreach (var bullet in Model.LeftListBullets)
+                                    {
+                                        <li class="d-flex gap-3 align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                 viewBox="0 0 30 30" fill="none" class="flex-shrink-0">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" fill-opacity="0.1" stroke="white" />
+                                                <path d="M9 14.1863L13.2923 19L21 11" stroke="white" />
+                                            </svg>
+                                            <span>@bullet</span>
+                                        </li>
+                                    }
+                                </ul>
+                                <a href="@Model.LeftListCtaSource" class="btn btn-light mt-4 w-100">@Model.LeftListCtaText <i class="bi bi-download"></i></a>
+                            }
+                        </div>
+                        <div class="tab-pane fade" id="patient-tab-pane" role="tabpanel" aria-labelledby="patient-tab"
+                             tabindex="0">
+                            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                            {
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.RightList)
+                                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnStaggeredList.Fields.RightListCtaSource, new { @class = "btn btn-light mt-4 w-100" })
+                            }
+                            else
+                            {
+                                <ul class="list-unstyled">
+                                    @foreach (var bullet in Model.RightListBullets)
+                                    {
+                                        <li class="d-flex gap-3 align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                 viewBox="0 0 30 30" fill="none" class="flex-shrink-0">
+                                                <circle cx="15" cy="15" r="14.5" fill="white" fill-opacity="0.1" stroke="white" />
+                                                <path d="M9 14.1863L13.2923 19L21 11" stroke="white" />
+                                            </svg>
+                                            <span>@bullet</span>
+                                        </li>
+                                    }
+                                </ul>
+                                <a href="@Model.RightListCtaSource" class="btn btn-light mt-4 w-100">@Model.RightListCtaText <i class="bi bi-download"></i></a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -178,14 +178,17 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string Title = "Title";
-                public static string ProviderList = "Provider List";
-                public static string PatientList = "Patient List";
+                public static string LeftList = "Left List";
+                public static string RightList = "Right List";
                 public static string Image = "Image";
-                public static string ListBackgroundColor = "List Background Color";
-                public static string ProviderCtaSource = "Provider Cta Source";
-                public static string PatientCtaSource = "Patient Cta Source";
-                public static string ProviderTitle = "Provider Title";
-                public static string PatientTitle = "Patient Title";
+                //public static string ListBackgroundColor = "List Background Color";
+                public static string LeftListCtaSource = "Left List Cta Source";
+                public static string RightListCtaSource = "Right List Cta Source";
+                public static string LeftListTitle = "Left List Title";
+                public static string RightListTitle = "Right List Title";
+                public static string LeftListTab = "Left List Tab";
+                public static string RightListTab = "Right List Tab";
+                //public static string CssClass = "Css Class";
             }
         }
         public static class ResearchList

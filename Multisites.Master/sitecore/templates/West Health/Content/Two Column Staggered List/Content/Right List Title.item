@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {F5004011-7F63-4623-9FC0-230681A7EEBD}
+id: {4E9039EC-0964-427B-8527-93DC01C98410}
 database: master
-path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Provider Title
+path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Right List Title
 parent: {5B0FFC15-9C6D-49B2-918F-4B273D463DD5}
-name: Provider Title
+name: Right List Title
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,11 +22,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-800
+900
 ----version----
 language: en
 version: 1
-revision: 76c6fb0e-ec1b-4c0c-8bae-04b7c515826c
+revision: a23cc870-006e-428f-aa8d-b2c5f8591c78
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-76c6fb0e-ec1b-4c0c-8bae-04b7c515826c
+a23cc870-006e-428f-aa8d-b2c5f8591c78
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250529T141402Z
+20250604T202010Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

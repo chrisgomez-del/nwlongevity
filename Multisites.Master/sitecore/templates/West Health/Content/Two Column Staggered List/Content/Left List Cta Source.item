@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {DF562DC2-EBB6-452F-B1F9-A288573A146A}
+id: {BDA7E390-8426-4039-93FB-4A2974067600}
 database: master
-path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Patient Cta Source
+path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Left List Cta Source
 parent: {5B0FFC15-9C6D-49B2-918F-4B273D463DD5}
-name: Patient Cta Source
+name: Left List Cta Source
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,11 +22,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-700
+600
 ----version----
 language: en
 version: 1
-revision: 18ad83c1-740f-4611-8fed-d8bfe9bc891a
+revision: 5a65404f-cbc5-488e-ad29-1b4e7f451d94
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-18ad83c1-740f-4611-8fed-d8bfe9bc891a
+5a65404f-cbc5-488e-ad29-1b4e7f451d94
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250528T162547Z
+20250604T202010Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

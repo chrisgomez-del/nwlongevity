@@ -25,61 +25,39 @@ namespace NM_MultiSites.Areas.westhealth.Services
         public TwoColumnStaggeredListViewModel GetTwoColumnStaggeredListViewModel()
         {
             var model = new TwoColumnStaggeredListViewModel();
-            Item datasource = GetDataSourceItem();
+            Item datasource = WestHealthSitecoreService.GetDataSourceItem();
             if (datasource != null)
             {
                 model.SourceItem = datasource;
                 model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.Title));
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.Image));
-                model.ProviderTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.ProviderTitle));
-                model.ProviderList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.ProviderList));
-                model.ProviderString = datasource[Templates.TwoColumnStaggeredList.Fields.ProviderList];
-                model.PatientTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.PatientTitle));
-                model.PatientList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.PatientList));
-                model.PatientString = datasource[Templates.TwoColumnStaggeredList.Fields.PatientList];
-                model.ListBackgroundColor = GetDroplinkValue(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.ListBackgroundColor]);
-                model.ProviderCtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.ProviderCtaSource].GetValue(true)) ?
+                model.LeftListTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.LeftListTitle));
+                model.LeftListTab = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.LeftListTab));
+                model.LeftList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.LeftList));
+                model.LeftListString = datasource[Templates.TwoColumnStaggeredList.Fields.LeftList];
+                model.RightListTitle = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.RightListTitle));
+                model.RightListTab = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.RightListTab));
+                model.RightList = new HtmlString(FieldRenderer.Render(datasource, Templates.TwoColumnStaggeredList.Fields.RightList));
+                model.RightListString = datasource[Templates.TwoColumnStaggeredList.Fields.RightList];
+                model.LeftListCtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource].GetValue(true)) ?
                     null :
-                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.ProviderCtaSource]);
-                model.PatientCtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.PatientCtaSource].GetValue(true)) ?
+                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource]);
+                var leftLinkField = (LinkField)datasource.Fields[Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource];
+                model.LeftListCtaText = !string.IsNullOrWhiteSpace(leftLinkField?.Text) ? leftLinkField.Text : "Download PDF"; 
+                model.RightListCtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource].GetValue(true)) ?
                     null :
-                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.PatientCtaSource]);
+                    WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource]);
+                var rightLinkField = (LinkField)datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource];
+                model.RightListCtaText = !string.IsNullOrWhiteSpace(rightLinkField?.Text) ? rightLinkField.Text : "Download PDF";
+                model.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
+                model.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
 
             }
-            model.ProviderBullets = GetBullets(model.ProviderString);
-            model.PatientBullets = GetBullets(model.PatientString); 
+            model.LeftListBullets = GetBullets(model.LeftListString);
+            model.RightListBullets = GetBullets(model.RightListString); 
 
 
             return model;
-        }
-        public Item GetDataSourceItem()
-        {
-            var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
-            return GetItemById(dataSourceId);
-        }
-
-        public Item GetItemById(ID id)
-        {
-            return Sitecore.Context.Database.GetItem(id);
-        }
-        public Item GetItemById(string path)
-        {
-            return Sitecore.Context.Database.GetItem(path);
-        }
-        private string GetDroplinkValue(ReferenceField referenceField)
-        {
-            if (referenceField == null)
-            {
-                return string.Empty;
-            }
-            else if (referenceField.TargetItem == null)
-            {
-                return string.Empty;
-            }
-            else
-            {
-                return referenceField.TargetItem.Name;
-            }
         }
         private List<string> GetBullets(string bulletString)
         {
