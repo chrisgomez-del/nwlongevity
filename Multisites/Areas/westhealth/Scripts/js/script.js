@@ -3,7 +3,7 @@
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Offcanvas from 'bootstrap/js/dist/offcanvas';
 import initNavDropdownLabelUpdater from "./components/ToolsAndResources";
-import {animateGradient, smoothScrollInternalLinks} from "./utils";
+import { animateGradient, smoothScrollInternalLinks, expandFirstAccordion } from "./utils";
 
 const featureModules = [
     {
@@ -28,7 +28,7 @@ const featureModules = [
 document.addEventListener('DOMContentLoaded', () => {
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
-
+    expandFirstAccordion();
     animateGradient("[data-footer]");
 
     featureModules.forEach(({ selector, importPath, init }) => {
@@ -42,5 +42,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
