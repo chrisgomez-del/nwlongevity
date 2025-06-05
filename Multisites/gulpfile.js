@@ -5,6 +5,13 @@ var cleanCss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+const path = require('path');
+
+// Rollup
+const { rollup } = require('rollup');
+const resolve = require('@rollup/plugin-node-resolve').nodeResolve;
+const commonjs = require('@rollup/plugin-commonjs');
+const terser = require('@rollup/plugin-terser');
 
 function processArea(area) {
     const base = `Areas/${area}`;
@@ -12,6 +19,9 @@ function processArea(area) {
     const cssDest = `${base}/Content/dist/css/`;
     const jsPath = `${base}/Scripts/js/*.js`;
     const jsDest = `${base}/Content/dist/js/`;
+    const jsEntry = `${base}/Scripts/js/script.js`
+
+    const useRollup = area.toLowerCase() === 'westhealth';
 
     return {
         styles: function() {
@@ -27,21 +37,47 @@ function processArea(area) {
                 .pipe(rename({ suffix: '.min' }))
                 .pipe(gulp.dest(cssDest));
         },
-        scripts: function() {
-            return gulp.src(jsPath)
-                .pipe(concat('bundle.js'))
-                .pipe(gulp.dest(jsDest));
+        scripts: function () {
+            if (useRollup) {
+                return rollup({
+                    input: jsEntry,
+                    plugins: [resolve(), commonjs()]
+                }).then(bundle => {
+                    return bundle.write({
+                        file: path.join(jsDest, 'bundle.min.js'),
+                        format: 'esm',
+                        sourcemap: true
+                    });
+                });
+            } else {
+                return gulp.src(jsPath)
+                    .pipe(concat('bundle.js'))
+                    .pipe(gulp.dest(jsDest));
+            }
         },
-        minifyJs: function() {
-            return gulp.src(`${jsDest}bundle.js`, { allowEmpty: true })
-                .pipe(uglify())
-                .pipe(rename({ suffix: '.min' }))
-                .pipe(gulp.dest(jsDest));
+        minifyJs: function () {
+            if (useRollup) {
+                return rollup({
+                    input: jsEntry,
+                    plugins: [resolve(), commonjs(), terser()]
+                }).then(bundle => {
+                    return bundle.write({
+                        file: path.join(jsDest, 'bundle.min.js'),
+                        format: 'esm',
+                        sourcemap: true
+                    });
+                });
+            } else {
+                return gulp.src(`${jsDest}bundle.js`, { allowEmpty: true })
+                    .pipe(uglify())
+                    .pipe(rename({ suffix: '.min' }))
+                    .pipe(gulp.dest(jsDest));
+            }
         },
         watchPaths: {
             scss: `${base}/Content/scss/**/*.scss`,
             css: `${cssDest}style.css`,
-            js: `${base}/Scripts/**/*.js`,
+            js: useRollup ? `${base}/Scripts/**/*.js` : jsPath,
             jsBundle: `${jsDest}bundle.js`
         }
     }

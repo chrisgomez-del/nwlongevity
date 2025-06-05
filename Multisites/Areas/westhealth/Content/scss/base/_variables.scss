@@ -48,7 +48,8 @@ $border-radius-lg: 1.5rem;
 $link-color:                              $brand-green;
 $link-decoration:                         underline;
 $link-shade-percentage:                   20%;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+//$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+$link-hover-color:                        transparentize($link-color, .2);
 $link-hover-decoration:                   null;
 
 $btn-font-weight: 600;
