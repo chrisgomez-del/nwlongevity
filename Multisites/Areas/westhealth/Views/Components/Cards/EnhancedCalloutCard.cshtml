@@ -1,0 +1,9 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.CardViewModel
+
+<div class="card h-100 shadow-sm border-0 rounded-3 ps-1 pe-1 pt-3 pb-3 p-md-3">
+    <div class="card-body d-flex flex-column ps-4 pe-4 pt-3 pb-3 p-md-4">
+        <h3 class="card-title mb-2">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)</h3>
+        <p class="flex-grow-1 primary-copy primary-copy--dark">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)</p>
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource, new { @class = "mt-2 text-primary" })
+    </div>
+</div>
