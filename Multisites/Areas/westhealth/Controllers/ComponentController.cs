@@ -140,6 +140,10 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Cards/TwoColumnCardStaggered.cshtml", cardViewModel);
         }
-
+        public ActionResult EnhancedCalloutCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/EnhancedCalloutCard.cshtml", cardViewModel);
+        }
     }
 }

@@ -12,7 +12,7 @@ templatekey: Config
 ----version----
 language: en
 version: 1
-revision: 4ef33e1a-7b08-4cec-90d3-420cba5ec9e1
+revision: a3354e18-e8d0-4b0c-a416-310b4cc3eadd
 
 ----field----
 field: {2AB1D2A5-943A-4389-9457-8A0134FB15C7}
@@ -34,7 +34,7 @@ name: Social Links
 key: social links
 content-length: 155
 
-{78F39EF4-B905-45F9-816F-0ACADF510367}|{85BD5554-8260-427F-8E30-B58A606C683D}|{E6B25AA2-A058-425E-A83C-03311A280613}|{A827EECB-413B-4ACE-B30E-B67259747621}
+{16C48DB1-65D1-4402-97A8-9B778AE4B122}|{27E3F8F5-9275-47BE-8D42-F5B15F741206}|{8920E32F-BD51-4E1E-AF34-55E6A870CC4E}|{8FC3FBB5-8A0B-4D52-91BE-5C56E7082625}
 ----field----
 field: {74BFFC3E-AE21-4A1E-A08E-27BB06F52CFF}
 name: Footer Utility Navigation Links
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4ef33e1a-7b08-4cec-90d3-420cba5ec9e1
+a3354e18-e8d0-4b0c-a416-310b4cc3eadd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250519T174735Z
+20250605T162539Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
