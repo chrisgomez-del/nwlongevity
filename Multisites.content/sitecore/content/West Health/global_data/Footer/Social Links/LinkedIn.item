@@ -1,18 +1,18 @@
 ----item----
 version: 1
-id: {85BD5554-8260-427F-8E30-B58A606C683D}
+id: {8FC3FBB5-8A0B-4D52-91BE-5C56E7082625}
 database: master
 path: /sitecore/content/West Health/global_data/Footer/Social Links/LinkedIn
 parent: {BFA7E6CB-7F14-467A-9CDB-FEC12F1DF12F}
 name: LinkedIn
 master: {00000000-0000-0000-0000-000000000000}
-template: {2A2633CF-037B-40AE-9026-EEE2B4835D07}
-templatekey: Generic Link
+template: {813C9B6E-B320-4830-81F4-DAD5AC610953}
+templatekey: Social Link
 
 ----version----
 language: en
 version: 1
-revision: d7587f1d-e361-41d0-9bb0-5ce1edb31542
+revision: 2796638c-66ce-4406-8812-74c369385006
 
 ----field----
 field: {95CFA3F7-0003-42B9-A5B2-F773C741B061}
@@ -22,26 +22,33 @@ content-length: 8
 
 LinkedIn
 ----field----
+field: {AEF7E439-602A-46BF-91AC-DB544590D153}
+name: Link Icon Class
+key: link icon class
+content-length: 11
+
+bi-linkedin
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250516T145428Z
+20250605T162130Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-d7587f1d-e361-41d0-9bb0-5ce1edb31542
+2796638c-66ce-4406-8812-74c369385006
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250516T145428Z
+20250605T162413Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
