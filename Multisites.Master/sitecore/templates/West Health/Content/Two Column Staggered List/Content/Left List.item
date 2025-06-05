@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {1EA8256C-9ABC-4045-95A2-AF8C5D76671F}
+id: {355EC235-0F7F-4C30-A07B-992347F1D062}
 database: master
-path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Patient List
+path: /sitecore/templates/West Health/Content/Two Column Staggered List/Content/Left List
 parent: {5B0FFC15-9C6D-49B2-918F-4B273D463DD5}
-name: Patient List
+name: Left List
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,11 +22,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-300
+200
 ----version----
 language: en
 version: 1
-revision: 5cdc8b9a-140f-4aca-abef-6bb0fef3b639
+revision: 614e2665-8103-41d3-9406-406da537ee02
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5cdc8b9a-140f-4aca-abef-6bb0fef3b639
+614e2665-8103-41d3-9406-406da537ee02
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250528T162547Z
+20250604T202010Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
