@@ -52,7 +52,7 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string SectionId = "Section ID";
                 public static string SectionTitle = "Section Title";
-                public static string IncludeInNavigation= "Include in Navigation";
+                public static string IncludeInNavigation = "Include in Navigation";
             }
         }
         public static class Testimonial
@@ -62,7 +62,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Image = "Image";
                 public static string Testimonial = "Testimonial";
                 public static string Copy = "Copy";
-                public static string TestimonialAuthor= "Testimonial Author";
+                public static string TestimonialAuthor = "Testimonial Author";
             }
         }
         public static class EnhancedCallout
@@ -81,7 +81,16 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string LinkSource = "Link Source";
                 public static string LinkText = "Link Text";
-                public static string Icon = "Icon";
+            }
+        }
+        public static class SocialLink
+        {
+            public static class Fields
+            {
+
+                public static string LinkSource = "Link Source";
+                public static string LinkText = "Link Text";
+                public static string LinkIconClass = "Link Icon Class";
             }
         }
         public static class AccordionItem
@@ -119,7 +128,7 @@ namespace NM_MultiSites.Areas.westhealth
         }
         public static class TeamContainer
         {
-            public static class Fields 
+            public static class Fields
             {
                 public static string Title = "Title";
                 public static string Logo = "Logo";
@@ -168,7 +177,7 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string TopImage = "Top Image";
-                public static string TopBackground = "Top Background"; 
+                public static string TopBackground = "Top Background";
                 public static string BottomImage = "Bottom Image";
                 public static string BottomBackground = "Bottom Background";
             }
