@@ -11,9 +11,9 @@
 </head>
 <body>
 
-    <header id="site-header" class="d-flex">
+    @*<header id="site-header" class="d-flex">*@
         @{ Html.Sitecore().RenderControllerRendering("Navigation", "Header", new { area = "westhealth" }); }
-    </header>
+    @*</header>*@
     <main>
         <div class="main-contain">
             @Html.Sitecore().Placeholder("westhealth-main")
