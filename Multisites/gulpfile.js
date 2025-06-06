@@ -24,6 +24,14 @@ function processArea(area) {
     const useRollup = area.toLowerCase() === 'westhealth';
 
     return {
+        copyIcons: function () {
+            if (useRollup) {
+                return gulp.src('node_modules/bootstrap-icons/font/fonts/*')
+                    .pipe(gulp.dest(`${base}/Content/dist/fonts`))
+            } else {
+                return Promise.resolve();
+            }
+        },
         styles: function() {
             return gulp.src(scssPath)
                 .pipe(sass({
@@ -120,6 +128,7 @@ gulp.task('scripts', gulp.parallel(innovation.scripts, westhealth.scripts));
 gulp.task('minify-js', gulp.parallel(innovation.minifyJs, westhealth.minifyJs));*/
 
 gulp.task('styles', gulp.parallel(...processedAreas.map(a => a.styles)));
+gulp.task('copy-icons', gulp.parallel(...processedAreas.map(a => a.copyIcons)))
 gulp.task('minify-css', gulp.parallel(...processedAreas.map(a => a.scripts)));
 gulp.task('scripts', gulp.parallel(...processedAreas.map(a => a.minifyCss)));
 gulp.task('minify-js', gulp.parallel(...processedAreas.map(a => a.minifyJs)));
@@ -142,6 +151,7 @@ gulp.task('watch', function () {
 
 const buildAll = gulp.series(
     gulp.series('styles'),
+    gulp.series('copy-icons'),
     gulp.series('scripts'),
     gulp.series('minify-css'),
     gulp.series('minify-js')
