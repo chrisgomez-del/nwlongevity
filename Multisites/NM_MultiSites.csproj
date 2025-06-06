@@ -698,6 +698,8 @@
     <Content Include="Areas\westhealth\Content\scss\fonts\_titles.scss" />
     <Content Include="Areas\westhealth\Content\scss\style.scss" />
     <Content Include="Areas\westhealth\Views\Components\Cards\EnhancedCalloutCard.cshtml" />
+    <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff" />
+    <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff2" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

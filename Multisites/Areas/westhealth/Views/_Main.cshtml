@@ -11,9 +11,9 @@
 </head>
 <body>
 
-    <header id="site-header" class="d-flex">
+    @*<header id="site-header" class="d-flex">*@
         @{ Html.Sitecore().RenderControllerRendering("Navigation", "Header", new { area = "westhealth" }); }
-    </header>
+    @*</header>*@
     <main>
         <div class="main-contain">
             @Html.Sitecore().Placeholder("westhealth-main")
@@ -22,6 +22,6 @@
     <footer id="site-footer" class="footer-container mb-5">
         @{ Html.Sitecore().RenderControllerRendering("Navigation", "Footer", new { area = "westhealth" }); }
     </footer>
-    <script src="~/Areas/westhealth/Content/dist/js/bundle.min.js"></script>
+    <script type="module" src="~/Areas/westhealth/Content/dist/js/bundle.min.js"></script>
 </body>
 </html>

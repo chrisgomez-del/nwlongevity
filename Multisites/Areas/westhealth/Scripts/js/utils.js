@@ -106,3 +106,11 @@ export function animateGradient(selector) {
             ease: 'sine.inOut'
         });
 }
+
+export function expandFirstAccordion() {
+    const firstHeader = document.querySelector('[data-accordionparent]');
+    if (!firstHeader) return;
+
+    const button = firstHeader.querySelector('[data-bs-toggle="collapse"]');
+    if (button) button.click();
+}

@@ -27,15 +27,16 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10 offset-md-1">
-                            <h2 class="accordion-header pe-3"
+                            <h2 class="accordion-header pe-3 collapsed"
+                                data-accordionparent="true"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#@teamAccordionCollapseId"
-                                aria-expanded="true"
+                                aria-expanded="false"
                                 aria-controls="@teamAccordionCollapseId">
-                                <button class="accordion-button" type="button"
+                                <button class="accordion-button collapsed" type="button"
                                         data-bs-toggle="collapse"
                                         data-bs-target="#@teamAccordionCollapseId"
-                                        aria-expanded="true"
+                                        aria-expanded="false"
                                         aria-controls="@teamAccordionCollapseId">
 
                                     <span class="tab-title rounded-top p-4">
@@ -53,7 +54,7 @@
                             <div class="accordion tabbed-container position-relative rounded" id="@teamAccordionId">
                                 <div class="accordion-item border-0">
                                     <!-- Custom styled tab -->
-                                    <div id="@teamAccordionCollapseId" class="accordion-collapse show" data-bs-parent="#@teamAccordionId">
+                                    <div id="@teamAccordionCollapseId" class="accordion-collapse collapse" data-bs-parent="#@teamAccordionId">
                                         <div class="accordion-body p-5">
                                             <div class="row g-5">
                                                 <!-- Example team member -->
