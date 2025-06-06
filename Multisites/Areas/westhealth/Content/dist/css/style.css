@@ -8343,7 +8343,7 @@
 
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("/fonts/bootstrap-icons.woff2") format("woff2"), url("/fonts/bootstrap-icons.woff") format("woff");
+  src: url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff2") format("woff2"), url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff") format("woff");
 }
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
