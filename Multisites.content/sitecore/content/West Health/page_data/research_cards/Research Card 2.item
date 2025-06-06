@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {AE8FDBCE-7AE8-45AB-9694-B283008F6B17}
+database: master
+path: /sitecore/content/West Health/page_data/research_cards/Research Card 2
+parent: {8FC4DA01-0227-4758-B768-F6B595837E08}
+name: Research Card 2
+master: {00000000-0000-0000-0000-000000000000}
+template: {BE49D9AF-40B1-4256-9581-7E1AE7F68D7B}
+templatekey: Research Card
+
+----version----
+language: en
+version: 1
+revision: 79404970-43eb-437e-9026-ad2fcc3680e1
+
+----field----
+field: {694C7008-A490-46F1-B3D5-D89FCE504E15}
+name: Title
+key: title
+content-length: 15
+
+Research Card 2
+----field----
+field: {3BA1063B-EB2E-402A-B615-B64A782EFF43}
+name: Source
+key: source
+content-length: 13
+
+ScienceDirect
+----field----
+field: {8F4CAFDE-2DB7-401E-A657-A2D67E557700}
+name: Cta Source
+key: cta source
+content-length: 124
+
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{470F7108-5E8C-446C-B5CA-910A774BDF09}" />
+----field----
+field: {5C7B53AD-A513-4F76-8B38-2AF956F87758}
+name: Background Color
+key: background color
+content-length: 38
+
+{F84ACF6E-E5FB-419B-BA1C-8B594A706C7F}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250606T195131Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+79404970-43eb-437e-9026-ad2fcc3680e1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250606T212733Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

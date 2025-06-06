@@ -205,6 +205,7 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string Title = "Title";
+                public static string CardLocation = "Card Location";
             }
         }
         public static class SplitContentHero
@@ -223,6 +224,18 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Image = "Image";
                 public static string ImageLocation = "Image Location";
+                public static string BackgroundColor = "Background Color";
+                public static string CssClass = "Css Class";
+            }
+        }
+        public static class ResearchCard
+        {
+            public static string TemplateID = "{BE49D9AF-40B1-4256-9581-7E1AE7F68D7B}";
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Source = "Source";
+                public static string CtaSource = "Cta Source";
                 public static string BackgroundColor = "Background Color";
                 public static string CssClass = "Css Class";
             }

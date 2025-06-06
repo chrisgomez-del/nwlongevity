@@ -372,6 +372,7 @@
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\ResearchCardViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SlideViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SplitContentHeroViewModel.cs" />
