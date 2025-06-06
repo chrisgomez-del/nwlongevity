@@ -114,3 +114,34 @@ export function expandFirstAccordion() {
     const button = firstHeader.querySelector('[data-bs-toggle="collapse"]');
     if (button) button.click();
 }
+
+export function highlightFooterActiveLink(selector = 'footer ul a') {
+    const getFirstLevelPath = (url) => {
+        try {
+            const pathname = new URL(url, window.location.origin).pathname
+                .replace(/\/+$/, '') // Remove trailing slash
+                .toLowerCase();
+            const segments = pathname.split('/').filter(Boolean); // Remove empty segments
+            return segments.length > 0 ? `/${segments[0]}` : '/';
+        } catch (e) {
+            return null;
+        }
+    };
+
+    const currentFirstLevelPath = getFirstLevelPath(window.location.href);
+
+    document.querySelectorAll(selector).forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('javascript:')) return;
+
+        const linkFirstLevelPath = getFirstLevelPath(href);
+
+        if (linkFirstLevelPath === currentFirstLevelPath) {
+            link.classList.add('text-decoration-underline');
+            link.classList.remove('text-decoration-none');
+        } else {
+            link.classList.remove('text-decoration-underline');
+            link.classList.add('text-decoration-none');
+        }
+    });
+}
