@@ -1,0 +1,23 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.CardViewModel
+
+<div class="col-md-4 js-stat-card-slide">
+    <div class="card card-stat shadow h-100" data-card-stat>
+        <div class="card-stat-value">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 33">
+                <path stroke="#000" stroke-width="2"
+                      d="M16 1.333c8.288 0 15 6.69 15 14.935 0 8.244-6.712 14.935-15 14.935S1 24.513 1 16.268C1 8.024 7.712 1.334 16 1.334Z" />
+                <rect width="1" height="14.934" x="15.5" y="8.801" fill="#000" stroke="#000" rx=".5" />
+                <rect width=".996" height="15.004" x="8.498" y="16.766" fill="#000" stroke="#000"
+                      stroke-width=".996" rx=".498" transform="rotate(-90 8.498 16.766)" />
+            </svg>
+            <span>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.SubTitle)</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)</h5>
+            <div class="card-content-animate mt-auto">
+                <p class="card-text">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)</p>
+                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource, new { @class = "card-link" })
+            </div>
+        </div>
+    </div>
+</div>

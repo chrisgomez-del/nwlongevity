@@ -250,5 +250,13 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string CssClass = "Css Class";
             }
         }
+        public static class ThreeCardCallout
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Image = "Image";
+            }
+        }
     }
 }
