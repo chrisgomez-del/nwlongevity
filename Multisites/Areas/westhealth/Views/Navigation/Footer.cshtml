@@ -111,7 +111,8 @@
                     <ul class="list-unstyled d-none d-lg-block mb-4">
                         @foreach (var navItem in Model.Links)
                         {
-                        <li class="mb-4"><a href="@navItem.LinkSource" class="primary-copy primary-copy--lg fw-bold text-decoration-underline mb-4">@navItem.LinkText</a></li>
+                            var linkClass = navItem.IsActive ? " text-decoration-underline" : " text-decoration-none";
+                        <li class="mb-4"><a href="@navItem.LinkSource" class="primary-copy primary-copy--lg fw-bold mb-4 @linkClass">@navItem.LinkText</a></li>
                         }
                     </ul>
 

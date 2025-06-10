@@ -39,8 +39,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 d-none d-lg-flex">
             @foreach (var navItem in Model.Links)
             {
+                var linkClass = navItem.IsActive || (navItem.Children != null && navItem.Children.Any(kid => kid.IsActive)) ? "active" : string.Empty;
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="@navItem.LinkSource">@navItem.LinkText</a>
+                    <a class="nav-link @linkClass" aria-current="page" href="@navItem.LinkSource">@navItem.LinkText</a>
                 </li>
                 if (navItem.Children != null && navItem.Children.Any())
                 {

@@ -6,6 +6,7 @@ using NM_MultiSites.Areas.Innovation.Infrastructure.Extensions;
 using NM_MultiSites.Areas.westhealth.Models;
 using NM_MultiSites.Areas.westhealth.Models.Navigation;
 using Sitecore.Data;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Data.Query;
 using Sitecore.Mvc.Presentation;
@@ -29,9 +30,11 @@ namespace NM_MultiSites.Areas.westhealth.Services
             FooterViewModel footer = new FooterViewModel();
             Item i = WestHealthSitecoreService.GetSiteSettingItem();
 
-            footer.Links.AddRange(MapMultiListItems<GenericLinkViewModel>(i, Templates.Config.Fields.FooterNavigationLinks, MapGenericLinkViewModel));
+            Item currentItem = RenderingContext.Current.ContextItem;
 
-            footer.SocialLinks.AddRange(MapMultiListItems<SocialLinkViewModel>(i, Templates.Config.Fields.SocialNavigationLinks, MapSocialLinkViewModel));
+            footer.Links.AddRange(MapMultiListItems<NavigationLinkViewModel>(i, currentItem.ID.Guid,Templates.Config.Fields.FooterNavigationLinks, MapNavigationLinkViewModel));
+
+            footer.SocialLinks.AddRange(MapMultiListItems<SocialLinkViewModel>(i,  Templates.Config.Fields.SocialNavigationLinks, MapSocialLinkViewModel));
 
             footer.FooterUtilityLinks.AddRange(MapMultiListItems<GenericLinkViewModel>(i, Templates.Config.Fields.FooterUtilityNavigationLinks, MapGenericLinkViewModel));
 
@@ -43,10 +46,17 @@ namespace NM_MultiSites.Areas.westhealth.Services
         {
             HeaderViewModel header = new HeaderViewModel();
             Item i = WestHealthSitecoreService.GetSiteSettingItem();
-            header.Links.AddRange(MapMultiListItems<NavigationLinkViewModel>(i, Templates.Config.Fields.HeaderNavigationLinks, MapNavigationLinkViewModel));
+            Item currentItem = RenderingContext.Current.ContextItem;
+            header.Links.AddRange(MapMultiListItems<NavigationLinkViewModel>(i, currentItem.ID.Guid, Templates.Config.Fields.HeaderNavigationLinks, MapNavigationLinkViewModel));
 
             header.Logo = WestHealthSitecoreService.GetMediaUrl(i, Templates.Config.Fields.HeaderLogo);
+
             return header;
+
+        }
+        private void SetActiveLinks(List<NavigationLinkViewModel> links)
+        {
+            var currentItem = RenderingContext.Current.ContextItem;
 
         }
         public InternalNavigationViewModel GetInternalNavigation()
@@ -54,7 +64,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
             InternalNavigationViewModel model = new InternalNavigationViewModel();
             var items = GetCurrentPageDataDirectoryItemsOfType(Templates.NavigableSectionBase.TemplateId);
 
-            foreach(var item in items)
+            foreach (var item in items)
             {
                 model.Links.Add(MapInternalNavigationViewModel(item));
             }
@@ -68,8 +78,9 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 .FirstOrDefault(x => x.Name == "page_data");
 
             return pageData.Axes.GetDescendants()
-                .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId) 
+                .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId)
                         && x.Fields[Templates.NavigableSectionBase.Fields.IncludeInNavigation].GetValue(true).ToBoolean() == true)
+                .OrderBy(item => item.Appearance.Sortorder)
                 .ToList();
 
         }
@@ -96,25 +107,44 @@ namespace NM_MultiSites.Areas.westhealth.Services
             }
             return result;
         }
-        private List<NavigationLinkViewModel> GetChildNavigationItems(Item currentNavItem)
+
+        private List<T> MapMultiListItems<T>(Item item, Guid currentID, string fieldName, Func<Item, Guid, T> MappingFunction)
+            where T : class
+        {
+            List<Item> items = WestHealthSitecoreService.GetMultiListItems(item, fieldName);
+            var result = new List<T>();
+
+            if (items != null && items.Any())
+            {
+                foreach (var i in items)
+                {
+                    result.Add(MappingFunction(i, currentID));
+                }
+            }
+            return result;
+        }
+        private List<NavigationLinkViewModel> GetChildNavigationItems(Item currentNavItem, Guid currentItemId)
         {
             var children = currentNavItem.Children.Where(x => x.InheritsFrom(Templates.GenericLink.TemplateID));
             if (children.Any())
             {
-                return children.Select(x => MapNavigationLinkViewModel(x)).ToList();
+                return children.Select(x => MapNavigationLinkViewModel(x, currentItemId)).ToList();
             }
             return null;
 
         }
-        private NavigationLinkViewModel MapNavigationLinkViewModel(Item item)
+        private NavigationLinkViewModel MapNavigationLinkViewModel(Item item, Guid currentItemID)
         {
+            LinkField link = item.Fields[Templates.GenericLink.Fields.LinkSource];
+
             return new NavigationLinkViewModel
             {
                 LinkText = new HtmlString(FieldRenderer.Render(item, Templates.GenericLink.Fields.LinkText)),
                 LinkSource = string.IsNullOrEmpty(item.Fields[Templates.GenericLink.Fields.LinkSource].GetValue(true)) ?
                             null :
                             WestHealthSitecoreService.LinkUrl(item.Fields[Templates.GenericLink.Fields.LinkSource]),
-                Children = GetChildNavigationItems(item)
+                IsActive = link.TargetID.Guid == currentItemID, 
+                Children = GetChildNavigationItems(item, currentItemID)
             };
         }
         private GenericLinkViewModel MapGenericLinkViewModel(Item item)
@@ -125,6 +155,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 LinkSource = String.IsNullOrEmpty(item.Fields[Templates.GenericLink.Fields.LinkSource].GetValue(true)) ?
                     null :
                     WestHealthSitecoreService.LinkUrl(item.Fields[Templates.GenericLink.Fields.LinkSource]),
+                
             };
         }
         private SocialLinkViewModel MapSocialLinkViewModel(Item item)
@@ -135,7 +166,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 LinkSource = String.IsNullOrEmpty(item.Fields[Templates.SocialLink.Fields.LinkSource].GetValue(true)) ?
                     null :
                     WestHealthSitecoreService.LinkUrl(item.Fields[Templates.SocialLink.Fields.LinkSource]),
-                LinkIconClass= String.IsNullOrEmpty(item.Fields[Templates.SocialLink.Fields.LinkIconClass].GetValue(true)) ?
+                LinkIconClass = String.IsNullOrEmpty(item.Fields[Templates.SocialLink.Fields.LinkIconClass].GetValue(true)) ?
                     null :
                     item.Fields[Templates.SocialLink.Fields.LinkIconClass].GetValue(true),
             };
