@@ -124,6 +124,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Copy = "Copy";
                 public static string CtaText = "Cta Text";
                 public static string CtaSource = "Cta Source";
+                public static string Image = "Image";
             }
         }
         public static class TeamContainer
@@ -236,6 +237,15 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Title = "Title";
                 public static string Source = "Source";
                 public static string CtaSource = "Cta Source";
+                public static string BackgroundColor = "Background Color";
+                public static string CssClass = "Css Class";
+            }
+        }
+        public static class CardList
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
                 public static string BackgroundColor = "Background Color";
                 public static string CssClass = "Css Class";
             }

@@ -368,6 +368,7 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\CardListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
@@ -383,6 +384,7 @@
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnWithImageViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnImageStackViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\InternalNavigationViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\CardListService.cs" />
     <Compile Include="Areas\westhealth\Services\CardService.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
@@ -701,6 +703,9 @@
     <Content Include="Areas\westhealth\Views\Components\Cards\EnhancedCalloutCard.cshtml" />
     <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff" />
     <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff2" />
+    <Content Include="Areas\westhealth\Views\Components\Cards\NewsCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Cards\ResourceCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\CardList.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

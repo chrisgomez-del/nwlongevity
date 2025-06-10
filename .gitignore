@@ -47,3 +47,8 @@ node_modules
 /Innovation/obj/uat.innovation.nm.org
 .vs
 /Innovation.Master/sitecore/layout/Placeholder Settings/Innovation
+
+# WestHealthAccelerator-Specific files
+# ------------------
+/Multisites/Areas/westhealth/Content/dist/js
+/Multisites/Areas/westhealth/Content/dist/css
