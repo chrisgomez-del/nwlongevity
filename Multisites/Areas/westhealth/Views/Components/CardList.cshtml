@@ -1,0 +1,19 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.CardListViewModel
+
+<section class="news-featured position-relative my-5 d-flex flex-column justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Section Title -->
+                <div class="section-title">
+                    <h2 class="secondary-title mb-5">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.CardList.Fields.Title)</h2>
+                </div>
+                <!-- Card Repeater -->
+                <div class="row g-4 card-row">
+                    @Html.Sitecore().DynamicPlaceholder("cardlist-leftcard")
+                    @Html.Sitecore().DynamicPlaceholder("cardlist-rightcard")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

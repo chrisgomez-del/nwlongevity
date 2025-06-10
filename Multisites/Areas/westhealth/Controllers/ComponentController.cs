@@ -24,6 +24,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly IResearchListService _researchListService;
         private readonly ISplitContentHeroService _splitContentHeroService;
         private readonly ISplitContentSubtitleService _splitContentSubtitleService;
+        private readonly ICardListService _cardListService;
 
 
         public ComponentController()
@@ -41,6 +42,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _researchListService = new ResearchListService();
             _splitContentHeroService = new SplitContentHeroService(); 
             _splitContentSubtitleService = new SplitContentSubtitleService();
+            _cardListService = new CardListService();
 
         }
         // GET: westhealth/Index
@@ -144,6 +146,21 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Cards/EnhancedCalloutCard.cshtml", cardViewModel);
+        }
+        public ActionResult CardList()
+        {
+            var cardListViewModel = _cardListService.GetCardListViewModel();
+            return View("~/Areas/westhealth/Views/Components/CardList.cshtml", cardListViewModel);
+        }
+        public ActionResult NewsCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/NewsCard.cshtml", cardViewModel);
+        }
+        public ActionResult ResourceCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/ResourceCard.cshtml", cardViewModel);
         }
     }
 }
