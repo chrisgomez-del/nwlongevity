@@ -87,12 +87,13 @@
                     Northwestern Medicine® is a trademark of Northwestern Memorial HealthCare, used by Northwestern University.
                 </p>
                 <p class="small text-white-50 mt-2">
-                    @for(int i = 0; i < Model.FooterUtilityLinks.Count; i++)
+                    @for (int i = 0; i < Model.FooterUtilityLinks.Count; i++)
                     {
                         var link = Model.FooterUtilityLinks[i];
                         <a href="@link.LinkSource" class="text-white text-decoration-underline">@link.LinkText</a>
 
-                        if(i< Model.FooterUtilityLinks.Count-1){
+                        if (i < Model.FooterUtilityLinks.Count - 1)
+                        {
                             @:&nbsp;|&nbsp;
                         }
 
@@ -111,15 +112,16 @@
                     <ul class="list-unstyled d-none d-lg-block mb-4">
                         @foreach (var navItem in Model.Links)
                         {
-                            var linkClass = navItem.IsActive ? " text-decoration-underline" : " text-decoration-none";
-                        <li class="mb-4"><a href="@navItem.LinkSource" class="primary-copy primary-copy--lg fw-bold mb-4 @linkClass">@navItem.LinkText</a></li>
+                            var baseClass = "primary-copy primary-copy--lg fw-bold mb-4";
+                            var linkClass = navItem.IsActive ? baseClass+ " text-decoration-underline" : baseClass+ " text-decoration-none";
+                            <li class="mb-4"><a href="@navItem.LinkSource" class="@linkClass">@navItem.LinkText</a></li>
                         }
                     </ul>
 
                     <div class="d-flex gap-3 align-items-center">
                         @foreach (var navItem in Model.SocialLinks)
                         {
-                        <a href="@navItem.LinkSource" class="text-white" aria-label="@navItem.LinkText"><i class="bi @navItem.LinkIconClass icon--fs-1 icon-lg--fs-5"></i></a>
+                            <a href="@navItem.LinkSource" class="text-white" aria-label="@navItem.LinkText"><i class="bi @navItem.LinkIconClass icon--fs-1 icon-lg--fs-5"></i></a>
                         }
                     </div>
                 </div>
