@@ -32,9 +32,9 @@ namespace NM_MultiSites.Areas.westhealth.Services
 
             Item currentItem = RenderingContext.Current.ContextItem;
 
-            footer.Links.AddRange(MapMultiListItems<NavigationLinkViewModel>(i, currentItem.ID.Guid,Templates.Config.Fields.FooterNavigationLinks, MapNavigationLinkViewModel));
+            footer.Links.AddRange(MapMultiListItems<NavigationLinkViewModel>(i, currentItem.ID.Guid, Templates.Config.Fields.FooterNavigationLinks, MapNavigationLinkViewModel));
 
-            footer.SocialLinks.AddRange(MapMultiListItems<SocialLinkViewModel>(i,  Templates.Config.Fields.SocialNavigationLinks, MapSocialLinkViewModel));
+            footer.SocialLinks.AddRange(MapMultiListItems<SocialLinkViewModel>(i, Templates.Config.Fields.SocialNavigationLinks, MapSocialLinkViewModel));
 
             footer.FooterUtilityLinks.AddRange(MapMultiListItems<GenericLinkViewModel>(i, Templates.Config.Fields.FooterUtilityNavigationLinks, MapGenericLinkViewModel));
 
@@ -52,11 +52,6 @@ namespace NM_MultiSites.Areas.westhealth.Services
             header.Logo = WestHealthSitecoreService.GetMediaUrl(i, Templates.Config.Fields.HeaderLogo);
 
             return header;
-
-        }
-        private void SetActiveLinks(List<NavigationLinkViewModel> links)
-        {
-            var currentItem = RenderingContext.Current.ContextItem;
 
         }
         public InternalNavigationViewModel GetInternalNavigation()
@@ -143,7 +138,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 LinkSource = string.IsNullOrEmpty(item.Fields[Templates.GenericLink.Fields.LinkSource].GetValue(true)) ?
                             null :
                             WestHealthSitecoreService.LinkUrl(item.Fields[Templates.GenericLink.Fields.LinkSource]),
-                IsActive = link.TargetID.Guid == currentItemID, 
+                IsActive = link.TargetID.Guid == currentItemID,
                 Children = GetChildNavigationItems(item, currentItemID)
             };
         }
@@ -155,7 +150,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 LinkSource = String.IsNullOrEmpty(item.Fields[Templates.GenericLink.Fields.LinkSource].GetValue(true)) ?
                     null :
                     WestHealthSitecoreService.LinkUrl(item.Fields[Templates.GenericLink.Fields.LinkSource]),
-                
+
             };
         }
         private SocialLinkViewModel MapSocialLinkViewModel(Item item)
