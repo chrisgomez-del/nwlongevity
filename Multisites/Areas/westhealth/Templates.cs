@@ -33,6 +33,10 @@ namespace NM_MultiSites.Areas.westhealth
         }
         public static class Global
         {
+            public static class Folders
+            {
+                public static string PageData = "page_data";
+            }
             public static class Fields
             {
                 public static string MetaTitle = "Meta Title";
@@ -87,7 +91,6 @@ namespace NM_MultiSites.Areas.westhealth
         {
             public static class Fields
             {
-
                 public static string LinkSource = "Link Source";
                 public static string LinkText = "Link Text";
                 public static string LinkIconClass = "Link Icon Class";

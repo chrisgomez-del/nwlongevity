@@ -70,7 +70,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
         {
             var root = RenderingContext.Current.ContextItem;
             var pageData = root.Axes.GetDescendants()
-                .FirstOrDefault(x => x.Name == "page_data");
+                .FirstOrDefault(x => x.Name ==Templates.Global.Folders.PageData);
 
             return pageData.Axes.GetDescendants()
                 .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId)
