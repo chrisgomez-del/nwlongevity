@@ -373,11 +373,14 @@
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\NavigableTabsViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\NavigableTabViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchCardViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SlideViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SplitContentHeroViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SplitContentSubtitleViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\TabResourceViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TeamMemberViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TeamContainerViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ThreeCardCalloutViewModel.cs" />
@@ -391,6 +394,7 @@
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\FooterViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\NavigableTabsService.cs" />
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
     <Compile Include="Areas\westhealth\Services\ResearchListService.cs" />
@@ -710,6 +714,7 @@
     <Content Include="Areas\westhealth\Views\Components\CardList.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\ThreeCardCallout.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\StatCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\NavigableTabs.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

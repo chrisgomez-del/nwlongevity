@@ -26,6 +26,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly ISplitContentSubtitleService _splitContentSubtitleService;
         private readonly ICardListService _cardListService;
         private readonly IThreeCardCalloutService _threeCardCalloutService;
+        private readonly INavigableTabsService _navigableTabsService;
 
 
         public ComponentController()
@@ -45,6 +46,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _splitContentSubtitleService = new SplitContentSubtitleService();
             _cardListService = new CardListService();
             _threeCardCalloutService = new ThreeCardCalloutService();
+            _navigableTabsService = new NavigableTabsService();
 
         }
         // GET: westhealth/Index
@@ -173,6 +175,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             var cardViewModel = _cardService.GetCardViewModel();
             return View("~/Areas/westhealth/Views/Components/Cards/StatCard.cshtml", cardViewModel);
+        }
+        public ActionResult NavigableTabs()
+        {
+            var NavigableTabsViewModel = _navigableTabsService.GetNavigableTabsViewModel(); 
+            return View("~/Areas/westhealth/Views/Components/NavigableTabs.cshtml", NavigableTabsViewModel);
         }
     }
 }

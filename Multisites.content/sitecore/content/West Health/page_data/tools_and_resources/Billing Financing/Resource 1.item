@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {759E2C76-7ABA-46AA-8D5E-326616F4B4D6}
+database: master
+path: /sitecore/content/West Health/page_data/tools_and_resources/Billing Financing/Resource 1
+parent: {19EA8856-D554-4FF5-996F-FA578C76B57F}
+name: Resource 1
+master: {00000000-0000-0000-0000-000000000000}
+template: {A65CF74A-C1A7-43ED-947F-4FC0BEB73D95}
+templatekey: Tab Resource
+
+----version----
+language: en
+version: 1
+revision: 6594c53c-0492-4414-8766-d4c5cd33c0aa
+
+----field----
+field: {8D371CFE-E039-4A9C-8F21-F8A9E6D92726}
+name: Title
+key: title
+content-length: 10
+
+Resource 1
+----field----
+field: {A8626276-797B-4612-90BA-A866BAF6E24A}
+name: Copy
+key: copy
+content-length: 286
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sollicitudin commodo ante, eu elementum ligula viverra ac. Integer id ligula justo. Aliquam eu accumsan ipsum.
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250611T191156Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6594c53c-0492-4414-8766-d4c5cd33c0aa
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250611T204659Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

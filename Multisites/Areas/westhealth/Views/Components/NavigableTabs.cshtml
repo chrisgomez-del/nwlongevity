@@ -1,0 +1,81 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.NavigableTabsViewModel
+
+<!-- Tools & Resources -->
+<link rel="stylesheet" href="../styles/components/ResourceNavigator.processed.css">
+
+<!-- INCLUDE IN EVERY FILE -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+<link rel="stylesheet" href="../styles/style.processed.min.css">
+<!-- INCLUDE IN EVERY FILE -->
+
+@{
+    bool isFirstTab = true;
+    bool isFirstPanel = true;
+}
+
+
+<div class="container py-4">
+    <div class="row">
+        <!-- Sidebar Navigation -->
+        <nav class="col-md-4 col-lg-3 mb-4 mb-md-0 sticky-top" style="top: 2rem;" aria-label="Resource Section Navigation">
+            <div class="list-group" role="tablist">
+                @foreach (var tab in Model.NavigableTabs)
+                {
+                    var selectedAria = isFirstTab ? "true" : "";
+                    isFirstTab = false;
+
+                    <button id="tab-@tab.TabId"
+                            class="list-group-item list-group-item-action"
+                            data-bs-toggle="tab"
+                            data-bs-target="#panel-@tab.TabId"
+                            type="button"
+                            role="tab"
+                            aria-controls="panel-@tab.TabId"
+                            aria-selected="@selectedAria">
+                        @tab.Title
+                    </button>
+                }
+            </div>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="col-md-8 col-lg-9 tab-content">
+            <!-- Panel: Tab -->
+            @foreach (var tab in Model.NavigableTabs)
+            {
+                var activeClass = isFirstPanel ? "show active" : "";
+                isFirstPanel = false;
+
+                <div id="panel-@tab.TabId"
+                     class="tab-pane fade @activeClass"
+                     role="tabpanel"
+                     aria-labelledby="tab-@tab.TabId">
+                    <h2 class="h4 mb-4">@tab.Title</h2>
+                    @foreach (var tabResource in tab.TabResources)
+                    {
+
+                        <article class="mb-5">
+                            <h3 class="h5 text-primary">@tabResource.Title</h3>
+                            <p class="mb-2">
+                                @tabResource.Copy
+                            </p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="@tabResource.PdfSource" class="btn btn-link p-0" download>
+                                    <span class="visually-hidden">@tabResource.PdfText </span> @tabResource.PdfText
+                                </a>
+                                <a href="@tabResource.CtaSource" class="btn btn-link p-0" target="_blank" rel="noopener noreferrer">
+                                    <span class="visually-hidden">@tabResource.CtaText </span> @tabResource.CtaText
+                                </a>
+                            </div>
+                        </article>
+
+                        <hr />
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

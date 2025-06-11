@@ -262,5 +262,34 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string SectionId = "Section Id";
             }
         }
+        public static class NavigableTabs
+        {
+            public static string TemplateID = "{A4BD525A-7773-496B-B839-46BCE6E5CB0D}";
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string NavigableTabsLocation = "Navigable Tabs Location";
+            }
+        }
+        public static class NavigableTab
+        {
+            public static string TemplateID = "{A65CF74A-C1A7-43ED-947F-4FC0BEB73D95}";
+            public static class Fields
+            {
+                public static string Title = "Title";
+            }
+        }
+        public static class TabResource
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Copy = "Copy";
+                public static string PdfSource = "Pdf Source";
+                public static string PdfText = "Pdf Text";
+                public static string CtaSource = "Cta Source";
+                public static string CtaText = "Cta Text";
+            }
+        }
     }
 }
