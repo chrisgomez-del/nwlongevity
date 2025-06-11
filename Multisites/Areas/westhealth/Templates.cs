@@ -259,6 +259,7 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string Image = "Image";
+                public static string SectionId = "Section Id";
             }
         }
     }

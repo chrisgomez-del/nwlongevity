@@ -12,15 +12,15 @@ templatekey: Research Card
 ----version----
 language: en
 version: 1
-revision: 79404970-43eb-437e-9026-ad2fcc3680e1
+revision: 0564c606-58a1-4370-97f7-becbed18f251
 
 ----field----
 field: {694C7008-A490-46F1-B3D5-D89FCE504E15}
 name: Title
 key: title
-content-length: 15
+content-length: 20
 
-Research Card 2
+Test Research Card 2
 ----field----
 field: {3BA1063B-EB2E-402A-B615-B64A782EFF43}
 name: Source
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-79404970-43eb-437e-9026-ad2fcc3680e1
+0564c606-58a1-4370-97f7-becbed18f251
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250606T212733Z
+20250610T154039Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

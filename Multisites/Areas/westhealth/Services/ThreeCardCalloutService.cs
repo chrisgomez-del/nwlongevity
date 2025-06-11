@@ -28,6 +28,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.ThreeCardCallout.Fields.Image));
                 model.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
                 model.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
+                model.SectionId = datasource.Fields[Templates.ThreeCardCallout.Fields.SectionId].GetValue(true) ?? string.Empty;
             }
             return model;
         }
