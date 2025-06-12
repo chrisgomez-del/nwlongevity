@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
     expandFirstAccordion();
-    highlightFooterActiveLink('[data-footer] .footer-nav a');
+    // highlightFooterActiveLink('[data-footer] .footer-nav a');
     animateGradient("[data-footer]");
 
     featureModules.forEach(({ selector, importPath, init }) => {
