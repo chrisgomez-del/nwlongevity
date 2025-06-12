@@ -137,11 +137,9 @@ export function highlightFooterActiveLink(selector = 'footer ul a') {
         const linkFirstLevelPath = getFirstLevelPath(href);
 
         if (linkFirstLevelPath === currentFirstLevelPath) {
-            link.classList.add('text-decoration-underline');
-            link.classList.remove('text-decoration-none');
+            link.classList.toggle('active');
         } else {
-            link.classList.remove('text-decoration-underline');
-            link.classList.add('text-decoration-none');
+            link.classList.toggle('active');
         }
     });
 }

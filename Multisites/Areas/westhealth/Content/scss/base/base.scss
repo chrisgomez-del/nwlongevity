@@ -5,6 +5,7 @@
 @import "swiper";
 @import "helpers";
 @import "navbar";
+@import "buttons";
 
 html {
   //font-size: 62.5%; // 62.5% of 16px = 10px - 64px would be 6.4rem
@@ -24,8 +25,32 @@ html {
   background: rgba(255, 255, 255, 0.10);
   border:none;
   color:$white;
-  padding:0.5rem 1rem;
+  padding:0.625rem 1rem;
   &::placeholder {
     color:$white;
+  }
+}
+
+footer {
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .footer-nav {
+    .active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+  .footer-socials {
+    a {
+      &:hover {
+        color: #D4D4D4;
+      }
+    }
   }
 }

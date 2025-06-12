@@ -4,22 +4,26 @@
   --navbar-offset: 33px;
 }
 
+//$bootstrap-icons-font-path: "/fonts/";
+//"Production Path"
 $bootstrap-icons-font-path: "/Areas/westhealth/Content/dist/fonts/";
+$enable-negative-margins: true;
+
 @import "bootstrap-icons/font/bootstrap-icons";
 
 @font-face {
-    font-family: "bootstrap-icons";
-    src: url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff2") format("woff2"), url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff") format("woff");
+  font-family: "bootstrap-icons";
+  src: url("/fonts/bootstrap-icons.woff2") format("woff2"),
+  url("/fonts/bootstrap-icons.woff") format("woff");
+  //src: url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff2") format("woff2"),
+  //url("/Areas/westhealth/Content/dist/fonts/bootstrap-icons.woff") format("woff");
 }
 
 @import "./base/variables.scss";
-$enable-negative-margins: true;
 
 @import "bootstrap/scss/bootstrap";
 @import "./base/functions.scss";
-@import "./base/btns.scss";
 @import "./base/base.scss";
-
 
 @import "./components/SplitContentHero.scss";
 @import "./components/SplitContentSubtitle.scss";
