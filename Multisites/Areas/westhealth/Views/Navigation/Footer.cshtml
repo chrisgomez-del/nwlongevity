@@ -17,7 +17,7 @@
                         <input type="email" id="newsletterEmail" class="secondary-input w-100" placeholder="Email address" required />
                     </div>
                     <div class="col-lg-4 col-xl-3">
-                        <button type="submit" class="btn btn-light w-100 d-flex justify-content-center justify-content-lg-between align-items-center">
+                        <button type="submit" class="btn btn-sm btn-light w-100 d-flex justify-content-center justify-content-lg-between align-items-center">
                             <span class="me-2">Sign Up</span>
                             <i class="bi bi-chevron-right"></i>
                         </button>
@@ -90,7 +90,7 @@
                     @for (int i = 0; i < Model.FooterUtilityLinks.Count; i++)
                     {
                         var link = Model.FooterUtilityLinks[i];
-                        <a href="@link.LinkSource" class="text-white text-decoration-underline">@link.LinkText</a>
+                        <a href="@link.LinkSource">@link.LinkText</a>
 
                         if (i < Model.FooterUtilityLinks.Count - 1)
                         {
@@ -109,16 +109,16 @@
                         <i class="bi bi-arrow-up-short fs-4"></i>
                     </a>
 
-                    <ul class="list-unstyled d-none d-lg-block mb-4">
+                    <ul class="footer-nav list-unstyled d-none d-lg-block mb-4">
                         @foreach (var navItem in Model.Links)
                         {
-                            var baseClass = "primary-copy primary-copy--lg fw-bold mb-4";
-                            var linkClass = navItem.IsActive ? baseClass+ " text-decoration-underline" : baseClass+ " text-decoration-none";
+                            var baseClass = "primary-copy primary-copy--lg fw-bold mb-4 link-offset-2";
+                            var linkClass = navItem.IsActive ? baseClass + " active" : baseClass;
                             <li class="mb-4"><a href="@navItem.LinkSource" class="@linkClass">@navItem.LinkText</a></li>
                         }
                     </ul>
 
-                    <div class="d-flex gap-3 align-items-center">
+                    <div class="footer-socials d-flex gap-3 align-items-center">
                         @foreach (var navItem in Model.SocialLinks)
                         {
                             <a href="@navItem.LinkSource" class="text-white" aria-label="@navItem.LinkText"><i class="bi @navItem.LinkIconClass icon--fs-1 icon-lg--fs-5"></i></a>

@@ -23,6 +23,11 @@
   &.collapsed {
     border-radius:1rem;
   }
+  > .accordion-button {
+    &.collapsed {
+      border-radius:1rem;
+    }
+  }
 }
 
 .accordion-icon .icon-bar-vertical {

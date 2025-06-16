@@ -1,9 +1,7 @@
-// Please note: You can set up imports here but they wont be referenced. Please reference your script directly in the html file. Then add the import here. When we port over the work, our import list will be ready.
-//import '../styles/style.scss';
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Offcanvas from 'bootstrap/js/dist/offcanvas';
 import initNavDropdownLabelUpdater from "./components/ToolsAndResources";
-import { animateGradient, smoothScrollInternalLinks, highlightFooterActiveLink, expandFirstAccordion } from "./utils";
+import {animateGradient, expandFirstAccordion, highlightFooterActiveLink, smoothScrollInternalLinks} from "./utils";
 
 const featureModules = [
     {
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
     expandFirstAccordion();
-    highlightFooterActiveLink('[data-footer] .list-unstyled a');
+    // highlightFooterActiveLink('[data-footer] .footer-nav a');
     animateGradient("[data-footer]");
 
     featureModules.forEach(({ selector, importPath, init }) => {
@@ -43,3 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+

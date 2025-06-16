@@ -1,5 +1,6 @@
 $brand-purple: #574497;
 $brand-green: #00668F;
+$nm-lavender: #E8E5F3;
 
 // Base colors
 $primary: $brand-purple; // The purple-blue used in "Our Research" and heading
@@ -16,7 +17,7 @@ $grey: #F7F6FA;
 // Custom theme colors (optional)
 $custom-purple: #5f64d8; // Alternate highlight shade
 $brand-blue: #004b84; // Used in the gradient banner
-$copy: #E8E5F3;
+$copy: $nm-lavender;
 
 // Font stack (adjust if using a web font)
 $font-family-sans-serif: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
@@ -48,18 +49,25 @@ $border-radius-lg: 1.5rem;
 $link-color:                              $brand-green;
 $link-decoration:                         underline;
 $link-shade-percentage:                   20%;
-//$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
-$link-hover-color:                        transparentize($link-color, .2);
+//TODO: Check transparentize value to make sure value is 20% not 80% or vice versa
+$link-hover-color:                        transparentize($link-color, 0.2);
 $link-hover-decoration:                   null;
 
-$btn-font-weight: 600;
-$btn-border-radius: 0.5rem;
-$btn-padding-y: 0.5rem;
-$btn-padding-x: 1.5rem;
+// all buttons
+$input-btn-padding-y-sm: 1.125rem;
+$input-btn-padding-x-sm: 1.5rem;
+$input-btn-font-size-sm: 1rem;
 
-$btn-primary-bg: $primary;
-$btn-primary-border-color: $primary;
-$btn-primary-color: #ffffff;
+$btn-padding-y-sm: 0.625rem;          
+$btn-padding-x-sm: 1.5rem;
+$btn-font-size-sm: 1rem;
+$btn-border-radius-sm: 0.5rem;
+
+$btn-font-weight: 600;
+$btn-border-radius: 0.25rem;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.25rem;
+$btn-font-size: 1rem;
 
 $btn-hover-bg-shade-amount: 10%;
 

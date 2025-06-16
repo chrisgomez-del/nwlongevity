@@ -21,7 +21,6 @@ function enableSwiper() {
     row.classList.remove('row'); 
     row.classList.add('swiper-wrapper'); // remove Bootstrap row so Swiper styles apply
     
-
     swiperInstance = new Swiper(container, {
         modules: [Pagination],
         slidesPerView: 1.15,
@@ -54,7 +53,7 @@ function destroySwiper() {
 }
 
 function handleBreakpointChange(e) {
-    console.log('breakpoint change', e);
+    console.info('Breakpoint Changed', e);
     if (e.matches) {
         enableSwiper();
     } else {
@@ -63,6 +62,7 @@ function handleBreakpointChange(e) {
 }
 
 export const init = (targetSelector) => {
+    console.info('StatCards Loaded', targetSelector);
     breakpoint.addEventListener('change', handleBreakpointChange);
     handleBreakpointChange(breakpoint);
 }
