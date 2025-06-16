@@ -12,22 +12,22 @@ templatekey: Testimonial
 ----version----
 language: en
 version: 1
-revision: 5793c96a-6a13-49a1-8801-1e48f41da6a9
+revision: 39317d88-5236-4978-820d-032e12b17c78
 
 ----field----
 field: {9FF4C3AA-36DF-4491-BB7D-1253AC003E65}
 name: Testimonial
 key: testimonial
-content-length: 65
+content-length: 78
 
-<p>Here is the testiwefkl;jwealkfjwealkfjwealk;jfwmonial copy</p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim.
 ----field----
 field: {FFB86819-9D0A-4082-A519-572A8ADAFF27}
 name: Copy
 key: copy
-content-length: 87
+content-length: 259
 
-<p>Here is some actual copy that supports the testimooaiwkelk;weajflkweajflkwejnial</p>
+<p><span style="color: #000000; background-color: #ffffff; text-align: justify;">Curabitur quis lobortis justo. Fusce sollicitudin, risus id facilisis posuere, enim ex tempor nibh, vitae malesuada magna libero sit amet nisl. Nunc a accumsan tellus.</span></p>
 ----field----
 field: {C785C47A-2D0B-4487-B693-63BCEC1A4519}
 name: Image
@@ -35,6 +35,13 @@ key: image
 content-length: 58
 
 <image mediaid="{39872F3A-5BF9-4EA9-B2ED-8A5EF7F1F70A}" />
+----field----
+field: {8D224FB2-4FF7-43F8-BBD1-62EB206DFF36}
+name: Testimonial Author
+key: testimonial author
+content-length: 8
+
+Socrates
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5793c96a-6a13-49a1-8801-1e48f41da6a9
+39317d88-5236-4978-820d-032e12b17c78
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250516T170129Z
+20250610T153939Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

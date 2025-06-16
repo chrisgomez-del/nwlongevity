@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {206B8EED-C8A8-4C95-B183-16FE9461C5D8}
+id: {3C0FD704-A625-4A3E-849C-41198F05137A}
 database: master
-path: /sitecore/layout/Placeholder Settings/West Health/WestHealth-Main
+path: /sitecore/layout/Placeholder Settings/West Health/WestHealth-Article
 parent: {F962D5AE-BE74-4B7C-A7B8-ADA8817A328F}
-name: WestHealth-Main
+name: WestHealth-Article
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
@@ -13,20 +13,20 @@ templatekey: Placeholder
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 15
+content-length: 18
 
-WestHealth-Main
+westhealth-article
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 428
+content-length: 38
 
-{BD241B31-7DEF-4CF2-A9A5-E144E50CAAB6}|{0F9994B3-6857-4653-9EDE-32191216BEF2}|{5058D9DB-0F88-499E-BC6A-7AD7E541A76D}|{0FAF548E-2613-4268-B953-45785FF8A771}|{DCFE7B37-94DE-490B-915A-F0C9FC19E0F4}|{B2C2AC10-F6F2-4B84-9424-35A75346EB70}|{C00427FD-C0E0-4B90-93B2-A2F97E8FA1C5}|{2A0A4A9A-AAC9-45F4-A955-996E01589908}|{2363AF76-01CE-4E40-BA78-11D6207977E9}|{15D3B659-DCB7-470D-91E2-C5D5B1FA8A2B}|{6A3D03BF-B24C-42FD-9467-A788C8590877}
+{83CE5B94-EA9B-4FE2-9F83-F4B7EBFF6126}
 ----version----
 language: en
 version: 1
-revision: 651aa6cc-8821-4ce6-95e3-9ae02e104053
+revision: 2e8b405f-8a77-4b23-85b2-e2ce0ead01af
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250515T191324Z
+20250613T191623Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-651aa6cc-8821-4ce6-95e3-9ae02e104053
+2e8b405f-8a77-4b23-85b2-e2ce0ead01af
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250611T194406Z
+20250613T195205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
