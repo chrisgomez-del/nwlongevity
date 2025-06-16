@@ -291,5 +291,19 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string CtaText = "Cta Text";
             }
         }
+        public static class Article
+        {
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Subtitle = "Subtitle";
+                public static string Author = "Author";
+                public static string Copy = "Copy";
+                public static string Source = "Source";
+                public static string Image = "Image";
+                public static string Date = "Date";
+
+            }
+        }
     }
 }

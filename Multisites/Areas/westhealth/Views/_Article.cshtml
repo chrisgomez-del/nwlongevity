@@ -1,0 +1,45 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Global.Fields.MetaTitle)</title>
+    <link href="https://fonts.googleapies.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="~/Areas/westhealth/Content/dist/css/style.min.css" />
+</head>
+<body>
+
+    @*<header id="site-header" class="d-flex">*@
+    @{ Html.Sitecore().RenderControllerRendering("Navigation", "Header", new { area = "westhealth" }); }
+    @*</header>*@
+    <main>
+        <div class="main-contain">
+            @Html.Sitecore().Placeholder("westhealth-article")
+        </div>
+    </main>
+    <footer id="site-footer" class="footer-container mb-5">
+        @{ Html.Sitecore().RenderControllerRendering("Navigation", "Footer", new { area = "westhealth" }); }
+    </footer>
+    <script type="module" src="~/Areas/westhealth/Content/dist/js/bundle.min.js"></script>
+    <script type="text/javascript">
+        //Environment Detection
+        if (window.location.hostname === "test.westhealthaccelerator.nm.org") {
+            window.PPROappID = '7a4bd3a6-e7ca-4521-9f4d-6a7bde6a5f5a';
+        } else if (window.location.hostname === "westhealthaccelerator.nm.org") {
+            window.PPROappID = 'f7759d97-c4f3-4a7f-b3a1-3e3f699f8fc6';
+        }
+
+        //P Pro Tag Manager
+            (function (window, document, dataLayerName, id) {
+                window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+                function stgCreateCookie(a, b, c) { var d = ""; if (c) { var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict" } document.cookie = a + "=" + b + d + f + "; path=/" }
+                var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+                var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+                tags.async = !0, tags.src = "https://nm.containers.piwik.pro/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+                !function (a, n, i) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }) } }(i[c]) }(window, "ppms", ["tm", "cm"]);
+            })(window, document, 'dataLayer', window.PPROappID);
+    </script>
+</body>
+</html>

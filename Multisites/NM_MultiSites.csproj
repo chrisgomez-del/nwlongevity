@@ -368,6 +368,7 @@
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
+    <Compile Include="Areas\westhealth\Controllers\PageController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardListViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
@@ -388,6 +389,8 @@
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnWithImageViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\TwoColumnImageStackViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\InternalNavigationViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Pages\ArticleViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\ArticleService.cs" />
     <Compile Include="Areas\westhealth\Services\CardListService.cs" />
     <Compile Include="Areas\westhealth\Services\CardService.cs" />
     <Compile Include="Areas\westhealth\Services\EnhancedCalloutService.cs" />
@@ -715,6 +718,8 @@
     <Content Include="Areas\westhealth\Views\Components\ThreeCardCallout.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\StatCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\NavigableTabs.cshtml" />
+    <Content Include="Areas\westhealth\Views\Pages\Article.cshtml" />
+    <Content Include="Areas\westhealth\Views\_Article.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -754,6 +759,7 @@
     <Folder Include="Areas\westhealth\Scripts\js\" />
     <Folder Include="Areas\westhealth\Scripts\_libs\" />
     <Folder Include="Areas\westhealth\Views\Index\" />
+    <Folder Include="Areas\westhealth\Views\Page\" />
     <Folder Include="Areas\westhealth\Views\Shared\" />
     <Folder Include="sitecore\" />
   </ItemGroup>
