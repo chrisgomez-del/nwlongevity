@@ -32,7 +32,7 @@
     <EnableContainerDeployment>False</EnableContainerDeployment>
     <ConnectorTimeoutSeconds>120</ConnectorTimeoutSeconds>
     <SitecoreDeployFolder>C:\inetpub\wwwroot\nmmultisitessc.dev.local</SitecoreDeployFolder>
-    <SitecoreAccessGuid>3b81ddd7-1fa8-4754-ac37-0f6761984d33</SitecoreAccessGuid>
+    <SitecoreAccessGuid>fc95bc32-0f46-478a-944a-20c74d09af8b</SitecoreAccessGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
