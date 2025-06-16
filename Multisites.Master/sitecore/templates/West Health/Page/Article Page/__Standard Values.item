@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {8B023D3F-68D9-4023-A78B-75927B9CE412}
+database: master
+path: /sitecore/templates/West Health/Page/Article Page/__Standard Values
+parent: {57D5462C-3C73-4E38-8089-4CBD8B13EE93}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {57D5462C-3C73-4E38-8089-4CBD8B13EE93}
+templatekey: Article Page
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 384
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{1D352687-AD9D-4B31-A802-387E368CFF55}"><p uid="{888E0D30-E99C-47E5-89A9-48CA577E1760}" key="westhealth-article" md="{3C0FD704-A625-4A3E-849C-41198F05137A}" /><r id="{83CE5B94-EA9B-4FE2-9F83-F4B7EBFF6126}" ph="westhealth-article" uid="{485F8B43-5C75-4D21-AD3B-36AC69016B4E}" /></d></r>
+----version----
+language: en
+version: 1
+revision: 52c037f6-cd48-48ff-94f9-9c3e1f29b012
+
+----field----
+field: {F7469723-8B97-494E-8D8A-05CFCBF396C7}
+name: Title
+key: title
+content-length: 5
+
+$name
+----field----
+field: {E187D262-57DA-4CC5-8CF6-5E8A3554EF92}
+name: Date
+key: date
+content-length: 16
+
+20250612T050000Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250612T172817Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+52c037f6-cd48-48ff-94f9-9c3e1f29b012
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250613T202251Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
