@@ -174,6 +174,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Title = "Title";
                 public static string Copy = "Copy";
                 public static string CTA = "CTA";
+                public static string Image = "Image";
             }
         }
         public static class TwoColumnImageStack
