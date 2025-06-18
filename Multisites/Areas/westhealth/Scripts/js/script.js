@@ -7,16 +7,19 @@ const featureModules = [
     {
         selector: '[data-hero-carousel]',
         importPath: './components/HeroCarousel',
+        importFn: () => import('./components/HeroCarousel'),
         init: (mod, elements, selector) => mod.init(elements, selector)
     },
     {
         selector: '.benefit-tabs button[data-bs-toggle="tab"]',
         importPath: './components/BenefitTabs',
+        importFn: () => import('./components/BenefitTabs'),
         init: (mod, elements) => mod.init(elements)
     },
     {
         selector: '[data-card-stat]',
         importPath: './components/StatCards',
+        importFn: () => import('./components/StatCards'),
         init: (mod, elements) => mod.init(elements)
     },
 ]
@@ -30,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // highlightFooterActiveLink('[data-footer] .footer-nav a');
     animateGradient("[data-footer]");
 
-    featureModules.forEach(({ selector, importPath, init }) => {
+    featureModules.forEach(({ selector, importPath, init, importFn }) => {
         const elements = document.querySelectorAll(selector);
         if (elements.length > 0) {
-            import(importPath)
+            importFn()
                 .then((mod) => init(mod, elements, selector))
                 .catch((err) =>
                     console.error(`Failed to load module for ${selector}:`, err)
