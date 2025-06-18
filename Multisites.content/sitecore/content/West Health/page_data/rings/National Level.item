@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {23259F9F-6534-450D-9197-4AEEAA1E3726}
+database: master
+path: /sitecore/content/West Health/page_data/rings/National Level
+parent: {94319527-25CB-4D89-BFF5-BBED42476F72}
+name: National Level
+master: {00000000-0000-0000-0000-000000000000}
+template: {666D5F1D-1AF7-4456-9903-093AC1E521CE}
+templatekey: Ring
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----version----
+language: en
+version: 1
+revision: 9597cc7b-f126-4189-8cd9-6b91ebd6a501
+
+----field----
+field: {0628E0DF-4FA5-4E0C-B180-51A8F99DC768}
+name: Label
+key: label
+content-length: 14
+
+National Level
+----field----
+field: {CA97A908-FD50-4F90-814B-8E96D7F2B5F3}
+name: Short Label
+key: short label
+content-length: 14
+
+National Level
+----field----
+field: {2464BFA0-981E-4248-A76F-68A1C01BCDD1}
+name: Theme Color
+key: theme color
+content-length: 38
+
+{BBADEEE5-23C2-4AB1-B03C-CD4D54E2BB87}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250617T205357Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9597cc7b-f126-4189-8cd9-6b91ebd6a501
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250617T205448Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

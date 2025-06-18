@@ -305,5 +305,26 @@ namespace NM_MultiSites.Areas.westhealth
 
             }
         }
+        public static class RingDiagram
+        {
+            public static string RingTemplateID = "{666D5F1D-1AF7-4456-9903-093AC1E521CE}";
+            public static class Fields
+            {
+                public static string Title = "Title";
+                public static string Copy = "Copy";
+                public static string RingLocation = "Ring Location";
+            }
+        }
+        public static class Ring
+        {
+            public static string CardTemplateID = "{9F23EFD2-120C-41ED-B49B-3D103D464BDB}";
+            public static class Fields
+            {
+                public static string Label = "Label";
+                public static string ShortLabel = "Short Label";
+                public static string ThemeColor = "Theme Color";
+                public static string ThemeCssColor = "Css Class";
+            }
+        }
     }
 }

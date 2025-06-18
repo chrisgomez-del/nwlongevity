@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using NM_MultiSites.Areas.Innovation.Models.Components;
 using NM_MultiSites.Areas.westhealth.Models.Components;
 using NM_MultiSites.Areas.westhealth.Services;
@@ -27,7 +28,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         private readonly ICardListService _cardListService;
         private readonly IThreeCardCalloutService _threeCardCalloutService;
         private readonly INavigableTabsService _navigableTabsService;
-
+        private readonly IRingDiagramService _ringDiagramService; 
 
         public ComponentController()
         {
@@ -47,6 +48,7 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             _cardListService = new CardListService();
             _threeCardCalloutService = new ThreeCardCalloutService();
             _navigableTabsService = new NavigableTabsService();
+            _ringDiagramService = new RingDiagramService();
 
         }
         // GET: westhealth/Index
@@ -178,8 +180,13 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         }
         public ActionResult NavigableTabs()
         {
-            var NavigableTabsViewModel = _navigableTabsService.GetNavigableTabsViewModel(); 
-            return View("~/Areas/westhealth/Views/Components/NavigableTabs.cshtml", NavigableTabsViewModel);
+            var navigableTabsViewModel = _navigableTabsService.GetNavigableTabsViewModel(); 
+            return View("~/Areas/westhealth/Views/Components/NavigableTabs.cshtml", navigableTabsViewModel);
+        }
+        public ActionResult RingDiagram()
+        {
+            var ringDiagramViewModel = _ringDiagramService.GetRingDiagramViewModel(); 
+            return View("~/Areas/westhealth/Views/Components/RingDiagram.cshtml", ringDiagramViewModel);
         }
     }
 }
