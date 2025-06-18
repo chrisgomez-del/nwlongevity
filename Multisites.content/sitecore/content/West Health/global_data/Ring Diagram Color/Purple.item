@@ -1,47 +1,54 @@
 ----item----
 version: 1
-id: {3648D109-2AC1-48E6-A817-35C23E87B54D}
+id: {BBADEEE5-23C2-4AB1-B03C-CD4D54E2BB87}
 database: master
-path: /sitecore/templates/West Health/Content/Slide/Slide Data
-parent: {4E125E2B-495A-4E3A-9472-90BDDD45C4E3}
-name: Slide Data
+path: /sitecore/content/West Health/global_data/Ring Diagram Color/Purple
+parent: {A0403CD6-A5B1-4DF5-BA9F-B19C998C47A5}
+name: Purple
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
+template: {89056EC1-5C3C-4677-92B6-D4CA7537D5C6}
+templatekey: Droplink Item
 
 ----version----
 language: en
 version: 1
-revision: 2dad02ee-a4fc-408d-ad2e-8b19cb6d0323
+revision: 7e1249a1-4dba-4a02-a834-a24d469eb3c7
 
 ----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
+field: {FC2764E4-F090-4DB2-B8F6-CC4AD0239C5D}
+name: Name
+key: name
+content-length: 6
 
-sitecore\Admin
+Purple
+----field----
+field: {D0CE2F48-0561-48A2-BDDA-435C6FFE9969}
+name: Css Class
+key: css class
+content-length: 7
+
+#4159B0
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250521T141322Z
+20250617T143855Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-2dad02ee-a4fc-408d-ad2e-8b19cb6d0323
+7e1249a1-4dba-4a02-a834-a24d469eb3c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250618T174917Z
+20250617T143910Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

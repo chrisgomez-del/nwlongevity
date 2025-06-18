@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {33C0126D-7F46-425F-913D-ACCFBFAA7572}
+database: master
+path: /sitecore/content/West Health/page_data/rings/National Level/Quality Metrics
+parent: {23259F9F-6534-450D-9197-4AEEAA1E3726}
+name: Quality Metrics
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----version----
+language: en
+version: 1
+revision: 3cfbbc41-6893-4000-bc43-0f5ec447e2ff
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 15
+
+Quality Metrics
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 257
+
+<span style="color: #000000; background-color: #ffffff; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</span>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250618T125810Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3cfbbc41-6893-4000-bc43-0f5ec447e2ff
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250618T164328Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

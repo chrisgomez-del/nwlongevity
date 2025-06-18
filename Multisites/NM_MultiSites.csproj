@@ -378,6 +378,9 @@
     <Compile Include="Areas\westhealth\Models\Components\NavigableTabViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchCardViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchListViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\RingCardViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\RingDiagramViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\RingViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SlideViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SplitContentHeroViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\SplitContentSubtitleViewModel.cs" />
@@ -401,6 +404,7 @@
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
     <Compile Include="Areas\westhealth\Services\ResearchListService.cs" />
+    <Compile Include="Areas\westhealth\Services\RingDiagramService.cs" />
     <Compile Include="Areas\westhealth\Services\SliderService.cs" />
     <Compile Include="Areas\westhealth\Services\SplitContentHeroService.cs" />
     <Compile Include="Areas\westhealth\Services\SplitContentSubtitleService.cs" />
@@ -723,6 +727,7 @@
     <Content Include="Areas\westhealth\Views\Components\NavigableTabs.cshtml" />
     <Content Include="Areas\westhealth\Views\Pages\Article.cshtml" />
     <Content Include="Areas\westhealth\Views\_Article.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\RingDiagram.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

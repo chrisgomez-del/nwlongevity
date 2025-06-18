@@ -1,33 +1,40 @@
 ----item----
 version: 1
-id: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
+id: {69F6FAF7-95BC-48DD-946E-22C6010683AE}
 database: master
-path: /sitecore/templates/West Health/Content/Slide/Slide Data/CTA
-parent: {3648D109-2AC1-48E6-A817-35C23E87B54D}
-name: CTA
+path: /sitecore/templates/West Health/Content/Ring/__Standard Values
+parent: {666D5F1D-1AF7-4456-9903-093AC1E521CE}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
+template: {666D5F1D-1AF7-4456-9903-093AC1E521CE}
+templatekey: Ring
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 12
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
 
-General Link
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-300
+{9F23EFD2-120C-41ED-B49B-3D103D464BDB}
 ----version----
 language: en
 version: 1
-revision: ff1f77e2-f306-4ded-b955-d8fb8648bb0c
+revision: 929e681e-b175-4b57-90a3-16267c72dd65
 
+----field----
+field: {0628E0DF-4FA5-4E0C-B180-51A8F99DC768}
+name: Label
+key: label
+content-length: 5
+
+$name
+----field----
+field: {2464BFA0-981E-4248-A76F-68A1C01BCDD1}
+name: Theme Color
+key: theme color
+content-length: 38
+
+{B6FB65D9-CCC7-4C32-BFB4-4C988079DA65}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +48,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250521T141322Z
+20250617T142422Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ff1f77e2-f306-4ded-b955-d8fb8648bb0c
+929e681e-b175-4b57-90a3-16267c72dd65
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250618T174917Z
+20250618T125700Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

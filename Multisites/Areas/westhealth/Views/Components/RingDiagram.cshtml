@@ -1,0 +1,21 @@
+﻿@using Newtonsoft.Json
+@model NM_MultiSites.Areas.westhealth.Models.Components.RingDiagramViewModel
+
+
+@{
+    var jsonModel = JsonConvert.SerializeObject(Model);
+}
+
+<script id="view-model-data" type="application/json">
+    @Html.Raw(jsonModel);
+</script>
+
+<script>
+    const json = document.getElementById("view-model-data").textContent;
+    const viewModel = JSON.parse(json);
+    console.log(viewModel);
+</script>
+
+<h1>ringdiagram.cshtml</h1>
+@Html.Raw(jsonModel)
+

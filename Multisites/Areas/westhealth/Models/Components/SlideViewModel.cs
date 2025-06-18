@@ -12,6 +12,7 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Title { get; set; }
         public IHtmlString Copy { get; set; }
         public IHtmlString CTA { get; set; }
+        public IHtmlString Image { get; set; }
     }
 
     public class SliderViewModel
