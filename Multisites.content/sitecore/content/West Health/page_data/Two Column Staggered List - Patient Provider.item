@@ -1,0 +1,116 @@
+----item----
+version: 1
+id: {EE9BD1F1-35BD-43DC-BF4E-F0C8D8562C92}
+database: master
+path: /sitecore/content/West Health/page_data/Two Column Staggered List - Patient Provider
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Two Column Staggered List - Patient Provider
+master: {00000000-0000-0000-0000-000000000000}
+template: {CC79CDA3-F693-4278-B34F-06B5BAEBB5E8}
+templatekey: Two Column Staggered List
+
+----version----
+language: en
+version: 1
+revision: f3a4b38a-7c3f-4527-b5c2-ef4373546cd1
+
+----field----
+field: {355EC235-0F7F-4C30-A07B-992347F1D062}
+name: Left List
+key: left list
+content-length: 334
+
+Treat mild to moderate anxiety, depression and substance use disorders
+Reduce patient wait times and improve access to care
+Deliver a team-formulated care plan through a PCP
+Use a designated billing code for insurance reimbursement
+Track and measure progress through a patient registry
+Evidence-based with over 90 clinical trials
+----field----
+field: {1EA8256C-9ABC-4045-95A2-AF8C5D76671F}
+name: Right List
+key: right list
+content-length: 339
+
+Get treatment for conditions like anxiety, depression, and substance use through your PCP
+Mental health experts help treat your concerns and develop a wellness maintenance plan for your success
+CoCM treatment is reimbursed by insurance
+Psychiatrists are able to treat patients 8x faster using a CoCM
+Access personalized, attentive care
+----field----
+field: {54B20742-3236-464D-A751-0A6BF72E83F9}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{08908D6F-B54C-4168-8E87-DD9180AD9D6A}" />
+----field----
+field: {BDA7E390-8426-4039-93FB-4A2974067600}
+name: Left List Cta Source
+key: left list cta source
+content-length: 136
+
+<link text="Download PDF" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {DF562DC2-EBB6-452F-B1F9-A288573A146A}
+name: Right List Cta Source
+key: right list cta source
+content-length: 136
+
+<link text="Download PDF" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {F5004011-7F63-4623-9FC0-230681A7EEBD}
+name: Left List Title
+key: left list title
+content-length: 22
+
+Benefits for providers
+----field----
+field: {4E9039EC-0964-427B-8527-93DC01C98410}
+name: Right List Title
+key: right list title
+content-length: 21
+
+Benefits for patients
+----field----
+field: {317FBEDA-1CCE-4C7E-BBCA-76D6360BBBDC}
+name: Left List Tab
+key: left list tab
+content-length: 8
+
+Provider
+----field----
+field: {A68EFAEC-3409-4445-A243-FFF82EAD4064}
+name: Right List Tab
+key: right list tab
+content-length: 7
+
+Patient
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250618T194953Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f3a4b38a-7c3f-4527-b5c2-ef4373546cd1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250618T204544Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

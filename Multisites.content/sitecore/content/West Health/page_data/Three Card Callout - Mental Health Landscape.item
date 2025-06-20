@@ -1,54 +1,47 @@
 ----item----
 version: 1
-id: {2B6172A7-159D-4170-8288-C48645C4AAF0}
+id: {0B08BDD6-57A2-4001-8AEF-7653DD99C2D9}
 database: master
-path: /sitecore/content/West Health/global_data/Image Location/Left
-parent: {BF360258-17B7-4645-9951-A505B7BEE822}
-name: Left
+path: /sitecore/content/West Health/page_data/Three Card Callout - Mental Health Landscape
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Three Card Callout - Mental Health Landscape
 master: {00000000-0000-0000-0000-000000000000}
-template: {89056EC1-5C3C-4677-92B6-D4CA7537D5C6}
-templatekey: Droplink Item
+template: {9CE0CF79-5F8E-4A39-B407-39873D3C5D1E}
+templatekey: Three Card Callout
 
 ----version----
 language: en
 version: 1
-revision: 5343fe11-758d-4706-bf0a-8516b501b7cb
+revision: a380470e-ead3-4f3b-b3df-a642019e6225
 
 ----field----
-field: {FC2764E4-F090-4DB2-B8F6-CC4AD0239C5D}
-name: Name
-key: name
-content-length: 4
+field: {6EFD3BA9-25C6-4048-8543-34ECC149F4E3}
+name: Title
+key: title
+content-length: 83
 
-Left
-----field----
-field: {D0CE2F48-0561-48A2-BDDA-435C6FFE9969}
-name: Css Class
-key: css class
-content-length: 10
-
-image-left
+The country's mental health landscape leaves <strong>room for improvement.</strong>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250521T144752Z
+20250618T192535Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-5343fe11-758d-4706-bf0a-8516b501b7cb
+a380470e-ead3-4f3b-b3df-a642019e6225
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250620T144548Z
+20250618T193026Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
