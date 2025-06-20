@@ -564,10 +564,13 @@
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.min.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.min.js" />
-    <Content Include="Areas\westhealth\Content\dist\css\style.css" />
-    <Content Include="Areas\westhealth\Content\dist\css\style.min.css" />
-    <Content Include="Areas\westhealth\Content\dist\js\bundle.js" />
-    <Content Include="Areas\westhealth\Content\dist\js\bundle.min.js" />
+    <Content Include="Areas\westhealth\Content\dist\**\*.*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <!--<Content Include="Areas\westhealth\Content\dist\css\style.css" />
+    <Content Include="Areas\westhealth\Content\dist\css\style.min.css" />-->
+    <!--<Content Include="Areas\westhealth\Content\dist\js\bundle.js" />
+    <Content Include="Areas\westhealth\Content\dist\js\bundle.min.js" />-->
     <Content Include="Areas\westhealth\Content\img\bg-collaborative-care%401.5x.jpg" />
     <Content Include="Areas\westhealth\Content\img\bg-collaborative-care.jpg" />
     <Content Include="Areas\westhealth\Content\img\bg-usa.png" />
@@ -714,8 +717,8 @@
     <Content Include="Areas\westhealth\Content\scss\fonts\_titles.scss" />
     <Content Include="Areas\westhealth\Content\scss\style.scss" />
     <Content Include="Areas\westhealth\Views\Components\Cards\EnhancedCalloutCard.cshtml" />
-    <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff" />
-    <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff2" />
+    <!--<Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff" />
+    <Content Include="Areas\westhealth\Content\dist\fonts\bootstrap-icons.woff2" />-->
     <Content Include="Areas\westhealth\Views\Components\Cards\NewsCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\ResourceCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\CardList.cshtml" />
@@ -758,6 +761,7 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="Areas\westhealth\Content\dist\js\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />
     <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />

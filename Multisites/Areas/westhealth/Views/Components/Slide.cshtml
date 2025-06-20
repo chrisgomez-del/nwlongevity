@@ -1,13 +1,16 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.SlideViewModel
 
-<div>
-    <div>
-        @Model.Title
-    </div>
-    <div>
-        @Model.Copy
-    </div>
-    <div>
-        @Model.CTA
+<div class="swiper-slide">
+    <div class="row hero-content flex-row-reverse">
+        <div class="col-md-6">
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Slide.Fields.Image, new { @class = "ratio ratio-1x1 rounded-2" })
+        </div>
+        <div class="col-md-5 offset-md-1">
+            <h2 class="primary-title text-white">
+                @Model.Title
+            </h2>
+            <p>@Model.Copy</p>
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Slide.Fields.CTA, new { @class = "btn btn-light" })
+        </div>
     </div>
 </div>

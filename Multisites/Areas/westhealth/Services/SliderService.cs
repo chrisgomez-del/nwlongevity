@@ -28,6 +28,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.Title));
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.Copy));
                 model.CTA = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.CTA));
+                model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.Image));
             }
             return model;
         }

@@ -9,7 +9,7 @@ const path = require('path');
 
 // Rollup
 const { rollup } = require('rollup');
-const resolve = require('@rollup/plugin-node-resolve').nodeResolve;
+const resolve = require('@rollup/plugin-node-resolve').default;
 const commonjs = require('@rollup/plugin-commonjs');
 const terser = require('@rollup/plugin-terser');
 
@@ -45,15 +45,23 @@ function processArea(area) {
                 .pipe(rename({ suffix: '.min' }))
                 .pipe(gulp.dest(cssDest));
         },
-        scripts: function () {
+        scripts: async function () {
+            // need to do this way because most (good) plugins that handle css imports 
+            // are ESM, not common js
+            const postcssModule = useRollup ? await import('rollup-plugin-postcss') : null;
+            const postcss = postcssModule ? postcssModule.default : null;
+
             if (useRollup) {
                 return rollup({
                     input: jsEntry,
-                    plugins: [resolve(), commonjs()]
+                    plugins: [resolve(), commonjs(), postcss()]
                 }).then(bundle => {
                     return bundle.write({
-                        file: path.join(jsDest, 'bundle.min.js'),
+                        //dir: path.join(jsDest, 'bundle.min.js'),
+                        dir: jsDest,
                         format: 'esm',
+                        entryFileNames: 'bundle.min.js',
+                        chunkFileNames: 'chunks/[name].js',
                         sourcemap: true
                     });
                 });
@@ -63,14 +71,21 @@ function processArea(area) {
                     .pipe(gulp.dest(jsDest));
             }
         },
-        minifyJs: function () {
+        minifyJs: async function () {
+            // need to do this way because most (good) plugins that handle css imports 
+            // are ESM, not common js
+            const postcssModule = useRollup ? await import('rollup-plugin-postcss') : null;
+            const postcss = postcssModule ? postcssModule.default : null;
             if (useRollup) {
                 return rollup({
                     input: jsEntry,
-                    plugins: [resolve(), commonjs(), terser()]
+                    plugins: [resolve(), commonjs(), postcss(), terser()]
                 }).then(bundle => {
                     return bundle.write({
-                        file: path.join(jsDest, 'bundle.min.js'),
+                        //file: path.join(jsDest, 'bundle.min.js'),
+                        dir: jsDest,
+                        entryFileNames: 'bundle.min.js',
+                        chunkFileNames: 'chunks/[name].js',
                         format: 'esm',
                         sourcemap: true
                     });
@@ -81,6 +96,13 @@ function processArea(area) {
                     .pipe(rename({ suffix: '.min' }))
                     .pipe(gulp.dest(jsDest));
             }
+        },
+        cleanJs: async function () {
+            // not integrated yet
+            if (!useRollup) return;
+            const del = (await import('del')).default;
+            const { default: del } = await import('del');
+            return del([`${jsDest}**`, `!${jsDest}`]);
         },
         watchPaths: {
             scss: `${base}/Content/scss/**/*.scss`,
@@ -132,6 +154,7 @@ gulp.task('copy-icons', gulp.parallel(...processedAreas.map(a => a.copyIcons)))
 gulp.task('minify-css', gulp.parallel(...processedAreas.map(a => a.scripts)));
 gulp.task('scripts', gulp.parallel(...processedAreas.map(a => a.minifyCss)));
 gulp.task('minify-js', gulp.parallel(...processedAreas.map(a => a.minifyJs)));
+gulp.task('clean:js', gulp.parallel(...processedAreas.map(a => a.cleanJs)));
 
 //gulp.task('watch', function () {
 //    gulp.watch('Areas/Innovation/Content/scss/**/*.scss', gulp.series('styles'));
@@ -150,6 +173,7 @@ gulp.task('watch', function () {
 });
 
 const buildAll = gulp.series(
+    //gulp.series('clean:js'),
     gulp.series('styles'),
     gulp.series('copy-icons'),
     gulp.series('scripts'),
