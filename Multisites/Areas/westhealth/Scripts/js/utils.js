@@ -143,3 +143,43 @@ export function highlightFooterActiveLink(selector = 'footer ul a') {
         }
     });
 }
+
+export function injectFormstackPlaceholders(containerSelector = '#fsform-container-6214449') {
+    const form = document.querySelector(containerSelector);
+    if (!form) return;
+
+    const labels = form.querySelectorAll('.fsLabelVertical');
+
+    labels.forEach(label => {
+        const inputId = label.getAttribute('for');
+        const input = form.querySelector(`#${inputId}`);
+        const labelTextSpan = label.querySelector('.fsSupporting span');
+
+        if (input && labelTextSpan) {
+            const rawLabel = labelTextSpan.textContent.trim();
+            const cleanLabel = rawLabel.replace(/\*/g, '').trim();
+            input.placeholder = cleanLabel;
+        }
+    });
+}
+
+export function applySecondaryInputAttribute(containerSelector = '#fsform-container-6214449') {
+    const form = document.querySelector(containerSelector);
+    if (!form) return;
+
+    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"]');
+
+    inputs.forEach(input => {
+        input.setAttribute('data-secondaryinput', '');
+    });
+}
+
+export function applyFormBtnStyles(containerSelector = '#fsform-container-6214449') {
+    const submitBtn = document.querySelector(containerSelector).querySelector('[type="submit"]');
+    submitBtn.classList.add('btn', 'btn-light', 'w-100', 'd-flex', 'justify-content-center', 'justify-content-lg-between', 'align-items-center');
+
+    const btnIcon = document.createElement('i');
+    btnIcon.setAttribute('class', 'bi bi-chevron-right ms-4');
+    
+    submitBtn.appendChild(btnIcon);
+}

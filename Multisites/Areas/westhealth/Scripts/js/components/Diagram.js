@@ -1,11 +1,26 @@
-﻿// === Constants ===
+﻿import gsap from 'gsap';
+
+// === Constants ===
 const ringLabelsContainer = document.querySelector(".ring-labels");
 const sliderContainer = document.querySelector(".diagram__card-slider");
 const rings = document.querySelectorAll(".ring");
 const groups = document.querySelectorAll(".subcircle-group");
-const parsedJSON = JSON.parse(document.getElementById("ring-data").textContent);
-const introData = parsedJSON[0];
-const ringContentData = parsedJSON.slice(1).reverse();
+//const parsedJSON = JSON.parse(document.getElementById("ring-data")?.textContent?.trim());
+const raw = document.getElementById("ring-data")?.textContent?.trim();
+const cleaned = raw
+    .replace(/^'/, '')
+    .replace(/';?$/, '')
+    .replace(/};?%/, '}')
+    .trim();
+
+let parsedJSON = null;
+try {
+    parsedJSON = JSON.parse(cleaned);
+} catch (err) {
+    console.error("Failed to parse JSON from ring-data:", err, cleaned);
+}
+const introData = parsedJSON;
+const ringContentData = parsedJSON.Rings.reverse();
 const dotConfigs = [
     { scale: 0.166, angles: { desktop: [265, 170, 85], mobile: [265, 170, 80] } },
     { scale: 0.33, angles: { desktop: [270, 176, 85], mobile: [210, 180, 150] } },
@@ -71,15 +86,17 @@ function renderRingDots() {
     dotConfigs.forEach(({ scale, angles }, ringIndex) => {
         const distance = wrapperSize * scale;
         const ringData = ringContentData[ringIndex];
-        const theme = ringData.themeColor;
-        const cards = ringData.cards || [];
+        const theme = ringData.ThemeCssColor;
+        const cards = ringData.Cards || [];
         const angleList = isMobile() ? angles.mobile : angles.desktop;
 
         angleList.forEach((angle, i) => {
-            const label = cards[i]?.cardTitle || null;
-            groups[ringIndex].appendChild(
-                createDot(angle, distance, 26, label, ringIndex, i, theme)
-            );
+            if (cards.length >= i + 1) {
+                const label = cards[i]?.cardTitle || null;
+                groups[ringIndex].appendChild(
+                    createDot(angle, distance, 26, label, ringIndex, i, theme)
+                );
+            }
         });
     });
 }
@@ -91,7 +108,7 @@ function renderRingLabels(callback) {
     const labelEls = ringContentData.map((ring, i) => {
         const label = document.createElement("div");
         label.className = "ring-label";
-        label.style.setProperty("--theme-color", ring.themeColor);
+        label.style.setProperty("--theme-color", ring.ThemeCssColor);
         label.dataset.ring = (i + 1).toString();
         label.setAttribute("role", "button");
         label.setAttribute("tabindex", "0");
@@ -125,7 +142,7 @@ function renderRingLabels(callback) {
     callback?.(labelEls);
 }
 
-function playRingAnimation(labelEls) {
+/*function playRingAnimation(labelEls) {
     const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
     const anyRingIsActive = [...rings].some(r => r.classList.contains("active"));
 
@@ -143,7 +160,7 @@ function playRingAnimation(labelEls) {
     } else {
         labelEls.forEach(el => gsap.set(el, { opacity: 1 }));
     }
-}
+}*/
 
 function clearActiveRing() {
     rings.forEach(r => r.classList.remove("active"));
@@ -167,11 +184,17 @@ function swapDiagramCards(ringIndex) {
     renderDiagramCard(ringIndex);
 }
 
+function stripHTML(htmlString) {
+    const div = document.createElement("div");
+    div.innerHTML = htmlString;
+    return div.textContent || div.innerText || "";
+}
+
 export function setActiveRing(index) {
     clearActiveRing();
     activeRingIndex = index;
 
-    const themeColor = ringContentData[index]?.themeColor;
+    const themeColor = ringContentData[index]?.ThemeCssColor || '#000000';
 
     if (themeColor) {
         document.querySelector(".diagram__card-container")?.style.setProperty("--theme-color", themeColor);
@@ -222,8 +245,8 @@ function setActiveSubcircle(el) {
     const topic = label?.dataset.topic;
 
     if (topic && ringContentData[ringIndex]) {
-        const { cards } = ringContentData[ringIndex];
-        const matchingIndex = cards.findIndex(card => card.cardTitle.toLowerCase() === topic);
+        const { Cards } = ringContentData[ringIndex];
+        const matchingIndex = Cards.findIndex(card => card.cardTitle.toLowerCase() === topic);
 
         const currentCard = document.querySelector(`.diagram__card[data-ringCard="${ringIndex + 1}"]`);
         const currentTitle = currentCard?.querySelector('.diagram__card-title')?.textContent.trim().toLowerCase();
@@ -235,7 +258,7 @@ function setActiveSubcircle(el) {
             const copy = currentCard.querySelector('.diagram__card-copy');
             const existingReadMore = currentCard.querySelector('.diagram__card-readmore');
 
-            const fullCopy = cards[matchingIndex].cardCopy;
+            const fullCopy = stripHTML(Cards[matchingIndex].cardCopy);
             const truncated = fullCopy.length > 130 ? fullCopy.slice(0, 130).trim() + "…" : fullCopy;
             const copyId = copy.id || `copy-ring${ringIndex + 1}-card${matchingIndex}`;
 
@@ -484,8 +507,8 @@ function renderDiagramCard(ringIndex, defaultCardIndex = 0) {
     const ringData = ringContentData[ringIndex];
     if (!ringData) return;
 
-    const { cards, themeColor, ringShortLabel } = ringData;
-    const currentCard = cards[defaultCardIndex];
+    const { Cards, ThemeCssColor, ringShortLabel } = ringData;
+    const currentCard = Cards[defaultCardIndex];
     const primaryCard = document.querySelector('[data-primaryCard]');
     const card = document.querySelector(`.diagram__card[data-ringCard="${ringIndex + 1}"]`);
     card.style.minHeight = `${MAX_CARD_HEIGHT}px`;
@@ -493,7 +516,7 @@ function renderDiagramCard(ringIndex, defaultCardIndex = 0) {
     if (!card) return;
 
     // Apply theme color
-    card.style.setProperty('--theme-color', themeColor);
+    card.style.setProperty('--theme-color', ThemeCssColor);
 
     // Show/hide cards appropriately
     if (primaryCard.getAttribute('aria-hidden') === "true") {
@@ -529,7 +552,7 @@ function renderDiagramCard(ringIndex, defaultCardIndex = 0) {
     transitionWrapper.appendChild(header);
 
     // === Copy with mobile "Read more" toggle ===
-    const fullCopy = currentCard.cardCopy;
+    const fullCopy = stripHTML(currentCard.cardCopy);
     const copy = document.createElement("p");
     const copyId = `copy-ring${ringIndex + 1}-card${defaultCardIndex}`;
 
@@ -566,7 +589,7 @@ function renderDiagramCard(ringIndex, defaultCardIndex = 0) {
     const btnContainer = document.createElement("div");
     btnContainer.className = "diagram__card-btn-container";
 
-    cards.forEach((cardObj, index) => {
+    Cards.forEach((cardObj, index) => {
         const btn = document.createElement("button");
         btn.className = "diagram__card-btn diagram__card-btn--secondary text-start";
         btn.textContent = cardObj.cardTitle;
@@ -575,7 +598,7 @@ function renderDiagramCard(ringIndex, defaultCardIndex = 0) {
         btn.addEventListener("click", () => {
             title.textContent = cardObj.cardTitle;
 
-            const newFull = cardObj.cardCopy;
+            const newFull = stripHTML(cardObj.cardCopy);
             const newTrunc = newFull.length > 130 ? newFull.slice(0, 130).trim() + "…" : newFull;
 
             if (isMobile() && newFull.length > 130) {
@@ -662,11 +685,11 @@ function renderPrimaryCard(intro, ringsData) {
 
     const title = document.createElement('h4');
     title.className = 'diagram__card-title';
-    title.textContent = intro.introTitle || 'Welcome';
+    title.textContent = intro?.introTitle || 'Welcome';
 
     const copy = document.createElement('p');
     copy.className = 'diagram__card-copy';
-    copy.textContent = intro.introCopy || '';
+    copy.textContent = intro?.introCopy || '';
 
     const btnContainer = document.createElement('div');
     btnContainer.className = 'diagram__card-btn-container';
@@ -679,7 +702,7 @@ function renderPrimaryCard(intro, ringsData) {
         const btn = document.createElement('button');
         btn.className = 'diagram__card-btn mb-2 text-start';
         btn.dataset.ring = displayIndex;
-        btn.style.setProperty('--theme-color', ring.themeColor);
+        btn.style.setProperty('--theme-color', ring.ThemeCssColor);
         btn.innerHTML = `${ring.ringLabel}
       ${getArrowIconSVG()}`;
 
@@ -744,7 +767,7 @@ function initialize() {
 let _resizeListenerInitialized = false;
 
 export function setupDiagram() {
-    if (!document.querySelector('[data-ring]')) return;
+    if (!document.querySelector('#ring-data')) return;
     initialize();
     measureMaxDiagramCardHeight();
 

@@ -32,9 +32,9 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 {
                     //model.SourceItem = datasource;
                     //model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.RingDiagram.Fields.Title));
-                    model.Title = datasource.Fields[Templates.RingDiagram.Fields.Title].Value; 
+                    model.introTitle = datasource.Fields[Templates.RingDiagram.Fields.Title].Value; 
                     //model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.RingDiagram.Fields.Copy));
-                    model.Copy = datasource.Fields[Templates.RingDiagram.Fields.Copy].Value;
+                    model.introCopy = datasource.Fields[Templates.RingDiagram.Fields.Copy].Value;
                     ringLocation = (ReferenceField)datasource.Fields[Templates.RingDiagram.Fields.RingLocation];
                     Item folder = ringLocation.TargetItem;
                     model.Rings = GetRingItems(folder);
@@ -64,10 +64,10 @@ namespace NM_MultiSites.Areas.westhealth.Services
             return new RingViewModel
             {
                 //Label = new HtmlString(FieldRenderer.Render(item, Templates.Ring.Fields.Label)),
-                Label = item.Fields[Templates.Ring.Fields.Label].Value,
+                ringLabel = item.Fields[Templates.Ring.Fields.Label].Value,
                 //ShortLabel = new HtmlString(FieldRenderer.Render(item, Templates.Ring.Fields.ShortLabel)),
-                ShortLabel = item.Fields[Templates.Ring.Fields.ShortLabel].Value,
-                ThemeColor = WestHealthSitecoreService.GetDroplinkValue(item.Fields[Templates.Ring.Fields.ThemeColor]),
+                ringShortLabel = item.Fields[Templates.Ring.Fields.ShortLabel].Value,
+                themeColor = WestHealthSitecoreService.GetDroplinkValue(item.Fields[Templates.Ring.Fields.ThemeColor]),
                 ThemeCssColor = WestHealthSitecoreService.GetDroplinkValue(item.Fields[Templates.Ring.Fields.ThemeColor], Templates.Ring.Fields.ThemeCssColor),
                 Cards = cards
             };
@@ -87,8 +87,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
         {
             return new RingCardViewModel
             {
-                CardTitle = item.Fields[Templates.Card.Fields.Title].Value,
-                CardCopy = item.Fields[Templates.Card.Fields.Copy].Value,
+                cardTitle = item.Fields[Templates.Card.Fields.Title].Value,
+                cardCopy = item.Fields[Templates.Card.Fields.Copy].Value,
             };
         }
     }

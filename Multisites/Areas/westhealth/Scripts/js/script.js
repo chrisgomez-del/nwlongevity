@@ -41,23 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupDiagram();
 
-    window.addEventListener("resize", () => {
-        if (document.querySelector('[data-ring]'))
-            clearTimeout(window._resizeTimer);
-        window._resizeTimer = setTimeout(() => {
-            const currentRing = document.querySelector('.ring.active');
-            const currentRingIndex = currentRing ? [...document.querySelectorAll('.ring')].indexOf(currentRing) : null;
-
-            setupDiagram();
-
-            if (currentRingIndex !== null) {
-                setActiveRing(currentRingIndex);
-            }
-
-            initSwiperIfMobile();
-        }, 200);
-    });
-
     const waitForForm = setInterval(() => {
         const form = document.querySelector('#fsform-container-6214449');
         if (form) {

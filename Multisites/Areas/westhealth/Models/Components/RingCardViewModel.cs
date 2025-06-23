@@ -2,7 +2,7 @@
 {
     public class RingCardViewModel
     {
-        public string CardTitle { get; set; }
-        public string CardCopy { get; set; }
+        public string cardTitle { get; set; }
+        public string cardCopy { get; set; }
     }
 }
