@@ -728,6 +728,7 @@
     <Content Include="Areas\westhealth\Views\Pages\Article.cshtml" />
     <Content Include="Areas\westhealth\Views\_Article.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\RingDiagram.cshtml" />
+    <Content Include="Areas\westhealth\Content\scss\components\Diagram.scss" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -761,7 +762,6 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
-    <Folder Include="Areas\westhealth\Content\dist\js\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />
     <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />

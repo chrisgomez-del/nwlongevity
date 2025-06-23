@@ -1,7 +1,15 @@
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Offcanvas from 'bootstrap/js/dist/offcanvas';
 import initNavDropdownLabelUpdater from "./components/ToolsAndResources";
-import {animateGradient, expandFirstAccordion, highlightFooterActiveLink, smoothScrollInternalLinks} from "./utils";
+import {
+    animateGradient,
+    expandFirstAccordion,
+    highlightFooterActiveLink,
+    smoothScrollInternalLinks,
+    injectFormstackPlaceholders,
+    applySecondaryInputAttribute, applyFormBtnStyles
+} from "./utils";
+import { setupDiagram } from "./components/Diagram";
 
 const featureModules = [
     {
@@ -24,14 +32,42 @@ const featureModules = [
     },
 ]
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
     expandFirstAccordion();
-    // highlightFooterActiveLink('[data-footer] .footer-nav a');
+    highlightFooterActiveLink('[data-footer] .footer-nav a');
     animateGradient("[data-footer]");
+
+    setupDiagram();
+
+    window.addEventListener("resize", () => {
+        if (document.querySelector('[data-ring]'))
+            clearTimeout(window._resizeTimer);
+        window._resizeTimer = setTimeout(() => {
+            const currentRing = document.querySelector('.ring.active');
+            const currentRingIndex = currentRing ? [...document.querySelectorAll('.ring')].indexOf(currentRing) : null;
+
+            setupDiagram();
+
+            if (currentRingIndex !== null) {
+                setActiveRing(currentRingIndex);
+            }
+
+            initSwiperIfMobile();
+        }, 200);
+    });
+
+    const waitForForm = setInterval(() => {
+        const form = document.querySelector('#fsform-container-6214449');
+        if (form) {
+            form.classList.add('formstack-styled');
+            injectFormstackPlaceholders();
+            applySecondaryInputAttribute();
+            applyFormBtnStyles();
+            clearInterval(waitForForm);
+        }
+    }, 100);
 
     featureModules.forEach(({ selector, importPath, init, importFn }) => {
         const elements = document.querySelectorAll(selector);
@@ -44,5 +80,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
