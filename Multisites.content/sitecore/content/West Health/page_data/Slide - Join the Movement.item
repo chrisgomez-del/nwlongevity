@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {880F72DA-EC18-46C4-9D57-A74ABAAB08C1}
+database: master
+path: /sitecore/content/West Health/page_data/Slide - Join the Movement
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Slide - Join the Movement
+master: {00000000-0000-0000-0000-000000000000}
+template: {4E125E2B-495A-4E3A-9472-90BDDD45C4E3}
+templatekey: Slide
+
+----version----
+language: en
+version: 1
+revision: acbeacf2-cb88-4b76-98a0-db1695094da3
+
+----field----
+field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
+name: Title
+key: title
+content-length: 49
+
+Together, we are transforming mental health care.
+----field----
+field: {4FA42C0A-7677-4014-8308-74232EB7355D}
+name: Copy
+key: copy
+content-length: 345
+
+The Northwestern Medicine West Health Mental Health Accelerator is an initiative to make mental health care more accessible by integrating it into primary care through a collaborative care model.  Seamless access to mental health care means earlier intervention and more optimized treatments for the patients across the country who need it most.
+----field----
+field: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
+name: CTA
+key: cta
+content-length: 141
+
+<link text="Join our Movement" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250620T172956Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+acbeacf2-cb88-4b76-98a0-db1695094da3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250620T182917Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

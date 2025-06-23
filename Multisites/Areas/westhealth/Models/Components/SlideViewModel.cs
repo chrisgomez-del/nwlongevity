@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using Sitecore.Data.Items;
 
 namespace NM_MultiSites.Areas.westhealth.Models.Components
@@ -13,6 +10,8 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Copy { get; set; }
         public IHtmlString CTA { get; set; }
         public IHtmlString Image { get; set; }
+        public string ImageLocation { get; set; }
+        public string ImageLocationCssClass { get; set; }
     }
 
     public class SliderViewModel

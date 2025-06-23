@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {406EA64B-7580-4CF2-9778-54000AE86895}
+database: master
+path: /sitecore/content/West Health/page_data/Slide - Gary and Mary West
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Slide - Gary and Mary West
+master: {00000000-0000-0000-0000-000000000000}
+template: {4E125E2B-495A-4E3A-9472-90BDDD45C4E3}
+templatekey: Slide
+
+----version----
+language: en
+version: 1
+revision: 0b2e5a01-77fd-4411-92ad-7ab08ad375f4
+
+----field----
+field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
+name: Title
+key: title
+content-length: 43
+
+Made possible by health care's visionaries.
+----field----
+field: {4FA42C0A-7677-4014-8308-74232EB7355D}
+name: Copy
+key: copy
+content-length: 225
+
+The Northwestern Medicine West Health Accelerator is made possible by the vision and philanthropy of Gart and Mary West of West Health, along with experts from Northwestern Medicine and Meadows Policy Mental Health Institute.
+----field----
+field: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
+name: CTA
+key: cta
+content-length: 134
+
+<link text="Our Vision" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {19A9D081-B09B-44D2-A887-05944CBFD443}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{EB58AB4D-D94D-44F9-BEAC-B6B7C0E371C3}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250620T173051Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0b2e5a01-77fd-4411-92ad-7ab08ad375f4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250620T180646Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
