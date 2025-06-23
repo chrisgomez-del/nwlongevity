@@ -101,7 +101,7 @@ function processArea(area) {
             // not integrated yet
             if (!useRollup) return;
             const del = (await import('del')).default;
-            const { default: del } = await import('del');
+            //const { default: del } = await import('del');
             return del([`${jsDest}**`, `!${jsDest}`]);
         },
         watchPaths: {

@@ -1,7 +1,7 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.SlideViewModel
 
-<div class="swiper-slide">
-    <div class="row hero-content flex-row-reverse">
+<div class="swiper-slide @Model.ImageLocationCssClass">
+    <div class="row hero-content">
         <div class="col-md-6">
             @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Slide.Fields.Image, new { @class = "ratio ratio-1x1 rounded-2" })
         </div>

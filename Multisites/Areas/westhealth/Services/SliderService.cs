@@ -29,6 +29,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.Copy));
                 model.CTA = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.CTA));
                 model.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.Slide.Fields.Image));
+                model.ImageLocation = WestHealthSitecoreService.GetDroplinkValue(datasource.Fields[Templates.Slide.Fields.ImageLocation]);
+                model.ImageLocationCssClass = WestHealthSitecoreService.GetDroplinkValue(datasource.Fields[Templates.Slide.Fields.ImageLocation], Templates.Slide.Fields.CssClass);
             }
             return model;
         }
