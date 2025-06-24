@@ -20,7 +20,7 @@ try {
     console.error("Failed to parse JSON from ring-data:", err, cleaned);
 }
 const introData = parsedJSON;
-const ringContentData = parsedJSON.Rings.reverse();
+const ringContentData = parsedJSON ? parsedJSON.Rings.reverse() : {};
 const dotConfigs = [
     { scale: 0.166, angles: { desktop: [265, 170, 85], mobile: [265, 170, 80] } },
     { scale: 0.33, angles: { desktop: [270, 176, 85], mobile: [210, 180, 150] } },
