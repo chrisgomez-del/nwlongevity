@@ -276,12 +276,6 @@
   }
 }
 
-
-body {
-  margin-top:5rem;
-  background: linear-gradient(180deg, #574497 0%, #00B0DA 201.96%);
-}
-
 .diagram__card {
   --theme-color: #4159B0;
   --theme-color-hover: #2d3f88;
@@ -421,7 +415,8 @@ body {
     // background-color: #4159B0;
     // background-color:var(--theme-color);
     background-color:#FFF;
-    border-color:2px solid var(--theme-color);
+    //border-color:2px solid var(--theme-color);
+    border:none;
     color:var(--theme-color);
     display: flex;
     padding: 16px 20px;
