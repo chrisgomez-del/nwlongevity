@@ -12,7 +12,7 @@ templatekey: Basic Page
 ----version----
 language: en
 version: 1
-revision: 36050be9-57c1-4281-8f9c-f9b5880d75a9
+revision: 1c59f580-8127-4829-90e3-b3d47f64d312
 
 ----field----
 field: {9429F2A1-D3CA-4CCF-BEAF-8AED1984490B}
@@ -21,6 +21,13 @@ key: meta title
 content-length: 14
 
 Meet Our Teams
+----field----
+field: {A7FAC178-7B70-471A-AE74-A99D3C7E5C8F}
+name: Canonical URL
+key: canonical url
+content-length: 14
+
+meet-our-teams
 ----field----
 field: {189F2A86-59BB-4152-A127-D8A73A66CBFB}
 name: Item Name
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-36050be9-57c1-4281-8f9c-f9b5880d75a9
+1c59f580-8127-4829-90e3-b3d47f64d312
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250514T201431Z
+20250620T190608Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
