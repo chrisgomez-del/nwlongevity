@@ -7,11 +7,11 @@ const rings = document.querySelectorAll(".ring");
 const groups = document.querySelectorAll(".subcircle-group");
 //const parsedJSON = JSON.parse(document.getElementById("ring-data")?.textContent?.trim());
 const raw = document.getElementById("ring-data")?.textContent?.trim();
-const cleaned = raw
-    .replace(/^'/, '')
-    .replace(/';?$/, '')
-    .replace(/};?%/, '}')
-    .trim();
+const cleaned = raw ?
+    raw.replace(/^'/, '')
+        .replace(/';?$/, '')
+        .replace(/};?%/, '}')
+        .trim() ; { };
 
 let parsedJSON = null;
 try {
