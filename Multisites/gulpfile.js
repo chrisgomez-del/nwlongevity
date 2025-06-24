@@ -97,13 +97,13 @@ function processArea(area) {
                     .pipe(gulp.dest(jsDest));
             }
         },
-        cleanJs: async function () {
-            // not integrated yet
-            if (!useRollup) return;
-            const del = (await import('del')).default;
-            //const { default: del } = await import('del');
-            return del([`${jsDest}**`, `!${jsDest}`]);
-        },
+        //cleanJs: async function () {
+        //    // not integrated yet
+        //    if (!useRollup) return;
+        //    const del = (await import('del')).default;
+        //    //const { default: del } = await import('del');
+        //    return del([`${jsDest}**`, `!${jsDest}`]);
+        //},
         watchPaths: {
             scss: `${base}/Content/scss/**/*.scss`,
             css: `${cssDest}style.css`,
@@ -154,7 +154,7 @@ gulp.task('copy-icons', gulp.parallel(...processedAreas.map(a => a.copyIcons)))
 gulp.task('minify-css', gulp.parallel(...processedAreas.map(a => a.scripts)));
 gulp.task('scripts', gulp.parallel(...processedAreas.map(a => a.minifyCss)));
 gulp.task('minify-js', gulp.parallel(...processedAreas.map(a => a.minifyJs)));
-gulp.task('clean:js', gulp.parallel(...processedAreas.map(a => a.cleanJs)));
+//gulp.task('clean:js', gulp.parallel(...processedAreas.map(a => a.cleanJs)));
 
 //gulp.task('watch', function () {
 //    gulp.watch('Areas/Innovation/Content/scss/**/*.scss', gulp.series('styles'));
