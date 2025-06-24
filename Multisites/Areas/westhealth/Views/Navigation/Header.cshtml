@@ -40,12 +40,10 @@
             @foreach (var navItem in Model.Links)
             {
                 var linkClass = navItem.IsActive || (navItem.Children != null && navItem.Children.Any(kid => kid.IsActive)) ? "active" : string.Empty;
-                <li class="nav-item">
-                    <a class="nav-link @linkClass" aria-current="page" href="@navItem.LinkSource">@navItem.LinkText</a>
-                </li>
+
                 if (navItem.Children != null && navItem.Children.Any())
                 {
-                    <button type="button" class="dropdown-toggle dropdown-toggle-split btn btn-link py-0 px-1" data-bs-toggle="dropdown"
+                    @*<button type="button" class="dropdown-toggle dropdown-toggle-split btn btn-link py-0 px-1" data-bs-toggle="dropdown"
                             aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
@@ -54,7 +52,32 @@
                         {
                             <li><a class="dropdown-item" href="@childItem.LinkSource">@navItem.LinkText</a></li>
                         }
-                    </ul>
+                    </ul>*@
+
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <div class="btn-group">
+                            <a class="nav-link btn btn-link @linkClass" href="@navItem.LinkSource">
+                                @navItem.LinkText
+                            </a>
+                            <button type="button" class="dropdown-toggle dropdown-toggle-split btn btn-link py-0 px-1"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                @foreach (var childItem in navItem.Children)
+                                {
+                                    <li><a class="dropdown-item" href="@childItem.LinkSource">@childItem.LinkText</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link @linkClass" aria-current="page" href="@navItem.LinkSource">@navItem.LinkText</a>
+                    </li>
                 }
             }
         </ul>
