@@ -42,7 +42,15 @@
                                     @foreach (var tab in Model.NavigableTabs)
                                     {
                                         var activeClass = isFirstTab ? "active" : "";
-                                        <button class="nav-link @activeClass" data-bs-toggle="pill" data-bs-target="#panel-@tab.TabId">@tab.Title</button>
+                                        var selectedAria = isFirstTab ? "true" : "false";
+                                        <button class="nav-link @activeClass" 
+                                                id="tab-@tab.TabId-tab"
+                                                data-bs-toggle="pill"
+                                                data-bs-target="#panel-@tab.TabId"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="panel-@tab.TabId"
+                                                aria-selected="@selectedAria">@tab.Title</button>
                                         isFirstTab = false;
                                     }
                                 </div>
@@ -58,7 +66,7 @@
                     @foreach (var tab in Model.NavigableTabs)
                     {
                         var activeClass = isFirstDesktopTab ? "active" : "";
-                        var selectedAria = isFirstTab ? "true" : "false";
+                        var selectedAria = isFirstDesktopTab ? "true" : "false";
                         <button class="nav-link text-start @activeClass"
                                 id="tab-@tab.TabId-tab"
                                 data-bs-toggle="pill"

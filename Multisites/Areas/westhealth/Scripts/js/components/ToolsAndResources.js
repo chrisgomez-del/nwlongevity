@@ -1,5 +1,5 @@
 import Collapse from 'bootstrap/js/dist/collapse';
-
+import Tab from 'bootstrap/js/dist/tab';
 export function initNavDropdownLabelUpdater(parentElement) {
     const parent = document.querySelector(parentElement);
     if (!parent) return;
@@ -13,6 +13,17 @@ export function initNavDropdownLabelUpdater(parentElement) {
     const bsAccordionCollapse = Collapse.getOrCreateInstance(accordion, { toggle: false });
 
     const allNavLinks = document.querySelectorAll(".nav-link");
+
+    function initializeBootstrapTabs(scope = document) {
+        const tabTriggers = scope.querySelectorAll('[data-bs-toggle="pill"], [data-bs-toggle="tab"]');
+        tabTriggers.forEach((tabTriggerEl) => {
+            if (!Tab.getInstance(tabTriggerEl)) {
+                new Tab(tabTriggerEl);
+            }
+        });
+    }
+
+    initializeBootstrapTabs();
 
     allNavLinks.forEach(btn => {
         btn.addEventListener("click", function () {
