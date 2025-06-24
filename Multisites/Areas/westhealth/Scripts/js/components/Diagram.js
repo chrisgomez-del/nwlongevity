@@ -11,7 +11,7 @@ const cleaned = raw ?
     raw.replace(/^'/, '')
         .replace(/';?$/, '')
         .replace(/};?%/, '}')
-        .trim() ; { };
+        .trim() : { };
 
 let parsedJSON = null;
 try {
