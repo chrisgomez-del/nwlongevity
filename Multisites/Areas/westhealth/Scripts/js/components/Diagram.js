@@ -1,4 +1,5 @@
 ﻿import gsap from 'gsap';
+import Swiper from 'swiper';
 
 // === Constants ===
 const ringLabelsContainer = document.querySelector(".ring-labels");
