@@ -1,12 +1,16 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.SlideViewModel
 
+@{ 
+    var imageAlignmentCssClass = Model.ImageLocationCssClass == "image-left" ? "me-md-5" : "ms-md-5";
+}
+
 <div class="swiper-slide @Model.ImageLocationCssClass">
-    <div class="row hero-content">
-        <div class="col-md-6">
-            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Slide.Fields.Image, new { @class = "ratio ratio-1x1 rounded-2" })
+    <div class="row hero-content justify-content-center">
+        <div class="col-md-5 mb-4 @imageAlignmentCssClass">
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Slide.Fields.Image, new { @class = "ratio ratio-1x1 rounded-2 object-fit-contain" })
         </div>
-        <div class="col-md-5 offset-md-1">
-            <h2 class="primary-title text-white">
+        <div class="col-md-5">
+            <h2 class="secondary-title text-white lh-sm mb-3">
                 @Model.Title
             </h2>
             <p>@Model.Copy</p>
