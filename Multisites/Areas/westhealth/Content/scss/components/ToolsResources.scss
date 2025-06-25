@@ -4,7 +4,7 @@
       padding: 1rem 1.25rem;
       border: 1px solid rgba(87, 68, 151, 0.8);
       color:$primaryTertiary;
-      &.active {
+      &:hover, &.active {
         color:$white;
         background: linear-gradient(92deg, #574497 -12%, #00668F 136.31%);
       }

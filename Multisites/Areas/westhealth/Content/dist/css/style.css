@@ -23207,7 +23207,7 @@ footer .footer-socials a:hover {
   border: 1px solid rgba(87, 68, 151, 0.8);
   color: #484B95;
 }
-.tools-resources .nav-pills .nav-link.active {
+.tools-resources .nav-pills .nav-link:hover, .tools-resources .nav-pills .nav-link.active {
   color: #FFF;
   background: linear-gradient(92deg, #574497 -12%, #00668F 136.31%);
 }
@@ -23253,7 +23253,12 @@ footer .footer-socials a:hover {
   padding: 3.75rem 0;
 }
 .hero-carousel .swiper-wrapper {
-  align-items: center;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .hero-carousel .swiper-wrapper {
+    align-items: center;
+  }
 }
 .hero-carousel .swiper-button-next,
 .hero-carousel .swiper-button-prev {
@@ -23281,6 +23286,9 @@ footer .footer-socials a:hover {
 }
 .hero-carousel .swiper-button-next, .hero-carousel .swiper-rtl .swiper-button-prev {
   --swiper-navigation-sides-offset: 25px;
+}
+.hero-carousel .swiper-slide:not(.image-left) .hero-content {
+  flex-direction: row-reverse;
 }
 .hero-carousel .swiper-pagination {
   --swiper-pagination-bottom: 0;
