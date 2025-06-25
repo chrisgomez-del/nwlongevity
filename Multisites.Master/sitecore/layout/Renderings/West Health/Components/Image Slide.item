@@ -2,9 +2,9 @@
 version: 1
 id: {99DA290B-8A0D-49C7-A859-1158FFB7246E}
 database: master
-path: /sitecore/layout/Renderings/West Health/Components/Slide
+path: /sitecore/layout/Renderings/West Health/Components/Image Slide
 parent: {3AB256AA-1E62-4E8C-8D8C-AEEC021512BC}
-name: Slide
+name: Image Slide
 master: {00000000-0000-0000-0000-000000000000}
 template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
 templatekey: Controller rendering
@@ -47,7 +47,7 @@ content-length: 45
 ----version----
 language: en
 version: 1
-revision: 222eeda6-9f50-4f7e-a6f8-2aa9142180ca
+revision: 38eb15bf-0b03-4e2f-96a8-0fc2538f3df4
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-222eeda6-9f50-4f7e-a6f8-2aa9142180ca
+38eb15bf-0b03-4e2f-96a8-0fc2538f3df4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250521T142924Z
+20250625T161722Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

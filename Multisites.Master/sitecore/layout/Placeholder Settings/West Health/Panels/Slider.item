@@ -20,13 +20,13 @@ Slider
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 38
+content-length: 77
 
-{99DA290B-8A0D-49C7-A859-1158FFB7246E}
+{99DA290B-8A0D-49C7-A859-1158FFB7246E}|{A1DE32E8-7D48-4AAD-A091-7B8968DA06D5}
 ----version----
 language: en
 version: 1
-revision: b474210e-22ab-4d26-ac34-927456681027
+revision: 257f8231-ca9f-4ae3-b2ab-f4c85f475cd8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b474210e-22ab-4d26-ac34-927456681027
+257f8231-ca9f-4ae3-b2ab-f4c85f475cd8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250521T143029Z
+20250625T161642Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -188,5 +188,10 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var ringDiagramViewModel = _ringDiagramService.GetRingDiagramViewModel(); 
             return View("~/Areas/westhealth/Views/Components/RingDiagram.cshtml", ringDiagramViewModel);
         }
+        public ActionResult TextSlide()
+        {
+            var slideViewModel = _sliderService.GetSlideViewModel();
+            return View("~/Areas/westhealth/Views/Components/TextSlide.cshtml", slideViewModel);
+        }
     }
 }
