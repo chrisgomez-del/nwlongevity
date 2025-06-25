@@ -1,4 +1,5 @@
 ﻿import gsap from 'gsap';
+import Swiper from 'swiper';
 
 // === Constants ===
 const ringLabelsContainer = document.querySelector(".ring-labels");
@@ -7,11 +8,11 @@ const rings = document.querySelectorAll(".ring");
 const groups = document.querySelectorAll(".subcircle-group");
 //const parsedJSON = JSON.parse(document.getElementById("ring-data")?.textContent?.trim());
 const raw = document.getElementById("ring-data")?.textContent?.trim();
-const cleaned = raw
-    .replace(/^'/, '')
-    .replace(/';?$/, '')
-    .replace(/};?%/, '}')
-    .trim();
+const cleaned = raw ?
+    raw.replace(/^'/, '')
+        .replace(/';?$/, '')
+        .replace(/};?%/, '}')
+        .trim() : { };
 
 let parsedJSON = null;
 try {
@@ -20,7 +21,7 @@ try {
     console.error("Failed to parse JSON from ring-data:", err, cleaned);
 }
 const introData = parsedJSON;
-const ringContentData = parsedJSON.Rings.reverse();
+const ringContentData = parsedJSON ? parsedJSON.Rings.reverse() : {};
 const dotConfigs = [
     { scale: 0.166, angles: { desktop: [265, 170, 85], mobile: [265, 170, 80] } },
     { scale: 0.33, angles: { desktop: [270, 176, 85], mobile: [210, 180, 150] } },

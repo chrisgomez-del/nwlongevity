@@ -23692,7 +23692,7 @@ footer .footer-socials a:hover {
 .diagram__card-btn {
   border-radius: 8px;
   background-color: #FFF;
-  border: none;
+  border-color: 1px solid var(--theme-color);
   color: var(--theme-color);
   display: flex;
   padding: 16px 20px;
