@@ -22720,6 +22720,9 @@ footer .footer-nav .active {
   font-weight: 700;
   text-decoration: underline;
 }
+footer .footer-socials a {
+  color: #FFF;
+}
 footer .footer-socials a:hover {
   color: #D4D4D4;
 }
