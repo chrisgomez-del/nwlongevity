@@ -193,5 +193,9 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             var slideViewModel = _sliderService.GetSlideViewModel();
             return View("~/Areas/westhealth/Views/Components/TextSlide.cshtml", slideViewModel);
         }
+        public ActionResult ContactUs()
+        {
+            return View("~/Areas/westhealth/Views/Components/ContactUs.cshtml");
+        }
     }
 }
