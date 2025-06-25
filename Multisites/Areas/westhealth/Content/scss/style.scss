@@ -1,7 +1,8 @@
 //$enable-cssgrid: true;
 :root {
-  --rem: 10px;
-  --navbar-offset: 33px;
+    --rem: 10px;
+    --navbar-offset: 33px;
+    --content-offset: calc( (var(--navbar-offset, 33px) * 3) );
 }
 
 //$bootstrap-icons-font-path: "/fonts/";
@@ -47,11 +48,12 @@ body {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background-color:$grey;
-  margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: $grey;
+    margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
+    padding-top: calc( (var(--navbar-offset, 33px) * 2) * 1.5);
 }
 
 .site-header {

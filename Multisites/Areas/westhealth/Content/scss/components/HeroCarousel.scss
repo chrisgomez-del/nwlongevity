@@ -1,8 +1,9 @@
 .hero-carousel {
-    padding: 2rem 0;
+    padding: var(--content-offset) 0 2rem;
     display: flex;
     align-items: center;
     min-height: 60vh;
+    margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
 
     .container {
         height: 100%;

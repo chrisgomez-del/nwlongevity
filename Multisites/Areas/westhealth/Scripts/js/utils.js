@@ -184,3 +184,11 @@ export function applyFormBtnStyles(containerSelector = '#fsform-container-621444
     
     submitBtn.appendChild(btnIcon);
 }
+
+export function debounce(fn, delay = 150) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
