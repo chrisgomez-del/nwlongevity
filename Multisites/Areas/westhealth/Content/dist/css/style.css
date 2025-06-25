@@ -22720,6 +22720,9 @@ footer .footer-nav .active {
   font-weight: 700;
   text-decoration: underline;
 }
+footer .footer-socials a {
+  color: #FFF;
+}
 footer .footer-socials a:hover {
   color: #D4D4D4;
 }
@@ -23207,7 +23210,7 @@ footer .footer-socials a:hover {
   border: 1px solid rgba(87, 68, 151, 0.8);
   color: #484B95;
 }
-.tools-resources .nav-pills .nav-link.active {
+.tools-resources .nav-pills .nav-link:hover, .tools-resources .nav-pills .nav-link.active {
   color: #FFF;
   background: linear-gradient(92deg, #574497 -12%, #00668F 136.31%);
 }
