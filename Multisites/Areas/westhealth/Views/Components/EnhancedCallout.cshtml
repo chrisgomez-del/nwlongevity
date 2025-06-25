@@ -2,13 +2,13 @@
 
 
 @*<div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Title)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)</div>
+        <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Title)</div>
+        <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)</div>
 
-    <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-leftcard")</div>
-    <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-rightcard")</div>
+        <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-leftcard")</div>
+        <div>@Html.Sitecore().DynamicPlaceholder("enhancedcallout-rightcard")</div>
 
-</div>*@
+    </div>*@
 
 
 <section class="statement-content-w-cards py-5">
@@ -24,7 +24,9 @@
 
         <div class="row">
             <div class="col-lg-7 offset-lg-1">
-                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)
+                <p class="primary-copy mb-4">
+                    @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.EnhancedCallout.Fields.Copy)
+                </p>
             </div>
         </div>
 
