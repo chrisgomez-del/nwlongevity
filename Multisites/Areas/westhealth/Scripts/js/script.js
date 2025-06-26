@@ -7,7 +7,9 @@ import {
     highlightFooterActiveLink,
     smoothScrollInternalLinks,
     injectFormstackPlaceholders,
-    applySecondaryInputAttribute, applyFormBtnStyles
+    applySecondaryInputAttribute,
+    applyFormBtnStyles,
+    stripHTMLFromElement
 } from "./utils";
 import { setupDiagram } from "./components/Diagram";
 
@@ -61,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(waitForContactForm);
         }
     }, 100);
+
+    document.querySelectorAll('[data-StripHtml]').forEach((element) => {
+        element.innerHTML = stripHTMLFromElement(element);
+    })
 
     featureModules.forEach(({ selector, importPath, init, importFn }) => {
         const elements = document.querySelectorAll(selector);

@@ -185,6 +185,12 @@ export function applyFormBtnStyles(containerSelector = '#fsform-container-621444
     submitBtn.appendChild(btnIcon);
 }
 
+export function stripHTMLFromElement(htmlElement) {
+    const div = document.createElement("div");
+    div.innerHTML = htmlElement.innerHTML;
+    return div.textContent || div.innerText || "";
+}
+
 export function debounce(fn, delay = 150) {
     let timeout;
     return function (...args) {
