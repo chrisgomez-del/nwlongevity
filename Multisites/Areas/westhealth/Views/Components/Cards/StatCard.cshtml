@@ -15,7 +15,7 @@
         <div class="card-body d-flex flex-column">
             <h5 class="card-title">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)</h5>
             <div class="card-content-animate mt-auto">
-                <p class="card-text">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)</p>
+                <p class="card-text" data-StripHtml="true">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)</p>
                 @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource, new { @class = "card-link" })
             </div>
         </div>

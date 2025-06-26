@@ -7,7 +7,9 @@ import {
     highlightFooterActiveLink,
     smoothScrollInternalLinks,
     injectFormstackPlaceholders,
-    applySecondaryInputAttribute, applyFormBtnStyles
+    applySecondaryInputAttribute,
+    applyFormBtnStyles,
+    stripHTMLFromElement
 } from "./utils";
 import { setupDiagram } from "./components/Diagram";
 
@@ -51,6 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(waitForForm);
         }
     }, 100);
+
+    const waitForContactForm = setInterval(() => {
+        const form = document.querySelector('#fsform-container-6211076');
+        if (form) {
+            form.classList.add('formstack-styled');
+            applySecondaryInputAttribute('#fsform-container-6211076');
+            applyFormBtnStyles('#fsform-container-6211076', 'btn-primary');
+            clearInterval(waitForContactForm);
+        }
+    }, 100);
+
+    document.querySelectorAll('[data-StripHtml]').forEach((element) => {
+        element.innerHTML = stripHTMLFromElement(element);
+    })
 
     featureModules.forEach(({ selector, importPath, init, importFn }) => {
         const elements = document.querySelectorAll(selector);
