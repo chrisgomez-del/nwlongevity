@@ -19,7 +19,7 @@
             @Html.Sitecore().Placeholder("westhealth-main")
         </div>
     </main>
-    <footer id="site-footer" class="footer-container mb-5">
+    <footer id="site-footer" class="footer-container">
         @{ Html.Sitecore().RenderControllerRendering("Navigation", "Footer", new { area = "westhealth" }); }
     </footer>
     <script type="module" src="~/Areas/westhealth/Content/dist/js/bundle.min.js"></script>
