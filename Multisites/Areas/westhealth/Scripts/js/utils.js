@@ -174,15 +174,21 @@ export function applySecondaryInputAttribute(containerSelector = '#fsform-contai
     });
 }
 
-export function applyFormBtnStyles(containerSelector = '#fsform-container-6214449') {
+export function applyFormBtnStyles(containerSelector = '#fsform-container-6214449', btnTheme = 'btn-light') {
     const submitBtn = document.querySelector(containerSelector).querySelector('[type="submit"]');
-    //submitBtn.classList.add('btn', 'btn-light', 'w-100', 'd-flex', 'justify-content-center', 'justify-content-lg-between', 'align-items-center');
-    submitBtn.className = 'btn btn-light w-100 d-flex justify-content-center justify-content-lg-between align-items-center';
+    // submitBtn.classList.add('btn', 'btn-light', 'w-100', 'd-flex', 'justify-content-center', 'justify-content-lg-between', 'align-items-center');
+    submitBtn.className = `btn ${btnTheme} w-100 d-flex justify-content-center justify-content-lg-between align-items-center`;
 
     const btnIcon = document.createElement('i');
     btnIcon.setAttribute('class', 'bi bi-chevron-right ms-4');
-    
+
     submitBtn.appendChild(btnIcon);
+}
+
+export function stripHTMLFromElement(htmlElement) {
+    const div = document.createElement("div");
+    div.innerHTML = htmlElement.innerHTML;
+    return div.textContent || div.innerText || "";
 }
 
 export function debounce(fn, delay = 150) {
