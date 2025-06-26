@@ -1,7 +1,6 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.ThreeCardCalloutViewModel
 
 <section id="@Model.SectionId" class="three-card-callout position-relative my-5 d-flex flex-column justify-content-center">
-    <!--  Not sure if bg image should be editable, but set it up to be just in case-->
     <div class="three-card-callout-bg">
         <img src="@Model.ImageUrl" alt="@Model.ImageAltText">
     </div>
@@ -9,13 +8,11 @@
         <div class="row justify-content-center">
             <div class="col-md-10 mb-4">
                 <div class="row">
-                    <!-- Editor should be able to at least make text <b> or <em> here, otherwise might need 'copy' and
-                    'emphasisCopy'-type fields -->
                     <h2 class="secondary-title text-center col-md-10 offset-md-1 mb-4 mb-md-0">
                         @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ThreeCardCallout.Fields.Title)
                     </h2>
                 </div>
-                <div class="js-stat-card-slider">
+                <div class="js-stat-card-slider mt-4">
                     <div class="row">
                         @Html.Sitecore().DynamicPlaceholder("threecardcallout-cards")                                 
                     </div>

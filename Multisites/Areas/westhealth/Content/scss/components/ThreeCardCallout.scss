@@ -1,34 +1,50 @@
 .three-card-callout {
-  @include gradient-directional(#FFF, #E8E5F3, 180deg);
-  
-  
-  @include media-breakpoint-up(md) {
-    min-height: 80vh;
-  }
+    @include gradient-directional(#FFF, #E8E5F3, 180deg);
+
+
+    @include media-breakpoint-up(md) {
+        min-height: 80vh;
+    }
+
+    .swiper {
+        overflow: visible;
+
+        @include media-breakpoint-up(md) {
+            overflow: hidden;
+        }
+    }
+
+    .swiper-pagination {
+        --swiper-pagination-bottom: -30px;
+
+        @include media-breakpoint-up(md) {
+            --swiper-pagination-bottom: 8px;
+        }
+    }
 }
 
 .three-card-callout-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 90%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  
-  > * {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 
-    @include media-breakpoint-up(md) {
-      object-position: center;
+    > * {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: center top;
+
+        @include media-breakpoint-up(md) {
+            object-position: center;
+        }
     }
-  }
 }
 
 .three-card-callout-content {
-  z-index: 1;
+    z-index: 1;
 }

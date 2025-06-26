@@ -56,80 +56,98 @@
 }
 
 .card-stat {
-  --card-stat-text-color: #{$brand-green};
-  --card-stat-bg-color: #FFF;
-  --bs-card-title-color: var(--card-stat-text-color);
-  --bs-card-bg: var(--card-stat-bg-color);
-  
-  color: var(--card-stat-text-color);
-  margin-top: 30px;
-  transition-property: color background-color;
-  transition-duration: 300ms;
-  transition-timing-function:  linear;
-  
-  .card-header {
-    background: transparent;
-    border: 0;
-  }
-  .card-stat-value {
-    font-size: autorem(80);
-    font-style: normal;
-    font-weight: 600;
-    line-height: 115%; /* 92px */
-    display: flex;
-    flex-direction: column;
-    gap: autorem(10);
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) 0 var(--bs-card-spacer-x);
+    --card-stat-text-color: #{$brand-green};
+    --card-stat-bg-color: #FFF;
+    --bs-card-title-color: var(--card-stat-text-color);
+    --bs-card-bg: var(--card-stat-bg-color);
+    color: var(--card-stat-text-color);
+    margin-top: 0;
+    transition-property: color background-color;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+    overflow: hidden;
 
-    svg {
-      width: 32px;
-      height: 32px;
-
-      path {
-        stroke: var(--card-stat-text-color);
-        transition: stroke 300ms linear;
-      }
-      rect {
-        fill: var(--card-stat-text-color);
-        stroke: var(--card-stat-text-color);
-        transition-property: fill stroke;
-        transition-duration: 300ms;
-        transition-timing-function:  linear;
-      }
+    .card-header {
+        background: transparent;
+        border: 0;
     }
-  }
-  .card-title {
-    font-size: autorem(28);
-    font-weight: 400;
-    color: var(--card-stat-text-color);
-    transition-property: color;
-    transition-duration: 300ms;
-    transition-timing-function:  linear;
-  }
-  .card-text {
-    font-size: autorem(13);
-    font-weight: 400;
-  }
-  .card-link {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--card-stat-text-color);
-    text-decoration: underline;
-    transition: color 300ms linear;
-  }
-  .card-content-animate {
-    
-  }
 
-  &:hover {
-    cursor: pointer;
-    --card-stat-text-color: #FFF;
-    --card-stat-bg-color: #{$brand-green};
+    .card-stat-value {
+        font-size: autorem(80);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 115%; /* 92px */
+        display: flex;
+        flex-direction: column;
+        gap: autorem(10);
+        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) 0 var(--bs-card-spacer-x);
+
+        svg {
+            width: 32px;
+            height: 32px;
+            display: none;
+
+            path {
+                stroke: var(--card-stat-text-color);
+                transition: stroke 200ms linear;
+            }
+
+            rect {
+                fill: var(--card-stat-text-color);
+                stroke: var(--card-stat-text-color);
+                transition-property: fill stroke;
+                transition-duration: 200ms;
+                transition-timing-function: linear;
+            }
+
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+
+    .card-body {
+        flex: 1 1 auto;
+        margin-top: auto;
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 auto;
+        }
+    }
+
+    .card-title {
+        font-size: autorem(28);
+        font-weight: 400;
+        color: var(--card-stat-text-color);
+        transition-property: color;
+        transition-duration: 200ms;
+        transition-timing-function: linear;
+    }
+
+    .card-text {
+        font-size: autorem(13);
+        font-weight: 400;
+    }
+
+    .card-link {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--card-stat-text-color);
+        text-decoration: underline;
+        transition: color 200ms linear;
+    }
 
     .card-content-animate {
-      
+        opacity: 1; /* visible at first for measurement */
+        transform: translateY(0px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
     }
-  }
+
+    &:hover {
+        cursor: pointer;
+        --card-stat-text-color: #FFF;
+        --card-stat-bg-color: #{$brand-green};
+    }
 }
 
 .footer__source {
