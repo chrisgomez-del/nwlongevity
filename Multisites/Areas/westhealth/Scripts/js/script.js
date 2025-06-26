@@ -52,6 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100);
 
+    const waitForContactForm = setInterval(() => {
+        const form = document.querySelector('#fsform-container-6211076');
+        if (form) {
+            form.classList.add('formstack-styled');
+            applySecondaryInputAttribute('#fsform-container-6211076');
+            applyFormBtnStyles('#fsform-container-6211076', 'btn-primary');
+            clearInterval(waitForContactForm);
+        }
+    }, 100);
+
     featureModules.forEach(({ selector, importPath, init, importFn }) => {
         const elements = document.querySelectorAll(selector);
         if (elements.length > 0) {
