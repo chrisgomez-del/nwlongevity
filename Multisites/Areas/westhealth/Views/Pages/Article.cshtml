@@ -1,12 +1,54 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Pages.ArticleViewModel
 
+@{ 
+    var hasHeaderImage = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Image));
+    var hasSubtitle = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Subtitle));
+    var hasAuthor = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Author));
+    var hasDate = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Date));
+    var hasSource = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Source));
+}
 
-<div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Title)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Subtitle)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Author)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Source)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Date)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Image)</div>
-    <div>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Copy)</div>
+<div class="container my-5 article-detail" role="article" aria-labelledby="article-title">
+    <a href="#article-main" class="visually-hidden-focusable">Skip to main content</a>
+
+    <header class="mb-4">
+        @if (hasHeaderImage)
+            {
+            <figure class="mb-4">
+                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Image, new { @class = "img-fluid rounded" })
+            </figure>
+        }
+    <div class="px-4">
+        <h1 class="display-5 my-3 my-lg-4" id="article-title">
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Title)
+        </h1>
+        @if (hasSubtitle)
+        {
+            <p class="lead col-lg-10 my-3 my-lg-4">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Subtitle)</p>
+        }
+        <p class="text-muted mb-1 hstack gap-2 my-3 my-lg-4">
+            @if (hasAuthor)
+            {
+                <span class="fw-bold">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Author)</span>
+            }
+            @if (hasDate)
+            {
+                <time datetime="@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Date)">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Date)</time>
+            }
+            @if (hasSource)
+            {
+                <a href="@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Source)">source</a>
+            }
+        </p>
+    </div>
+    </header>
+
+    <main id="article-main" class="my-5 bg-white rounded p-4">
+        <div class="col-12 col-lg-10">
+            <div class="wysiwyg">
+                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Copy)
+            </div>
+        </div>
+    </main>
 </div>
+

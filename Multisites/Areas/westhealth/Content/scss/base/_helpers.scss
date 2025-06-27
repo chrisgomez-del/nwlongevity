@@ -39,3 +39,19 @@
  //backdrop-filter: blur(4.150000095367432px) invert(80%) saturate(150%);
  backdrop-filter: blur(4.150000095367432px);
 }
+.wysiwyg {
+    display: flex;
+    flex-direction: column;
+    gap: autorem(12);
+
+    > *:not(h1, h2, h3, h4, h5, h6) {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    > *:is(h1, h2, h3, h4, h5, h6) {
+        margin-top: autorem(24);
+    }
+}
