@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {1797580E-A162-4131-B7A5-708ADE2FBDBC}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Member - Rinad Beidas
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Member - Rinad Beidas
+master: {00000000-0000-0000-0000-000000000000}
+template: {F3632DD6-B049-418C-94FA-16B667CC3DA8}
+templatekey: Team Member
+
+----version----
+language: en
+version: 1
+revision: 7b1b6a75-45e1-4cf5-89dd-ce7aa7ef00d0
+
+----field----
+field: {175C0EBB-CB9B-4AA2-9943-BF8E6F2E9379}
+name: Name
+key: name
+content-length: 20
+
+Rinad S. Beidas, PhD
+----field----
+field: {206933CF-3BF2-4CD3-92D3-A5469B9AFC44}
+name: Qualifications
+key: qualifications
+content-length: 94
+
+Feinberg School of Medicine Principal Investigator, Embedded Evaluation and Dissemination Team
+----field----
+field: {224D056F-54FE-44C0-9BCD-E10470ADB77A}
+name: Titles
+key: titles
+content-length: 82
+
+Ralph Seal Paffenbarger Professor and Chair, Department of Medical Social Sciences
+----field----
+field: {FB48674E-AED2-4348-A315-E577232D8B1C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{13B88191-8908-4965-A258-366725CE27CD}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T125030Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7b1b6a75-45e1-4cf5-89dd-ce7aa7ef00d0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T155155Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

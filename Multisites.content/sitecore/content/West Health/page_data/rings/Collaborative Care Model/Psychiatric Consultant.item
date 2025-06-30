@@ -2,9 +2,9 @@
 version: 1
 id: {AB606320-6451-4116-AC5A-3C33D2489EC5}
 database: master
-path: /sitecore/content/West Health/page_data/rings/Collaborative Care Model/Outcomes Tracking
+path: /sitecore/content/West Health/page_data/rings/Collaborative Care Model/Psychiatric Consultant
 parent: {AA7DCE55-0603-48CD-B0F6-D3E31CDC5BEA}
-name: Outcomes Tracking
+name: Psychiatric Consultant
 master: {00000000-0000-0000-0000-000000000000}
 template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
 templatekey: Card
@@ -12,22 +12,22 @@ templatekey: Card
 ----version----
 language: en
 version: 1
-revision: 8e8acd28-2f28-4823-a1da-501114be14a7
+revision: fcda586e-8eac-473d-bf36-74b516f48201
 
 ----field----
 field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
 name: Title
 key: title
-content-length: 17
+content-length: 22
 
-Outcomes Tracking
+Psychiatric Consultant
 ----field----
 field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
 name: Copy
 key: copy
-content-length: 257
+content-length: 242
 
-<span style="color: #000000; background-color: #ffffff; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</span>
+<span style="background-color: #ffffff; text-align: justify; color: #000000;">The psychiatric consultant (PC) supports the PCP and behavioral health care manager buy regularly reviewing cases and making treatment recommendations.&nbsp;</span>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8e8acd28-2f28-4823-a1da-501114be14a7
+fcda586e-8eac-473d-bf36-74b516f48201
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250618T163841Z
+20250624T163051Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

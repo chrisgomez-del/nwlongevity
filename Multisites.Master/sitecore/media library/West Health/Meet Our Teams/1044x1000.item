@@ -1,54 +1,47 @@
 ----item----
 version: 1
-id: {9C62B150-C845-4CEF-8C5F-1177ABD32878}
+id: {D56C89FC-891A-4060-B9D8-588A1E3985C2}
 database: master
-path: /sitecore/content/West Health/global_data/Background Color/White
-parent: {393C436D-7FA0-4C05-AA4F-E886614471CE}
-name: White
+path: /sitecore/media library/West Health/Meet Our Teams/1044x1000
+parent: {A13FAD01-0AD8-46AF-B9DD-17F51CB09D36}
+name: 1044x1000
 master: {00000000-0000-0000-0000-000000000000}
-template: {89056EC1-5C3C-4677-92B6-D4CA7537D5C6}
-templatekey: Droplink Item
+template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
+templatekey: Media folder
 
 ----version----
 language: en
 version: 1
-revision: 653e1417-4aa3-45a7-94fd-5d14749c2948
+revision: 621ccb85-2e10-473b-8ef4-b5e4968c4687
 
 ----field----
-field: {FC2764E4-F090-4DB2-B8F6-CC4AD0239C5D}
-name: Name
-key: name
-content-length: 5
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
-White
-----field----
-field: {D0CE2F48-0561-48A2-BDDA-435C6FFE9969}
-name: Css Class
-key: css class
-content-length: 8
-
-bg-white
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250521T191509Z
+20250627T190940Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-653e1417-4aa3-45a7-94fd-5d14749c2948
+621ccb85-2e10-473b-8ef4-b5e4968c4687
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250627T173826Z
+20250627T190940Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
