@@ -1,11 +1,11 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Pages.ArticleViewModel
 
 @{ 
-    var hasHeaderImage = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Image));
-    var hasSubtitle = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Subtitle));
-    var hasAuthor = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Author));
-    var hasDate = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Date));
-    var hasSource = !string.IsNullOrEmpty(Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Article.Fields.Source));
+    var hasHeaderImage = true;
+    var hasSubtitle = true;
+    var hasAuthor = true;
+    var hasDate = true;
+    var hasSource = true;
 }
 
 <div class="container my-5 article-detail" role="article" aria-labelledby="article-title">
