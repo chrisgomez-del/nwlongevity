@@ -1,33 +1,33 @@
 ----item----
 version: 1
-id: {5A07C788-CAB1-4A11-BA5A-A7A3A81982EC}
+id: {8192ADCB-FD4D-45E4-9C78-64FD4C1F21F9}
 database: master
-path: /sitecore/layout/Placeholder Settings/West Health/Panels/Accordion
-parent: {AD2AB2A2-5880-4CE8-B103-DA4ADD2D2D03}
-name: Accordion
+path: /sitecore/templates/West Health/Content/Split Content Subtitle/__Standard Values
+parent: {0E45F19E-0857-4CB4-9E78-67FF8AA3DE33}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
+template: {0E45F19E-0857-4CB4-9E78-67FF8AA3DE33}
+templatekey: Split Content Subtitle
 
-----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 9
-
-accordion
-----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
-content-length: 38
-
-{CB374E96-C34A-4965-8D58-C10A56E51A54}
 ----version----
 language: en
 version: 1
-revision: 257230a7-0382-4aa9-99c7-0f069e6de3b0
+revision: 20bfee11-ec1f-4b65-9444-5882ec48d7f5
 
+----field----
+field: {5D6D9997-FF4A-4215-83F3-113B92677C02}
+name: Image Location
+key: image location
+content-length: 38
+
+{E79ED289-3D6C-498F-A2E3-D6D75717C043}
+----field----
+field: {C261D5FC-5BA4-4D28-B4B0-3FD298236DB1}
+name: Background Color
+key: background color
+content-length: 38
+
+{9C62B150-C845-4CEF-8C5F-1177ABD32878}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250519T195722Z
+20250624T190703Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-257230a7-0382-4aa9-99c7-0f069e6de3b0
+20bfee11-ec1f-4b65-9444-5882ec48d7f5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T145847Z
+20250624T190712Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

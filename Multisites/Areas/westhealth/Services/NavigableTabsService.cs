@@ -36,7 +36,14 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 }
 
                 Item folder = model.NavigableTabsLocation.TargetItem;
-                model.NavigableTabs = GetNavigableTabItems(folder);
+                if (folder != null)
+                {
+                    model.NavigableTabs = GetNavigableTabItems(folder);
+                }
+                else
+                {
+                    model.NavigableTabs = new List<NavigableTabViewModel>();
+                }
 
                 return model;
             }
@@ -53,7 +60,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
         }
         private NavigableTabViewModel MapNavigableTabViewModel(Item item)
         {
-            List<TabResourceViewModel> tabResources = GetTabResources(item); 
+            List<TabResourceViewModel> tabResources = GetTabResources(item);
 
             return new NavigableTabViewModel
             {

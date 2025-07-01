@@ -1,32 +1,18 @@
 ----item----
 version: 1
-id: {0E45F19E-0857-4CB4-9E78-67FF8AA3DE33}
+id: {42CCCFA3-1F39-4786-9222-5CFB1502E78F}
 database: master
-path: /sitecore/templates/West Health/Content/Split Content Subtitle
-parent: {0CF2D3C5-4554-44E8-AE42-025D1CA08372}
-name: Split Content Subtitle
+path: /sitecore/content/West Health/Resources/page_data
+parent: {45DCC665-BB47-4CA7-B27E-562C4265F004}
+name: page_data
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
 
-----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 38
-
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
-----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
-
-{8192ADCB-FD4D-45E4-9C78-64FD4C1F21F9}
 ----version----
 language: en
 version: 1
-revision: e8c1b1cf-c5a8-408b-8ad7-1059a6ee5a5b
+revision: d4e5e794-176c-49f3-bafd-c0d922dd049e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,21 +27,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20250530T163811Z
+20250630T184238Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-e8c1b1cf-c5a8-408b-8ad7-1059a6ee5a5b
+d4e5e794-176c-49f3-bafd-c0d922dd049e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250624T190703Z
+20250630T184238Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

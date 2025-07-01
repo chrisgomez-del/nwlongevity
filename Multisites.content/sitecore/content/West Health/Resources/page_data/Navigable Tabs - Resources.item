@@ -1,33 +1,26 @@
 ----item----
 version: 1
-id: {5A07C788-CAB1-4A11-BA5A-A7A3A81982EC}
+id: {A47106FF-3CE8-46AB-B45E-FBE03FFD65DC}
 database: master
-path: /sitecore/layout/Placeholder Settings/West Health/Panels/Accordion
-parent: {AD2AB2A2-5880-4CE8-B103-DA4ADD2D2D03}
-name: Accordion
+path: /sitecore/content/West Health/Resources/page_data/Navigable Tabs - Resources
+parent: {42CCCFA3-1F39-4786-9222-5CFB1502E78F}
+name: Navigable Tabs - Resources
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
+template: {2570D0F2-35A9-4466-80E4-7D24C7640419}
+templatekey: Navigable Tabs
 
-----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 9
-
-accordion
-----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
-content-length: 38
-
-{CB374E96-C34A-4965-8D58-C10A56E51A54}
 ----version----
 language: en
 version: 1
-revision: 257230a7-0382-4aa9-99c7-0f069e6de3b0
+revision: 24e7d74f-3fa6-4bec-b5ac-6849b3250c71
 
+----field----
+field: {3F24C2B1-D6D2-460D-BF98-690DBF302FE0}
+name: Navigable Tabs Location
+key: navigable tabs location
+content-length: 38
+
+{BAF37E6E-1979-4DA9-A087-323FC4A95F91}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250519T195722Z
+20250630T191532Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-257230a7-0382-4aa9-99c7-0f069e6de3b0
+24e7d74f-3fa6-4bec-b5ac-6849b3250c71
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T145847Z
+20250630T201401Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

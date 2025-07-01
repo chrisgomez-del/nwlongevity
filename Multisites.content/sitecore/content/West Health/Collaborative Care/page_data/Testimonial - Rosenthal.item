@@ -1,0 +1,94 @@
+----item----
+version: 1
+id: {C7CBDEF6-A4F4-4E24-9269-4801CE0B5366}
+database: master
+path: /sitecore/content/West Health/Collaborative Care/page_data/Testimonial - Rosenthal
+parent: {DB02CA7F-0368-4C9A-96F1-5D042B52D4B9}
+name: Testimonial - Rosenthal
+master: {00000000-0000-0000-0000-000000000000}
+template: {E963651A-6F20-40D1-8771-79F8B420BF5E}
+templatekey: Testimonial
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+850
+----version----
+language: en
+version: 1
+revision: b008496b-47b3-4e24-bb2e-300651c14bdf
+
+----field----
+field: {9FF4C3AA-36DF-4491-BB7D-1253AC003E65}
+name: Testimonial
+key: testimonial
+content-length: 206
+
+"Widespread misunderstanding about psychiatric illness &ndash; and the benefits of treatment &ndash; has created barriers to integrating mental health as a core part of routine care.<br />
+<div>&nbsp;</div>
+----field----
+field: {FFB86819-9D0A-4082-A519-572A8ADAFF27}
+name: Copy
+key: copy
+content-length: 257
+
+This continues to create doubt about how well treatment works. Moving forward, we need a health system that identifies mental health needs without stigma and relies on strong, integrated care teams to reduce the serious impact of psychiatric illness.&rdquo;
+----field----
+field: {C785C47A-2D0B-4487-B693-63BCEC1A4519}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{C397025D-1443-487C-9AF7-17765DA5B47B}" />
+----field----
+field: {8D224FB2-4FF7-43F8-BBD1-62EB206DFF36}
+name: Testimonial Author
+key: testimonial author
+content-length: 35
+
+Lisa J. Rosenthal, MD, FACLP, DFAPA
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250625T190207Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b008496b-47b3-4e24-bb2e-300651c14bdf
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T140204Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
