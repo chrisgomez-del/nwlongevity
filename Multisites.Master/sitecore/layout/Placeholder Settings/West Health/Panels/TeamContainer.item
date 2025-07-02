@@ -13,9 +13,9 @@ templatekey: Placeholder
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 13
+content-length: 24
 
-TeamContainer
+TeamContainerPlaceholder
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
@@ -26,7 +26,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 034ed8a5-9b56-4802-a37e-3573a9233338
+revision: b4420ed2-5eea-4bb5-9dd8-d9c6e751a235
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-034ed8a5-9b56-4802-a37e-3573a9233338
+b4420ed2-5eea-4bb5-9dd8-d9c6e751a235
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250520T170535Z
+20250627T185921Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
