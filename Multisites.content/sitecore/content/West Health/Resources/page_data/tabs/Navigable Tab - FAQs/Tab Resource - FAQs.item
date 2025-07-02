@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {168997D3-7134-4A34-80D6-8AD86A6C8B15}
+database: master
+path: /sitecore/content/West Health/Resources/page_data/tabs/Navigable Tab - FAQs/Tab Resource - FAQs
+parent: {1184900C-1620-4736-9EB0-06878AF69B5F}
+name: Tab Resource - FAQs
+master: {00000000-0000-0000-0000-000000000000}
+template: {A65CF74A-C1A7-43ED-947F-4FC0BEB73D95}
+templatekey: Tab Resource
+
+----version----
+language: en
+version: 1
+revision: dce8f33a-8332-42aa-aae5-379db3660f7a
+
+----field----
+field: {8D371CFE-E039-4A9C-8F21-F8A9E6D92726}
+name: Title
+key: title
+content-length: 4
+
+FAQs
+----field----
+field: {A8626276-797B-4612-90BA-A866BAF6E24A}
+name: Copy
+key: copy
+content-length: 176
+
+Have a question about the Northwestern Medicine West Health Accelerator, the Collaborative Care Model or something else? Browse our Frequently Asked Questions for an answer.   
+----field----
+field: {A0D886B5-F78D-4946-8242-E0C6B2E66829}
+name: Cta Source
+key: cta source
+content-length: 159
+
+<link class="" id="{AA66BF1D-D8CE-48E4-BFA5-01E927DB9E83}" querystring="" anchor="" title="" linktype="internal" text="Explore FAQs" url="/West Health/FAQs" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T200556Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+dce8f33a-8332-42aa-aae5-379db3660f7a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T205313Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
