@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {74129262-50ED-4140-8B35-992377935807}
+database: master
+path: /sitecore/content/West Health/Evidence and Data/page_data/Split Content Hero - Research
+parent: {D08D4969-10B1-419D-8F10-BCF4B62B5BC2}
+name: Split Content Hero - Research
+master: {00000000-0000-0000-0000-000000000000}
+template: {D2770F65-E6C6-4E85-B40C-0524FD8E80B3}
+templatekey: Split Content Hero
+
+----version----
+language: en
+version: 1
+revision: acb58536-6d19-437d-b9a2-fd8fd43b465b
+
+----field----
+field: {41DF2214-0496-407A-A27A-06B256A1DFE0}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{CEAADD3A-2828-4FA0-8063-FFA49CFC466D}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250701T154338Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+acb58536-6d19-437d-b9a2-fd8fd43b465b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T154447Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

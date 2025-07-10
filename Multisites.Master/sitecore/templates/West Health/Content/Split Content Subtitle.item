@@ -16,10 +16,17 @@ key: __base template
 content-length: 38
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{8192ADCB-FD4D-45E4-9C78-64FD4C1F21F9}
 ----version----
 language: en
 version: 1
-revision: 06bdd608-2256-45c6-8ce0-2ce1f781eaac
+revision: e8c1b1cf-c5a8-408b-8ad7-1059a6ee5a5b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-06bdd608-2256-45c6-8ce0-2ce1f781eaac
+e8c1b1cf-c5a8-408b-8ad7-1059a6ee5a5b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250530T163812Z
+20250624T190703Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

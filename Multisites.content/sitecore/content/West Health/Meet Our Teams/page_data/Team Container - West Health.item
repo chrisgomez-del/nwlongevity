@@ -1,0 +1,85 @@
+----item----
+version: 1
+id: {DC45CF79-CDC7-4A42-9C47-983C3BFFBB90}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Container - West Health
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Container - West Health
+master: {00000000-0000-0000-0000-000000000000}
+template: {D82EE3A3-6653-4AA7-A30B-80C6E56FBD36}
+templatekey: Team Container
+
+----version----
+language: en
+version: 1
+revision: fb4698f8-db34-4b09-9867-3356cf69e200
+
+----field----
+field: {0FC18A7C-20B3-4A7A-AB1E-C9B880ABA4A9}
+name: Title
+key: title
+content-length: 11
+
+West Health
+----field----
+field: {C8BB1035-2D2F-4E4E-96D0-8326D08D036A}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{4D071A69-3F5E-44C4-A66D-8325753A8F96}" />
+----field----
+field: {9223C0D8-24C8-4551-A983-63811CFF2470}
+name: Sub-Title
+key: sub-title
+content-length: 136
+
+Gary and Mary West are entrepreneurs and philanthropists who have committed their wealth to lowering the cost of health care in America.
+----field----
+field: {8E629F51-B876-4F9B-A06E-48AAA5FC4A72}
+name: Copy
+key: copy
+content-length: 1460
+
+<p>In 2006, they established the Gary and Mary West Foundation, and the West Health Institute and the West Health Policy Center soon followed, collectively called West Health.&nbsp;</p>
+<p>
+West Health&rsquo;s mission is to enable seniors to successfully age with access to high-quality, affordable health and support services that preserve and protect their dignity, quality of life and independence. West Health has funded more than $500 million in initiatives.&nbsp;</p>
+<p>
+<strong>West Health Institute</strong>&nbsp;<br />
+The institute collaborates with large healthcare institutions and deploys its accelerators to enhance, study, scale and expedite best practices in health care and mental health nationwide.&nbsp;</p>
+<p>
+<strong>West Health Policy Center&nbsp;</strong><br />
+Based in Washington, D.C., the center was established to inform better public policy through research, analysis, education and outreach.&nbsp;</p>
+<p>
+<strong>West Health Foundation&nbsp;</strong><br />
+The foundation is one of only a handful of private healthcare nonprofit foundations in the U.S. solely focused on addressing the needs of vulnerable seniors. Through its grantmaking, it strategically deploys funding to fuel groundbreaking research, models of care, and resources that improve care for seniors, their families, and all Americans.&nbsp;</p>
+<p>
+Learn more at <a rel="noopener noreferrer" href="http://westhealth.org" target="_blank">westhealth.org</a>.</p>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T130323Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fb4698f8-db34-4b09-9867-3356cf69e200
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T154343Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

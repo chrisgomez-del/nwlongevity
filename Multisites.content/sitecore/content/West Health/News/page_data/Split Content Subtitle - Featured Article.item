@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {D44DCA8F-B7FC-48D4-999C-9219EC7A86AD}
+database: master
+path: /sitecore/content/West Health/News/page_data/Split Content Subtitle - Featured Article
+parent: {FBA9B82B-3FA8-4D1C-853F-0B4C194E8290}
+name: Split Content Subtitle - Featured Article
+master: {00000000-0000-0000-0000-000000000000}
+template: {0E45F19E-0857-4CB4-9E78-67FF8AA3DE33}
+templatekey: Split Content Subtitle
+
+----version----
+language: en
+version: 1
+revision: ced182a3-d492-4cb0-a32e-89118fc0512b
+
+----field----
+field: {3D7A752C-E68B-4E01-8883-FD9B5FB231AA}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{7D6B7207-9F4A-4A77-98C1-CB343F8F2F9D}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250701T163939Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ced182a3-d492-4cb0-a32e-89118fc0512b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T164338Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -22468,10 +22468,11 @@ textarea.form-control-lg {
   --bs-card-title-color: var(--card-stat-text-color);
   --bs-card-bg: var(--card-stat-bg-color);
   color: var(--card-stat-text-color);
-  margin-top: 30px;
+  margin-top: 0;
   transition-property: color background-color;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transition-timing-function: linear;
+  overflow: hidden;
 }
 .card-stat .card-header {
   background: transparent;
@@ -22491,24 +22492,39 @@ textarea.form-control-lg {
 .card-stat .card-stat-value svg {
   width: 32px;
   height: 32px;
+  display: none;
 }
 .card-stat .card-stat-value svg path {
   stroke: var(--card-stat-text-color);
-  transition: stroke 300ms linear;
+  transition: stroke 200ms linear;
 }
 .card-stat .card-stat-value svg rect {
   fill: var(--card-stat-text-color);
   stroke: var(--card-stat-text-color);
   transition-property: fill stroke;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transition-timing-function: linear;
+}
+@media (min-width: 768px) {
+  .card-stat .card-stat-value svg {
+    display: block;
+  }
+}
+.card-stat .card-body {
+  flex: 1 1 auto;
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  .card-stat .card-body {
+    flex: 0 0 auto;
+  }
 }
 .card-stat .card-title {
   font-size: 1.75rem;
   font-weight: 400;
   color: var(--card-stat-text-color);
   transition-property: color;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transition-timing-function: linear;
 }
 .card-stat .card-text {
@@ -22520,13 +22536,20 @@ textarea.form-control-lg {
   font-weight: 600;
   color: var(--card-stat-text-color);
   text-decoration: underline;
-  transition: color 300ms linear;
+  transition: color 200ms linear;
+}
+.card-stat .card-content-animate {
+  opacity: 1;
+  /* visible at first for measurement */
+  transform: translateY(0px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .card-stat:hover {
   cursor: pointer;
   --card-stat-text-color: #FFF;
   --card-stat-bg-color: #00668F;
 }
+
 .footer__source {
   color: #363637;
   font-size: 1rem;
@@ -22592,6 +22615,21 @@ textarea.form-control-lg {
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(4.1500000954px);
+}
+
+.wysiwyg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.wysiwyg > *:not(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wysiwyg > *:is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  margin-top: 1.5rem;
 }
 
 .navbar-main {
@@ -22726,6 +22764,14 @@ footer .footer-socials a {
 }
 footer .footer-socials a:hover {
   color: #D4D4D4;
+}
+
+.article-detail figure img {
+  aspect-ratio: 21/9;
+  object-fit: cover;
+}
+.article-detail img {
+  max-width: 100%;
 }
 
 .hero-split .bg-white + .container .primary-title {
@@ -22974,6 +23020,22 @@ footer .footer-socials a:hover {
 @media (min-width: 768px) {
   .three-card-callout {
     min-height: 80vh;
+  }
+}
+.three-card-callout .swiper {
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .three-card-callout .swiper {
+    overflow: hidden;
+  }
+}
+.three-card-callout .swiper-pagination {
+  --swiper-pagination-bottom: -30px;
+}
+@media (min-width: 768px) {
+  .three-card-callout .swiper-pagination {
+    --swiper-pagination-bottom: 8px;
   }
 }
 

@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {0B08BDD6-57A2-4001-8AEF-7653DD99C2D9}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Three Card Callout - Mental Health Landscape
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Three Card Callout - Mental Health Landscape
+master: {00000000-0000-0000-0000-000000000000}
+template: {9CE0CF79-5F8E-4A39-B407-39873D3C5D1E}
+templatekey: Three Card Callout
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+6150
+----version----
+language: en
+version: 1
+revision: 7de9190c-bc90-4f4c-83c6-dba8966c43b2
+
+----field----
+field: {6EFD3BA9-25C6-4048-8543-34ECC149F4E3}
+name: Title
+key: title
+content-length: 72
+
+Rethinking mental health care in America starts with primary care.&nbsp;
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250618T192535Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7de9190c-bc90-4f4c-83c6-dba8966c43b2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T120626Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

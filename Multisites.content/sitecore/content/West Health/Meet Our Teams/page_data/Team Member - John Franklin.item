@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {7255F226-3534-4B4F-80BC-1CF1D3BC5655}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Member - John Franklin
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Member - John Franklin
+master: {00000000-0000-0000-0000-000000000000}
+template: {F3632DD6-B049-418C-94FA-16B667CC3DA8}
+templatekey: Team Member
+
+----version----
+language: en
+version: 1
+revision: 72a4897c-da69-4983-a072-215341e52e50
+
+----field----
+field: {175C0EBB-CB9B-4AA2-9943-BF8E6F2E9379}
+name: Name
+key: name
+content-length: 19
+
+ John Franklin, PhD
+----field----
+field: {206933CF-3BF2-4CD3-92D3-A5469B9AFC44}
+name: Qualifications
+key: qualifications
+content-length: 21
+
+Northwestern Medicine
+----field----
+field: {FB48674E-AED2-4348-A315-E577232D8B1C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{D0B6D3BD-12BB-4D67-84AF-04CF041E56C9}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T163028Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+72a4897c-da69-4983-a072-215341e52e50
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T163103Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

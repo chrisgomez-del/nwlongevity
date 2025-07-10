@@ -1,29 +1,8 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TeamMemberViewModel
 
-@*<div>
-    <div>
-        @Model.Name
-    </div>
-    <div>
-        @Model.Qualifications
-    </div>
-    <div>
-        @Model.Titles
-    </div>
-    <div>
-        @Model.Image
-    </div>
-    <div>
-        @Model.ProfileLink
-    </div>
-</div>*@
-
-
 <div class="col-md-4">
     <div class="h-100">
         @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TeamMember.Fields.Image, new { @class = "card-img-top rounded mb-3" })
-
-        <img src="https://placehold.co/300x300" class="card-img-top rounded mb-3" alt="Sachin Patel">
         <div class="card-body">
             <h5 class="accordion-item-title mb-2">@Model.Name</h5>
             <p>@Model.Qualifications</p>

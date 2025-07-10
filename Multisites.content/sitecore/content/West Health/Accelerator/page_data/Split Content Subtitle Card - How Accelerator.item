@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {31B21553-E092-4CB1-9043-D5450D29F2D9}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Split Content Subtitle Card - How Accelerator
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Split Content Subtitle Card - How Accelerator
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1688
+----version----
+language: en
+version: 1
+revision: ed6ce011-c8dd-4b78-a3f4-35fd2a684244
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 62
+
+How the Accelerator can help your system enhance primary care.
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 285
+
+The Accelerator resources provide practical tools and guidance for integrating mental health services into primary care settings. Designed to support healthcare teams at all stages of implementation and scale, the resources offer strategies to enhance access and improve care delivery.
+----field----
+field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
+name: Cta Source
+key: cta source
+content-length: 141
+
+<link text="Explore Resources" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250620T135002Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ed6ce011-c8dd-4b78-a3f4-35fd2a684244
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T125612Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 52
+
+<r owner="sitecore\Admin" date="20250620T140529Z" />
