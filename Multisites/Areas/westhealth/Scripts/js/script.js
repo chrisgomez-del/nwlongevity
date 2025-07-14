@@ -35,13 +35,24 @@ const featureModules = [
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
+    featureModules.forEach(({ selector, importPath, init, importFn }) => {
+        const elements = document.querySelectorAll(selector);
+        if (elements.length > 0) {
+            importFn()
+                .then((mod) => init(mod, elements, selector))
+                .catch((err) =>
+                    console.error(`Failed to load module for ${selector}:`, err)
+                );
+        }
+    });
+
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
     expandFirstAccordion();
     highlightFooterActiveLink('[data-footer] .footer-nav a');
     animateGradient("[data-footer]");
 
-    setupDiagram();
+    //setupDiagram();
 
     const waitForForm = setInterval(() => {
         const form = document.querySelector('#fsform-container-6214449');
@@ -67,15 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-StripHtml]').forEach((element) => {
         element.innerHTML = stripHTMLFromElement(element);
     })
-
-    featureModules.forEach(({ selector, importPath, init, importFn }) => {
-        const elements = document.querySelectorAll(selector);
-        if (elements.length > 0) {
-            importFn()
-                .then((mod) => init(mod, elements, selector))
-                .catch((err) =>
-                    console.error(`Failed to load module for ${selector}:`, err)
-                );
-        }
-    });
 });
