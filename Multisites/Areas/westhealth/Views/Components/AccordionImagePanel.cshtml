@@ -1,0 +1,19 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.AccordionPanelViewModel
+
+<div class="bg-white py-5">
+    <h1>ACCORDION IMAGE</h1>
+    <div class="container single-col-accordion">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 mb-4">
+                <div class="section-title">
+                    <h2 class="secondary-title secondary-title--dark">@Model.Title</h2>
+                </div>
+            </div>
+            <div class="col-md-10 offset-md-1">
+                <div class="accordion position-relative rounded" id="teamAccordions">
+                    @Html.Sitecore().DynamicPlaceholder("accordionimage")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

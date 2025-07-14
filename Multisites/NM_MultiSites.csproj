@@ -733,6 +733,8 @@
     <Content Include="Areas\westhealth\Views\Components\TextSlide.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\ContactUs.cshtml" />
     <Content Include="Areas\westhealth\Content\scss\components\ContactForm.scss" />
+    <Content Include="Areas\westhealth\Views\Components\AccordionImagePanel.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\AccordionImageItem.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

@@ -23,6 +23,9 @@ namespace NM_MultiSites.Areas.westhealth.Services
             {
                 data.SourceItem = datasource;
                 data.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionPanel.Fields.Title));
+                data.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionPanel.Fields.Image));
+                data.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
+                data.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
             }
             return data;
         }
