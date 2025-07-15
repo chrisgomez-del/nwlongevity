@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Text.RegularExpressions;
+using System.Web;
 using NM_MultiSites.Areas.Innovation.Models.Components;
 using NM_MultiSites.Areas.westhealth.Models.Components;
 using Sitecore.Data;
@@ -39,6 +40,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 data.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionItem.Fields.Title));
                 data.Copy = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionItem.Fields.Copy));
                 data.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionItem.Fields.Image));
+                data.CardId = Regex.Replace(FieldRenderer.Render(datasource, Templates.AccordionItem.Fields.Title), "[^a-zA-Z]", ""); 
             }
             return data;
         }
