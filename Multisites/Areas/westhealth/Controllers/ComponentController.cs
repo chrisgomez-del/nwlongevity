@@ -209,5 +209,11 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
             AccordionItemViewModel data = _accordionPanelService.GetAccordionItemData();
             return View("~/Areas/westhealth/Views/Components/AccordionImageItem.cshtml", data);
         }
+
+        public ActionResult CopyCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/CopyCard.cshtml", cardViewModel);
+        }
     }
 }

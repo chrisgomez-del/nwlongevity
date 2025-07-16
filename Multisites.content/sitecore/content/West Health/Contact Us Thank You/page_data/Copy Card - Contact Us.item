@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {C44A0C04-6142-4247-86D5-13B83FB15AD3}
+database: master
+path: /sitecore/content/West Health/Contact Us Thank You/page_data/Copy Card - Contact Us
+parent: {C9FD08A9-E3DF-423B-B1B5-D030849AD301}
+name: Copy Card - Contact Us
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: 77e4a9ea-b4dc-4ff5-9263-8a6f5a646b27
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 22
+
+Copy Card - Contact Us
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 173
+
+Thank you for your message.&nbsp; We will do our best to respond to you within 3 business days.&nbsp; <strong>Responses may be delayed</strong> during weekends and holidays.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250715T201359Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+77e4a9ea-b4dc-4ff5-9263-8a6f5a646b27
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250715T201652Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
