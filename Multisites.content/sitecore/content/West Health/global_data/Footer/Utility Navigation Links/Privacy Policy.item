@@ -12,8 +12,15 @@ templatekey: Generic Link
 ----version----
 language: en
 version: 1
-revision: f1dc5598-2389-46bf-8f6d-d1752987f79b
+revision: c154cb7d-5d5f-4940-8e53-ee3b39d750e5
 
+----field----
+field: {B996E940-9DEC-4A26-8A68-0D1B3634D07A}
+name: Link Source
+key: link source
+content-length: 122
+
+<link linktype="external" url="https://www.nm.org/patients-and-visitors/patient-rights-policies/digital-privacy-policy" />
 ----field----
 field: {95CFA3F7-0003-42B9-A5B2-F773C741B061}
 name: Link Text
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f1dc5598-2389-46bf-8f6d-d1752987f79b
+c154cb7d-5d5f-4940-8e53-ee3b39d750e5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250519T163438Z
+20250714T181138Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

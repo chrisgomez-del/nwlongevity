@@ -12,8 +12,15 @@ templatekey: Generic Link
 ----version----
 language: en
 version: 1
-revision: 103a8a6a-bb97-4c2e-9f35-fa5dce74f78a
+revision: 6fc1c271-a624-4f21-9794-4a8a6fbe97db
 
+----field----
+field: {B996E940-9DEC-4A26-8A68-0D1B3634D07A}
+name: Link Source
+key: link source
+content-length: 120
+
+<link linktype="external" url="https://www.nm.org/patients-and-visitors/patient-rights-policies/digital-terms-of-use" />
 ----field----
 field: {95CFA3F7-0003-42B9-A5B2-F773C741B061}
 name: Link Text
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-103a8a6a-bb97-4c2e-9f35-fa5dce74f78a
+6fc1c271-a624-4f21-9794-4a8a6fbe97db
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250519T163422Z
+20250714T181155Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
