@@ -19,7 +19,7 @@ content-length: 1
 ----version----
 language: en
 version: 1
-revision: 6b916329-1c7f-4418-8976-e02a3226dc1e
+revision: 7cbce789-07db-421a-a833-3a555a3d59c1
 
 ----field----
 field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
@@ -32,10 +32,10 @@ Reimaging mental health care in primary care.
 field: {4FA42C0A-7677-4014-8308-74232EB7355D}
 name: Copy
 key: copy
-content-length: 365
+content-length: 352
 
 The Northwestern Medicine West Health Accelerator is reshaping how mental health care is being delivered by bringing it directly into primary care clinics through the proven Collaborative Care Model.<br />
-By making mental health services part of everyday care, we&rsquo;re ensuring more people get the support they need&mdash;earlier, easier, and more efficiently.
+By making mental health services part of everyday care, were ensuring more people get the support they need earlier, easier, and more efficiently.
 ----field----
 field: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
 name: CTA
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6b916329-1c7f-4418-8976-e02a3226dc1e
+7cbce789-07db-421a-a833-3a555a3d59c1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250716T190624Z
+20250716T191725Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
