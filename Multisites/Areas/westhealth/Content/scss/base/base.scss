@@ -66,3 +66,13 @@ footer {
         max-width: 100%;
     }
 }
+
+.main-contain {
+    .copy-card {
+        padding: 2rem 0;
+
+        &:first-child {
+            padding: var(--content-offset) 0 2rem;
+        }
+    }
+}
