@@ -19,7 +19,7 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: 72c71340-8033-4d99-8e1d-847d5e183fa2
+revision: c4226437-c18e-439a-bf47-76fc402f65f8
 
 ----field----
 field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
@@ -32,10 +32,9 @@ With gratitude to the visionaries advancing healthcare innovation.
 field: {4FA42C0A-7677-4014-8308-74232EB7355D}
 name: Copy
 key: copy
-content-length: 372
+content-length: 354
 
 Gary and Mary West are entrepreneurs and philanthropists committed to lowering healthcare costs and improving aging in America. Through West Health, they support the Northwestern Medicine West Health Accelerator to bring effective mental health care into primary care&mdash;helping more patients get the care they need, when and where they need it.<br />
-<div>&nbsp;</div>
 ----field----
 field: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
 name: CTA
@@ -84,14 +83,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-72c71340-8033-4d99-8e1d-847d5e183fa2
+c4226437-c18e-439a-bf47-76fc402f65f8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T120155Z
+20250716T185239Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

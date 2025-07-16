@@ -19,7 +19,7 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: 64a29b7f-141c-4f64-9035-45e733b3bceb
+revision: 63131c24-7fe3-4c14-babd-97a0f7c47728
 
 ----field----
 field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
@@ -32,10 +32,9 @@ Enhancing primary care by bridging gaps: Northwestern Medicine West Health Accel
 field: {4FA42C0A-7677-4014-8308-74232EB7355D}
 name: Copy
 key: copy
-content-length: 298
+content-length: 280
 
 The Northwestern Medicine West Health Accelerator is changing how we provide and access mental health care. Northwestern Medicine Psychiatrist, Lisa J. Rosenthal, MD, discusses the new initiative and its impact on patients and physicians in this podcast episode.&nbsp;&nbsp;<br />
-<div>&nbsp;</div>
 ----field----
 field: {A9951BE1-034B-4544-B8F1-CE86D867D4DC}
 name: CTA
@@ -84,14 +83,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-64a29b7f-141c-4f64-9035-45e733b3bceb
+63131c24-7fe3-4c14-babd-97a0f7c47728
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T120147Z
+20250716T185228Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
