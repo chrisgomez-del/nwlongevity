@@ -22342,7 +22342,7 @@ textarea.form-control-lg {
 
 .card-title, .single-col-accordion__title {
   color: #00668F;
-  font-size: clamp(1.125rem, 2.5vw + 1rem, 1.75rem);
+  font-size: clamp(1.125rem, 1.5vw + 1rem, 1.75rem);
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
@@ -22632,6 +22632,11 @@ textarea.form-control-lg {
   margin-top: 1.5rem;
 }
 
+[data-footer], [data-hero-carousel] {
+  background: #574497;
+  background: linear-gradient(90deg, #574497 0%, #00668f 100%);
+}
+
 .navbar-main {
   --bs-navbar-padding-x: .5rem;
   border-radius: 8px;
@@ -22774,10 +22779,17 @@ footer .footer-socials a:hover {
   max-width: 100%;
 }
 
-.hero-split .bg-white + .container .primary-title {
+.main-contain .copy-card {
+  padding: 2rem 0;
+}
+.main-contain .copy-card:first-child {
+  padding: var(--content-offset) 0 2rem;
+}
+
+.hero-split .bg-white + .container .primary-title, .hero-split .bg-white + .container h1, .hero-split .bg-white + .container .h1, .hero-split .bg-white + .container h2, .hero-split .bg-white + .container .h2, .hero-split .bg-white + .container h3, .hero-split .bg-white + .container .h3, .hero-split .bg-white + .container h4, .hero-split .bg-white + .container .h4, .hero-split .bg-white + .container h5, .hero-split .bg-white + .container .h5, .hero-split .bg-white + .container h6, .hero-split .bg-white + .container .h6, .hero-split [data-bg=bg-white] + .container .primary-title, .hero-split [data-bg=bg-white] + .container h1, .hero-split [data-bg=bg-white] + .container .h1, .hero-split [data-bg=bg-white] + .container h2, .hero-split [data-bg=bg-white] + .container .h2, .hero-split [data-bg=bg-white] + .container h3, .hero-split [data-bg=bg-white] + .container .h3, .hero-split [data-bg=bg-white] + .container h4, .hero-split [data-bg=bg-white] + .container .h4, .hero-split [data-bg=bg-white] + .container h5, .hero-split [data-bg=bg-white] + .container .h5, .hero-split [data-bg=bg-white] + .container h6, .hero-split [data-bg=bg-white] + .container .h6 {
   color: #574497;
 }
-.hero-split .bg-white + .container .primary-copy {
+.hero-split .bg-white + .container .primary-copy, .hero-split .bg-white + .container p, .hero-split [data-bg=bg-white] + .container .primary-copy, .hero-split [data-bg=bg-white] + .container p {
   color: #363637;
 }
 .hero-split .object-fit-cover {
@@ -23319,6 +23331,18 @@ footer .footer-socials a:hover {
 .hero-carousel .swiper {
   padding: 3.75rem 0;
 }
+.hero-carousel .swiper .swiper-slide {
+  display: none;
+}
+.hero-carousel .swiper .swiper-slide:first-child {
+  display: block;
+}
+.hero-carousel .swiper-initialized .swiper-slide {
+  display: block;
+}
+.hero-carousel .swiper-initialized + .swiper-button-prev, .hero-carousel .swiper-initialized + .swiper-button-prev + .swiper-button-next {
+  display: inline-flex;
+}
 .hero-carousel .swiper-wrapper {
   align-items: start;
 }
@@ -23333,7 +23357,7 @@ footer .footer-socials a:hover {
   color: white;
   border-radius: 4px;
   border: 1px solid #E8E5F3;
-  display: inline-flex;
+  display: none;
   padding: 2px 4px;
   justify-content: center;
   width: var(--swiper-navigation-size);

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
         }
     });
-    debugger;
+
     init(null, '[data-hero-carousel]');
 
     initNavDropdownLabelUpdater('[data-toolsresources]');

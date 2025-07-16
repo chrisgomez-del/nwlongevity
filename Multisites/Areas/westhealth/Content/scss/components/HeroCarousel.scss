@@ -23,6 +23,25 @@
 
     .swiper {
         padding: autorem(60) 0;
+
+        .swiper-slide {
+            display: none;
+
+            &:first-child {
+                display: block;
+            }
+        }
+
+    }
+
+    .swiper-initialized {
+        .swiper-slide {
+            display: block;
+        }
+
+        + .swiper-button-prev, + .swiper-button-prev + .swiper-button-next {
+            display: inline-flex;
+        }
     }
 
     .swiper-wrapper {
@@ -39,7 +58,7 @@
         color: white;
         border-radius: 4px;
         border: 1px solid #E8E5F3;
-        display: inline-flex;
+        display: none;
         padding: 2px 4px;
         justify-content: center;
         width: var(--swiper-navigation-size);
