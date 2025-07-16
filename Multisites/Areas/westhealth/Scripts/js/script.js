@@ -1,6 +1,7 @@
 import Dropdown from 'bootstrap/js/dist/dropdown';
 import Offcanvas from 'bootstrap/js/dist/offcanvas';
 import initNavDropdownLabelUpdater from "./components/ToolsAndResources";
+import { init } from './components/HeroCarousel';
 import {
     animateGradient,
     expandFirstAccordion,
@@ -14,12 +15,12 @@ import {
 import { setupDiagram } from "./components/Diagram";
 
 const featureModules = [
-    {
+    /*{
         selector: '[data-hero-carousel]',
         importPath: './components/HeroCarousel',
         importFn: () => import('./components/HeroCarousel'),
         init: (mod, elements, selector) => mod.init(elements, selector)
-    },
+    },*/
     {
         selector: '.benefit-tabs button[data-bs-toggle="tab"]',
         importPath: './components/BenefitTabs',
@@ -45,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
         }
     });
+    debugger;
+    init(null, '[data-hero-carousel]');
 
     initNavDropdownLabelUpdater('[data-toolsresources]');
     smoothScrollInternalLinks();
