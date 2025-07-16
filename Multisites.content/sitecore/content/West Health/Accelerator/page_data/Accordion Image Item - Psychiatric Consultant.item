@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {99FFA68F-7778-4145-8466-DCC19E32CD08}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Accordion Image Item - Psychiatric Consultant
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Accordion Image Item - Psychiatric Consultant
+master: {00000000-0000-0000-0000-000000000000}
+template: {DB2FA430-C28C-4841-A105-E40EAEFE7558}
+templatekey: Accordion Item
+
+----version----
+language: en
+version: 1
+revision: c5ee7aa0-c08e-4b44-aa56-8e8745d9bffd
+
+----field----
+field: {425C6DB7-BA6D-424A-874C-40080AA4DC8D}
+name: Title
+key: title
+content-length: 22
+
+Psychiatric Consultant
+----field----
+field: {E39B1E93-1921-4A30-B06C-B22614020C80}
+name: Copy
+key: copy
+content-length: 154
+
+The psychiatric consultant (PC) supports the PCP and the behavioral health care manager by regularly reviewing cases and making treatment recommendations.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250714T221841Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c5ee7aa0-c08e-4b44-aa56-8e8745d9bffd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250714T222857Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

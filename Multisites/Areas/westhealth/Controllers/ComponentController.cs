@@ -197,5 +197,23 @@ namespace NM_MultiSites.Areas.westhealth.Controllers.Components
         {
             return View("~/Areas/westhealth/Views/Components/ContactUs.cshtml");
         }
+
+        public ActionResult AccordionImagePanel()
+        {
+            AccordionPanelViewModel data = _accordionPanelService.GetAccordionPanelData();
+            return View("~/Areas/westhealth/Views/Components/AccordionImagePanel.cshtml", data);
+        }
+
+        public ActionResult AccordionImageItem()
+        {
+            AccordionItemViewModel data = _accordionPanelService.GetAccordionItemData();
+            return View("~/Areas/westhealth/Views/Components/AccordionImageItem.cshtml", data);
+        }
+
+        public ActionResult CopyCard()
+        {
+            var cardViewModel = _cardService.GetCardViewModel();
+            return View("~/Areas/westhealth/Views/Components/Cards/CopyCard.cshtml", cardViewModel);
+        }
     }
 }

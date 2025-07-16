@@ -110,6 +110,7 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string Title = "Title";
+                public static string Image = "Image";
             }
         }
         public static class NavigationLink
