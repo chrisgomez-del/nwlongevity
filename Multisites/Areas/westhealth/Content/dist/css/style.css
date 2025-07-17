@@ -22342,7 +22342,7 @@ textarea.form-control-lg {
 
 .card-title, .single-col-accordion__title {
   color: #00668F;
-  font-size: clamp(1.125rem, 2.5vw + 1rem, 1.75rem);
+  font-size: clamp(1.125rem, 1.5vw + 1rem, 1.75rem);
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
@@ -22774,10 +22774,17 @@ footer .footer-socials a:hover {
   max-width: 100%;
 }
 
-.hero-split .bg-white + .container .primary-title {
+.main-contain .copy-card {
+  padding: 2rem 0;
+}
+.main-contain .copy-card:first-child {
+  padding: var(--content-offset) 0 2rem;
+}
+
+.hero-split .bg-white + .container .primary-title, .hero-split .bg-white + .container h1, .hero-split .bg-white + .container .h1, .hero-split .bg-white + .container h2, .hero-split .bg-white + .container .h2, .hero-split .bg-white + .container h3, .hero-split .bg-white + .container .h3, .hero-split .bg-white + .container h4, .hero-split .bg-white + .container .h4, .hero-split .bg-white + .container h5, .hero-split .bg-white + .container .h5, .hero-split .bg-white + .container h6, .hero-split .bg-white + .container .h6, .hero-split [data-bg=bg-white] + .container .primary-title, .hero-split [data-bg=bg-white] + .container h1, .hero-split [data-bg=bg-white] + .container .h1, .hero-split [data-bg=bg-white] + .container h2, .hero-split [data-bg=bg-white] + .container .h2, .hero-split [data-bg=bg-white] + .container h3, .hero-split [data-bg=bg-white] + .container .h3, .hero-split [data-bg=bg-white] + .container h4, .hero-split [data-bg=bg-white] + .container .h4, .hero-split [data-bg=bg-white] + .container h5, .hero-split [data-bg=bg-white] + .container .h5, .hero-split [data-bg=bg-white] + .container h6, .hero-split [data-bg=bg-white] + .container .h6 {
   color: #574497;
 }
-.hero-split .bg-white + .container .primary-copy {
+.hero-split .bg-white + .container .primary-copy, .hero-split .bg-white + .container p, .hero-split [data-bg=bg-white] + .container .primary-copy, .hero-split [data-bg=bg-white] + .container p {
   color: #363637;
 }
 .hero-split .object-fit-cover {
