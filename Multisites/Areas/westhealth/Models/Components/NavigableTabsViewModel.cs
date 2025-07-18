@@ -11,5 +11,6 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Title { get; set; }
         public ReferenceField NavigableTabsLocation { get; set; }
         public List<NavigableTabViewModel> NavigableTabs { get; set; }
+        public string SectionId { get; set; }
     }
 }

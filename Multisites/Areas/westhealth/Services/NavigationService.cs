@@ -5,10 +5,8 @@ using System.Web;
 using NM_MultiSites.Areas.Innovation.Infrastructure.Extensions;
 using NM_MultiSites.Areas.westhealth.Models;
 using NM_MultiSites.Areas.westhealth.Models.Navigation;
-using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Sitecore.Data.Query;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 
@@ -69,8 +67,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
         public static List<Item> GetCurrentPageDataDirectoryItemsOfType(string type)
         {
             var root = RenderingContext.Current.ContextItem;
-            var pageData = root.Axes.GetDescendants()
-                .FirstOrDefault(x => x.Name ==Templates.Global.Folders.PageData);
+            var pageData = root.Parent.Axes.GetDescendants()
+                .FirstOrDefault(x => x.Name == Templates.Global.Folders.PageData);
 
             return pageData.Axes.GetDescendants()
                 .Where(x => x.InheritsFrom(Templates.NavigableSectionBase.TemplateId)

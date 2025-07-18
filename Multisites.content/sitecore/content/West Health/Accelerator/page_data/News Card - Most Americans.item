@@ -2,39 +2,46 @@
 version: 1
 id: {6B76411C-B208-4CF1-A2F3-2C848AE1EFBF}
 database: master
-path: /sitecore/content/West Health/page_data/News Card - Most Americans
-parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+path: /sitecore/content/West Health/Accelerator/page_data/News Card - Most Americans
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
 name: News Card - Most Americans
 master: {00000000-0000-0000-0000-000000000000}
 template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
 templatekey: Card
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1000
 ----version----
 language: en
 version: 1
-revision: bf4f07f6-4449-457d-98df-1c7d439b633b
+revision: ffb30f5b-8109-4cc1-ba24-f2c5b250baac
 
 ----field----
 field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
 name: Title
 key: title
-content-length: 54
+content-length: 76
 
-Most Americans want doctors to ask about mental health
+Most Americans want primary care physicians to ask about their mental health
 ----field----
 field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
 name: Copy
 key: copy
-content-length: 168
+content-length: 169
 
-According to a West Health survey, 7 in 10 Americans say they would prefer their health provider ask about both physical and mental health concerns during appointments.
+According to a West Health Gallup survey, 7 in 10 Americans say they would prefer their care team ask about both physical and mental health concerns during appointments.
 ----field----
 field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
 name: Cta Source
 key: cta source
-content-length: 133
+content-length: 148
 
-<link text="Read More" anchor="" linktype="internal" class="" title=""  querystring="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+<link text="Read More" linktype="external" url="https://news.gallup.com/poll/653300/americans-doctors-ask-mental-health.aspx" anchor="" target="" />
 ----field----
 field: {0753FB10-378E-4B98-B325-B597ECD1D986}
 name: Image
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bf4f07f6-4449-457d-98df-1c7d439b633b
+ffb30f5b-8109-4cc1-ba24-f2c5b250baac
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250620T172221Z
+20250717T235505Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

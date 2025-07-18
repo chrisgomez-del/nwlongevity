@@ -2,17 +2,24 @@
 version: 1
 id: {A894FE93-9B55-451D-9A78-F2C5E1E1C3E8}
 database: master
-path: /sitecore/content/West Health/page_data/News Card - Launch
-parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+path: /sitecore/content/West Health/Accelerator/page_data/News Card - Launch
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
 name: News Card - Launch
 master: {00000000-0000-0000-0000-000000000000}
 template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
 templatekey: Card
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1100
 ----version----
 language: en
 version: 1
-revision: 35b58b4c-5ae9-4124-8bff-e2c4efd27aa1
+revision: 49e0bb0e-8795-4cf4-878b-85e239683fb5
 
 ----field----
 field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
@@ -25,16 +32,23 @@ Launch of the Northwestern Medicine West Health Accelerator
 field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
 name: Copy
 key: copy
-content-length: 153
+content-length: 163
 
-The $8.6 million initiative between Northwestern Medicine, West Health, and Meadows Mental Policy Institute is changing the future of mental health care.
+The $8.6 million collaboration between Northwestern Medicine, West Health, and Meadows Mental Health Policy Institute is changing the future of mental health care.
 ----field----
 field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
 name: Cta Source
 key: cta source
-content-length: 133
+content-length: 226
 
-<link text="Read More" anchor="" linktype="internal" class="" title=""  querystring="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+<link text="Read More" linktype="external" url="https://news.nm.org/northwestern-medicine-west-health-meadows-mental-health-policy-institute-collaboration-to-provide-easier-access-to-mental-health-care/" anchor="" target="" />
+----field----
+field: {0753FB10-378E-4B98-B325-B597ECD1D986}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{68881D79-3ACE-492C-9990-0B36028E74DA}" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -48,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-35b58b4c-5ae9-4124-8bff-e2c4efd27aa1
+49e0bb0e-8795-4cf4-878b-85e239683fb5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250620T150337Z
+20250717T235515Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
