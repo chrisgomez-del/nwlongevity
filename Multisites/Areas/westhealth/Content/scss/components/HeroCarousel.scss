@@ -17,8 +17,10 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
+        aspect-ratio: 1/1;
+        max-width: 95%;
     }
 
     .swiper {
@@ -31,7 +33,6 @@
                 display: block;
             }
         }
-
     }
 
     .swiper-initialized {
@@ -40,7 +41,9 @@
         }
 
         + .swiper-button-prev, + .swiper-button-prev + .swiper-button-next {
-            display: inline-flex;
+            @include media-breakpoint-up(lg) {
+                display: inline-flex;
+            }
         }
     }
 
@@ -78,11 +81,11 @@
     }
 
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
-        --swiper-navigation-sides-offset: 25px;
+        --swiper-navigation-sides-offset: -20px;
     }
 
     .swiper-button-next, .swiper-rtl .swiper-button-prev {
-        --swiper-navigation-sides-offset: 25px;
+        --swiper-navigation-sides-offset: -20px;
     }
 
     .swiper-slide {
@@ -107,16 +110,24 @@
         --swiper-pagination-color: #E8E5F3;
     }
 
-    @media (max-width: 768px) {
-        .swiper-button-next,
-        .swiper-button-prev {
-            display: none;
-        }
-    }
-
     .hero-content {
         color: white;
         align-items: center;
         min-height: 1px;
     }
+
+    .hero-content [class*="col-"]:has(img) {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-content [class*="col-"]:has(h2) {
+        @include media-breakpoint-up(lg) {
+            padding: 2rem;
+        }
+    }
+}
+
+.hero-carousel ~ .internal-nav .nav {
+    justify-content: center;
 }

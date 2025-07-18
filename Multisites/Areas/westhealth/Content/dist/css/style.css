@@ -23320,11 +23320,27 @@ footer .footer-socials a:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  aspect-ratio: 1/1;
+  max-width: 95%;
 }
 .hero-carousel .swiper {
   padding: 3.75rem 0;
+}
+.hero-carousel .swiper .swiper-slide {
+  display: none;
+}
+.hero-carousel .swiper .swiper-slide:first-child {
+  display: block;
+}
+.hero-carousel .swiper-initialized .swiper-slide {
+  display: block;
+}
+@media (min-width: 992px) {
+  .hero-carousel .swiper-initialized + .swiper-button-prev, .hero-carousel .swiper-initialized + .swiper-button-prev + .swiper-button-next {
+    display: inline-flex;
+  }
 }
 .hero-carousel .swiper-wrapper {
   align-items: start;
@@ -23340,7 +23356,7 @@ footer .footer-socials a:hover {
   color: white;
   border-radius: 4px;
   border: 1px solid #E8E5F3;
-  display: inline-flex;
+  display: none;
   padding: 2px 4px;
   justify-content: center;
   width: var(--swiper-navigation-size);
@@ -23356,10 +23372,10 @@ footer .footer-socials a:hover {
   backdrop-filter: blur(2px);
 }
 .hero-carousel .swiper-button-prev, .hero-carousel .swiper-rtl .swiper-button-next {
-  --swiper-navigation-sides-offset: 25px;
+  --swiper-navigation-sides-offset: -20px;
 }
 .hero-carousel .swiper-button-next, .hero-carousel .swiper-rtl .swiper-button-prev {
-  --swiper-navigation-sides-offset: 25px;
+  --swiper-navigation-sides-offset: -20px;
 }
 .hero-carousel .swiper-slide:not(.image-left) .hero-content {
   flex-direction: row-reverse;
@@ -23375,16 +23391,23 @@ footer .footer-socials a:hover {
 .hero-carousel .swiper-pagination-bullet-active {
   --swiper-pagination-color: #E8E5F3;
 }
-@media (max-width: 768px) {
-  .hero-carousel .swiper-button-next,
-.hero-carousel .swiper-button-prev {
-    display: none;
-  }
-}
 .hero-carousel .hero-content {
   color: white;
   align-items: center;
   min-height: 1px;
+}
+.hero-carousel .hero-content [class*=col-]:has(img) {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .hero-carousel .hero-content [class*=col-]:has(h2, .h2) {
+    padding: 2rem;
+  }
+}
+
+.hero-carousel ~ .internal-nav .nav {
+  justify-content: center;
 }
 
 .ring-wrapper {
