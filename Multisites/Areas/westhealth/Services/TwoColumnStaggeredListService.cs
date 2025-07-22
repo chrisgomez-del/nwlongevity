@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Web;
 using NM_MultiSites.Areas.westhealth.Models.Components;
-using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 
 namespace NM_MultiSites.Areas.westhealth.Services
@@ -51,6 +49,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 model.RightListCtaText = !string.IsNullOrWhiteSpace(rightLinkField?.Text) ? rightLinkField.Text : "Download PDF";
                 model.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
                 model.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
+                model.SectionId = datasource.Fields[Templates.TwoColumnStaggeredList.Fields.SectionId].GetValue(true) ?? string.Empty;
 
             }
             model.LeftListBullets = GetBullets(model.LeftListString);

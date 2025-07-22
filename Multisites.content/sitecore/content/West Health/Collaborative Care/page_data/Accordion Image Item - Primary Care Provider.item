@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {05AB438E-C538-44CC-B64A-DF7B6CECF1E0}
+id: {E01BE514-5E39-454D-AF2D-5E197FD6769D}
 database: master
-path: /sitecore/content/West Health/Accelerator/page_data/Accordion Image Item - Behavioral Health Care Manager
-parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
-name: Accordion Image Item - Behavioral Health Care Manager
+path: /sitecore/content/West Health/Collaborative Care/page_data/Accordion Image Item - Primary Care Provider
+parent: {DB02CA7F-0368-4C9A-96F1-5D042B52D4B9}
+name: Accordion Image Item - Primary Care Provider
 master: {00000000-0000-0000-0000-000000000000}
 template: {DB2FA430-C28C-4841-A105-E40EAEFE7558}
 templatekey: Accordion Item
@@ -12,43 +12,43 @@ templatekey: Accordion Item
 ----version----
 language: en
 version: 1
-revision: 4ba7bc58-8ca3-49e1-9324-a027262cc59f
+revision: fce4524f-0335-408d-b276-4f2a863c6e60
 
 ----field----
 field: {425C6DB7-BA6D-424A-874C-40080AA4DC8D}
 name: Title
 key: title
-content-length: 30
+content-length: 21
 
-Behavioral Health Care Manager
+Primary Care Provider
 ----field----
 field: {E39B1E93-1921-4A30-B06C-B22614020C80}
 name: Copy
 key: copy
-content-length: 278
+content-length: 145
 
-The behavioral health care manager (BHCM) works closely with the PCP and PC to manage a caseload of patients.&nbsp; They have contact with patients between their PCP visits to perform mental health assessments, provide brief therapeutic interventions and monitor progress.&nbsp;
+The primary care provider (PCP) leads the patient's mental health care, working with a behavioral health care manager and psychiatric consultant.
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20250714T221807Z
+20250714T221732Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-4ba7bc58-8ca3-49e1-9324-a027262cc59f
+fce4524f-0335-408d-b276-4f2a863c6e60
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250714T222631Z
+20250717T193346Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

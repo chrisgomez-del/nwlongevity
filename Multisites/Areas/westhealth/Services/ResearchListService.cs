@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using NM_MultiSites.Areas.westhealth.Models.Components;
-using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
@@ -32,6 +31,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                     model.SourceItem = datasource;
                     model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.ResearchList.Fields.Title));
                     model.CardLocation = (ReferenceField)datasource.Fields[Templates.ResearchList.Fields.CardLocation];
+                    model.SectionId = datasource.Fields[Templates.ResearchList.Fields.SectionId].GetValue(true) ?? string.Empty;
                 }
 
                 Item folder = model.CardLocation.TargetItem;

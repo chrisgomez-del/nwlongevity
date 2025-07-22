@@ -111,6 +111,7 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string Image = "Image";
+                public static string SectionId = "Section Id";
             }
         }
         public static class NavigationLink
@@ -198,14 +199,13 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string LeftList = "Left List";
                 public static string RightList = "Right List";
                 public static string Image = "Image";
-                //public static string ListBackgroundColor = "List Background Color";
                 public static string LeftListCtaSource = "Left List Cta Source";
                 public static string RightListCtaSource = "Right List Cta Source";
                 public static string LeftListTitle = "Left List Title";
                 public static string RightListTitle = "Right List Title";
                 public static string LeftListTab = "Left List Tab";
                 public static string RightListTab = "Right List Tab";
-                //public static string CssClass = "Css Class";
+                public static string SectionId = "Section Id";
             }
         }
         public static class ResearchList
@@ -214,6 +214,7 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string CardLocation = "Card Location";
+                public static string SectionId = "Section Id";
             }
         }
         public static class SplitContentHero
@@ -255,6 +256,7 @@ namespace NM_MultiSites.Areas.westhealth
                 public static string Title = "Title";
                 public static string BackgroundColor = "Background Color";
                 public static string CssClass = "Css Class";
+                public static string SectionId = "Section Id";
             }
         }
         public static class ThreeCardCallout
@@ -273,6 +275,7 @@ namespace NM_MultiSites.Areas.westhealth
             {
                 public static string Title = "Title";
                 public static string NavigableTabsLocation = "Navigable Tabs Location";
+                public static string SectionId = "Section Id";
             }
         }
         public static class NavigableTab

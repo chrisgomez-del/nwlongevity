@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using NM_MultiSites.Areas.westhealth.Models.Components;
-using Sitecore.Data;
-using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
 
@@ -31,6 +26,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 {
                     model.SourceItem = datasource;
                     model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.CardList.Fields.Title));
+                    model.SectionId = datasource.Fields[Templates.CardList.Fields.SectionId].GetValue(true) ?? string.Empty;
                 }
 
                 return model;

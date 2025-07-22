@@ -19,7 +19,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 85c039c0-c6ed-4dc4-a505-268cd5ad24d6
+revision: 040f7243-fa37-40a0-b0d8-9946443951ee
 
 ----field----
 field: {694C7008-A490-46F1-B3D5-D89FCE504E15}
@@ -39,9 +39,9 @@ JGIM
 field: {8F4CAFDE-2DB7-401E-A657-A2D67E557700}
 name: Cta Source
 key: cta source
-content-length: 136
+content-length: 141
 
-<link text="Read Article" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+<link text="Read Article" linktype="external" url="https://link.springer.com/article/10.1007/s11606-022-07750-8" anchor="" target="_blank" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-85c039c0-c6ed-4dc4-a505-268cd5ad24d6
+040f7243-fa37-40a0-b0d8-9946443951ee
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T155659Z
+20250717T191349Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

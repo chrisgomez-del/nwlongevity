@@ -2,8 +2,8 @@
 version: 1
 id: {DB855B90-2EBB-4151-B0F9-95EFA47B65F0}
 database: master
-path: /sitecore/content/West Health/Accelerator/page_data/Accordion Image Panel - CoCM Diagram
-parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+path: /sitecore/content/West Health/Collaborative Care/page_data/Accordion Image Panel - CoCM Diagram
+parent: {DB02CA7F-0368-4C9A-96F1-5D042B52D4B9}
 name: Accordion Image Panel - CoCM Diagram
 master: {00000000-0000-0000-0000-000000000000}
 template: {A0965326-9CC3-4DFE-A93C-580EF8D6247D}
@@ -12,7 +12,7 @@ templatekey: Accordion Panel
 ----version----
 language: en
 version: 1
-revision: 6b71a660-4729-457b-9d3a-068d22eb28b9
+revision: 156e61a6-7d12-4976-9df9-509298142b03
 
 ----field----
 field: {AF19985E-9B53-47E8-863B-7EED2DBABD86}
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6b71a660-4729-457b-9d3a-068d22eb28b9
+156e61a6-7d12-4976-9df9-509298142b03
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250714T224126Z
+20250717T193316Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

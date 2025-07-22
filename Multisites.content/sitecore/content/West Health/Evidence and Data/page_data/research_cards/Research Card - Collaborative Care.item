@@ -19,7 +19,7 @@ content-length: 1
 ----version----
 language: en
 version: 1
-revision: 1d5922c0-9e58-4f17-a4d4-75aa75f03284
+revision: 38cec194-32fb-4fd0-ada8-3610882f798f
 
 ----field----
 field: {694C7008-A490-46F1-B3D5-D89FCE504E15}
@@ -39,9 +39,9 @@ ScienceDirect
 field: {8F4CAFDE-2DB7-401E-A657-A2D67E557700}
 name: Cta Source
 key: cta source
-content-length: 136
+content-length: 148
 
-<link text="Read Article" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+<link text="Read Article" linktype="external" url="https://www.sciencedirect.com/science/article/pii/S2451865421001241" anchor="" target="_blank" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1d5922c0-9e58-4f17-a4d4-75aa75f03284
+38cec194-32fb-4fd0-ada8-3610882f798f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250701T155500Z
+20250717T191207Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

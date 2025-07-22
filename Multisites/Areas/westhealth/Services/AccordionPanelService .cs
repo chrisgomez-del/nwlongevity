@@ -1,10 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Web;
-using NM_MultiSites.Areas.Innovation.Models.Components;
 using NM_MultiSites.Areas.westhealth.Models.Components;
-using Sitecore.Data;
 using Sitecore.Data.Items;
-using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 
 namespace NM_MultiSites.Areas.westhealth.Services
@@ -27,6 +24,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 data.Image = new HtmlString(FieldRenderer.Render(datasource, Templates.AccordionPanel.Fields.Image));
                 data.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
                 data.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
+                data.SectionId = datasource.Fields[Templates.AccordionPanel.Fields.SectionId].GetValue(true) ?? string.Empty;
             }
             return data;
         }

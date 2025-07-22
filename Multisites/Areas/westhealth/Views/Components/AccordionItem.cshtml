@@ -4,9 +4,9 @@
     <h2 class="accordion-header collapsed pe-3"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#collapseTeam"
+        data-bs-target="#collapse-@Model.CardId"
         aria-expanded="false"
-        aria-controls="collapseTeam">
+        aria-controls="collapse-@Model.CardId">
         <span class="single-col-accordion__title single-col-accordion__title--dark p-4">
             @Model.Title
         </span>
@@ -20,7 +20,7 @@
 
     </h2>
     <!-- Custom styled tab -->
-    <div id="collapseTeam" class="accordion-collapse collapse" data-bs-parent="#teamAccordions">
+    <div id="collapse-@Model.CardId" class="accordion-collapse collapse" data-bs-parent="#teamAccordions">
         <div class="accordion-body p-4">
             <div class="row">
                 <!-- Example team member -->

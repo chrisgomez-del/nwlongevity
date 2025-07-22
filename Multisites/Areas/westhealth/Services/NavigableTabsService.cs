@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using NM_MultiSites.Areas.westhealth.Models.Components;
-using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
@@ -33,6 +32,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                     model.SourceItem = datasource;
                     model.Title = new HtmlString(FieldRenderer.Render(datasource, Templates.NavigableTabs.Fields.Title));
                     model.NavigableTabsLocation = (ReferenceField)datasource.Fields[Templates.NavigableTabs.Fields.NavigableTabsLocation];
+                    model.SectionId = datasource.Fields[Templates.NavigableTabs.Fields.SectionId].GetValue(true) ?? string.Empty;
                 }
 
                 Item folder = model.NavigableTabsLocation.TargetItem;

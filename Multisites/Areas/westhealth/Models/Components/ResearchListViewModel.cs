@@ -11,5 +11,6 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Title { get; set; }
         public ReferenceField CardLocation { get; set; }
         public List<ResearchCardViewModel> ResearchCards { get; set; } = new List<ResearchCardViewModel>();
+        public string SectionId { get; set; }
     }
 }
