@@ -47,7 +47,7 @@
   min-height: 50vh;
   
   @include media-breakpoint-up(lg) {
-    transform: translateY(-50px);
+    //transform: translateY(-50px);
   }
   
   ul:not(.nav) {

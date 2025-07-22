@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { animateGradient, debounce } from "../utils";
 
 const handleInternalNav = (elem1, elem2) => {
-    if (!(elem1 instanceof Element) || !(elem2 instanceof Element)) {
+    if (!(elOhem1 instanceof Element) || !(elem2 instanceof Element)) {
         console.warn('Both arguments must be DOM elements.');
         return;
     }

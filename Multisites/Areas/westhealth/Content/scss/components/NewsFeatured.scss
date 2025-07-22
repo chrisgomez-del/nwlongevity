@@ -1,0 +1,15 @@
+.news-featured {
+    &:after {
+        content:'';
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        background-color:#FFF;
+    }
+    &:last-child {
+        margin-top:-3rem !important;
+        margin-bottom: 0 !important;
+        padding:3rem 0;
+    }
+}
