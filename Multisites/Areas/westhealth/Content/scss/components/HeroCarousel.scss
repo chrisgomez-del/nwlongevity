@@ -48,7 +48,7 @@
     }
 
     .swiper-wrapper {
-        align-items: start;
+        align-items: center;
 
         @include media-breakpoint-up(md) {
             align-items: center;
