@@ -118,7 +118,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
         }
         private List<NavigationLinkViewModel> GetChildNavigationItems(Item currentNavItem, Guid currentItemId)
         {
-            var children = currentNavItem.Children.Where(x => x.InheritsFrom(Templates.GenericLink.TemplateID));
+            var children = currentNavItem.Children.Where(x => x.InheritsFrom(Templates.GenericLink.TemplateID)).OrderBy(x => x.Appearance.Sortorder);
             if (children.Any())
             {
                 return children.Select(x => MapNavigationLinkViewModel(x, currentItemId)).ToList();
