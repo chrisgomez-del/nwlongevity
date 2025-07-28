@@ -2,23 +2,42 @@
     @include gradient-directional(#FFF, #E8E5F3, 180deg);
 
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         min-height: 80vh;
     }
 
     .swiper {
         overflow: visible;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             overflow: hidden;
         }
     }
 
-    .swiper-pagination {
-        --swiper-pagination-bottom: -30px;
+    .swiper-slide {
+        display: none !important;
+        position: absolute;
+        z-index: -1;
 
-        @include media-breakpoint-up(md) {
+        &:first-child {
+            display: block !important;
+        }
+    }
+
+    .swiper-pagination {
+        --swiper-pagination-bottom: -40px;
+
+        @include media-breakpoint-up(lg) {
             --swiper-pagination-bottom: 8px;
+        }
+    }
+
+    .swiper-initialized {
+        .swiper-slide {
+            display: block !important;
+            position: static;
+            z-index: 10;
+            height: auto;
         }
     }
 }
@@ -39,7 +58,7 @@
         object-fit: contain;
         object-position: center top;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             object-position: center;
         }
     }
