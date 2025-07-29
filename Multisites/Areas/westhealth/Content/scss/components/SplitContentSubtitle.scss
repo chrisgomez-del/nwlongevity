@@ -3,6 +3,9 @@
   padding-right:3rem;
   margin-top:3rem;
   margin-bottom:3rem;
+  + .copy-card {
+      margin-top:-3rem;
+  }
   .object-fit-cover {
     object-fit: cover;
   }
