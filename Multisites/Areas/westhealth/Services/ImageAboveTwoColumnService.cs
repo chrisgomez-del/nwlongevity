@@ -44,6 +44,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                     var linkField = (LinkField)datasource.Fields[Templates.ImageAboveTwoColumn.Fields.CtaSource];
                     model.CtaText = !string.IsNullOrWhiteSpace(linkField?.Text) ? linkField.Text : "Read More";
                 }
+                model.SectionId = datasource.Fields[Templates.ImageAboveTwoColumn.Fields.SectionId].GetValue(true) ?? string.Empty;
             }
 
             return model;

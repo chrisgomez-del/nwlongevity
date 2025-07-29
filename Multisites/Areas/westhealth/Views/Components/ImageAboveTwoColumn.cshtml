@@ -1,6 +1,6 @@
 ﻿@model NM_MultiSites.Areas.westhealth.Models.Components.ImageAboveTwoColumnViewModel
 
-<div class="my-5 bg-light tools-resources bg-gradient-secondary">
+<div id="@Model.SectionId" class="my-5 bg-light tools-resources bg-gradient-secondary">
     @if (Sitecore.Context.PageMode.IsExperienceEditor)
     {
         @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.Image)
