@@ -118,10 +118,10 @@ namespace NM_MultiSites.Areas.westhealth.Services
         }
         private List<NavigationLinkViewModel> GetChildNavigationItems(Item currentNavItem, Guid currentItemId)
         {
-            var children = currentNavItem.Children.Where(x => x.InheritsFrom(Templates.GenericLink.TemplateID)).OrderBy(x => x.Appearance.Sortorder);
+            var children = currentNavItem.Children.Where(x => x.InheritsFrom(Templates.GenericLink.TemplateID));
             if (children.Any())
             {
-                return children.Select(x => MapNavigationLinkViewModel(x, currentItemId)).ToList();
+                return children.Select(x => MapNavigationLinkViewModel(x, currentItemId)).OrderBy(x => x.Sortorder).ToList();
             }
             return null;
 
@@ -137,7 +137,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
                             null :
                             WestHealthSitecoreService.LinkUrl(item.Fields[Templates.GenericLink.Fields.LinkSource]),
                 IsActive = link.TargetID.Guid == currentItemID,
-                Children = GetChildNavigationItems(item, currentItemID)
+                Children = GetChildNavigationItems(item, currentItemID), 
+                Sortorder = item.Appearance.Sortorder
             };
         }
         private GenericLinkViewModel MapGenericLinkViewModel(Item item)

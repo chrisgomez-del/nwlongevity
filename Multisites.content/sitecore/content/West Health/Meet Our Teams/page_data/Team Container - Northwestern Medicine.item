@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {D82EE3A3-6653-4AA7-A30B-80C6E56FBD36}
 templatekey: Team Container
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1000
 ----version----
 language: en
 version: 1
-revision: 861b1925-d745-42ea-ad25-1c65448de431
+revision: 0d4d39db-c27b-4bbc-a275-4659d83d92d9
 
 ----field----
 field: {4CC0D6E9-77E9-433D-9FFF-1FA886127F0F}
@@ -28,6 +35,13 @@ key: section title
 content-length: 21
 
 Northwestern Medicine
+----field----
+field: {C048B40B-65CA-4BCF-9239-D9D49F985E09}
+name: Include in Navigation
+key: include in navigation
+content-length: 1
+
+1
 ----field----
 field: {0FC18A7C-20B3-4A7A-AB1E-C9B880ABA4A9}
 name: Title
@@ -46,16 +60,15 @@ content-length: 58
 field: {9223C0D8-24C8-4551-A983-63811CFF2470}
 name: Sub-Title
 key: sub-title
-content-length: 185
+content-length: 186
 
-Northwestern Medicine is the shared strategic vision of Northwestern Memorial HealthCare and Northwestern University Feinberg School of Medicine to transform the future of health care. 
+Northwestern Medicine is the shared strategic vision of Northwestern Memorial Health Care and Northwestern University Feinberg School of Medicine to transform the future of health care. 
 ----field----
 field: {8E629F51-B876-4F9B-A06E-48AAA5FC4A72}
 name: Copy
 key: copy
-content-length: 1301
+content-length: 1109
 
-<p>Northwestern Medicine is the shared strategic vision of Northwestern Memorial HealthCare and Northwestern University Feinberg School of Medicine to transform the future of health care.</p>
 <p>With the academic foundation of Feinberg School of Medicine, Northwestern Medicine is committed to transforming the way health care is delivered.&nbsp;</p>
 <p>Northwestern Medicine is a nonprofit, integrated academic health system that exists to make people better by making medicine better, providing world-class care to patients in Chicago and the surrounding suburbs, as well as patients who travel from all 50 states and more than 100 countries.</p>
 <p>The health system has more than 200 locations with 11 hospitals, three medical groups, more than 5,000 physicians and approximately 40,000 employees.</p>
@@ -75,14 +88,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-861b1925-d745-42ea-ad25-1c65448de431
+0d4d39db-c27b-4bbc-a275-4659d83d92d9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250630T155441Z
+20250729T153442Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

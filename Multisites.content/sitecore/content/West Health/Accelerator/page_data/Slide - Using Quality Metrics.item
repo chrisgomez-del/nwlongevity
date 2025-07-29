@@ -1,0 +1,93 @@
+----item----
+version: 1
+id: {BF85D464-D8FF-40AE-BDEE-18D3FE0F0D4C}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Slide - Using Quality Metrics
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Slide - Using Quality Metrics
+master: {00000000-0000-0000-0000-000000000000}
+template: {4E125E2B-495A-4E3A-9472-90BDDD45C4E3}
+templatekey: Slide
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+788
+----version----
+language: en
+version: 1
+revision: 81ccfd20-777c-448d-a2be-fb50ad95ac57
+
+----field----
+field: {B4DCDAA1-18D2-4D1B-9491-12F0C0B1DFCE}
+name: Title
+key: title
+content-length: 46
+
+Using Quality Metrics to Deliver the Best Care
+----field----
+field: {4FA42C0A-7677-4014-8308-74232EB7355D}
+name: Copy
+key: copy
+content-length: 272
+
+The Accelerator is leading the development of quality metrics focused on accountability, value and outcomes.&nbsp; These metrics guide how integrated care works at Northwestern Medicine-and inform national standards for measuring mental health integration in primary care.
+----field----
+field: {19A9D081-B09B-44D2-A887-05944CBFD443}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{851B3E1E-BBB1-4162-9243-13E7E77A54D8}" />
+----field----
+field: {D150F129-C122-498D-BEBA-B286BE4F6F5D}
+name: Image Location
+key: image location
+content-length: 38
+
+{E79ED289-3D6C-498F-A2E3-D6D75717C043}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250729T130346Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+81ccfd20-777c-448d-a2be-fb50ad95ac57
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250729T131927Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

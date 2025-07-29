@@ -114,7 +114,7 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 if (null == field)
                     return null;
 
-                return field.GetItems().ToList();
+                return field.GetItems().OrderBy(x => x.Appearance.Sortorder).ToList();
             }
             return null;
         }
