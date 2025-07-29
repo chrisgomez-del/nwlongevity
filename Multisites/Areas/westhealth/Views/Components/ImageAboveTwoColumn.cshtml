@@ -8,7 +8,7 @@
     <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource)</p>
 </div>
 
-<section class="">
+<section id="@Model.SectionId" class="">
     <div class="container-fluid container-xxl">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
