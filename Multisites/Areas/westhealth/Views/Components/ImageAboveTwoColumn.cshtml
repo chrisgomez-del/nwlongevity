@@ -1,0 +1,28 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.ImageAboveTwoColumnViewModel
+
+
+<div>
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.SubTitle)</p>
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)</p>
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)</p>
+    <p>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource)</p>
+</div>
+
+<section class="">
+    <div class="container-fluid container-xxl">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.Image)
+        }
+        else
+        {
+            <img src="@Model.ImageUrl" class="w-100 object-fit-cover ratio-11-10" alt="@Model.ImageAltText">
+        }
+        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.Title)</h2>
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.Copy)
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.CtaSource, new { @class = "btn btn-primary" })<br/>
+        <h2>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ImageAboveTwoColumn.Fields.CardListTitle)</h2>
+        @Html.Sitecore().DynamicPlaceholder("imageabovetwocolumn-cards")
+
+    </div>
+</section>

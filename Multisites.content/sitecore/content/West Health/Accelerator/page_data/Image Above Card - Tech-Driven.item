@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {70BD95E4-E38A-4D73-9B67-040B21850C3C}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Image Above Card - Tech-Driven
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Image Above Card - Tech-Driven
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: a4fdf25f-cd21-45fd-9b17-0ecd7f1cecf4
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 21
+
+Tech-Driven Solutions
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 151
+
+A suite of tech-enabled tools and analytics helps track outcomes, optimize care and enable real-time learning, accelerating adoption across care teams.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250728T221526Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a4fdf25f-cd21-45fd-9b17-0ecd7f1cecf4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250728T231830Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

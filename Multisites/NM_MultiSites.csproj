@@ -374,6 +374,7 @@
     <Compile Include="Areas\westhealth\Models\Components\AccordionItemViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\AccordionPanelViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\EnhancedCalloutViewModel.cs" />
+    <Compile Include="Areas\westhealth\Models\Components\ImageAboveTwoColumnViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\NavigableTabsViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\NavigableTabViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Components\ResearchCardViewModel.cs" />
@@ -400,6 +401,7 @@
     <Compile Include="Areas\westhealth\Models\GenericLinkViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\FooterViewModel.cs" />
     <Compile Include="Areas\westhealth\Models\Navigation\HeaderViewModel.cs" />
+    <Compile Include="Areas\westhealth\Services\ImageAboveTwoColumnService.cs" />
     <Compile Include="Areas\westhealth\Services\NavigableTabsService.cs" />
     <Compile Include="Areas\westhealth\Services\NavigationService.cs" />
     <Compile Include="Areas\westhealth\Services\AccordionPanelService .cs" />
@@ -736,6 +738,8 @@
     <Content Include="Areas\westhealth\Views\Components\AccordionImagePanel.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\AccordionImageItem.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\CopyCard.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\ImageAboveTwoColumn.cshtml" />
+    <Content Include="Areas\westhealth\Views\Components\Cards\ImageAboveCard.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

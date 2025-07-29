@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {25F7017D-BB96-4C9D-ADF4-CE8B4A84707B}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Image Above Card - Cross-Functional
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Image Above Card - Cross-Functional
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: bc148d20-193b-4a88-8a2b-30433d2fef2a
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 25
+
+Cross-Functional Approach
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 222
+
+Through collaboration with clinical, operational, and tech teams, the Accelerator co-creates practical, scalable innovations tha embed mental health into primary care in ways that are effective, efficitent and sustainable.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250728T221620Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bc148d20-193b-4a88-8a2b-30433d2fef2a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250728T231958Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

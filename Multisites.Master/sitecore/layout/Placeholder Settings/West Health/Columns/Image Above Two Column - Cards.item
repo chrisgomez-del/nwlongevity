@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {206B8EED-C8A8-4C95-B183-16FE9461C5D8}
+id: {840BD499-8F59-4BE4-8F94-BBC35772B18A}
 database: master
-path: /sitecore/layout/Placeholder Settings/West Health/WestHealth-Main
-parent: {F962D5AE-BE74-4B7C-A7B8-ADA8817A328F}
-name: WestHealth-Main
+path: /sitecore/layout/Placeholder Settings/West Health/Columns/Image Above Two Column - Cards
+parent: {7A727EF6-3CF9-436B-9C22-04C0C2C9CB99}
+name: Image Above Two Column - Cards
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
@@ -13,20 +13,20 @@ templatekey: Placeholder
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 15
+content-length: 25
 
-WestHealth-Main
+imageabovetwocolumn-cards
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 740
+content-length: 38
 
-{BD241B31-7DEF-4CF2-A9A5-E144E50CAAB6}|{0F9994B3-6857-4653-9EDE-32191216BEF2}|{5058D9DB-0F88-499E-BC6A-7AD7E541A76D}|{0FAF548E-2613-4268-B953-45785FF8A771}|{DCFE7B37-94DE-490B-915A-F0C9FC19E0F4}|{B2C2AC10-F6F2-4B84-9424-35A75346EB70}|{C00427FD-C0E0-4B90-93B2-A2F97E8FA1C5}|{2A0A4A9A-AAC9-45F4-A955-996E01589908}|{2363AF76-01CE-4E40-BA78-11D6207977E9}|{15D3B659-DCB7-470D-91E2-C5D5B1FA8A2B}|{6A3D03BF-B24C-42FD-9467-A788C8590877}|{55CD6C3D-ED0A-49E0-9311-783BE49FE182}|{7A7F86F5-5FE1-4E38-B34A-D64E0C526DE2}|{3A1AB226-932F-4F67-BA3D-4F963426DCA6}|{7130B2BF-9A82-4200-8FE9-8B4EC5CD8117}|{BFF53D1B-D96A-45CD-B963-87AEB454399A}|{B79D59AD-96E8-4CDD-A4B4-CC505D050B2B}|{8E7AE4A1-6951-4260-B3D9-7139ADFED43C}|{EDCB95F4-3655-4916-9084-AD39CFCD95E0}
+{5E838C51-5DC8-4924-809D-849A5F60C205}
 ----version----
 language: en
 version: 1
-revision: 4dfb4976-e3c6-4e01-a54f-f0c1672ad98c
+revision: f83feab7-0b4c-4782-9922-ea5050402e09
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20250515T191324Z
+20250728T202522Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4dfb4976-e3c6-4e01-a54f-f0c1672ad98c
+f83feab7-0b4c-4782-9922-ea5050402e09
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20250728T203101Z
+20250728T215222Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
