@@ -22395,6 +22395,11 @@ textarea.form-control-lg {
   line-height: 120%;
 }
 
+.fs-28 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
 .primary-copy {
   color: #E8E5F3;
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -22616,6 +22621,35 @@ textarea.form-control-lg {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(4.1500000954px);
 }
+@media (min-width: 992px) {
+  .bg-frosted.dropdown-menu {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+    top: calc(100% + 0.3125rem) !important;
+  }
+}
+
+.dropdown-arrow.dropdown-toggle {
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.3s linear;
+}
+.dropdown-arrow.dropdown-toggle[aria-expanded=true] {
+  transform: rotate(-180deg);
+}
+.dropdown-arrow.dropdown-toggle:after {
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid #574497;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #574497;
+  transform: rotate(-45deg);
+}
+.dropdown-arrow.dropdown-toggle:hover:after {
+  border-color: rgba(0, 0, 0, 0.8);
+}
 
 .wysiwyg {
   display: flex;
@@ -22630,6 +22664,14 @@ textarea.form-control-lg {
 }
 .wysiwyg > *:is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
   margin-top: 1.5rem;
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(216deg, #574497 70.15%, #007298 148.56%);
+}
+
+.z-1000 {
+  z-index: 1000 !important;
 }
 
 .navbar-main {
@@ -22849,6 +22891,9 @@ footer .footer-socials a:hover {
   padding-right: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+.content-split--subtitle + .copy-card {
+  margin-top: -3rem;
 }
 .content-split--subtitle .object-fit-cover {
   object-fit: cover;
