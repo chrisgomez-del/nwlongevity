@@ -40,8 +40,8 @@ const handleInternalNav = (swiper, elem1, elem2) => {
         const totalHeight = getFullHeightWithMargin(elem2);
         console.log('Updated totalHeight:', totalHeight);
 
-        elem1.style.paddingBottom = `${totalHeight + yPaddingOffsetPB}px`;
-        elem2.style.marginTop = `-${totalHeight + yPaddingOffset}px`;
+        elem1.style.paddingBottom = `${totalHeight + yPaddingOffset}px`;
+        elem2.style.marginTop = `-${totalHeight + yPaddingOffsetPB}px`;
     }
 
     const debouncedUpdate = debounce(applyStacking, 10);
