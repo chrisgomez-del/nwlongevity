@@ -36,10 +36,11 @@ const handleInternalNav = (swiper, elem1, elem2) => {
 
     function applyStacking() {
         const yPaddingOffset = 60; // total padding above/below the nav
+        const yPaddingOffsetPB = 20; // total padding above/below the nav
         const totalHeight = getFullHeightWithMargin(elem2);
         console.log('Updated totalHeight:', totalHeight);
 
-        elem1.style.paddingBottom = `${totalHeight + yPaddingOffset}px`;
+        elem1.style.paddingBottom = `${totalHeight + yPaddingOffsetPB}px`;
         elem2.style.marginTop = `-${totalHeight + yPaddingOffset}px`;
     }
 
