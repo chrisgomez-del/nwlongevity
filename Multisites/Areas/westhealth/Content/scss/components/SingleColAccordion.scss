@@ -26,3 +26,12 @@
         min-height: 32px;
     }
 }
+
+#collaborativeCareDiagram {
+    .accordion-item {
+        &:first-of-type {
+            border-top:none;
+        }
+        border-color:#E8E5F3;
+    }
+}
