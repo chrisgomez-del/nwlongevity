@@ -12,5 +12,6 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public string CtaText { get; set; }
         public string BackgroundColor { get; set; }
         public string BackgroundCssClass { get; set; }
+        public string CtaTarget { get; set; }
     }
 }

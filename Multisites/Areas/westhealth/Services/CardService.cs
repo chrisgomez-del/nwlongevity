@@ -33,12 +33,13 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 if (String.IsNullOrEmpty(datasource.Fields[Templates.Card.Fields.CtaSource].GetValue(true)))
                 {
                     model.CtaText = string.Empty;
+                    model.CtaTarget = String.Empty;
                 } else
                 {
                     var linkField = (LinkField)datasource.Fields[Templates.Card.Fields.CtaSource];
-                    model.CtaText = !string.IsNullOrWhiteSpace(linkField?.Text) ? linkField.Text : "Read More";                    
+                    model.CtaText = !string.IsNullOrWhiteSpace(linkField?.Text) ? linkField.Text : "Read More";   
+                    model.CtaTarget = !string.IsNullOrWhiteSpace(linkField?.Target) ? linkField.Target : "";
                 }
-
             }
             return model;
         }

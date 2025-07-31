@@ -14,6 +14,7 @@ namespace NM_MultiSites.Areas.westhealth.Models.Components
         public IHtmlString Image { get; set; }
         public string ImageUrl { get; set; }
         public string ImageAltText { get; set; }
+        public string CtaTarget { get; set; }
 
     }
 }
