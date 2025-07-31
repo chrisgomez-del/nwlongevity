@@ -73,6 +73,17 @@
   }
 }
 
+.single-col-accordion__title {
+    font-size: clamp(1.125rem,1.5vw + 1rem,1.25rem);
+    color: #00668F;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 39.2px */
+    &--dark {
+        color: $primaryDark;
+    }
+}
+
 .primary-text--gradient {
   background: linear-gradient(110deg, #574497 0%, #007298 111.92%);
   background-clip: text;

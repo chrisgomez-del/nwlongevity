@@ -19,6 +19,7 @@
   z-index: 0;
   @include media-breakpoint-up(xxl) {
     max-height: calc(100% - #{autorem(115)});
+    padding-bottom:3rem;
   }
 
   > * {
