@@ -66,6 +66,7 @@
         justify-content: center;
         width: var(--swiper-navigation-size);
         height: 42px;
+        user-select:none;
 
         &:after {
             content: none;
