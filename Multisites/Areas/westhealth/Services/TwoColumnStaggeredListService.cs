@@ -41,12 +41,14 @@ namespace NM_MultiSites.Areas.westhealth.Services
                     null :
                     WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource]);
                 var leftLinkField = (LinkField)datasource.Fields[Templates.TwoColumnStaggeredList.Fields.LeftListCtaSource];
-                model.LeftListCtaText = !string.IsNullOrWhiteSpace(leftLinkField?.Text) ? leftLinkField.Text : "Download PDF"; 
+                model.LeftListCtaText = !string.IsNullOrWhiteSpace(leftLinkField?.Text) ? leftLinkField.Text : "Download PDF";
+                model.LeftListCtaTarget = !string.IsNullOrWhiteSpace(leftLinkField?.Target) ? leftLinkField.Target : "";
                 model.RightListCtaSource = String.IsNullOrEmpty(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource].GetValue(true)) ?
                     null :
                     WestHealthSitecoreService.LinkUrl(datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource]);
                 var rightLinkField = (LinkField)datasource.Fields[Templates.TwoColumnStaggeredList.Fields.RightListCtaSource];
                 model.RightListCtaText = !string.IsNullOrWhiteSpace(rightLinkField?.Text) ? rightLinkField.Text : "Download PDF";
+                model.RightListCtaTarget = !string.IsNullOrWhiteSpace(rightLinkField?.Target) ? rightLinkField.Target : "";
                 model.ImageUrl = WestHealthSitecoreService.GetMediaUrl(datasource);
                 model.ImageAltText = WestHealthSitecoreService.GetMediaAltText(datasource);
                 model.SectionId = datasource.Fields[Templates.TwoColumnStaggeredList.Fields.SectionId].GetValue(true) ?? string.Empty;
