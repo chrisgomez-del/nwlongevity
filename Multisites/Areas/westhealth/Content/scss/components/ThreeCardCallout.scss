@@ -1,6 +1,6 @@
 .three-card-callout {
     @include gradient-directional(#FFF, #E8E5F3, 180deg);
-
+    overflow:hidden;
 
     @include media-breakpoint-up(lg) {
         min-height: 80vh;

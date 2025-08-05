@@ -114,3 +114,9 @@
 #landscape + #our-solution {
     margin-top:-3rem !important;
 }
+
+.list-style {
+    &--none {
+        list-style:none;
+    }
+}
