@@ -19,9 +19,10 @@
  border-radius: calc(var(--bs-border-radius-sm) * 2) !important; 
 }
 .gradient-host {
- position: relative;
- --x: 40%;
- --y: 50%;
+    position: relative;
+    --x: 40%;
+    --y: 50%;
+    background-image: radial-gradient(circle at var(--x) var(--y), #574497, #00668f);
 }
 .gradient-host::before {
  content: "";
