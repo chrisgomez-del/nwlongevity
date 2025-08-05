@@ -62,7 +62,8 @@ namespace NM_MultiSites.Areas.westhealth.Services
                 Source = new HtmlString(FieldRenderer.Render(item, Templates.ResearchCard.Fields.Source)),
                 BackgroundColor = WestHealthSitecoreService.GetDroplinkValue(item.Fields[Templates.ResearchCard.Fields.BackgroundColor]),
                 BackgroundCssClass = WestHealthSitecoreService.GetDroplinkValue(item.Fields[Templates.ResearchCard.Fields.BackgroundColor], Templates.ResearchCard.Fields.CssClass),
-                CtaText = !string.IsNullOrWhiteSpace(linkField?.Text) ? linkField.Text : "Read More"
+                CtaText = !string.IsNullOrWhiteSpace(linkField?.Text) ? linkField.Text : "Read More",
+                CtaTarget = !string.IsNullOrWhiteSpace(linkField?.Target) ? linkField.Target : ""
 
             };
         }
