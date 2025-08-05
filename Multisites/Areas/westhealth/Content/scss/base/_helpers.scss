@@ -22,7 +22,6 @@
     position: relative;
     --x: 40%;
     --y: 50%;
-    background-image: radial-gradient(circle at var(--x) var(--y), #574497, #00668f);
 }
 .gradient-host::before {
  content: "";
@@ -34,6 +33,11 @@
  z-index: -1;
  pointer-events: none;
 }
+
+[data-hero-carousel], [data-footer] {
+    background-image: radial-gradient(circle at var(--x) var(--y), #574497, #00668f);
+}
+
 .bg-frosted {
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
