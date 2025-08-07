@@ -1,6 +1,6 @@
 .offset-content-with-tabs {
   position: relative;
-  min-height: autorem(800);
+  min-height: autorem(900);
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -44,7 +44,7 @@
   flex-direction: column;
   gap: autorem(32);
   transition: all 0.3s linear;
-  transform: translateY(-10px);
+  //transform: translateY(-10px);
   min-height: 50vh;
   
   @include media-breakpoint-up(lg) {

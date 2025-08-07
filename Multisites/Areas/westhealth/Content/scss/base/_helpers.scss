@@ -111,8 +111,9 @@
     z-index:1000 !important;
 }
 
-#landscape + #our-solution {
-    margin-top:-3rem !important;
+#landscape + #our-solution,
+#landscape + #benefits {
+    margin-top: -3rem !important;
 }
 
 .list-style {

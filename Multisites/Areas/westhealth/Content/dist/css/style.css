@@ -22352,6 +22352,18 @@ textarea.form-control-lg {
   color: #322071;
 }
 
+.single-col-accordion__title {
+  font-size: clamp(1.125rem, 1.5vw + 1rem, 1.25rem);
+  color: #00668F;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 39.2px */
+}
+.single-col-accordion__title--dark {
+  color: #322071;
+}
+
 .primary-text--gradient {
   background: linear-gradient(110deg, #574497 0%, #007298 111.92%);
   background-clip: text;
@@ -22616,6 +22628,10 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 
+[data-hero-carousel], [data-footer] {
+  background-image: radial-gradient(circle at var(--x) var(--y), #574497, #00668f);
+}
+
 .bg-frosted {
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -22651,6 +22667,10 @@ textarea.form-control-lg {
   border-color: rgba(0, 0, 0, 0.8);
 }
 
+.box-shadow--sm {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
 .wysiwyg {
   display: flex;
   flex-direction: column;
@@ -22672,6 +22692,15 @@ textarea.form-control-lg {
 
 .z-1000 {
   z-index: 1000 !important;
+}
+
+#landscape + #our-solution,
+#landscape + #benefits {
+  margin-top: -3rem !important;
+}
+
+.list-style--none {
+  list-style: none;
 }
 
 .navbar-main {
@@ -23073,6 +23102,7 @@ footer .footer-socials a:hover {
 
 .three-card-callout {
   background-image: linear-gradient(180deg, #FFF, #E8E5F3);
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .three-card-callout {
@@ -23163,7 +23193,7 @@ footer .footer-socials a:hover {
 
 .offset-content-with-tabs {
   position: relative;
-  min-height: 50rem;
+  min-height: 56.25rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -23186,6 +23216,7 @@ footer .footer-socials a:hover {
 @media (min-width: 1400px) {
   .offset-content-with-tabs-bg {
     max-height: calc(100% - 7.1875rem);
+    padding-bottom: 3rem;
   }
 }
 .offset-content-with-tabs-bg > * {
@@ -23210,7 +23241,6 @@ footer .footer-socials a:hover {
   flex-direction: column;
   gap: 2rem;
   transition: all 0.3s linear;
-  transform: translateY(-10px);
   min-height: 50vh;
 }
 .benefit-tabs ul:not(.nav) {
@@ -23325,6 +23355,13 @@ footer .footer-socials a:hover {
   min-height: 32px;
 }
 
+#collaborativeCareDiagram .accordion-item {
+  border-color: #E8E5F3;
+}
+#collaborativeCareDiagram .accordion-item:first-of-type {
+  border-top: none;
+}
+
 .utility-nav .btn i {
   font-size: 2rem;
   line-height: 0.2;
@@ -23424,6 +23461,7 @@ footer .footer-socials a:hover {
   justify-content: center;
   width: var(--swiper-navigation-size);
   height: 42px;
+  user-select: none;
 }
 .hero-carousel .swiper-button-next:after,
 .hero-carousel .swiper-button-prev:after {
