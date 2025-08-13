@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination, Navigation, Keyboard } from 'swiper/modules';
+import { Pagination, Navigation, Keyboard, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -62,8 +62,11 @@ export const init = (element, moduleSelector) => {
     animateGradient(moduleSelector);
 
     const swiper = new Swiper('.hero-swiper', {
-        modules: [Navigation, Pagination, Keyboard],
+        modules: [Navigation, Pagination, Keyboard, Autoplay],
         loop: true,
+        autoplay: {
+            delay: 4000,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
