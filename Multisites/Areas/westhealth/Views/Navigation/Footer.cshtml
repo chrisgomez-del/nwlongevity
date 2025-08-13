@@ -107,7 +107,8 @@
                         @foreach (var navItem in Model.Links)
                         {
                             var baseClass = "primary-copy primary-copy--lg fw-bold mb-4 link-offset-2";
-                            var linkClass = navItem.IsActive ? baseClass + " active" : baseClass;
+                            //var linkClass = navItem.IsActive ? baseClass + " active" : baseClass;
+                            var linkClass = !navItem.IsActive ? baseClass + " active" : baseClass;
                             <li class="mb-4"><a href="@navItem.LinkSource" data-sortorder="@navItem.Sortorder" class="@linkClass">@navItem.LinkText</a></li>
                         }
                     </ul>
