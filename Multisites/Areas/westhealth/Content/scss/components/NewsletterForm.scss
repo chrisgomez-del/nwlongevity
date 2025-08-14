@@ -86,7 +86,7 @@ $formstack-button-hover: #eaeaea;
   
   .fsValidationError {
     position:absolute;
-    bottom:0;
+    top:47px;
     background:transparent;
     border:none;
     color:$white;
@@ -122,4 +122,15 @@ $formstack-button-hover: #eaeaea;
 
 .grecaptcha-badge {
   display: none !important;
+}
+
+#fsform-container-6214449 label#label-field184403674, #fsform-container-6214449 label#label-field184606920w {
+    @media only screen and (min-width:992px) {
+        padding-bottom: 2.9rem;
+    }
+}
+
+[aria-label="recaptcha response"] {
+    color:#FFF;
+    margin-top:15px;
 }

@@ -24060,7 +24060,7 @@ footer .footer-socials a:hover {
 }
 #fsform-container-6214449 .fsValidationError {
   position: absolute;
-  bottom: 0;
+  top: 47px;
   background: transparent;
   border: none;
   color: #FFF;
@@ -24092,6 +24092,17 @@ footer .footer-socials a:hover {
 
 .grecaptcha-badge {
   display: none !important;
+}
+
+@media only screen and (min-width: 992px) {
+  #label-field184403674, #label-field184606920w {
+    padding-bottom: 2.9rem;
+  }
+}
+
+[aria-label="recaptcha response"] {
+  color: #FFF;
+  margin-top: 15px;
 }
 
 #fsform-container-6211076 form {
@@ -24205,6 +24216,10 @@ footer .footer-socials a:hover {
 }
 #fsform-container-6211076 .fsSubmitButton:hover {
   background: #eaeaea;
+}
+
+#label-field184292616 {
+  padding-bottom: 1.5rem;
 }
 
 html,
