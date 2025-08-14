@@ -1,5 +1,6 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
+@using Sitecore.Data.Fields
 @model RenderingModel
 
 <!DOCTYPE html>
@@ -7,8 +8,9 @@
 <head>
     <title>@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Global.Fields.MetaTitle)</title>
     <link href="https://fonts.googleapies.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
-    <link rel="stylesheet" href="~/Areas/westhealth/Content/dist/css/style.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Areas/westhealth/Content/dist/css/style.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Global.Fields.MetaDescription)" />
 </head>
 <body data-scrollToTarget="BackToTop">
 

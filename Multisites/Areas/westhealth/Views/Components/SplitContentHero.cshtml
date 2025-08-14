@@ -18,11 +18,14 @@
                 }
                 else
                 {
-                    <picture>
-                        <source srcset="@Model.ImageUrl?mw=670&mh=500&mode=crop" media="(max-width: 991px)" />
-                        <source srcset="@Model.ImageUrl?mw=670&mh=701&mode=crop" media="(min-width: 992px)" />
-                        <img src="@Model.ImageUrl?mw=670&mh=701&mode=crop" alt="@Model.ImageAltText" class="img-fluid w-100 h-100 object-fit-cover hero-img" />
-                    </picture>
+                    if (!string.IsNullOrEmpty(Model.ImageUrl))
+                    {
+                        <picture>
+                            <source srcset="@Model.ImageUrl?mw=670&mh=500&mode=crop" media="(max-width: 991px)" />
+                            <source srcset="@Model.ImageUrl?mw=670&mh=701&mode=crop" media="(min-width: 992px)" />
+                            <img src="@Model.ImageUrl?mw=670&mh=701&mode=crop" alt="@Model.ImageAltText" class="img-fluid w-100 h-100 object-fit-cover hero-img" />
+                        </picture>
+                    }
                 }
             </div>
         </div>

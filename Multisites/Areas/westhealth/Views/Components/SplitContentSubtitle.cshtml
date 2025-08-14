@@ -17,10 +17,13 @@
                     }
                     else
                     {
-                        <picture>
-                            <source srcset="@Model.ImageUrl?mw=576&mh=400&mode=crop" media="(max-width: 991px)" />
-                            <img src="@Model.ImageUrl?mw=670&mh=701&mode=crop" alt="@Model.ImageAltText" class="content-split__img object-fit-cover img-fluid w-100 h-auto" />
-                        </picture>
+                        if (!string.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <picture>
+                                <source srcset="@Model.ImageUrl?mw=576&mh=400&mode=crop" media="(max-width: 991px)" />
+                                <img src="@Model.ImageUrl?mw=670&mh=701&mode=crop" alt="@Model.ImageAltText" class="content-split__img object-fit-cover img-fluid w-100 h-auto" />
+                            </picture>
+                        }
                     }
                 </div>
             </div>
