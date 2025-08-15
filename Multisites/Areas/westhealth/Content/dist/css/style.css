@@ -22725,7 +22725,7 @@ textarea.form-control-lg {
   --bs-nav-link-font-weight: 600;
   --active-state-bar-height: 8px;
 }
-.navbar-main .nav-link:after {
+.navbar-main .nav-link:before {
   content: "";
   position: absolute;
   bottom: calc(-1 * var(--active-state-bar-height));
@@ -22736,9 +22736,18 @@ textarea.form-control-lg {
   border-radius: 4px 4px 0px 0px;
   transition: width 0.2s ease-out;
 }
-.navbar-main .nav-link.active:after {
+.navbar-main .nav-link.active:before {
   width: 100%;
   background: var(--bs-navbar-active-color);
+}
+.navbar-main .nav-link:after {
+  display: none;
+}
+.navbar-main .nav-link svg {
+  transition: transform 0.2s ease-out;
+}
+.navbar-main .nav-link[aria-expanded=true] svg {
+  transform: rotate(180deg);
 }
 .navbar-main .dropdown-toggle-split {
   padding-right: 0.5rem;
@@ -24095,7 +24104,7 @@ footer .footer-socials a:hover {
 }
 
 @media only screen and (min-width: 992px) {
-  #label-field184403674, #label-field184606920w {
+  #fsform-container-6214449 label#label-field184403674, #fsform-container-6214449 label#label-field184606920w {
     padding-bottom: 2.9rem;
   }
 }
