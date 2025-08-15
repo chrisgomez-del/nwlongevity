@@ -40,6 +40,8 @@ namespace NM_MultiSites.Areas.westhealth
             public static class Fields
             {
                 public static string MetaTitle = "Meta Title";
+                public static string MetaDescription = "Meta Description";
+                public static string MetaKeywords = "Meta Keywords";
             }
         }
         public static class InternalNavigation
