@@ -22633,16 +22633,18 @@ textarea.form-control-lg {
 }
 
 .bg-frosted {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(4.1500000954px);
 }
 @media (min-width: 992px) {
   .bg-frosted.dropdown-menu {
+    --bs-dropdown-min-width: 100%;
+    width: max-content;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: none;
-    top: calc(100% + 0.3125rem) !important;
+    top: calc(100% + 0.45rem) !important;
   }
 }
 
@@ -22748,6 +22750,13 @@ textarea.form-control-lg {
 }
 .navbar-main .nav-link[aria-expanded=true] svg {
   transform: rotate(180deg);
+}
+.navbar-main .nav-link:focus-visible {
+  box-shadow: none;
+}
+.navbar-main .nav-link .dropdown .nav-link {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 .navbar-main .dropdown-toggle-split {
   padding-right: 0.5rem;
