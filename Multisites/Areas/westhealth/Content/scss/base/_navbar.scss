@@ -57,6 +57,17 @@
                 transform: rotate(180deg);
             }
         }
+
+        &:focus-visible {
+            box-shadow: none;
+        }
+
+        .dropdown {
+            .nav-link {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
     }
 
     .dropdown-toggle-split {
