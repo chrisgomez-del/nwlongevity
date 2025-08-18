@@ -23443,6 +23443,11 @@ footer .footer-socials a:hover {
   aspect-ratio: 1/1;
   max-width: 95%;
 }
+@media (min-width: 1200px) {
+  .hero-carousel img {
+    max-width: 90%;
+  }
+}
 .hero-carousel .swiper {
   padding: 3.75rem 0;
 }
