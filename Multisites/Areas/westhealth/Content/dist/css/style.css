@@ -22633,16 +22633,18 @@ textarea.form-control-lg {
 }
 
 .bg-frosted {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(4.1500000954px);
 }
 @media (min-width: 992px) {
   .bg-frosted.dropdown-menu {
+    --bs-dropdown-min-width: 100%;
+    width: max-content;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: none;
-    top: calc(100% + 0.3125rem) !important;
+    top: calc(100% + 0.45rem) !important;
   }
 }
 
@@ -22725,7 +22727,7 @@ textarea.form-control-lg {
   --bs-nav-link-font-weight: 600;
   --active-state-bar-height: 8px;
 }
-.navbar-main .nav-link:after {
+.navbar-main .nav-link:before {
   content: "";
   position: absolute;
   bottom: calc(-1 * var(--active-state-bar-height));
@@ -22736,9 +22738,25 @@ textarea.form-control-lg {
   border-radius: 4px 4px 0px 0px;
   transition: width 0.2s ease-out;
 }
-.navbar-main .nav-link.active:after {
+.navbar-main .nav-link.active:before {
   width: 100%;
   background: var(--bs-navbar-active-color);
+}
+.navbar-main .nav-link:after {
+  display: none;
+}
+.navbar-main .nav-link svg {
+  transition: transform 0.2s ease-out;
+}
+.navbar-main .nav-link[aria-expanded=true] svg {
+  transform: rotate(180deg);
+}
+.navbar-main .nav-link:focus-visible {
+  box-shadow: none;
+}
+.navbar-main .nav-link .dropdown .nav-link {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 .navbar-main .dropdown-toggle-split {
   padding-right: 0.5rem;
@@ -23425,6 +23443,11 @@ footer .footer-socials a:hover {
   aspect-ratio: 1/1;
   max-width: 95%;
 }
+@media (min-width: 1200px) {
+  .hero-carousel img {
+    max-width: 90%;
+  }
+}
 .hero-carousel .swiper {
   padding: 3.75rem 0;
 }
@@ -24095,7 +24118,7 @@ footer .footer-socials a:hover {
 }
 
 @media only screen and (min-width: 992px) {
-  #label-field184403674, #label-field184606920w {
+  #fsform-container-6214449 label#label-field184403674, #fsform-container-6214449 label#label-field184606920w {
     padding-bottom: 2.9rem;
   }
 }

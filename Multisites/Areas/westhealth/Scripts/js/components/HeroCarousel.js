@@ -66,6 +66,7 @@ export const init = (element, moduleSelector) => {
         loop: true,
         autoplay: {
             delay: 8000,
+            pauseOnMouseEnter: true
         },
         pagination: {
             el: '.swiper-pagination',

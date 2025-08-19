@@ -81,4 +81,34 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-StripHtml]').forEach((element) => {
         element.innerHTML = stripHTMLFromElement(element);
     })
+
+    const desktopMainNavDropdowns = document.querySelectorAll('.navbar-main-desktop .dropdown');
+    desktopMainNavDropdowns.forEach((dd) => {
+        const link = dd.querySelector('a.dropdown-toggle');
+        const dropdown = Dropdown.getOrCreateInstance(link, { autoClose: 'outside' });
+        let hoverTimeout;
+
+        // Hover behavior
+        dd.addEventListener('mouseenter', () => {
+            clearTimeout(hoverTimeout);
+            dropdown.show();
+        });
+
+        dd.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => dropdown.hide(), 150);
+        });
+
+        // Click behavior
+        link.addEventListener('click', (e) => {
+            // Prevent Bootstrap's default click toggle from running first
+            e.stopImmediatePropagation();
+            setTimeout(() => {
+                if (!dd.classList.contains('show')) {
+                    e.preventDefault(); // first click opens
+                    dropdown.show();
+                }
+            }, 200);
+            // If already open, allow navigation to href
+        });
+    });
 });

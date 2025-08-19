@@ -21,6 +21,10 @@
         object-position: center;
         aspect-ratio: 1/1;
         max-width: 95%;
+
+        @include media-breakpoint-up(xl) {
+            max-width: 90%;
+        }
     }
 
     .swiper {
