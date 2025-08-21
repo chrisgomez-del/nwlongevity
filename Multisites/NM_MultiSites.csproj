@@ -369,6 +369,7 @@
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
+    <Compile Include="Areas\longevity\longevityAreaRegistration.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
     <Compile Include="Areas\westhealth\Controllers\PageController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardListViewModel.cs" />
@@ -452,6 +453,7 @@
     <Content Include="App_Config\include\RegisterApiRoutes.config" />
     <Content Include="App_Config\include\WestHealth-Settings.config" />
     <Content Include="App_Config\include\WestHealth-Initialize.config" />
+    <Content Include="App_Config\include\Longevity-Settings.config" />
     <None Include="Areas\ems\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.min.js" />
@@ -742,6 +744,7 @@
     <Content Include="Areas\westhealth\Views\Components\Cards\CopyCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\ImageAboveTwoColumn.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\ImageAboveCard.cshtml" />
+    <Content Include="Areas\longevity\Views\web.config" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -775,6 +778,9 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
+    <Folder Include="Areas\longevity\Controllers\" />
+    <Folder Include="Areas\longevity\Data\" />
+    <Folder Include="Areas\longevity\Views\Shared\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />
     <Folder Include="Areas\westhealth\Controllers\Components\" />
     <Folder Include="Areas\westhealth\Data\" />
