@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {EB7483A6-FFAE-4012-BAEA-8BC2701BC7A6}
+database: master
+path: /sitecore/content/West Health/page_data/Card List Card - Interested
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Card List Card - Interested
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: a846d1ae-0e9f-489d-9951-0c8d28ad3f9a
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 44
+
+Interested?&nbsp; Contact us to get started.
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 194
+
+Reach out to learn more about the Accelerator's resources, the Collaborative Behavioral Health Program, or Northwestern Medicine, West Health and Meadows Mental Health Policy Institute research.
+----field----
+field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
+name: Cta Source
+key: cta source
+content-length: 134
+
+<link text="Contact Us" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250625T193612Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a846d1ae-0e9f-489d-9951-0c8d28ad3f9a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250625T193808Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

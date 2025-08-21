@@ -1,0 +1,138 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.NavigableTabsViewModel
+
+<!-- Tools & Resources -->
+@*<link rel="stylesheet" href="../styles/components/ResourceNavigator.processed.css">*@
+
+<!-- INCLUDE IN EVERY FILE -->
+@*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+<link rel="stylesheet" href="../styles/style.processed.min.css">*@
+<!-- INCLUDE IN EVERY FILE -->
+
+@{
+    bool isFirstTab = true;
+    bool isFirstDesktopTab = true;
+    bool isFirstPanel = true;
+}
+
+
+<div id="@Model.SectionId" class="container py-4 tools-resources" data-toolsresources>
+    <div class="row">
+        <!-- Sidebar Navigation -->
+        <nav class="col-md-4 col-lg-3 mb-4 mb-md-0">
+            <!-- Mobile Accordion Navigation -->
+            <div class="d-md-none mb-3">
+                <div class="accordion" data-navAccordion>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="navHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-expanded="false" aria-controls="navCollapse">
+                                <span data-navDropdownLabel>Navigate Sections</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                    <circle cx="16" cy="16.199" r="15" stroke="#FFF" stroke-width="2" />
+                                    <rect class="icon-bar-horizontal" x="6.58789" y="17.1404" width="1.88235" height="18.8235" transform="rotate(-90 6.58789 17.1404)" fill="#FFF" />
+                                    <rect class="icon-bar-vertical" x="15.0586" y="7" width="1.88235" height="18.8235" fill="#FFF" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="navCollapse" class="accordion-collapse collapse" aria-labelledby="navHeading" data-bs-parent="#navAccordion">
+                            <div class="accordion-body">
+                                <div class="nav flex-column nav-pills gap-2">
+                                    @foreach (var tab in Model.NavigableTabs)
+                                    {
+                                        var activeClass = isFirstTab ? "active" : "";
+                                        var selectedAria = isFirstTab ? "true" : "false";
+                                        <button class="nav-link @activeClass" 
+                                                id="tab-@tab.TabId-tab"
+                                                data-bs-toggle="pill"
+                                                data-bs-target="#panel-@tab.TabId"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="panel-@tab.TabId"
+                                                aria-selected="@selectedAria">@tab.Title</button>
+                                        isFirstTab = false;
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Sticky Side Navigation -->
+            <div class="d-none d-md-block position-sticky sticky-top" style="top: 6rem; z-index:1;">
+                <div class="nav flex-column nav-pills gap-3" id="resource-tabs" role="tablist" aria-orientation="vertical">
+                    @foreach (var tab in Model.NavigableTabs)
+                    {
+                        var activeClass = isFirstDesktopTab ? "active" : "";
+                        var selectedAria = isFirstDesktopTab ? "true" : "false";
+                        <button class="nav-link text-start @activeClass"
+                                id="tab-@tab.TabId-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#panel-@tab.TabId"
+                                type="button"
+                                role="tab"
+                                aria-controls="panel-@tab.TabId"
+                                aria-selected="@selectedAria">
+                            @tab.Title
+                        </button>
+                        isFirstDesktopTab = false;
+                    }
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Tab Content -->
+        <div class="col-md-7 col-lg-8 offset-md-1">
+            <div class="tab-content" id="resource-tabs-content">
+                @foreach (var tab in Model.NavigableTabs)
+                {
+                    var activeClass = isFirstPanel ? "show active" : "";
+                    var selected = isFirstPanel ? "true" : "false";
+                    isFirstPanel = false;
+
+                    <div class="tab-pane fade @activeClass"
+                         id="panel-@tab.TabId"
+                         role="tabpanel"
+                         aria-labelledby="tab-@tab.TabId-tab">
+                        <h2 class="introduction-title introduction-title--primary mb-4">@tab.Title</h2>
+
+                        @foreach (var resource in tab.TabResources)
+                        {
+                            var hasPdf = !string.IsNullOrWhiteSpace(resource.PdfSource);
+                            var hasCta = !string.IsNullOrWhiteSpace(resource.CtaSource);
+                            var isLinkOnly = !hasPdf && hasCta;
+
+                            <div class="mb-5 pb-5 resources__item-container">
+                                <h3 class="emphasis-title">@resource.Title</h3>
+                                <p class="text-body">@resource.Copy</p>
+
+                                @if (hasPdf)
+                                {
+                                    <a href="@resource.PdfSource"
+                                       class="d-inline-flex align-items-center"
+                                       aria-label="Download PDF - @resource.Title"
+                                       download>
+                                        <i class="bi bi-download me-1"></i> @resource.PdfText
+                                    </a>
+                                }
+
+                                @if (isLinkOnly)
+                                {
+                                    <a href="@resource.CtaSource"
+                                       class=""
+                                       aria-label="Read more: @resource.Title"
+                                       target="_blank" rel="noopener noreferrer">
+                                        @resource.CtaText
+                                    </a>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

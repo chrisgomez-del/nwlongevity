@@ -1,0 +1,97 @@
+----item----
+version: 1
+id: {3D28C2A8-4F81-4A15-8094-A9CEE98945C3}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Container - Advisory Council
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Container - Advisory Council
+master: {00000000-0000-0000-0000-000000000000}
+template: {D82EE3A3-6653-4AA7-A30B-80C6E56FBD36}
+templatekey: Team Container
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+4000
+----version----
+language: en
+version: 1
+revision: dc43051c-c9cd-4b9d-b584-29bda0e399a7
+
+----field----
+field: {4CC0D6E9-77E9-433D-9FFF-1FA886127F0F}
+name: Section ID
+key: section id
+content-length: 16
+
+advisory-council
+----field----
+field: {FE8E3D52-1E07-45D9-B76F-618DCE39FC7C}
+name: Section Title
+key: section title
+content-length: 16
+
+Advisory Council
+----field----
+field: {C048B40B-65CA-4BCF-9239-D9D49F985E09}
+name: Include in Navigation
+key: include in navigation
+content-length: 1
+
+1
+----field----
+field: {0FC18A7C-20B3-4A7A-AB1E-C9B880ABA4A9}
+name: Title
+key: title
+content-length: 62
+
+Northwestern Medicine West Health Accelerator Advisory Council
+----field----
+field: {C8BB1035-2D2F-4E4E-96D0-8326D08D036A}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{10D4DB00-8A28-4C4E-A890-E0CF6C387EBC}" />
+----field----
+field: {8E629F51-B876-4F9B-A06E-48AAA5FC4A72}
+name: Copy
+key: copy
+content-length: 1527
+
+<p>The Northwestern Medicine West Health Accelerator Advisory Council is a dynamic, cross-sector collaboration uniting bold ideas and visionary leadership from Northwestern Medicine, West Health, and Meadows Mental Health Policy Institute. With deep expertise across primary care, mental health care, and health systems, these partners share a powerful commitment: to transform mental health care and expand access to high-quality, patient-centered support.</p>
+<p>Together, the Council helps drive the mission and strategic direction of the Accelerator, grounding its work in the real-world experiences of scaling the Collaborative Behavioral Health Program across Northwestern Medicine&rsquo;s 70+ primary care clinics. By combining innovation with practical insight, the Council advances scalable models that address the mental health crisis head-on &ndash; prioritizing equity, accessibility, and lasting impact.</p>
+<p>The Northwestern Medicine Collaborative Behavioral Health Program serves as a powerful example of this vision in action, showing how psychiatric care can be seamlessly embedded into primary care through the Collaborative Care Model (CoCM). This approach not only improves outcomes and access but also reduces stigma and fragmentation in care.&nbsp;</p>
+<p>Through this unique partnership, the Advisory Council is accelerating the spread of effective, sustainable solutions &ndash; building a future where mental health care is an essential part of how we care for people every day.</p>
+<div>&nbsp;</div>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T132149Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+dc43051c-c9cd-4b9d-b584-29bda0e399a7
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250729T150043Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

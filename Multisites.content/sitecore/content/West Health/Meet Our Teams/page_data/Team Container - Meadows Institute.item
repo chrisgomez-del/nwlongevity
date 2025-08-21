@@ -1,0 +1,104 @@
+----item----
+version: 1
+id: {B2544E29-3AC1-4F55-ABB1-C0907352E2E5}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Container - Meadows Institute
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Container - Meadows Institute
+master: {00000000-0000-0000-0000-000000000000}
+template: {D82EE3A3-6653-4AA7-A30B-80C6E56FBD36}
+templatekey: Team Container
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+3000
+----version----
+language: en
+version: 1
+revision: ee6028a5-84c1-4c97-a612-25d11e36ed6d
+
+----field----
+field: {4CC0D6E9-77E9-433D-9FFF-1FA886127F0F}
+name: Section ID
+key: section id
+content-length: 17
+
+meadows-institute
+----field----
+field: {FE8E3D52-1E07-45D9-B76F-618DCE39FC7C}
+name: Section Title
+key: section title
+content-length: 17
+
+Meadows Institute
+----field----
+field: {C048B40B-65CA-4BCF-9239-D9D49F985E09}
+name: Include in Navigation
+key: include in navigation
+content-length: 1
+
+1
+----field----
+field: {0FC18A7C-20B3-4A7A-AB1E-C9B880ABA4A9}
+name: Title
+key: title
+content-length: 38
+
+Meadows Mental Health Policy Institute
+----field----
+field: {C8BB1035-2D2F-4E4E-96D0-8326D08D036A}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{95B9F1A9-7480-4CF2-8877-AC3E96F97B9F}" />
+----field----
+field: {9223C0D8-24C8-4551-A983-63811CFF2470}
+name: Sub-Title
+key: sub-title
+content-length: 244
+
+Independent and nonpartisan, the Meadows Mental Health Policy Institute works at the intersection of policy and programs to create equitable systemic changes so all people in Texas, the nation and the world can obtain the health care they need.
+----field----
+field: {8E629F51-B876-4F9B-A06E-48AAA5FC4A72}
+name: Copy
+key: copy
+content-length: 1665
+
+<p>Independent and nonpartisan, the Meadows Mental Health Policy Institute works at the intersection of policy and programs to create equitable systemic changes so all people in Texas, the nation and the world can obtain the health care they need.&nbsp;</p>
+<p>The Meadows Institute grew out of The Meadows Foundation&rsquo;s unyielding concern for the people of Texas. In 2014, The Meadows Foundation established the Institute as an independent nonprofit organization. With offices in Austin, Dallas&ndash;Fort Worth, Houston, and San Antonio, and projects in every region of the state, the Meadows Institute has become Texas&rsquo;s most trusted source for results-oriented information and analysis of effective and efficient mental health policy and programs.</p>
+<p>The Meadows Institute works at the national, state, regional, and local levels to help mental health systems improve, share best practices, develop resources, and increase public awareness on the most effective ways to treat mental illness and help people recover.&nbsp;</p>
+<p>The Meadows Institute provides state and national leaders with data-driven, trusted policy and program guidance. It works to shift the focus of investments toward early interventions for children and families and address the mental health crisis in our jails and emergency rooms. By advancing improvements in critical areas such as trauma and grief and the expansion of the mental health workforce, the Meadows Institute is leading the effort to help all people with a mental health need recover and be well.</p>
+<p>Learn more at <a rel="noopener noreferrer" href="http://mmhpi.org" target="_blank">mmhpi.org</a>.</p>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T131935Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ee6028a5-84c1-4c97-a612-25d11e36ed6d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250729T150035Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

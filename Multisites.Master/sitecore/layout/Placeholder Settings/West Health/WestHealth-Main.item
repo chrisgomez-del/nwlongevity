@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {206B8EED-C8A8-4C95-B183-16FE9461C5D8}
+database: master
+path: /sitecore/layout/Placeholder Settings/West Health/WestHealth-Main
+parent: {F962D5AE-BE74-4B7C-A7B8-ADA8817A328F}
+name: WestHealth-Main
+master: {00000000-0000-0000-0000-000000000000}
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+
+----field----
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 15
+
+WestHealth-Main
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
+content-length: 740
+
+{BD241B31-7DEF-4CF2-A9A5-E144E50CAAB6}|{0F9994B3-6857-4653-9EDE-32191216BEF2}|{5058D9DB-0F88-499E-BC6A-7AD7E541A76D}|{0FAF548E-2613-4268-B953-45785FF8A771}|{DCFE7B37-94DE-490B-915A-F0C9FC19E0F4}|{B2C2AC10-F6F2-4B84-9424-35A75346EB70}|{C00427FD-C0E0-4B90-93B2-A2F97E8FA1C5}|{2A0A4A9A-AAC9-45F4-A955-996E01589908}|{2363AF76-01CE-4E40-BA78-11D6207977E9}|{15D3B659-DCB7-470D-91E2-C5D5B1FA8A2B}|{6A3D03BF-B24C-42FD-9467-A788C8590877}|{55CD6C3D-ED0A-49E0-9311-783BE49FE182}|{7A7F86F5-5FE1-4E38-B34A-D64E0C526DE2}|{3A1AB226-932F-4F67-BA3D-4F963426DCA6}|{7130B2BF-9A82-4200-8FE9-8B4EC5CD8117}|{BFF53D1B-D96A-45CD-B963-87AEB454399A}|{B79D59AD-96E8-4CDD-A4B4-CC505D050B2B}|{8E7AE4A1-6951-4260-B3D9-7139ADFED43C}|{EDCB95F4-3655-4916-9084-AD39CFCD95E0}
+----version----
+language: en
+version: 1
+revision: 4dfb4976-e3c6-4e01-a54f-f0c1672ad98c
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250515T191324Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4dfb4976-e3c6-4e01-a54f-f0c1672ad98c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250728T203101Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

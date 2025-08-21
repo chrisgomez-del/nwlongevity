@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {1184900C-1620-4736-9EB0-06878AF69B5F}
+database: master
+path: /sitecore/content/West Health/Resources/page_data/tabs/Navigable Tab - FAQs
+parent: {BAF37E6E-1979-4DA9-A087-323FC4A95F91}
+name: Navigable Tab - FAQs
+master: {00000000-0000-0000-0000-000000000000}
+template: {A4BD525A-7773-496B-B839-46BCE6E5CB0D}
+templatekey: Navigable Tab
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----version----
+language: en
+version: 1
+revision: 2e89c4ca-8144-47e9-8a52-c6464fa5f122
+
+----field----
+field: {6B0B5BF1-5EE0-408F-84C7-A04236A1C90C}
+name: Title
+key: title
+content-length: 4
+
+FAQs
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T200422Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2e89c4ca-8144-47e9-8a52-c6464fa5f122
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T201152Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

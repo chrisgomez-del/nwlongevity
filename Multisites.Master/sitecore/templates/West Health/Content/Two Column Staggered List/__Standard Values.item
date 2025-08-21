@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {90B37228-C565-45AF-876C-290C960BA059}
+database: master
+path: /sitecore/templates/West Health/Content/Two Column Staggered List/__Standard Values
+parent: {CC79CDA3-F693-4278-B34F-06B5BAEBB5E8}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {CC79CDA3-F693-4278-B34F-06B5BAEBB5E8}
+templatekey: Two Column Staggered List
+
+----version----
+language: en
+version: 1
+revision: 6ba0128e-10a3-473c-bd3f-0888d16e9fa6
+
+----field----
+field: {5DC0258D-34E7-4E46-BD2A-6982E468407B}
+name: List Background Color
+key: list background color
+content-length: 38
+
+{366E515C-3399-4FBF-B589-81641A8AA71F}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250527T180530Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6ba0128e-10a3-473c-bd3f-0888d16e9fa6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250527T180539Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

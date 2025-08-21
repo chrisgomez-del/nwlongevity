@@ -1,0 +1,32 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.ResearchListViewModel
+
+<section id="@Model.SectionId" class="news-featured position-relative py-5 d-flex flex-column justify-content-center bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Section Title -->
+                <div class="section-title">
+                    <h2 class="secondary-title secondary-title--dark">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.ResearchList.Fields.Title)</h2>
+                </div>
+
+                <div class="row g-4 card-row">
+                    <!-- Card Repeater -->
+                    @foreach (var card in Model.ResearchCards)
+                    {
+                        <div class="col-md-6">
+                            <div class="card h-100 @card.BackgroundCssClass">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <h3 class="card-title mb-4">@card.Title</h3>
+                                    <div class="footer-links d-flex justify-content-between">
+                                        <p class="footer__source">@card.Source</p>
+                                        <a href="@card.CtaSource" target="@card.CtaTarget" class="btn btn-link align-self-start d-flex align-items-center p-0"><i class="bi bi-box-arrow-up-right me-2"></i>@card.CtaText</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

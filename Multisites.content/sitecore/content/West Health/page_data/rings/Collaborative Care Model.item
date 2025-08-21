@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {AA7DCE55-0603-48CD-B0F6-D3E31CDC5BEA}
+database: master
+path: /sitecore/content/West Health/page_data/rings/Collaborative Care Model
+parent: {94319527-25CB-4D89-BFF5-BBED42476F72}
+name: Collaborative Care Model
+master: {00000000-0000-0000-0000-000000000000}
+template: {666D5F1D-1AF7-4456-9903-093AC1E521CE}
+templatekey: Ring
+
+----version----
+language: en
+version: 1
+revision: 63bd0c01-82f6-4dc5-9117-69855c05a0a1
+
+----field----
+field: {0628E0DF-4FA5-4E0C-B180-51A8F99DC768}
+name: Label
+key: label
+content-length: 24
+
+Collaborative Care Model
+----field----
+field: {CA97A908-FD50-4F90-814B-8E96D7F2B5F3}
+name: Short Label
+key: short label
+content-length: 24
+
+Collaborative Care Model
+----field----
+field: {2464BFA0-981E-4248-A76F-68A1C01BCDD1}
+name: Theme Color
+key: theme color
+content-length: 38
+
+{8E97054B-59DB-4F8C-A06B-480528B1BDBE}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250617T205513Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+63bd0c01-82f6-4dc5-9117-69855c05a0a1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250617T205521Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -1,0 +1,32 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.SplitContentSubtitleViewModel
+
+<!-- Add "image-left" to "content-split--subtitle" to change image order -->
+<section class="@Model.BackgroundCssClass content-split--subtitle py-5 @Model.ImageLocationCssClass" aria-labelledby="collab-heading-sub" data-bg="@Model.BackgroundCssClass">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Text Column -->
+            @Html.Sitecore().DynamicPlaceholder("splitcontentsubtitle-card")
+
+            <!-- Image Column -->
+            <div class="col-lg-6 offset-lg-1 content-split__img-container mb-5 mb-lg-0">
+                <div class="collab-image-wrapper overflow-hidden">
+                    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.SplitContentSubtitle.Fields.Image)
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <picture>
+                                <source srcset="@Model.ImageUrl?mw=576&mh=400&mode=crop" media="(max-width: 991px)" />
+                                <img src="@Model.ImageUrl?mw=670&mh=701&mode=crop" alt="@Model.ImageAltText" class="content-split__img object-fit-cover img-fluid w-100 h-auto" />
+                            </picture>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {372FBDD8-CBB7-4143-ABA7-4758B277B666}
+database: master
+path: /sitecore/layout/Layouts/West Health/Main
+parent: {CC336428-A49A-47D2-88BB-42FEF9C53F2C}
+name: Main
+master: {00000000-0000-0000-0000-000000000000}
+template: {3A45A723-64EE-4919-9D41-02FD40FD1466}
+templatekey: Layout
+
+----field----
+field: {A036B2BC-BA04-44F6-A75F-BAE6CD242ABF}
+name: Path
+key: path
+content-length: 36
+
+/Areas/westhealth/views/_Main.cshtml
+----field----
+field: {70DC08D9-CDA2-4F04-AA35-C11FD7138066}
+name: Area
+key: area
+content-length: 10
+
+westhealth
+----version----
+language: en
+version: 1
+revision: cc6fe9d3-fec8-45b0-856d-469901912aa6
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250514T184605Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+cc6fe9d3-fec8-45b0-856d-469901912aa6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250514T184836Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

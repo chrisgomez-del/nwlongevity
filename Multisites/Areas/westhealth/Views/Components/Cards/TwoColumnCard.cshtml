@@ -1,0 +1,13 @@
+﻿
+@model NM_MultiSites.Areas.westhealth.Models.Components.CardViewModel
+
+<!-- Right Column - Content -->
+<div class="col-10 col-md-5 col-xl-6 offset-md-1 content-column">
+    <h2 class="secondary-title mt-4 mt-md-0 mb-4">@Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)</h2>
+    <p class="mb-4">
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)
+    </p>
+    <div>
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.CtaSource, new { @class = "btn btn-primary" })
+    </div>
+</div>

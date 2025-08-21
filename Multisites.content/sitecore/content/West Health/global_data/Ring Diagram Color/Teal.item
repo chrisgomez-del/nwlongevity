@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {8E97054B-59DB-4F8C-A06B-480528B1BDBE}
+database: master
+path: /sitecore/content/West Health/global_data/Ring Diagram Color/Teal
+parent: {A0403CD6-A5B1-4DF5-BA9F-B19C998C47A5}
+name: Teal
+master: {00000000-0000-0000-0000-000000000000}
+template: {89056EC1-5C3C-4677-92B6-D4CA7537D5C6}
+templatekey: Droplink Item
+
+----version----
+language: en
+version: 1
+revision: 3f87a4c5-7b0a-471f-8072-7af25295646c
+
+----field----
+field: {FC2764E4-F090-4DB2-B8F6-CC4AD0239C5D}
+name: Name
+key: name
+content-length: 4
+
+Teal
+----field----
+field: {D0CE2F48-0561-48A2-BDDA-435C6FFE9969}
+name: Css Class
+key: css class
+content-length: 7
+
+#2E6EB2
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250617T144027Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3f87a4c5-7b0a-471f-8072-7af25295646c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250617T144039Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

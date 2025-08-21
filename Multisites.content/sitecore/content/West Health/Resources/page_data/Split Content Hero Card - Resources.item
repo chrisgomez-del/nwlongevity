@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {31C8A5AC-1488-4679-A79E-565FF71765F5}
+database: master
+path: /sitecore/content/West Health/Resources/page_data/Split Content Hero Card - Resources
+parent: {42CCCFA3-1F39-4786-9222-5CFB1502E78F}
+name: Split Content Hero Card - Resources
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: a078d01a-c723-4d99-9d5f-2dbf23a04825
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 9
+
+Resources
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 239
+
+Our mission to transform mental health care only works when providers have the resources they need to be successful. The tools and resources below provide guidance and real-world insights to support collaborative care implementation.&nbsp;
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T185734Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a078d01a-c723-4d99-9d5f-2dbf23a04825
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T190001Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

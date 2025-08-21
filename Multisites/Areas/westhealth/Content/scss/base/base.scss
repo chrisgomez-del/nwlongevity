@@ -1,0 +1,78 @@
+@import "../fonts/_icons.scss";
+@import "../fonts/_titles.scss";
+@import "../fonts/_copy.scss";
+@import "cards";
+@import "swiper";
+@import "helpers";
+@import "navbar";
+@import "buttons";
+
+html {
+  //font-size: 62.5%; // 62.5% of 16px = 10px - 64px would be 6.4rem
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.secondary-input {
+  border-radius:0.5rem;
+  background: rgba(255, 255, 255, 0.10);
+  border:none;
+  color:$white;
+  padding:0.625rem 1rem;
+  &::placeholder {
+    color:$white;
+  }
+}
+
+footer {
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .footer-nav {
+    .active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+  .footer-socials {
+    a {
+        color:#FFF;
+      &:hover {
+        color: #D4D4D4;
+      }
+    }
+  }
+}
+
+.article-detail {
+    figure img {
+        aspect-ratio: 21 / 9;
+        object-fit: cover;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.main-contain {
+    .copy-card {
+        padding: 2rem 0;
+
+        &:first-child {
+            padding: var(--content-offset) 0 2rem;
+        }
+    }
+}

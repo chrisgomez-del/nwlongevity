@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {8ADF7AA2-B538-4DB7-BC4C-5289C2BB021C}
+database: master
+path: /sitecore/content/West Health/global_data/Header/Navigation Links/Collaborative Care/Evidence and Data
+parent: {619E5693-0648-4CBB-B5AE-2B6DD4F761E0}
+name: Evidence and Data
+master: {00000000-0000-0000-0000-000000000000}
+template: {2A2633CF-037B-40AE-9026-EEE2B4835D07}
+templatekey: Generic Link
+
+----version----
+language: en
+version: 1
+revision: da34ddb9-a0a7-49e5-9f8d-2eb8a015ae72
+
+----field----
+field: {B996E940-9DEC-4A26-8A68-0D1B3634D07A}
+name: Link Source
+key: link source
+content-length: 124
+
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A387A077-93DF-4B0A-9F2B-050E2D229EBF}" />
+----field----
+field: {95CFA3F7-0003-42B9-A5B2-F773C741B061}
+name: Link Text
+key: link text
+content-length: 17
+
+Evidence and Data
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250519T144635Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+da34ddb9-a0a7-49e5-9f8d-2eb8a015ae72
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250624T143328Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 52
+
+<r owner="sitecore\Admin" date="20250624T143314Z" />

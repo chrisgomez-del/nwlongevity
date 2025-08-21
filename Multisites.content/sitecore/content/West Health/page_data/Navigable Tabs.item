@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {FB99F32A-84D5-4E57-8ABE-9EDB80CFEBE5}
+database: master
+path: /sitecore/content/West Health/page_data/Navigable Tabs
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Navigable Tabs
+master: {00000000-0000-0000-0000-000000000000}
+template: {2570D0F2-35A9-4466-80E4-7D24C7640419}
+templatekey: Navigable Tabs
+
+----version----
+language: en
+version: 1
+revision: 54d98421-3d3a-49a7-8448-a1a0520fc729
+
+----field----
+field: {082B8218-D5D4-4F4F-B39D-2253F675B855}
+name: Title
+key: title
+content-length: 14
+
+Navigable Tabs
+----field----
+field: {3F24C2B1-D6D2-460D-BF98-690DBF302FE0}
+name: Navigable Tabs Location
+key: navigable tabs location
+content-length: 38
+
+{C01B8189-F687-4C7D-8DD1-E0A5F36DAC25}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250611T192351Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+54d98421-3d3a-49a7-8448-a1a0520fc729
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250611T192412Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

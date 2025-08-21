@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {184C1725-B409-403A-9D4D-21E2C3C02151}
+database: master
+path: /sitecore/content/West Health/page_data/tools_and_resources/FAQs/Resource 4
+parent: {6EAF7EC0-B99B-47F5-9844-824B482DAD78}
+name: Resource 4
+master: {00000000-0000-0000-0000-000000000000}
+template: {A65CF74A-C1A7-43ED-947F-4FC0BEB73D95}
+templatekey: Tab Resource
+
+----version----
+language: en
+version: 1
+revision: 82f6db29-21e4-4e28-b81d-4da71d3be822
+
+----field----
+field: {8D371CFE-E039-4A9C-8F21-F8A9E6D92726}
+name: Title
+key: title
+content-length: 10
+
+Resource 4
+----field----
+field: {A8626276-797B-4612-90BA-A866BAF6E24A}
+name: Copy
+key: copy
+content-length: 286
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sollicitudin commodo ante, eu elementum ligula viverra ac. Integer id ligula justo. Aliquam eu accumsan ipsum.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250611T192010Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+82f6db29-21e4-4e28-b81d-4da71d3be822
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250611T192016Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

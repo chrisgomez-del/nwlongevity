@@ -1,0 +1,38 @@
+<section class="news-featured position-relative my-5 d-flex flex-column justify-content-center">
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Section Title -->
+            <div class="section-title">
+                <h2 class="secondary-title">News</h2>
+            </div>
+
+            <!-- Repeat -->
+            <div class="row g-4 card-row">
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    {% ContentCard
+                    "/images/fpo-news-card.png",
+                    "Launch of the Northwestern Medicine West Health Accelerator",
+                    "The $8.6 million initiative between Northwestern Medicine.",
+                    "Read More",
+                    "#"
+                    %}
+                </div>
+                <!-- /Repeat -->
+                
+                <div class="col-md-6">
+                    {% ContentCard
+                    "https://placehold.co/1110x1110/png",
+                    "Most Americans want doctors to ask about mental health",
+                    "According to a West Health survey, 7 in 10 Americans say they would prefer their healthcare provider ask about both physical and mental health concerns during appointments.",
+                    "Read More",
+                    "#"
+                    %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

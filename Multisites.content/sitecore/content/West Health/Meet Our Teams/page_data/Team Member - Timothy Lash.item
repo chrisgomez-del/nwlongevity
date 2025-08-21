@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {B3C86518-2BA1-4D82-81DB-1BAFE7028B4A}
+database: master
+path: /sitecore/content/West Health/Meet Our Teams/page_data/Team Member - Timothy Lash
+parent: {8651ED8F-10C3-4701-9DEA-5FC40B66ACCB}
+name: Team Member - Timothy Lash
+master: {00000000-0000-0000-0000-000000000000}
+template: {F3632DD6-B049-418C-94FA-16B667CC3DA8}
+templatekey: Team Member
+
+----version----
+language: en
+version: 1
+revision: 0f801e79-7780-464a-828c-cdf9b0dbff79
+
+----field----
+field: {175C0EBB-CB9B-4AA2-9943-BF8E6F2E9379}
+name: Name
+key: name
+content-length: 18
+
+ Timothy Lash, MBA
+----field----
+field: {206933CF-3BF2-4CD3-92D3-A5469B9AFC44}
+name: Qualifications
+key: qualifications
+content-length: 40
+
+President, Gary and Mary West Foundation
+----field----
+field: {224D056F-54FE-44C0-9BCD-E10470ADB77A}
+name: Titles
+key: titles
+content-length: 93
+
+<p>President, West Health Institute</p>
+<p>President and Chair, West Health Policy Center</p>
+----field----
+field: {FB48674E-AED2-4348-A315-E577232D8B1C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{72A51027-4DA1-4661-9591-E248D0FC506D}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250630T160428Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0f801e79-7780-464a-828c-cdf9b0dbff79
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250630T160526Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

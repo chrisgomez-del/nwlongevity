@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {4F4A9A90-75FB-4215-91FE-53EEA1A75650}
+database: master
+path: /sitecore/content/West Health/Accelerator/page_data/Three Card Callout - 59M
+parent: {2B102205-AFAB-4A24-A5E9-47A4E75B3966}
+name: Three Card Callout - 59M
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+6300
+----version----
+language: en
+version: 1
+revision: 507eed70-66fa-456a-99e7-67c1a7c10519
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 38
+
+American adults have a mental illness.
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 193
+
+Untreated mental health conditions such as depression and anxiety are linked to higher rates of chronic physical conditions, including heart disease and type 2 diabetes.<br />
+<div>&nbsp;</div>
+----field----
+field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
+name: Cta Source
+key: cta source
+content-length: 130
+
+<link text="Source" anchor="" linktype="internal" class="" title=""  querystring="" id="{68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}" />
+----field----
+field: {A75510A2-78C3-400E-8649-129F3458D687}
+name: Sub Title
+key: sub title
+content-length: 3
+
+59M
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250618T192645Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+507eed70-66fa-456a-99e7-67c1a7c10519
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T120714Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

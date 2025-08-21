@@ -1,0 +1,36 @@
+<!-- Add "image-left" to "hero-split" to change image order -->
+<section class="hero-split position-relative image-left my-5" aria-labelledby="collab-heading">
+<!--  Remove 'bg-gradient-primary' and replace with 'bg-white'-->
+  <div class="bg-gradient-primary position-absolute gradient-bg"></div>
+  <div class="container">
+    <div class="row g-0 align-items-stretch">
+      <!-- Text Column -->
+      <div class="col-lg-6 split-content__container text-white d-flex flex-column justify-content-center px-4 py-5">
+        <div class="row justify-content-center">
+          <div class="col-11">
+<!--            If 'bg-white' applied, add 'primary-title&#45;&#45;dark' to title, leave 'primary-title' as well-->
+            <h1 id="collab-heading" class="fw-bold mb-4 primary-title">
+              Our approach to collaborative mental health care.
+            </h1>
+<!--            if 'bg-white' applied, add 'primary-copy&#45;&#45;dark' to copy, leave 'primary-copy' as well.-->
+            <p class="primary-copy">
+              The Northwestern Medicine Collaborative Behavioral Health Program (CBHP) is made up of an expert team of clinicians that deliver efficient, strategic, patient-focused mental health care. The program has integrated mental health care into more than 70 primary care practices. Based off the Collaborative Care Model (CoCM), this program, along with the Accelerator, will revolutionize mental health care across the country.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-lg-6 position-relative hero-img__container">
+        <picture>
+          <source srcset="https://placehold.co/670x500" media="(max-width: 991px)" />
+          <source srcset="https://placehold.co/670x701" media="(min-width: 992px)" />
+          <img
+                  src="https://placehold.co/670x701"
+                  alt="Clinician speaking with colleague in hallway"
+                  class="img-fluid w-100 h-100 object-fit-cover hero-img" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {8164F6EA-28AD-43F1-A0AF-B99163B6C4CF}
+database: master
+path: /sitecore/content/West Health/FAQs/page_data/Accordion - Insurance and Billing
+parent: {E8DDBD48-4573-42CD-8FB5-8E98E43893EB}
+name: Accordion - Insurance and Billing
+master: {00000000-0000-0000-0000-000000000000}
+template: {A0965326-9CC3-4DFE-A93C-580EF8D6247D}
+templatekey: Accordion Panel
+
+----version----
+language: en
+version: 1
+revision: 41ea9990-3e27-4147-9a3c-c7e1790cbaa8
+
+----field----
+field: {AF19985E-9B53-47E8-863B-7EED2DBABD86}
+name: Title
+key: title
+content-length: 21
+
+Insurance and Billing
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250701T152253Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+41ea9990-3e27-4147-9a3c-c7e1790cbaa8
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T152345Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

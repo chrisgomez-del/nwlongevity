@@ -1,0 +1,47 @@
+﻿@using Newtonsoft.Json
+@model NM_MultiSites.Areas.westhealth.Models.Components.RingDiagramViewModel
+
+
+@{
+    var jsonModel = JsonConvert.SerializeObject(Model);
+}
+
+<div class="bg-gradient-primary">
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="col-12 col-lg-7 mb-4">
+                <div class="ring-wrapper">
+                    <div class="center-icon" aria-hidden="true">
+                        <img src="https://assets.codepen.io/9019831/ThePatient.png" alt="" role="presentation" />
+                    </div>
+                    <div class="ring-labels"></div>
+                    <div class="rings">
+                        <div class="ring ring-1" data-ring-index="1"></div>
+                        <div class="subcircle-group" data-group-index="1" role="group" aria-label="Subcircles group 1"></div>
+                        <div class="ring ring-2" data-ring-index="2"></div>
+                        <div class="subcircle-group" data-group-index="2" role="group" aria-label="Subcircles group 2"></div>
+                        <div class="ring ring-3" data-ring-index="3"></div>
+                        <div class="subcircle-group" data-group-index="3" role="group" aria-label="Subcircles group 3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-4 offset-lg-1">
+                <div class="diagram__card-container">
+                    <div class="diagram__card diagram__card--primary" data-primaryCard aria-hidden="false"></div>
+                    <div class="diagram__card-slider mt-3 mt-md-0 swiper" data-mobile-slider role="region" aria-roledescription="carousel" aria-label="Diagram content slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide diagram__card" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3" aria-hidden="true" data-ringCard="3"></div>
+                            <div class="swiper-slide diagram__card" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3" aria-hidden="true" data-ringCard="2"></div>
+                            <div class="swiper-slide diagram__card" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3" aria-hidden="true" data-ringCard="1"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="ring-data" type="application/json">
+    @Html.Raw(jsonModel)
+    </script>
+</div>

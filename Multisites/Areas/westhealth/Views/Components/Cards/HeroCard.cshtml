@@ -1,0 +1,17 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.CardViewModel
+
+<!-- Text Column -->
+<div class="col-lg-6 split-content__container text-white d-flex flex-column justify-content-center px-4 py-5">
+    <div class="row justify-content-center">
+        <div class="col-11 my-lg-4">
+            <!--If 'bg-white' applied, add 'primary-title--dark' to title, leave 'primary-title' as well-->
+            <h1 id="collab-heading" class="fw-bold mb-4 primary-title">
+                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Title)
+            </h1>
+            <!--if 'bg-white' applied, add 'primary-copy--dark' to copy, leave 'primary-copy' as well.-->
+            <p class="primary-copy">
+                @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.Card.Fields.Copy)
+            </p>
+        </div>
+    </div>
+</div>

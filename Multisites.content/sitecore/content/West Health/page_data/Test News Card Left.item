@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {9D3CF1AD-9122-4D68-B61A-17F793901E16}
+database: master
+path: /sitecore/content/West Health/page_data/Test News Card Left
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Test News Card Left
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: 3b9b3c17-a4f3-4c8b-a6d3-003201cd59e5
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 19
+
+Test News Card Left
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 163
+
+<span style="color: #000000; background-color: #ffffff; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim.</span>
+----field----
+field: {F550D161-B5B9-4E4C-AA55-CC7D2C55BA94}
+name: Cta Source
+key: cta source
+content-length: 133
+
+<link text="Read More" anchor="" linktype="internal" class="" title=""  querystring="" id="{25E1FDA6-EF99-431C-AF8A-80B40BA620A2}" />
+----field----
+field: {0753FB10-378E-4B98-B325-B597ECD1D986}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{BFD1C4F2-C6D8-4AFD-860D-97483B1B602C}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250610T142010Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3b9b3c17-a4f3-4c8b-a6d3-003201cd59e5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250610T144142Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -1,0 +1,104 @@
+<section class="team-accordion py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Visual Icons -->
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <h2 class="secondary-title mb-3">Mental health deserves a dedicated team.</h2>
+        <p class="primary-copy primary-copy--dark mb-5">
+          The CoCM emphasizes a team-based approach, where the patient is the focus of 3 dedicated mental health experts. They work together seamlessly, providing the best possible care while measuring progress through a registry.
+        </p>
+
+        <div class="team-graphic d-flex flex-wrap justify-content-center gap-4">
+          <div class="team-node text-center" data-role="Patient">
+            <img src="path/to/patient.svg" class="img-fluid mb-2" alt="Patient" />
+            <div class="label btn btn-primary">Patient</div>
+          </div>
+          <div class="team-node text-center" data-role="Primary Care Provider">
+            <img src="path/to/primary.svg" class="img-fluid mb-2" alt="Primary Care Provider" />
+            <div class="label btn btn-primary">Primary Care Provider</div>
+          </div>
+          <div class="team-node text-center" data-role="Behavioral Health Care Manager">
+            <img src="path/to/manager.svg" class="img-fluid mb-2" alt="Behavioral Health Care Manager" />
+            <div class="label btn btn-primary">Behavioral Health Care Manager</div>
+          </div>
+          <div class="team-node text-center" data-role="Psychiatric Consultant">
+            <img src="path/to/psychiatrist.svg" class="img-fluid mb-2" alt="Psychiatric Consultant" />
+            <div class="label btn btn-primary">Psychiatric Consultant</div>
+          </div>
+          <div class="team-node text-center" data-role="Registry">
+            <img src="path/to/registry.svg" class="img-fluid mb-2" alt="Registry" />
+            <div class="label btn btn-primary">Registry</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Accordion -->
+      <div class="col-lg-5">
+        <div class="accordion" id="teamAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPatient">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePatient" aria-expanded="false" aria-controls="collapsePatient" data-role="Patient">
+                Patient
+              </button>
+            </h2>
+            <div id="collapsePatient" class="accordion-collapse collapse" aria-labelledby="headingPatient" data-bs-parent="#teamAccordion">
+              <div class="accordion-body">
+                The patient is at the center of the collaborative care team.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPrimary">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrimary" aria-expanded="false" aria-controls="collapsePrimary" data-role="Primary Care Provider">
+                Primary Care Provider
+              </button>
+            </h2>
+            <div id="collapsePrimary" class="accordion-collapse collapse" aria-labelledby="headingPrimary" data-bs-parent="#teamAccordion">
+              <div class="accordion-body">
+                The primary care provider oversees all aspects of patients’ behavioral health care...
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingManager">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManager" aria-expanded="false" aria-controls="collapseManager" data-role="Behavioral Health Care Manager">
+                Behavioral Health Care Manager
+              </button>
+            </h2>
+            <div id="collapseManager" class="accordion-collapse collapse" aria-labelledby="headingManager" data-bs-parent="#teamAccordion">
+              <div class="accordion-body">
+                The behavioral health care manager supports patient tracking and communication.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPsych">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePsych" aria-expanded="false" aria-controls="collapsePsych" data-role="Psychiatric Consultant">
+                Psychiatric Consultant
+              </button>
+            </h2>
+            <div id="collapsePsych" class="accordion-collapse collapse" aria-labelledby="headingPsych" data-bs-parent="#teamAccordion">
+              <div class="accordion-body">
+                Psychiatric consultants support primary care through case reviews and recommendations.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingRegistry">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegistry" aria-expanded="false" aria-controls="collapseRegistry" data-role="Registry">
+                Registry
+              </button>
+            </h2>
+            <div id="collapseRegistry" class="accordion-collapse collapse" aria-labelledby="headingRegistry" data-bs-parent="#teamAccordion">
+              <div class="accordion-body">
+                The registry tracks patient progress and outcomes across the care team.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

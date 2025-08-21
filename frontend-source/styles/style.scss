@@ -1,0 +1,77 @@
+//$enable-cssgrid: true;
+:root {
+  --rem: 10px;
+  --navbar-offset: 33px;
+}
+
+$bootstrap-icons-font-path: "/fonts/";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("/fonts/bootstrap-icons.woff2") format("woff2"),
+  url("/fonts/bootstrap-icons.woff") format("woff");
+}
+
+@import "./base/variables.scss";
+$enable-negative-margins: true;
+
+@import "bootstrap/scss/bootstrap";
+@import "./base/functions.scss";
+@import "./base/btns.scss";
+@import "./base/base.scss";
+
+
+@import "./components/SplitContentHero.scss";
+@import "./components/SplitContentSubtitle.scss";
+@import './components/ResourceNavigator.scss';
+@import "./components/ThreeCardCallout.scss";
+@import "./components/StatementContentWithCards.scss";
+@import "./components/QuoteImageSection.scss";
+@import "./components/OffsetContentWithTabs.scss";
+@import "./components/ThreeColAccordion.scss";
+@import "./components/SingleColAccordion.scss";
+@import "./components/UtilityNav.scss";
+@import "./components/ToolsResources.scss";
+@import "./components/HeroCarousel.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color:$grey;
+  margin-top: calc( (var(--navbar-offset, 33px) * 2) * -1);
+}
+
+.site-header {
+  background: #563D7C;
+  color: white;
+}
+
+.site-footer {
+  background-color: #3c3d41;
+  color: white;
+}
+
+.site-footer .footer-copyright {
+  background-color: #333333;
+  text-align: center;
+}
+.site-footer .footer-copyright p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #d2d1d1;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: none;
+  color: white;
+}

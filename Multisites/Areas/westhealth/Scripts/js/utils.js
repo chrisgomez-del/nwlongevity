@@ -1,0 +1,200 @@
+import gsap from 'gsap';
+
+const bootstrapBreakpoints = {
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1400
+};
+
+/**
+ * Match a Bootstrap breakpoint using min/lt/gte/gt prefixes.
+ * @param {string} queryKey - Example: 'lt-md', 'gte-lg', 'md'
+ * @returns {MediaQueryList}
+ */
+export function matchBreakpoint(queryKey) {
+    const match = queryKey.match(/^(lt-|lte-|gt-|gte-)?([a-z]{2,3})$/);
+
+    if (!match) {
+        console.warn(`Invalid breakpoint format: "${queryKey}"`);
+        return false;
+    }
+
+    const [, prefix = '', breakpoint] = match;
+    const value = bootstrapBreakpoints[breakpoint];
+
+    if (value == null) {
+        console.warn(`Unknown Bootstrap breakpoint: "${breakpoint}"`);
+        return false;
+    }
+
+    let mediaQuery;
+
+    switch (prefix) {
+        case 'lt-': // less than
+            mediaQuery = `(max-width: ${value - 0.02}px)`;
+            break;
+        case 'lte-': // less than or equal
+            mediaQuery = `(max-width: ${value}px)`;
+            break;
+        case 'gt-': // greater than
+            mediaQuery = `(min-width: ${value + 0.02}px)`;
+            break;
+        case 'gte-': // greater than or equal
+        case '':     // default: min-width
+            mediaQuery = `(min-width: ${value}px)`;
+            break;
+        default:
+            console.warn(`Unknown prefix in breakpoint query: "${prefix}"`);
+            return false;
+    }
+
+    return window.matchMedia(mediaQuery);
+}
+
+export function smoothScrollInternalLinks() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const rawSelector = this.getAttribute("href"); // e.g., "#body" or "#.myclass"
+            if (!rawSelector || rawSelector === "#") return;
+
+            const selector = rawSelector.slice(1); // Remove the '#'
+            let target =
+                document.querySelector(`[data-scrollToTarget='${selector}']`) ||
+                document.querySelector(selector.startsWith('.') || selector.startsWith('#') ? selector : `#${selector}`);
+
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+}
+
+export function animateGradient(selector) {
+    const host = document.querySelector(selector);
+    if (!host) return;
+
+    host.classList.add('gradient-host');
+
+    gsap.timeline({ repeat: -1 })
+        .to(host, {
+            duration: 2.5,
+            '--x': '30%', '--y': '70%',
+            ease: 'power2.inOut'
+        })
+        .to(host, {
+            duration: 2.5,
+            '--x': '100%', '--y': '100%',
+            ease: 'circ.inOut'
+        })
+        .to(host, {
+            duration: 4,
+            '--x': '0%', '--y': '100%',
+            ease: 'sine.inOut'
+        })
+        .to(host, {
+            duration: 2.5,
+            '--x': '50%', '--y': '0%',
+            ease: 'power3.inOut'
+        })
+        .to(host, {
+            duration: 2.5,
+            '--x': '40%', '--y': '50%',
+            ease: 'sine.inOut'
+        });
+}
+
+export function expandFirstAccordion() {
+    const firstHeader = document.querySelector('[data-accordionparent]');
+    if (!firstHeader) return;
+
+    const button = firstHeader.querySelector('[data-bs-toggle="collapse"]');
+    if (button) button.click();
+}
+
+export function highlightFooterActiveLink(selector = 'footer ul a') {
+    const getFirstLevelPath = (url) => {
+        try {
+            const pathname = new URL(url, window.location.origin).pathname
+                .replace(/\/+$/, '') // Remove trailing slash
+                .toLowerCase();
+            const segments = pathname.split('/').filter(Boolean); // Remove empty segments
+            return segments.length > 0 ? `/${segments[0]}` : '/';
+        } catch (e) {
+            return null;
+        }
+    };
+
+    const currentFirstLevelPath = getFirstLevelPath(window.location.href);
+
+    document.querySelectorAll(selector).forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('javascript:')) return;
+
+        const linkFirstLevelPath = getFirstLevelPath(href);
+
+        if (linkFirstLevelPath === currentFirstLevelPath) {
+            link.classList.toggle('active');
+        } else {
+            link.classList.toggle('active');
+        }
+    });
+}
+
+export function injectFormstackPlaceholders(containerSelector = '#fsform-container-6214449') {
+    const form = document.querySelector(containerSelector);
+    if (!form) return;
+
+    const labels = form.querySelectorAll('.fsLabelVertical');
+
+    labels.forEach(label => {
+        const inputId = label.getAttribute('for');
+        const input = form.querySelector(`#${inputId}`);
+        const labelTextSpan = label.querySelector('.fsSupporting span');
+
+        if (input && labelTextSpan) {
+            const rawLabel = labelTextSpan.textContent.trim();
+            const cleanLabel = rawLabel.replace(/\*/g, '').trim();
+            input.placeholder = cleanLabel;
+        }
+    });
+}
+
+export function applySecondaryInputAttribute(containerSelector = '#fsform-container-6214449') {
+    const form = document.querySelector(containerSelector);
+    if (!form) return;
+
+    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"]');
+
+    inputs.forEach(input => {
+        input.setAttribute('data-secondaryinput', '');
+    });
+}
+
+export function applyFormBtnStyles(containerSelector = '#fsform-container-6214449', btnTheme = 'btn-light') {
+    const submitBtn = document.querySelector(containerSelector).querySelector('[type="submit"]');
+    // submitBtn.classList.add('btn', 'btn-light', 'w-100', 'd-flex', 'justify-content-center', 'justify-content-lg-between', 'align-items-center');
+    submitBtn.className = `btn ${btnTheme} w-100 d-flex justify-content-center justify-content-lg-between align-items-center`;
+
+    const btnIcon = document.createElement('i');
+    btnIcon.setAttribute('class', 'bi bi-chevron-right ms-4');
+
+    submitBtn.appendChild(btnIcon);
+}
+
+export function stripHTMLFromElement(htmlElement) {
+    const div = document.createElement("div");
+    div.innerHTML = htmlElement.innerHTML;
+    return div.textContent || div.innerText || "";
+}
+
+export function debounce(fn, delay = 150) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(this, args), delay);
+    };
+}

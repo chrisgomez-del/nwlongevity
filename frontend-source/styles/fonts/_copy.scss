@@ -1,0 +1,28 @@
+.primary-copy {
+  color: $copy;
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  &--primary-dark {
+    color: $primary;
+  }
+  &--dark {
+    color:$dark;
+  }
+  &--lg {
+    font-size:1.25rem;
+  }
+}
+
+.multi-column-copy {
+  column-count: 1;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+  p {
+    margin-bottom:2rem;
+  }
+}

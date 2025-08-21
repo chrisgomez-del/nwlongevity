@@ -1,0 +1,21 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TwoColumnWithImageViewModel
+
+<section class="content-with-image position-relative my-5 @Model.ImageLocationCssClass">
+    <div class="container-fluid container-xxl">
+        <div class="row justify-content-center justify-content-md-start align-items-center align-items-md-start">
+            <!-- Left Column - Image with bleed -->
+            <div class="col-md-5 ps-2 ps-sm-0 ps-xxl-2">
+                @if (Sitecore.Context.PageMode.IsExperienceEditor)
+                {
+                    @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TwoColumnWithImage.Fields.Image)
+                }
+                else
+                {
+                    <img src="@Model.ImageUrl" class="w-100 object-fit-cover ratio-11-10" alt="@Model.ImageAltText">
+                }
+            </div>
+
+            @Html.Sitecore().DynamicPlaceholder("twocolumnwithimage-card")
+        </div>
+    </div>
+</section>

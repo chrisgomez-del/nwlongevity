@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {241B8C01-F57C-45A9-A8E8-D955175D0EAE}
+database: master
+path: /sitecore/content/West Health/FAQs/page_data/Accordion Item - Accelerator What
+parent: {E8DDBD48-4573-42CD-8FB5-8E98E43893EB}
+name: Accordion Item - Accelerator What
+master: {00000000-0000-0000-0000-000000000000}
+template: {DB2FA430-C28C-4841-A105-E40EAEFE7558}
+templatekey: Accordion Item
+
+----version----
+language: en
+version: 1
+revision: 698fdf34-3e26-43b5-8c2f-4e830240b7db
+
+----field----
+field: {425C6DB7-BA6D-424A-874C-40080AA4DC8D}
+name: Title
+key: title
+content-length: 58
+
+What is the Northwestern Medicine West Health Accelerator?
+----field----
+field: {E39B1E93-1921-4A30-B06C-B22614020C80}
+name: Copy
+key: copy
+content-length: 705
+
+The Northwestern Medicine West Health Accelerator is a multi-year collaboration between Northwestern Medicine, West Health and Meadows Mental Health Policy Institute, aimed at transforming mental health care by making it a core part of primary care. Guided by an advisory board of experts, the Accelerator employs the Collaborative Care Model to seamlessly embed mental health services within primary care, where patients already seek trusted care. At Northwestern Medicine, experts are evaluating and enhancing the Collaborative Behavioral Health Program. Insights from these efforts will inform the development of practical tools, training materials, and best practices for broader implementation.&nbsp;
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250701T150245Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+698fdf34-3e26-43b5-8c2f-4e830240b7db
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T151055Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

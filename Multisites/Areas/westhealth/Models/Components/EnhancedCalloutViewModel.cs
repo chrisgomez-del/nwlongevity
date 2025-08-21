@@ -1,0 +1,14 @@
+﻿using System.Collections.Generic;
+using System.Web;
+using Sitecore.Data.Items;
+
+namespace NM_MultiSites.Areas.westhealth.Models.Components
+{
+    public class EnhancedCalloutViewModel
+    {
+        public Item SourceItem { get; set; }
+        public IHtmlString Title { get; set; }
+        public IHtmlString Copy { get; set; }
+        public List<CardViewModel> Cards { get; set; } = new List<CardViewModel>();
+    }
+}

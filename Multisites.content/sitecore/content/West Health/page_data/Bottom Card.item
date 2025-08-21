@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {247BCAFC-BCA0-4A2A-B863-FEDB21CF576A}
+database: master
+path: /sitecore/content/West Health/page_data/Bottom Card
+parent: {CD9B34BA-8CE6-4CBC-8A10-1E6AFFCA3C47}
+name: Bottom Card
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: 3a2ef7e0-6b7f-4038-83c2-6ec3980b3524
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 11
+
+Bottom Card
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 241
+
+<span style="color: #000000; background-color: #ffffff; text-align: justify;">Morbi ullamcorper, ipsum porta volutpat feugiat, arcu sapien luctus leo, in convallis metus nisl dapibus metus. Nullam condimentum et urna vulputate ornare.</span>
+----field----
+field: {A75510A2-78C3-400E-8649-129F3458D687}
+name: Sub Title
+key: sub title
+content-length: 9
+
+UNDERVIEW
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250521T193456Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3a2ef7e0-6b7f-4038-83c2-6ec3980b3524
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250521T193541Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

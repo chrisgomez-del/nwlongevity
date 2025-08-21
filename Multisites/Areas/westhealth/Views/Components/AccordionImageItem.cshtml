@@ -1,0 +1,40 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.AccordionItemViewModel
+
+<div class="accordion-item">
+    <h2 class="accordion-header collapsed pe-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse-@Model.CardId"
+        aria-expanded="false"
+        aria-controls="collapse-@Model.CardId">
+        <span class="single-col-accordion__title single-col-accordion__title--dark p-4">
+            @Model.Title
+        </span>
+        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+            <circle cx="16" cy="16.199" r="15" stroke="#322071" stroke-width="2" />
+            <!-- Horizontal Bar -->
+            <rect class="icon-bar-horizontal" x="6.58789" y="17.1404" width="1.88235" height="18.8235" transform="rotate(-90 6.58789 17.1404)" fill="#322071" />
+            <!-- Vertical Bar (hidden by default) -->
+            <rect class="icon-bar-vertical" x="15.0586" y="7" width="1.88235" height="18.8235" fill="#322071" />
+        </svg>
+
+    </h2>
+    <!-- Custom styled tab -->
+    <div id="collapse-@Model.CardId" class="accordion-collapse collapse" data-bs-parent="#teamAccordions">
+        <div class="accordion-body p-4">
+            <div class="row">
+                <!-- Example team member -->
+                <div class="col-12">
+                    <div class="h-100">
+                        <div class="card-body">
+                            @Model.Copy
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Model.Image
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

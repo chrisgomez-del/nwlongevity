@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {5F60F22B-5DE5-4187-8236-342B7D487B87}
+database: master
+path: /sitecore/content/West Health/Collaborative Care/page_data/Split Content Hero Card - Our Approach
+parent: {DB02CA7F-0368-4C9A-96F1-5D042B52D4B9}
+name: Split Content Hero Card - Our Approach
+master: {00000000-0000-0000-0000-000000000000}
+template: {9F23EFD2-120C-41ED-B49B-3D103D464BDB}
+templatekey: Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1650
+----version----
+language: en
+version: 1
+revision: 5d87cbe2-a1eb-4c2f-85e2-eb6b027086b9
+
+----field----
+field: {D5F1A4D7-1369-4556-A4D6-EA587EBE5C9D}
+name: Title
+key: title
+content-length: 49
+
+Our approach to collaborative mental health care.
+----field----
+field: {FE5BB0AB-47D1-463D-9EF8-1C2EECA8F6B8}
+name: Copy
+key: copy
+content-length: 423
+
+The Northwestern Medicine Collaborative Behavioral Health Program is made up of an expert team of clinicians who deliver efficient, coordinated, research-supported, strategic and patient-focused mental health care through its 70+ primary care clinics. This program is based on the Collaborative Care Model, which, along with the Accelerator, aims to revolutionize the way mental health care is delivered across the country.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250624T183441Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5d87cbe2-a1eb-4c2f-85e2-eb6b027086b9
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250701T134443Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

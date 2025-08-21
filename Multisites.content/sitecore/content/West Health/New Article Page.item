@@ -1,0 +1,122 @@
+----item----
+version: 1
+id: {93224CA4-FAE9-46C5-9C51-FA31901A3719}
+database: master
+path: /sitecore/content/West Health/New Article Page
+parent: {68A7E90D-E2A6-49B7-A4D4-12E89671AC3B}
+name: New Article Page
+master: {00000000-0000-0000-0000-000000000000}
+template: {57D5462C-3C73-4E38-8089-4CBD8B13EE93}
+templatekey: Article Page
+
+----version----
+language: en
+version: 1
+revision: 72f8a01d-4d8f-46a2-80ad-ec25b9e28b31
+
+----field----
+field: {F7469723-8B97-494E-8D8A-05CFCBF396C7}
+name: Title
+key: title
+content-length: 16
+
+New Article Page
+----field----
+field: {2CA49FC6-2BFD-434B-83B1-B0B90E56F603}
+name: Subtitle
+key: subtitle
+content-length: 4
+
+asdf
+----field----
+field: {2AD7F74A-68E5-4B60-A352-15E8A799D160}
+name: Author
+key: author
+content-length: 4
+
+fghj
+----field----
+field: {88318985-ACD5-417A-89D4-A0EAFF9F6393}
+name: Source
+key: source
+content-length: 4
+
+erty
+----field----
+field: {E187D262-57DA-4CC5-8CF6-5E8A3554EF92}
+name: Date
+key: date
+content-length: 16
+
+20250601T050000Z
+----field----
+field: {FD47C0AC-6E89-4934-B8FF-A7F3FEB74024}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{BFD1C4F2-C6D8-4AFD-860D-97483B1B602C}" />
+----field----
+field: {C1AD492B-2BCB-4398-A6A2-7243A7145400}
+name: Copy
+key: copy
+content-length: 1969
+
+<div id="bannerR" style="color: #000000; background-color: #ffffff; height: 10px; width: 300px; margin: 0px -300px 0px 0px; padding: 0px;">
+<div data-freestar-ad="__300x600" id="lipsumcom_right_siderail" style="height: calc(var(--height) + var(--fsAddBuffer)); width: 300px; margin: 0px; padding: 0px; text-align: center;">&nbsp;</div>
+</div>
+<div class="boxed" style="color: #000000; background-color: #ffffff; margin: 10px 28.7969px; padding: 0px; text-align: center;">
+<div id="lipsum" style="margin: 0px; padding: 0px; text-align: justify;">
+<p style="margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget quam enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sollicitudin commodo ante, eu elementum ligula viverra ac. Integer id ligula justo. Aliquam eu accumsan ipsum. Nam ultrices faucibus mauris ut feugiat. Aenean volutpat mauris ut dolor eleifend interdum. Curabitur pharetra hendrerit elementum. Nulla aliquam eget neque id rutrum. Vestibulum in congue magna. Donec rhoncus rutrum blandit. Aenean non pulvinar mauris, pellentesque tempus turpis. Nunc arcu elit, tincidunt quis lacus a, molestie semper ex.</p>
+<p style="margin: 0px 0px 15px; padding: 0px;">Curabitur quis lobortis justo. Fusce sollicitudin, risus id facilisis posuere, enim ex tempor nibh, vitae malesuada magna libero sit amet nisl. Nunc a accumsan tellus. Mauris fringilla risus lectus, quis lobortis urna rutrum porta. Morbi non elementum enim, eget tempus turpis. Phasellus tincidunt, risus id fermentum ornare, purus enim tincidunt augue, et volutpat nisl ante a nulla. Donec et odio eu magna varius lobortis in mattis ligula. Quisque tristique sagittis mi ac mattis. Nulla facilisi. Morbi ornare lectus ut porta mollis. Fusce iaculis ex at convallis viverra. Nullam sit amet lorem volutpat, vulputate dolor eget, aliquet nisl.</p>
+</div>
+</div>
+----field----
+field: {9429F2A1-D3CA-4CCF-BEAF-8AED1984490B}
+name: Meta Title
+key: meta title
+content-length: 16
+
+New Article Page
+----field----
+field: {189F2A86-59BB-4152-A127-D8A73A66CBFB}
+name: Item Name
+key: item name
+content-length: 16
+
+New Article Page
+----field----
+field: {E9F8C958-1DC3-4F5E-8320-D1C5EB163064}
+name: Navigation Title
+key: navigation title
+content-length: 16
+
+New Article Page
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20250613T202449Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+72f8a01d-4d8f-46a2-80ad-ec25b9e28b31
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20250613T202527Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

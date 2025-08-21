@@ -1,0 +1,12 @@
+﻿@model NM_MultiSites.Areas.westhealth.Models.Components.TeamMemberViewModel
+
+<div class="col-md-4">
+    <div class="h-100">
+        @Html.Sitecore().Field(NM_MultiSites.Areas.westhealth.Templates.TeamMember.Fields.Image, new { @class = "card-img-top rounded mb-3" })
+        <div class="card-body">
+            <h4 class="accordion-item-title mb-2">@Model.Name</h4>
+            <p>@Model.Qualifications</p>
+            <p>@Model.Titles</p>
+        </div>
+    </div>
+</div>
