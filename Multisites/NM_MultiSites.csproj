@@ -369,7 +369,14 @@
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
+    <Compile Include="Areas\longevity\Controllers\GlobalComponentsController.cs" />
+    <Compile Include="Areas\longevity\Helpers\SitecoreAccess.cs" />
     <Compile Include="Areas\longevity\longevityAreaRegistration.cs" />
+    <Compile Include="Areas\longevity\Mappers\Global\FooterService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Global\HeaderService.cs" />
+    <Compile Include="Areas\longevity\Models\GeneralLink.cs" />
+    <Compile Include="Areas\longevity\Models\Global\Footer.cs" />
+    <Compile Include="Areas\longevity\Models\Global\Header.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
     <Compile Include="Areas\westhealth\Controllers\PageController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardListViewModel.cs" />
@@ -745,6 +752,9 @@
     <Content Include="Areas\westhealth\Views\Components\ImageAboveTwoColumn.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\ImageAboveCard.cshtml" />
     <Content Include="Areas\longevity\Views\web.config" />
+    <Content Include="Areas\longevity\Views\Layouts\Base.cshtml" />
+    <Content Include="Areas\longevity\Content\scss\style.scss" />
+    <Content Include="Areas\longevity\Content\scss\_variables.scss" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -778,7 +788,7 @@
     <Folder Include="Areas\Innovation\Views\Captcha\" />
     <Folder Include="Areas\Innovation\Views\JsonResponse\" />
     <Folder Include="Areas\Innovation\Views\TabsAccordian\" />
-    <Folder Include="Areas\longevity\Controllers\" />
+    <Folder Include="Areas\longevity\Content\scss\base\" />
     <Folder Include="Areas\longevity\Data\" />
     <Folder Include="Areas\longevity\Views\Shared\" />
     <Folder Include="Areas\westhealth\Content\_libs\" />

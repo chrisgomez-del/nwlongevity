@@ -1,0 +1,113 @@
+﻿//== primary colors
+
+
+$primary-color: #16b8ca !default; // light teal
+$secondary-color: #fff !default; // white
+$primary-purple: #7f6df2;
+
+$primary-cta: #00778a !default; // teal
+$primary-cta-hover: #005562 !default; // darker teal
+/*$primary-cta: #ca12e2 !default; // hot pink*/
+/*$primary-cta-hover: #980eaa !default; // darker pink*/
+$primary-cta-disabled: rgba(0, 119, 138, 0.4) !default; // opaque teal
+$secondary-cta: $primary-color !default; // light teal
+
+//== scaffolding
+
+$body-bg: #f5f5f5 !default;
+$base-color: #333 !default;
+$glass-bg: rgba(255, 255, 255, 0.55); // white with opacity
+$gray-glass-bg: rgba(235, 235, 235, 0.5); // gray with opacity
+
+$link-color: $primary-cta !default;
+$link-hover-color: $primary-cta-hover !default;
+$link-disabled-color: $primary-cta-disabled;
+
+
+//== colors
+
+$bright-purple: #7f6df2;
+$tertiary-gray: #ebebeb;
+$tertiary-purple: #63599e; //nm purple
+$tertiary-teal: #41efed;
+$error-red: #db0909;
+
+$primary-error: #db0909;
+$success-message: #24bf7a;
+
+//== typography
+$primary-font-family: 'Open Sans', Helvetica, Arial, sans-serif !default;
+
+$font-size-base: 18px !default;
+$line-height-base: 1.61 !default; // 29px
+$font-weight-base: 400 !default;
+$font-weight-bold: 600;
+$font-weight-bold-label: 700;
+$font-weight-extra-bold: 800;
+
+$font-size-extra-large: 1.5rem !default; // 24px
+$font-size-large: 1.25rem !default; // 20px
+$font-size-small: 0.875rem !default; // 14px
+$font-size-x-small: 0.667rem !default; // 12px
+
+$font-size-h1: 3.5rem !default; // 48px
+$font-size-h2: 2.25rem !default; // 36px
+$font-size-h3: 1.875rem !default; // 30px
+$font-size-h4: 1.5rem !default; // 24px
+$font-size-h5: 1.25rem !default; // 20px
+$font-size-h6: 1rem !default; // 18px
+
+$font-mobile-h1: 2.25rem !default; // 36px
+$font-mobile-h2: 2rem !default; // 32px
+$font-mobile-h3: 1.75rem !default; // 28px
+$font-mobile-h4: 1.5rem !default; // 24px
+$font-mobile-h5: 1.25rem !default; // 20px
+$font-mobile-h6: 1rem !default; // 18px
+$font-mobile-h7: 0.9rem !default; // 14px
+
+$headings-font-family: inherit !default;
+$headings-line-height: 1.25 !default;
+$headings-font-weight: 600 !default;
+$headings-font-weight-extra-bold: 800 !default;
+$headings-margin: 0 0 16px 0;
+$heading-color-pink: #ca12e2; // hot pink
+
+$btn-lg-font-size: 1.5rem !default; // 27px
+$btn-sm-font-size: 0.875rem !default; // 14px
+
+//== buttons
+
+$btn-font-weight: 400 !default;
+$btn-font-size: $font-size-base !default;
+$btn-color: $secondary-color !default;
+$btn-hover-color: $btn-color !default;
+
+$btn-bg: $primary-cta !default;
+$btn-hover-bg: $primary-cta-hover !default;
+$btn-focus-bg: $primary-cta-hover !default;
+$btn-active-bg: $primary-cta-hover !default;
+$btn-padding: 0.5em 0.95em !default;
+$btn-border: 1px solid $primary-cta !default;
+$btn-border-radius: 2px !default;
+
+$btn-primary-color: $btn-color !default;
+$btn-primary-hover-color: $btn-color !default;
+$btn-primary-bg: $primary-cta !default;
+$btn-primary-hover-bg: $primary-cta-hover !default;
+$btn-primary-focus-bg: $primary-cta !default;
+$btn-primary-active-bg: $primary-cta-hover !default;
+$btn-primary-border-color: $primary-cta !default;
+$btn-tertiary-color: $secondary-color !default;
+
+$btn-secondary-color: $primary-cta;
+$btn-secondary-bg: $secondary-color;
+$btn-secondary-hover-color: $secondary-color;
+$btn-secondary-hover-bg: $primary-color;
+$btn-secondary-focus-bg: $secondary-cta;
+
+$btn-disabled-bg: $primary-cta-disabled;
+
+//== icons
+
+$accordion-button-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+$accordion-button-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");

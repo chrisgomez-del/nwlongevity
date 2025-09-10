@@ -113,7 +113,7 @@ function processArea(area) {
     }
 }
 
-const areas = ['Innovation', 'westhealth'];
+const areas = ['Innovation', 'westhealth', 'longevity'];
 const processedAreas = areas.map(processArea);
 
 /*gulp.task('styles', function (done) {
