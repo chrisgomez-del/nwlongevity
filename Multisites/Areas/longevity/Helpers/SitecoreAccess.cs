@@ -206,7 +206,7 @@ namespace NM_MultiSites.Areas.Longevity.Helpers
 
         public static String LinkTitle(this Sitecore.Data.Fields.LinkField lf)
         {
-            return "";// lf.LinkTitle();
+            return lf != null ? lf.Text : string.Empty;
         }
 
 

@@ -9,8 +9,7 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
     {
         public HtmlString Title { get; set; }
         public HtmlString Content { get; set; }
-        public string CTALink { get; set; }
-        public string CTATitle { get; set; }
+        public GeneralLink CTA { get; set; }
         public string BackgroundVideoPath { get; set; }
     }
 }

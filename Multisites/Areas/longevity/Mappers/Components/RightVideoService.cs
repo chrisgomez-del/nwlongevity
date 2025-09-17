@@ -3,8 +3,8 @@ using System.Web;
 using NM_MultiSites.Areas.Longevity.Models.Components;
 using NM_MultiSites.Areas.Longevity.Helpers;
 using Sitecore.Web.UI.WebControls;
-using Sitecore.Shell.Framework.Commands.TemplateBuilder;
-
+using NM_MultiSites.Areas.Longevity.Models;
+using Sitecore.Mvc.Helpers;
 
 namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
@@ -23,8 +23,15 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
             {
                 rightVideo.Title = new HtmlString(FieldRenderer.Render(datasource, "Title"));
                 rightVideo.Content = new HtmlString(FieldRenderer.Render(datasource, "Content"));
-                rightVideo.CTALink = ""; // String.IsNullOrEmpty(datasource.Fields["CTA"].GetValue(true)) ? null : SitecoreAccess.LinkUrl(datasource.Fields["CTA"]);
-                rightVideo.CTATitle = "What to Expect"; //String.IsNullOrEmpty(datasource.Fields["CTA"].GetValue(true)) ? null : SitecoreAccess.LinkTitle(datasource.Fields["CTA"]);
+
+                GeneralLink cta = new GeneralLink()
+                {
+                    Title = new HtmlString(SitecoreAccess.LinkTitle(datasource.Fields["CTA"])),
+                    CTALink = String.IsNullOrEmpty(datasource.Fields["CTA"].GetValue(true)) ? null : SitecoreAccess.LinkUrl(datasource.Fields["CTA"]),
+                };
+
+                rightVideo.CTA = cta;
+                
                 rightVideo.BackgroundVideoPath = String.IsNullOrEmpty(datasource.Fields["Background Video"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(datasource, "Background Video");
             }
             return rightVideo;
