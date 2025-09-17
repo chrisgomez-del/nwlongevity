@@ -1,0 +1,89 @@
+@import 'variables';
+
+.component-our-team {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 20px;
+
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        overflow: visible;
+        justify-content: center;
+        gap: .5vw;  
+
+        @media screen and (min-width: 600px) {
+            width: 100%;
+        }
+
+        .row-container {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: wrap;            
+            width: 100%;
+
+            @media screen and (min-width: $tab-breakpoint) {
+                flex-direction: row;
+                justify-content:space-between;
+                gap: .5vw; 
+            }         
+
+            .team-member {
+                width: 100%;
+                max-width: 235px;
+                height: auto;
+                flex: 1 1 240px;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;                
+
+                @media screen and (min-width: 600px) {
+                    margin: 1vw 0;
+                }
+
+                .photo {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    
+                }
+
+                .name {
+                    margin-top: 10px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: $NM-Purple-prp-MAIN;
+                }
+
+                .role {
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: center;
+                    color: #555;
+                }
+            } 
+            
+            &.top {
+                width: 800px;
+
+                .team-member {
+                    max-width: 350px;
+
+                    .photo {
+                        max-width: 235px;                        
+                    }
+                }
+            }            
+        }
+
+    }
+}

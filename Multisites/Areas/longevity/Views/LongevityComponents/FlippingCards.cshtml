@@ -1,0 +1,38 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.FlippingCards
+
+<div class="component-flipping-cards">
+    <div class="slides-nav">
+        <div class="prev-button"></div>
+        <div class="next-button"></div>
+    </div>
+    <div class="cards-container">
+
+        @{ 
+            int _counter = 1;
+        }
+        @foreach (var card in @Model.FlippingCardCollection)
+        {
+
+            <div id="card1@_counter++" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(@card.ImagePath);">
+                        <!-- Content for the front side -->
+
+                    </div>
+                    <div class="flip-card-back">
+                        <!-- Content for the back side -->
+                        <div class="back-content">
+                            <h2>@card.TopText</h2>
+                            <p class="middle-text">@card.MiddleText</p>
+                            <p class="bottom-text">@card.BottomText</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+
+</div>

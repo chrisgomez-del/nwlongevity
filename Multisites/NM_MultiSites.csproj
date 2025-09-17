@@ -41,6 +41,7 @@
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
     <LangVersion>7.2</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -369,14 +370,32 @@
     <Compile Include="Areas\Innovation\Models\Global\Header.cs" />
     <Compile Include="Areas\Innovation\Pipelines\CreatePageDataFolder.cs" />
     <Compile Include="Areas\Innovation\Pipelines\InitializeInnovationSite.cs" />
+    <Compile Include="Areas\longevity\Controllers\ComponentsController.cs" />
     <Compile Include="Areas\longevity\Controllers\GlobalComponentsController.cs" />
     <Compile Include="Areas\longevity\Helpers\SitecoreAccess.cs" />
     <Compile Include="Areas\longevity\longevityAreaRegistration.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\AssessmentService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\ExperienceService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\FlippingCardsService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\OurTeamService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\RightVideoService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\TransitionCopyService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Components\VideoCarouselService.cs" />
     <Compile Include="Areas\longevity\Mappers\Global\FooterService.cs" />
+    <Compile Include="Areas\longevity\Mappers\Global\FormService.cs" />
     <Compile Include="Areas\longevity\Mappers\Global\HeaderService.cs" />
+    <Compile Include="Areas\longevity\Models\Components\Assessment.cs" />
+    <Compile Include="Areas\longevity\Models\Components\Experience.cs" />
+    <Compile Include="Areas\longevity\Models\Components\FlippingCards.cs" />
+    <Compile Include="Areas\longevity\Models\Components\OurTeam.cs" />
+    <Compile Include="Areas\longevity\Models\Components\RightVideo.cs" />
+    <Compile Include="Areas\longevity\Models\Components\TransitionCopy.cs" />
+    <Compile Include="Areas\longevity\Models\Components\VideoCarousel.cs" />
     <Compile Include="Areas\longevity\Models\GeneralLink.cs" />
     <Compile Include="Areas\longevity\Models\Global\Footer.cs" />
+    <Compile Include="Areas\longevity\Models\Global\Form.cs" />
     <Compile Include="Areas\longevity\Models\Global\Header.cs" />
+    <Compile Include="Areas\longevity\Pipelines\InitializeLongevitySite.cs" />
     <Compile Include="Areas\westhealth\Controllers\NavigationController.cs" />
     <Compile Include="Areas\westhealth\Controllers\PageController.cs" />
     <Compile Include="Areas\westhealth\Models\Components\CardListViewModel.cs" />
@@ -461,6 +480,7 @@
     <Content Include="App_Config\include\WestHealth-Settings.config" />
     <Content Include="App_Config\include\WestHealth-Initialize.config" />
     <Content Include="App_Config\include\Longevity-Settings.config" />
+    <Content Include="App_Config\include\Longevity-Initialize.config" />
     <None Include="Areas\ems\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.js" />
     <Content Include="Areas\ems\Scripts\jquery-1.10.2.min.js" />
@@ -577,6 +597,11 @@
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.min.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.js" />
     <Content Include="Areas\Innovation\Scripts\_libs\jquery\jquery-3.6.0.slim.min.js" />
+    <Content Include="Areas\longevity\Content\img\bottomnmpattern.png" />
+    <Content Include="Areas\longevity\Content\img\bottompattern2.png" />
+    <Content Include="Areas\longevity\Content\img\footer\footerbackground.png" />
+    <Content Include="Areas\longevity\Content\img\header\logo.png" />
+    <Content Include="Areas\longevity\Scripts\js\main.js" />
     <Content Include="Areas\westhealth\Content\dist\**\*.*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
@@ -751,10 +776,28 @@
     <Content Include="Areas\westhealth\Views\Components\Cards\CopyCard.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\ImageAboveTwoColumn.cshtml" />
     <Content Include="Areas\westhealth\Views\Components\Cards\ImageAboveCard.cshtml" />
-    <Content Include="Areas\longevity\Views\web.config" />
     <Content Include="Areas\longevity\Views\Layouts\Base.cshtml" />
     <Content Include="Areas\longevity\Content\scss\style.scss" />
-    <Content Include="Areas\longevity\Content\scss\_variables.scss" />
+    <Content Include="Areas\longevity\Content\scss\variables.scss" />
+    <Content Include="Areas\longevity\Views\LongevityGlobalComponents\Header.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityGlobalComponents\Footer.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\VideoCarousel.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\Assessment.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\Experience.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\FlippingCards.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\OurTeam.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\RightVideo.cshtml" />
+    <Content Include="Areas\longevity\Views\LongevityComponents\TransitionCopy.cshtml" />
+    <Content Include="Areas\longevity\Content\scss\component-assessment.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-experience.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-flipping-cards.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-our-team.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-right-video.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-transition-copy.scss" />
+    <Content Include="Areas\longevity\Content\scss\component-video-carousel.scss" />
+    <Content Include="Areas\longevity\Content\scss\footer.scss" />
+    <Content Include="Areas\longevity\Content\scss\form.scss" />
+    <Content Include="Areas\longevity\Content\scss\header.scss" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
@@ -831,6 +874,9 @@
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
@@ -855,6 +901,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

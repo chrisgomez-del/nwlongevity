@@ -1,0 +1,16 @@
+﻿@using NM_MultiSites.Areas.Longevity.Helpers
+@model NM_MultiSites.Areas.Longevity.Models.Global.Header
+
+
+@if (Model.MainNavLinks != null && Model.MainNavLinks.Any())
+{
+    <nav id="nav" class="home">
+        <div class="logo"><a href="/"><img src="~/Areas/longevity/Content/img/header/logo.png" alt="Logo"></a></div>
+        <div class="menu">
+            @foreach (var link in Model.MainNavLinks)
+            {
+                <a href="@link.CTALink" class="@link.Class">@link.Title</a>
+            }
+        </div>
+    </nav>
+}

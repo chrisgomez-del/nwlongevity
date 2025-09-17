@@ -1,0 +1,58 @@
+@import 'variables';
+
+
+.component-video-carousel {
+    position: relative;
+    
+    
+    @media screen and (min-width: $tab-breakpoint) {
+        min-height: 100vh;
+    }
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(78, 42, 132, 0.00) 2.24%,#4E2A84 77.8%);
+        z-index: 1;
+
+        .copy {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 20px;
+
+            @media screen and (min-width: $tab-breakpoint) {
+                width: 800px;
+            }
+
+        }
+        
+
+        .bottomnmpattern {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+                height: auto;
+                mask: linear-gradient(to bottom, rgba(209, 209, 209, 0.1) 0%, rgba(0,0,0,1) 100%);
+                -webkit-mask: linear-gradient(to bottom, rgba(209, 209, 209, 0.1) 0%, rgba(0,0,0,1) 100%);
+                opacity: 0.9;
+            }
+        }
+
+    }
+}
+

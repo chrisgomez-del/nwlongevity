@@ -8,11 +8,11 @@ using NM_MultiSites.Areas.Longevity.Models.Global;
 
 namespace NM_MultiSites.Areas.Longevity.Controllers
 {
-    public class GlobalComponentsController : Controller
+    public class LongevityGlobalComponentsController : Controller
     {
         private readonly IHeaderService _headerService;
         private readonly IFooterService _footerService;
-        public GlobalComponentsController()
+        public LongevityGlobalComponentsController()
         {
             _headerService = new HeaderService();
             _footerService = new FooterService();
@@ -23,11 +23,13 @@ namespace NM_MultiSites.Areas.Longevity.Controllers
         {
             Header HeaderData = _headerService.GetHeader();
             return View(HeaderData);
+            //return View();
         }
         public ActionResult Footer()
         {
-            Footer FooterData = _footerService.GetFooter();
-            return View(FooterData);
+            //Footer FooterData = _footerService.GetFooter();
+            //return View(FooterData);
+            return View();
         }
     }
 }

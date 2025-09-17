@@ -1,0 +1,21 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.RightVideo
+
+<div class="component-right-video">
+    <div class="title-text-container">
+        <div class="title-content">
+            <h2>@Model.Title</h2>
+        </div>
+        <div class="text-content small-text text-black">
+            @Model.Content
+            <a href="@Model.CTALink" class="button">@Model.CTATitle</a>
+        </div>
+    </div>
+    <div class="video-content">
+        <video autoplay muted loop>
+            <source src="@Model.BackgroundVideoPath" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+</div>

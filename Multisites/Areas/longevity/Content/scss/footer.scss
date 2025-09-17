@@ -1,0 +1,70 @@
+@import 'variables';
+
+footer {
+    position: relative;
+    background-image: url(/Areas/longevity/Content/img/bottompattern2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: $tab-breakpoint) {
+        //height: 550px;
+    }
+
+    .footer-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to left, $NM-Purple-prp-MAIN, transparent);
+    }
+
+    .footer-content {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+
+        p {
+            //font-size: 14px;
+            //line-height: 1.5;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+
+            &.button {
+                background-color: #fff;
+                color: $NM-Purple-prp-MAIN;
+                padding: 15px 30px;
+                font-weight: 700;
+                margin-top: 30px;
+                margin-bottom: 50px;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-decoration: underline;
+
+                &.button {
+                    text-decoration: none;
+                    background-color: $NM-Purple-prp-20;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: auto;
+        }
+    }
+}

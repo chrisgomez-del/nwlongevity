@@ -204,6 +204,12 @@ namespace NM_MultiSites.Areas.Longevity.Helpers
             }
         }
 
+        public static String LinkTitle(this Sitecore.Data.Fields.LinkField lf)
+        {
+            return "";// lf.LinkTitle();
+        }
+
+
         public static bool InheritsFrom(this Item item, string templateIdstring)
         {
             ID templateId = new Sitecore.Data.ID(templateIdstring);

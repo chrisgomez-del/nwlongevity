@@ -43,6 +43,7 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Global
                         {
                             Title = new HtmlString(FieldRenderer.Render(item, "Title")),
                             CTALink = String.IsNullOrEmpty(item.Fields["Link"].GetValue(true)) ? null : SitecoreAccess.LinkUrl(item.Fields["Link"]),
+                            Class = new HtmlString(FieldRenderer.Render(item, "Class"))
                         };
                         header.MainNavLinks.Add(link);
                     }

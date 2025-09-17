@@ -11,6 +11,7 @@ namespace NM_MultiSites.Areas.Longevity.Models
     {
         public HtmlString Title { get; set; }
         public string CTALink { get; set; }
+        public HtmlString Class { get; set; }
         public Item Item { get; set; }
     }
 }
