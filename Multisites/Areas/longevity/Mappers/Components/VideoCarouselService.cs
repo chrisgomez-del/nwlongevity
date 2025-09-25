@@ -13,6 +13,7 @@ using Sitecore.Web.UI.WebControls;
 using System.Globalization;
 using System.EnterpriseServices;
 using Sitecore.Web.UI.WebControls.Presentation;
+using Sitecore.Shell.Framework.Commands.TemplateBuilder;
 
 namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
@@ -31,6 +32,7 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
             {
                 videoCarousel.Title1 = new HtmlString(FieldRenderer.Render(datasource, "Title 1"));
                 videoCarousel.Title2 = new HtmlString(FieldRenderer.Render(datasource, "Title 2"));
+                videoCarousel.Class = String.IsNullOrEmpty(datasource.Fields["Class"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(datasource, "Class");
 
                 bool isMobile = HttpContext.Current?.Request?.Browser?.IsMobileDevice ?? false;
                 if (isMobile)

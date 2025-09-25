@@ -108,12 +108,14 @@ header {
                     position: absolute;
                     top: 50px;
                     left: 15px;
+                    padding: 10px 20px;
 
                     @media screen and (min-width: $tab-breakpoint) {
                         position: relative;
                         top: -10px;
                         left: unset;
                         right: -4vw;
+                        padding: 1rem 1.5rem;
                     }
                     
                 }

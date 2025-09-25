@@ -24,6 +24,7 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
                 {
                     FlippingCard card = new FlippingCard();
                     card.ImagePath = String.IsNullOrEmpty(child.Fields["Image"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child, "Image");
+                    card.Title = new HtmlString(FieldRenderer.Render(child, "Title"));
                     card.TopText = new HtmlString(FieldRenderer.Render(child, "Top Text"));
                     card.MiddleText = new HtmlString(FieldRenderer.Render(child, "Middle Text"));
                     card.BottomText = new HtmlString(FieldRenderer.Render(child, "Bottom Text"));

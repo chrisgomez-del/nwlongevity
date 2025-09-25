@@ -17,6 +17,7 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
         public List<Video> VideoCollection { get; set; }
         public HtmlString Title1 { get; set; }
         public HtmlString Title2 { get; set; }
+        public string Class { get; set; }
     }
 
     public class Video

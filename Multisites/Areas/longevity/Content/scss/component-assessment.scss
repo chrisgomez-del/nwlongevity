@@ -8,7 +8,7 @@
     overflow: hidden;
 
     @media screen and (min-width: $tab-breakpoint) {
-        height: 800px;
+        height: 900px;
     }      
 
     .slides-title {
@@ -22,9 +22,12 @@
     }
     
     .slides {
-        display: flex;
+
         height: 100%;
 
+        @media screen and (min-width: $tab-breakpoint) {
+            display: flex;
+        }
         .slides-title-nav {
             width: 100%;
             padding-top: 25px;
@@ -32,10 +35,11 @@
             @media screen and (min-width: $tab-breakpoint) {
                 width: 25%;
                 min-width: 350px;
+                padding-top: 0px;
             } 
 
             .slides-nav {
-                display: inline-flex;
+                display: block;
                 padding: 1px;
                 align-items: anchor-center;
                 border-radius: 40px;
@@ -44,21 +48,39 @@
                 z-index: 5;
                 flex-wrap: wrap;
 
+                @media screen and (min-width: $tab-breakpoint) {
+                    display: inline-flex;
+                }
   
                 
                 .slides-nav-item {
                     background-color: $NM-Purple-prp-10;
                     color: $NM-Purple-prp-MAIN;
-                    padding: 8px 12px;
+                    padding: 8px 10px;
                     margin-bottom: 10px;
                     border-radius: 5px;
-                    width: 300px;
                     
+                    
+                    @media screen and (min-width: $tab-breakpoint) {
+                        width: 300px;
+                        padding: 8px 12px;
+                    }
                     &:hover {
                         cursor: pointer;
-                        color: #9b7dc7;
+
+                        @media screen and (min-width: $tab-breakpoint) {
+                            color: #9b7dc7;
+                        }
                     }
 
+                    &.active {
+
+
+                        @media screen and (min-width: $tab-breakpoint) {
+                            background-color: $NM-Purple-prp-MAIN;
+                            color: white; 
+                        }
+                    }
                     .title-container {
 
                     }
@@ -66,9 +88,19 @@
                     .content-container {
                         display: none;
                         
+                        .description {
+                            padding-top: 20px;
+
+                            @media screen and (min-width: $tab-breakpoint) {
+                                padding-top: unset;
+                            }                            
+                        }
+
                     }
                 }
             }
+
+
         }
 
 
@@ -119,8 +151,11 @@
                         height: auto;
                         //margin: 0 auto;
                         color: $NM-Purple-prp-MAIN;
-                        background-color: rgba(226, 216, 239, 0.5);
                         padding: 20px;
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                        border-radius: 10px;
+                        background: rgba(228, 224, 238, 0.30);                        
 
                         &.wide {
                             max-width: 600px;
@@ -142,7 +177,8 @@
                     video {
                         position: absolute;
                         right: 0px;
-                        width: 60vw;
+                        width: 40vw;
+                        top: -30px;
                     }
                 }        
             }

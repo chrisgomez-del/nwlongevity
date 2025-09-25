@@ -34,6 +34,21 @@ footer {
             //line-height: 1.5;
         }
 
+        .disclaimer {
+            font-size: 10px;
+            line-height: 1.4;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #A495C3;
+            width: 100%;
+            margin: auto;
+            text-align: left;
+            font-style: italic;
+
+            @media screen and (min-width: $tab-breakpoint) {
+                width: 900px;
+            }
+        }
         a {
             color: #fff;
             text-decoration: none;
@@ -55,16 +70,21 @@ footer {
                 &.button {
                     text-decoration: none;
                     background-color: $NM-Purple-prp-20;
-                    text-decoration: none;
+                    text-decoration: none; 
                 }
-            }
+            } 
+           
         }
 
         .footer-links {
-            display: flex;
-            justify-content: space-between;
-            width: 300px;
+            width: 100%;
             margin: auto;
+
+            @media screen and (min-width: $tab-breakpoint) {
+                display: flex;
+                justify-content: space-between;
+                width: 350px;
+            }
         }
-    }
+    } 
 }

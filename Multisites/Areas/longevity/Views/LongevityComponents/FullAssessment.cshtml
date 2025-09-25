@@ -1,0 +1,51 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.FullAssessment
+
+<div class="component-assessment" role="region" aria-label="Full Multi-Organ Assessment">
+    <div class="slides-title">
+        <h2>@Model.Title</h2>
+    </div>
+    <div class="slides" tabindex="0" aria-label="Assessment slides navigation">
+        @{
+            int counter1 = 1;
+            int counter2 = 0;
+        }
+        <div class="slides-title-nav">
+            @foreach (var assessment in @Model.AssessmentCollection)
+            {
+                <div class="slides-nav">
+                    <div class="slides-nav-item @(counter1 == 1 ? "active" : "")" data-slide="slide@(counter1++)" tabindex="@(counter2++)" aria-label="Comprehensive Self-Assessments">
+                        <div class="title-container">@assessment.Title</div>
+                        <div class="content-container left-inner-container">
+
+                            @assessment.Content
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+            @{
+                counter1 = 1;
+                counter2 = 0;
+            }
+            <div class="slides-container">
+                @foreach (var assessment in Model.AssessmentCollection)
+                {
+                    <div class="slide slide@(counter1) @(counter1++ == 1 ? "show" : "")" role="group" aria-label="Comprehensive Self-Assessments slide">
+                        <div class="left">
+                            <div class="left-inner-container">
+                                @assessment.Content
+                            </div>
+                        </div>
+                        <div class="right">
+                            <video autoplay muted loop aria-label="Self-assessment video" playsinline>
+                                <source src="@assessment.VideoPath" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
 @if (Model.VideoCollection != null && Model.VideoCollection.Any())
 {
 
-    <div class="component-video-carousel">
+    <div class="component-video-carousel @Model.Class">
         <script>
             const videoFiles = [
                 @foreach (var video in @Model.VideoCollection)

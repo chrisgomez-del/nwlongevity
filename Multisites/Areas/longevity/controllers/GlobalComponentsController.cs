@@ -23,13 +23,11 @@ namespace NM_MultiSites.Areas.Longevity.Controllers
         {
             Header HeaderData = _headerService.GetHeader();
             return View(HeaderData);
-            //return View();
         }
         public ActionResult Footer()
         {
-            //Footer FooterData = _footerService.GetFooter();
-            //return View(FooterData);
-            return View();
+            Footer FooterData = _footerService.GetFooter();
+            return View(FooterData);
         }
     }
 }

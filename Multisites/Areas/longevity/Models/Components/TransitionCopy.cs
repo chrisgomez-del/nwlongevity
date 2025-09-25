@@ -9,5 +9,6 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
     {
         public HtmlString TransitionContent1 { get; set; }
         public HtmlString TransitionContent2 { get; set; }
+        public GeneralLink CTA { get; set; }
     }
 }

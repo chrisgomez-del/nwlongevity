@@ -1,0 +1,134 @@
+@import 'variables';
+
+.component-timeline {
+    position: relative;
+
+    .timeline-title {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            color: $NM-Purple-prp-MAIN;
+            font-weight: 700;
+        }
+    }
+
+    .timeline-container {
+        display: flex;
+        position: relative;
+        height: 800px;
+        background-color: #fff;
+        overflow: hidden;
+        overflow-x: scroll;
+
+
+        .inset-text-cta {
+            border-radius: 29.475px;
+            background: rgba(255, 255, 255, 0.70);
+            box-shadow: 0 0.982px 98.25px 9.825px rgba(255, 255, 255, 0.20) inset;
+            z-index: 5;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 250px;
+            padding: 20px;
+
+            @media screen and (min-width: $tab-breakpoint) {
+                top: 50px;
+                left: 50px;
+            }
+
+            h2 {
+                font-size: 20px;
+                color: $NM-Purple-prp-MAIN;
+                font-weight: 400;
+                text-align: left;
+                text-transform: none;
+            }
+        }
+
+        .event {
+            position: relative;
+            display: flex;
+            border-right: 7px solid white;
+
+            @media screen and (min-width: $desktop-breakpoint) {
+                //width: 130vw;
+            }
+
+            video {
+                width: auto;
+                height: 100%;
+                display: none;
+
+                @media screen and (min-width: $desktop-breakpoint) {
+                    display: block;
+                }
+            }
+
+            img {
+                width: auto;
+                height: 100%;
+                display: block;
+
+                @media screen and (min-width: $desktop-breakpoint) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .timeline-nav {
+        padding: 1px;
+        align-items: anchor-center;
+        border-radius: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        bottom: 40px;
+        width: 300px;
+        height: 200px;
+        z-index: 5;
+        justify-content: space-around;
+        left: 50px;
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            display: inline-flex;
+            width: 900px;
+            height: 50px;
+            bottom: 100px;
+            left: 100px;
+            background: rgba(255, 255, 255, 0.40);
+        }
+
+        div {
+            color: #4E2A84;
+            padding: 8px;
+            padding-left: 30px;
+
+            @media screen and (min-width: $desktop-breakpoint) {
+                padding: unset;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                @media screen and (min-width: $desktop-breakpoint) {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &.short {
+        .timeline-container {
+            height: 400px;
+            width: 1000px;
+
+            .days-span {
+                .day {
+                    height: 400px;
+                }
+            }
+        }
+    }
+}

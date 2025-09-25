@@ -1,0 +1,41 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.Timeline
+
+@{
+    int counter1 = 1;
+    int counter2 = 0;
+}
+
+<div class="component-timeline" role="region" aria-label="Longevity Program Timeline">
+    <div class="timeline-title">
+        <h2>@Model.Title</h2>
+    </div>
+    <div class="timeline-container" tabindex="@(counter2++)" aria-label="Timeline days navigation">
+        @foreach (var timelineEvent in @Model.EventCollection)
+        {
+            <div id="event@(counter1++)" class="event">
+
+                <div class="inset-text-cta" style="@(timelineEvent.InfoBoxTop != "" ? "top: " + timelineEvent.InfoBoxTop + ";" : "") @(timelineEvent.InfoBoxLeft != "" ? "left: " + timelineEvent.InfoBoxLeft + ";" : "")">
+                    <h2>@timelineEvent.Title</h2>
+                    <div>@timelineEvent.Content</div>
+                </div>
+                <video autoplay muted loop aria-label="@timelineEvent.VideoAriaLabel" playsinline>
+                    <source src="@timelineEvent.VideoPath" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="@timelineEvent.ImagePath" alt="@timelineEvent.ImageAlt" />
+
+            </div>
+        }
+    </div>
+    <div class="timeline-nav">
+        @{
+            counter1 = 1;
+            counter2 = 0;
+        }
+
+        @foreach (var timelineEvent in @Model.EventCollection)
+        {
+            <div class="timeline-nav-item" data-event="event@(counter1++)">@timelineEvent.NavTitle</div>
+        }
+    </div>
+</div>

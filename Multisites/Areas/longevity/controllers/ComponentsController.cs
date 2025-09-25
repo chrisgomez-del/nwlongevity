@@ -10,36 +10,38 @@ namespace NM_MultiSites.Areas.Innovation.Controllers
 {
     public class LongevityComponentsController : Controller
     {
-        private readonly IAssessmentService _assessmentService;
-        private readonly IExperienceService _experienceService;
+        private readonly IFullAssessmentService _fullAssessmentService;
+        private readonly ITimelineService _timeLineService;
         private readonly IFlippingCardsService _flippingCardsService;
-        private readonly IOurTeamService _ourTeamService;
+        private readonly ITeamMembersService _teamMembersService;
         private readonly IRightVideoService _rightVideoService;
         private readonly ITransitionCopyService _transitionCopyService;
         private readonly IVideoCarouselService _videoCarouselService;
+        private readonly IWhoWeAreService _whoWeAreService;
 
 
         public LongevityComponentsController()
         {
-            _assessmentService = new AssessmentService();
-            _experienceService = new ExperienceService();
+            _fullAssessmentService = new FullAssessmentService();
+            _timeLineService = new TimelineService();
             _flippingCardsService = new FlippingCardsService();
-            _ourTeamService = new OurTeamService();
+            _teamMembersService = new TeamMembersService();
             _rightVideoService = new RightVideoService();
             _transitionCopyService = new TransitionCopyService();
             _videoCarouselService = new VideoCarouselService();
+            _whoWeAreService = new WhoWeAreService();
         }
 
-        public ActionResult Assessment()
+        public ActionResult FullAssessment()
         {
-            Assessment assessment = _assessmentService.GetAssessmentData();
-            return View(assessment);
+            FullAssessment fullAssessment = _fullAssessmentService.GetAssessmentData();
+            return View(fullAssessment);
         }
 
-        public ActionResult Experience()
+        public ActionResult Timeline()
         {
-            Experience experience = _experienceService.GetExperienceData();
-            return View(experience);
+            Timeline timeline = _timeLineService.GetTimelineData();
+            return View(timeline);
         }
 
         public ActionResult FlippingCards()
@@ -48,10 +50,10 @@ namespace NM_MultiSites.Areas.Innovation.Controllers
             return View(flippingCards);
         }
 
-        public ActionResult OurTeam()
+        public ActionResult TeamMembers()
         {
-            OurTeam ourTeam = _ourTeamService.GetOurTeamData();
-            return View(ourTeam);
+            TeamMembers teamMembers = _teamMembersService.GetTeamMembersData();
+            return View(teamMembers);
         }
 
         public ActionResult RightVideo()
@@ -72,5 +74,10 @@ namespace NM_MultiSites.Areas.Innovation.Controllers
             return View(videos);
         }
 
+        public ActionResult WhoWeAre()
+        {
+            WhoWeAre whoWeAre = _whoWeAreService.GetWhoWeAreData();
+            return View(whoWeAre);
+        }
     }
 }

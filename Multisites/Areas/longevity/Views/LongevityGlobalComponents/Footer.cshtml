@@ -1,15 +1,21 @@
-﻿<div class="footer-overlay"></div>
+﻿@using NM_MultiSites.Areas.Longevity.Helpers
+@model NM_MultiSites.Areas.Longevity.Models.Global.Footer
+
+<div class="footer-overlay"></div>
 <div class="footer-content">
     <div>
-        <h2>Welcome To Better Aging</h2>
-        <p class="medium-text">Tailored strategies for your new journey.</p>
-        <a class="button" href="/what-to-expect.html">Plan Your Visit</a>
+        <h2>@Model.Title1</h2>
+        <p class="medium-text">@Model.Title2</p>
+        <a class="plan-your-visit button" href="#">Plan Your Visit</a>
     </div>
     <div>
         <div class="footer-links">
-            <div><a href="#" target="_blank">Patient Rights and Policies</a></div>
-            <div><a href="#" target="_blank">Accessibility</a></div>
+            <div><a href="@Model.PoliciesLink.CTALink" target="_blank">@Model.PoliciesLink.Title</a></div>
+            <div><a href="@Model.AccessibilityLink.CTALink" target="_blank">@Model.AccessibilityLink.Title</a></div>
         </div>
     </div>
-    <p>© 2025 by Northwestern Medicine® and Northwestern Memorial HealthCare.<br />Northwestern Medicine® is a trademark of Northwestern Memorial HealthCare, used by Northwestern University.</p>
+    <p>@Model.Copyright</p>
+    <div class="disclaimer">
+        <p class="">@Model.Disclaimer</p>
+    </div>
 </div>

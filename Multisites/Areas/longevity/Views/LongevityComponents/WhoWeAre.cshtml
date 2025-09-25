@@ -1,0 +1,75 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.WhoWeAre
+
+<div class="component-who-we-are" role="region" aria-label="Who We Are">
+    @{ 
+        int _counter = 1;
+    }
+    @foreach (var whosection in @Model.SectionCollection)
+    {
+
+        <div class="section @whosection.Class">
+            @if (_counter == 1)
+            {
+                <div class="component-title"><h2>@Model.Title</h2></div>
+                <div class="svg-background" aria-hidden="true">
+                </div>
+                _counter++;
+            }
+
+            <div class="section-inner-container">
+                <div class="left">
+                    <div class="content">
+                        <p>@whosection.LeftDescription</p>
+                        @if (whosection.LeftCTA.Title.ToString() != "")
+                        {
+                            <a href="@whosection.LeftCTA.CTALink" class="button">@whosection.LeftCTA.Title</a>
+                        }
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="content">
+                        @if (whosection.RightTeamMembers.Count > 0)
+                        {
+                            <div class="team-members">
+                                @foreach (var member in whosection.RightTeamMembers)
+                                {
+                                    <div class="member">
+                                        <img class="photo" src="@member.ProfileImagePath" alt="Photo of @member.Name.Title">
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else if (whosection.RightTimelineEvents.Count > 0)
+                        {
+                    <div class="component-timeline short" role="region" aria-label="Longevity Program Timeline">
+                        <div class="timeline-container" tabindex="0" aria-label="Timeline days navigation">
+                            @foreach (var timelineEvent in whosection.RightTimelineEvents)
+                            {
+                                <div class="event">
+                                    <video autoplay muted loop aria-label="@timelineEvent.VideoAriaLabel" playsinline>
+                                        <source src="@timelineEvent.VideoPath" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <img src="@timelineEvent.ImagePath" alt="@timelineEvent.ImageAlt" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                        }
+                        else
+                        {
+                            @whosection.RightContent
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="component-footer">
+        <div class="footer-inner-container">
+            @Model.BottomContent
+        </div>
+    </div>
+</div>
+

@@ -18,6 +18,7 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
 
     public class FlippingCard
     {
+        public HtmlString Title { get; set; }
         public string ImagePath { get; set; }
         public HtmlString TopText { get; set; }
         public HtmlString MiddleText { get; set; }

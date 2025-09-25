@@ -1,0 +1,21 @@
+﻿@model NM_MultiSites.Areas.Longevity.Models.Components.TeamMembers
+
+<div class="component-our-team" role="region" aria-label="Our Team">
+    <section class="team-container">
+        @foreach (var child in @Model.TeamMemberRowCollection)
+        { 
+            <div class="row-container @child.Class">
+                @foreach (var child2 in @child.TeamMemberCollection)
+                {
+                    <article class="team-member">
+                        <img class="photo" src="@child2.ProfileImagePath" alt="Photo of @child2.Name.Title, @child2.Title">
+                        <div class="name"><a href="@child2.Name.CTALink" target="_blank">@child2.Name.Title</a></div>
+                        <div class="role">
+                            @child2.Title
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </section>
+</div>
