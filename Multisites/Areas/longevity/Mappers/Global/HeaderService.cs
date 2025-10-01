@@ -33,7 +33,7 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Global
                 header.CaseStudyImage = new HtmlString(FieldRenderer.Render(currentitem, "CaseStudy Header Image"));
                 header.AdditionalContent = new HtmlString(FieldRenderer.Render(currentitem, "Additional Content"));
 
-            List<Item> MainNavItems = SitecoreAccess.GetMultiListItems(i, "Main Nav Links");
+                List<Item> MainNavItems = SitecoreAccess.GetMultiListItems(i, "Main Nav Links");
                 List<Item> AdditionalNavItems = SitecoreAccess.GetMultiListItems(i, "Additional Nav Links");
                 if (MainNavItems != null && MainNavItems.Any())
                 {

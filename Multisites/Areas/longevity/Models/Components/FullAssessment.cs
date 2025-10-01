@@ -20,5 +20,6 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
         public HtmlString Title { get; set; }
         public HtmlString Content { get; set; }
         public string VideoPath { get; set; }
+        public string MobileVideoPath { get; set; }
     }
 }

@@ -9,6 +9,8 @@ using TeamMember = NM_MultiSites.Areas.Longevity.Models.Components.TeamMember;
 using NM_MultiSites.Areas.Longevity.Models;
 using System.Collections.Generic;
 using Sitecore.Shell.Framework.Commands.TemplateBuilder;
+using Sitecore.Collections;
+using Sitecore.Data;
 
 namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
@@ -31,7 +33,8 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
                 whoWeAre.Title = new HtmlString(FieldRenderer.Render(datasource, "Title"));
                 whoWeAre.BottomContent = new HtmlString(FieldRenderer.Render(datasource, "Bottom Content"));
 
-                foreach (Sitecore.Data.Items.Item child in datasource.Children)
+                ChildList children = datasource.GetChildren();
+                foreach (Sitecore.Data.Items.Item child in children)
                 {
                     WhoWeAreSection whoWeAreSection = new WhoWeAreSection();
                     whoWeAreSection.LeftDescription = new HtmlString(FieldRenderer.Render(child, "Description"));
@@ -77,9 +80,12 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
             List<TeamMember> teamMembers = new List<TeamMember>();
             
             TeamMemberRow memberrow = new TeamMemberRow();
-            foreach (Sitecore.Data.Items.Item row in componentDataSource.Children)
+
+            ChildList children = componentDataSource.GetChildren();
+            foreach (Sitecore.Data.Items.Item row in children)
             {
-                foreach (Sitecore.Data.Items.Item child2 in row.Children)
+                ChildList children2 = row.GetChildren();
+                foreach (Sitecore.Data.Items.Item child2 in children2)
                 {
 
                     TeamMember teamMember = new TeamMember();
@@ -104,7 +110,8 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 
             List<TimelineEvent> timelineEvents = new List<TimelineEvent>();
 
-            foreach (Sitecore.Data.Items.Item child in componentDataSource.Children)
+            ChildList children = componentDataSource.GetChildren();
+            foreach (Sitecore.Data.Items.Item child in children)
             {
                 TimelineEvent timelineEvent = new TimelineEvent();
 

@@ -6,7 +6,7 @@
     margin-bottom: 50px;
 
     @media screen and (min-width: $tab-breakpoint) {
-        padding: 20px;
+
     }
 
     .team-container {
@@ -30,6 +30,7 @@
             align-content: center;
             flex-wrap: wrap;
             width: 100%;
+            padding: 20px;
 
             @media screen and (min-width: $tab-breakpoint) {
                 flex-direction: row;
@@ -42,7 +43,7 @@
                 max-width: 320px;
                 height: auto;
                 flex: 1 1 240px;
-                justify-content: center;
+                justify-content: flex-start;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -73,10 +74,10 @@
                 }
 
                 .role {
-                    font-size: 14px;
+                    font-size: 18px;
                     font-weight: 400;
                     text-align: center;
-                    color: #555;
+                    color: #262626;
                 }
             }
 

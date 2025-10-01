@@ -2,36 +2,64 @@
 
 <div class="component-flipping-cards">
     <div class="slides-nav">
-        <div class="prev-button"></div>
-        <div class="next-button"></div>
+        <div class="prev-button">
+            <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.5 0C48.897 0 63 14.103 63 31.5C63 48.897 48.897 63 31.5 63C14.103 63 0 48.897 0 31.5C0 14.103 14.103 0 31.5 0ZM26.1738 12.3809C25.3541 11.7851 24.2002 11.8947 23.5098 12.666C22.8193 13.4377 22.8373 14.5979 23.5205 15.3467L23.666 15.4902L41 31L23.666 46.5098C22.8432 47.2463 22.7733 48.5109 23.5098 49.334C24.2463 50.1568 25.5109 50.2267 26.334 49.4902L45.334 32.4902L46.999 31L45.334 29.5098L26.334 12.5098L26.1738 12.3809Z" fill="#B6ACD1" />
+            </svg>
+        </div>
+        <div class="next-button">
+            <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.5 0C48.897 0 63 14.103 63 31.5C63 48.897 48.897 63 31.5 63C14.103 63 0 48.897 0 31.5C0 14.103 14.103 0 31.5 0ZM26.1738 12.3809C25.3541 11.7851 24.2002 11.8947 23.5098 12.666C22.8193 13.4377 22.8373 14.5979 23.5205 15.3467L23.666 15.4902L41 31L23.666 46.5098C22.8432 47.2463 22.7733 48.5109 23.5098 49.334C24.2463 50.1568 25.5109 50.2267 26.334 49.4902L45.334 32.4902L46.999 31L45.334 29.5098L26.334 12.5098L26.1738 12.3809Z" fill="#B6ACD1" />
+            </svg>
+
+        </div>
     </div>
     <div class="cards-container">
 
-        @{ 
+        @{
             int _counter = 1;
         }
         @foreach (var card in @Model.FlippingCardCollection)
         {
-
-            <div id="card1@_counter++" class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url(@card.ImagePath);">
-                        <div class="front-content-overlay"></div>
-                        <!-- Content for the front side -->
-                        <div class="title">
-                            <h2>@card.Title</h2>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <!-- Content for the back side -->
-                        <div class="back-content">
-                            <h2>@card.TopText</h2>
-                            <p class="middle-text">@card.MiddleText</p>
-                            <p class="bottom-text">@card.BottomText</p>
+            if (@card.IsCTACard)
+            {
+                <div id="card@(_counter++)" class="flip-card is-cta">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a href="@card.CTA.CTALink">
+                                <div class="front-content-overlay"></div>
+                                <!-- Content for the front side -->
+                                <div class="title">
+                                    <h2>@card.Title</h2>
+                                </div>
+                                <p class="description">@card.CTADescription</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div id="card@(_counter++)" class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url(@card.ImagePath);">
+                            <div class="front-content-overlay"></div>
+                            <!-- Content for the front side -->
+                            <div class="title">
+                                <h2>@card.Title</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- Content for the back side -->
+                            <div class="back-content">
+                                <h2>@card.TopText</h2>
+                                <p class="middle-text">@card.MiddleText</p>
+                                <p class="bottom-text">@card.BottomText</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
 
         }
 

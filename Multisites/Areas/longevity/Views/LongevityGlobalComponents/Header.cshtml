@@ -4,8 +4,8 @@
 
 @if (Model.MainNavLinks != null && Model.MainNavLinks.Any())
 {
-    <nav id="nav" class="home">
-        <div class="logo"><a href="/"><img src="~/Areas/longevity/Content/img/header/logo.png" alt="Northwestern Medicine Longevity Clinic logo"></a></div>
+    <nav id="nav" class="home desktop">
+        <div class="logo"><a href="/"><img src="~/Areas/longevity/Content/img/header/logo.svg" alt="Northwestern Medicine Longevity Clinic logo"></a></div>
         <div class="menu">
             @foreach (var link in Model.MainNavLinks)
             {
@@ -13,4 +13,43 @@
             }
         </div>
     </nav>
+
+    <nav id="navMobile" class="home mobile" aria-label="Main navigation">
+        <div class="menu-icon" id="menuIcon" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg width="34" height="20" viewBox="0 0 34 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.07812 2H32.4679" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <path d="M2 10H32.4678" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <path d="M7.07812 18H32.4679" stroke="white" stroke-width="3" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="logo"><a href="/"><img src="/Areas/longevity/Content/img/header/logo.svg" alt="Northwestern Medicine Longevity Clinic logo"></a></div>
+        <div class="visit-icon plan-your-visit">
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="39" height="39" rx="19.5" fill="white" />
+                <path d="M11.7549 11.5469H26.8623C27.053 11.5469 27.2362 11.6221 27.3711 11.7568C27.5059 11.8917 27.5819 12.075 27.582 12.2656V16.0068H11.0361V12.2656C11.0363 12.075 11.1113 11.8917 11.2461 11.7568C11.3809 11.622 11.5642 11.547 11.7549 11.5469Z" fill="#5B3B8C" fill-opacity="0.2" stroke="#4E2A84" stroke-width="0.0716291" />
+                <path d="M26.8626 11.5107H11.7554C11.3382 11.5107 11 11.8489 11 12.2661V27.3733C11 27.7905 11.3382 28.1287 11.7554 28.1287H26.8626C27.2798 28.1287 27.6179 27.7905 27.6179 27.3733V12.2661C27.6179 11.8489 27.2798 11.5107 26.8626 11.5107Z" stroke="#4E2A84" stroke-width="1.14606" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M23.8418 10V13.0214" stroke="#4E2A84" stroke-width="1.14606" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14.7773 10V13.0214" stroke="#4E2A84" stroke-width="1.14606" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11 16.043H27.6179" stroke="#4E2A84" stroke-width="1.14606" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.1562 21.655L18.7349 24.1416L23.8922 19.1685" stroke="#4E2A84" stroke-width="1.14685" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+            <div class="logo-container">
+                <div class="close-icon" id="closeIcon" aria-label="Close menu">
+                    <svg id="closeIconSVG" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 12H11.6092L6.50589 6.36936L1.33182 12H0L5.79873 5.76197L0.518586 0H1.89755L6.55304 5.16279L11.2439 0H12.5757L7.2602 5.75376L13 12Z" fill="white" />
+                    </svg>
+                </div>
+                <div class="logo">
+                    <a href="/"><img src="/Areas/longevity/Content/img/header/logo.svg" alt="Northwestern Medicine Longevity Clinic logo"></a>
+                </div>
+            </div>
+            @foreach (var link in Model.MainNavLinks)
+            {
+                <a href="@link.CTALink" class="@link.Class">@link.Title</a>
+            }
+        </div>
+    </nav>
 }
+

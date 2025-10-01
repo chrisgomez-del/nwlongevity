@@ -31,14 +31,18 @@ html, body {
 }
 
 
-.large-text, h1 {
-    color: #fff;
+h1 {
+    color: #000;
     text-align: center;
-    font-size: 25px;
+
+    /* H1 */
+    font-family: "Open Sans";
+    font-size: 38px;
+    font-style: normal;
     font-weight: 700;
-    font-family: "Overpass", sans-serif;
-    text-transform: uppercase;  
-    width: 100%;
+    line-height: 50px; /* 131.579% */
+    letter-spacing: 5px;
+    text-transform: uppercase;
 
     @media screen and (min-width: $tab-breakpoint) {
         font-size: 48px;
@@ -46,31 +50,43 @@ html, body {
 }
 
 .medium-text, h2 {
-    color: #fff;
+    color: #000;
     text-align: center;
-    font-size: 15px;
-    font-family: "Overpass", sans-serif;
-    text-transform: uppercase;  
-    width: 100%;
 
-    @media screen and (min-width: $tab-breakpoint) {
-        font-size: 30px;
-    }            
+    /* H2 */
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 160%; /* 38.4px */            
 }      
 
 .small-text, h3 {
-    color: #fff;
+    color: #000;
     text-align: center;
-    font-size: 12px;
-    font-family: "Overpass", sans-serif;
-    text-transform: uppercase;  
-    width: 100%;
 
-    @media screen and (min-width: $tab-breakpoint) {
-        font-size: 18px;
-    }            
+    /* H3 */
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 80% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;         
 }    
 
+div, p {
+    color: #000;
+    text-align: center;
+
+    /* P */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 0.18px;    
+}
 .text-black {
     color: #000;
 }
@@ -86,7 +102,7 @@ html, body {
     text-decoration: none;
 
     &:hover {
-        background-color: darken($NM-Purple-prp-MAIN, 10%);
+        background-color: $NM-Purple-prp-20;
     }
 }
 .spacer-50 {
@@ -104,34 +120,10 @@ html, body {
     }  
 }
 
-
-
-
-
-
-
-.tests {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    @media screen and (min-width: 430px) {
-
-    }
+main {
+    overflow: hidden;
 }
 
-.tests .test {
-    width: 160px;
-    height: 200px;
-    display: flex;
 
-    @media screen and (min-width: 430px) {
-        width: 200px;
-    }    
-}
 
-.tests .test .icon {
-    padding: 10px;
-    padding-top: 25px;
-}
+

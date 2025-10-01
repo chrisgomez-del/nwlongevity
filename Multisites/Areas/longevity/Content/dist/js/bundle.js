@@ -16,22 +16,44 @@ document.addEventListener('DOMContentLoaded', function () {
     let current = 0;
 
     function playNextVideo() {
-        video.src = videoFiles[current];
-        video.currentTime = 0;
-        video.play();
-        current = (current + 1) % videoFiles.length;
+        if ($(window).width() < 768) {
+            video.src = videoMobileFiles[current];
+            video.currentTime = 0;
+            video.play();
+            current = (current + 1) % videoMobileFiles.length;
+        }
+        else {
+            video.src = videoFiles[current];
+            video.currentTime = 0;
+            video.play();
+            current = (current + 1) % videoFiles.length;
+        }
+
     }
 
     // Handle video ending - play next video or loop if only one
     video.addEventListener("ended", () => {
-        if (videoFiles.length === 1) {
-            // If only one video, just loop it
-            video.currentTime = 0;
-            video.play();
-        } else {
-            // Multiple videos - play the next one
-            playNextVideo();
+        if ($(window).width() < 768) {
+            if (videoMobileFiles.length === 1) {
+                // If only one video, just loop it
+                video.currentTime = 0;
+                video.play();
+            } else {
+                // Multiple videos - play the next one
+                playNextVideo();
+            }
         }
+        else {
+            if (videoFiles.length === 1) {
+                // If only one video, just loop it
+                video.currentTime = 0;
+                video.play();
+            } else {
+                // Multiple videos - play the next one
+                playNextVideo();
+            }
+        }
+
     });
 
     // Start the loop
@@ -166,7 +188,6 @@ gsap.from("#card5", {
 });
 
 // Flipping Cards slider logic with mobile support
-// Flipping Cards slider logic with mobile support
 (function () {
     const container = document.querySelector('.cards-container');
 
@@ -193,22 +214,39 @@ gsap.from("#card5", {
         const maxVisible = getMaxVisible();
         if (startIdx + maxVisible < cards.length) {
             startIdx++;
-        } else {
-            // Wrap to beginning when at the end
-            startIdx = 0;
+            updateVisibleCards();
+            updateButtonVisibility();
         }
-        updateVisibleCards();
     }
 
     function prevCard() {
         if (startIdx > 0) {
             startIdx--;
-        } else {
-            // Wrap to end when at the beginning
-            const maxVisible = getMaxVisible();
-            startIdx = Math.max(0, cards.length - maxVisible);
+            updateVisibleCards();
+            updateButtonVisibility();
         }
-        updateVisibleCards();
+    }
+
+    function updateButtonVisibility() {
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        const maxVisible = getMaxVisible();
+
+        if (prevButton) {
+            if (startIdx === 0) {
+                prevButton.classList.add('hide');
+            } else {
+                prevButton.classList.remove('hide');
+            }
+        }
+
+        if (nextButton) {
+            if (startIdx + maxVisible >= cards.length) {
+                nextButton.classList.add('hide');
+            } else {
+                nextButton.classList.remove('hide');
+            }
+        }
     }
 
     // Touch/swipe support for mobile
@@ -300,10 +338,12 @@ gsap.from("#card5", {
             startIdx = Math.max(0, cards.length - maxVisible);
         }
         updateVisibleCards();
+        updateButtonVisibility();
     });
 
     // Initialize
     updateVisibleCards();
+    updateButtonVisibility();
 })();
 
 
@@ -340,9 +380,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var thirdLabel = document.getElementById('svg-chart-last-label');
     var fourthLabel = document.getElementById('svg-chart-last-description');
     var secondBackground = document.getElementById('svg-chart-second-background');
+
     // Set initial scale to 0
     gsap.set([first, second, third], { transformOrigin: '50% 50%', scale: 0 });
-    svg.addEventListener('mouseenter', function () {
+
+    // Animation function to be reused
+    function animateChart() {
         gsap.timeline()
             .to(first, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(secondBackground, { opacity: 1, duration: 0.3, ease: 'back.out(1.7)' })
@@ -352,7 +395,21 @@ document.addEventListener('DOMContentLoaded', function () {
             .to(third, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
             .to(thirdLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(fourthLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' });
-    });
+    }
+
+    // Hover animation
+    svg.addEventListener('mouseenter', animateChart);
+
+    // Scroll animation for all devices
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.create({
+            trigger: svg,
+            start: 'top 80%',
+            once: true,
+            onEnter: animateChart
+        });
+    }
+
     svg.addEventListener('mouseleave', function () {
         //gsap.to([first, second, third], {scale: 0, duration: 0.3, stagger: 0.05, ease: 'power1.in'});
     });
@@ -442,6 +499,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $('.timeline-nav-item').click(function () {
         console.log('clicked', $(this).data('event'));
+
+        // Remove active class from all timeline nav items
+        $('.timeline-nav-item').removeClass('active');
+        // Add active class to the clicked item
+        $(this).addClass('active');
+
         const targetId = $(this).data('event');
         const targetElement = $('#' + targetId);
         if (targetElement.length) {
@@ -486,3 +549,130 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function closeMobileMenu() {
+        // Slide out and hide
+        gsap.to(mobileMenu, {
+            x: '-100%',
+            opacity: 0,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: function () {
+                mobileMenu.style.display = 'none';
+            }
+        });
+
+        // Reset aria attributes
+        menuIcon.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+
+    if (menuIcon && mobileMenu) {
+        menuIcon.addEventListener('click', function () {
+            const isExpanded = menuIcon.getAttribute('aria-expanded') === 'true';
+
+            // Toggle aria-expanded for accessibility
+            menuIcon.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.setAttribute('aria-hidden', isExpanded);
+
+            // Toggle the menu visibility and slide animation
+            if (!isExpanded) {
+                mobileMenu.style.display = 'block';
+                // Use GSAP for smooth slide animation from left to right
+                gsap.fromTo(mobileMenu,
+                    { x: '-100%', opacity: 0 },
+                    { x: '0%', opacity: 1, duration: 0.3, ease: 'power2.out' }
+                );
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu when close icon is clicked
+        if (closeIcon) {
+            closeIcon.addEventListener('click', function () {
+                closeMobileMenu();
+            });
+        }
+    }
+});
+
+
+// Start Timeline Mobile Component
+$('.timeline-nav-item').click(function () {
+    // Update nav-info display
+    const currentIndex = $(this).data('index') || 1;
+    const totalItems = $('.component-timeline-mobile .timeline-nav-item').length;
+    $('.nav-info-index').text(currentIndex + '/' + totalItems);
+    $('.nav-info-title').text($(this).find('span').text());
+    console.log('clicked', $(this).data('event'));
+
+    const targetEvent = $(this).data('event');
+
+    // Remove active class from all timeline nav items
+    $('.timeline-nav-item').removeClass('active');
+    // Add active class to the clicked item
+    $(this).addClass('active');
+
+    // Remove active class from all image-containers and info-items
+    $('.image-container').removeClass('active');
+    $('.info-item').removeClass('active');
+
+    // Add active class to image-container and info-item with matching data-event
+    $('.image-container[data-event="' + targetEvent + '"]').addClass('active');
+    $('.info-item[data-event="' + targetEvent + '"]').addClass('active');
+
+    const targetId = targetEvent;
+    const targetElement = $('#' + targetId);
+    if (targetElement.length) {
+        const parentOffset = $(targetElement)[0].offsetLeft;
+        const ctaOffset = $(targetElement).find('.inset-text-cta').position()?.left || 0;
+        const totalOffset = parentOffset + ctaOffset - 50;
+
+        console.log('scrolling to', totalOffset);
+        $('.timeline-container').animate({
+            scrollLeft: totalOffset
+        }, 800);
+    }
+
+});
+
+
+
+
+$(document).ready(function () {
+    // Timeline mobile menu toggle functionality
+    $('.timeline-nav-bottom .menu-icon').click(function () {
+        const $timelineNavItems = $('.timeline-nav-items');
+        const $menuIcon = $(this);
+        const $menuClose = $('.timeline-nav-bottom .menu-close');
+
+        // Show timeline nav items with slide up animation
+        $timelineNavItems.slideDown(400, function () {
+            // After animation completes, hide menu icon and show close icon
+            $menuIcon.hide();
+            $menuClose.show();
+        });
+    });
+
+    $('.timeline-nav-bottom .menu-close').click(function () {
+        const $timelineNavItems = $('.timeline-nav-items');
+        const $menuIcon = $('.timeline-nav-bottom .menu-icon');
+        const $menuClose = $(this);
+
+        // Hide timeline nav items with slide down animation
+        $timelineNavItems.slideUp(400, function () {
+            // After animation completes, show menu icon and hide close icon
+            $menuIcon.show();
+            $menuClose.hide();
+        });
+    });
+});
+
+// End Timeline Mobile Component

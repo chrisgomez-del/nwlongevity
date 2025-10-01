@@ -16,7 +16,12 @@
                     <div class="slides-nav-item @(counter1 == 1 ? "active" : "")" data-slide="slide@(counter1++)" tabindex="@(counter2++)" aria-label="Comprehensive Self-Assessments">
                         <div class="title-container">@assessment.Title</div>
                         <div class="content-container left-inner-container">
-
+                            <div class="video-container">
+                                <video autoplay="" muted="" loop="" playsinline="">
+                                    <source src="@assessment.MobileVideoPath" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                             @assessment.Content
 
                         </div>

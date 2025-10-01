@@ -23,5 +23,8 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
         public HtmlString TopText { get; set; }
         public HtmlString MiddleText { get; set; }
         public HtmlString BottomText { get; set; }
+        public HtmlString CTADescription { get; set; }
+        public GeneralLink CTA { get; set; }
+        public bool IsCTACard { get; set; }
     }
 }

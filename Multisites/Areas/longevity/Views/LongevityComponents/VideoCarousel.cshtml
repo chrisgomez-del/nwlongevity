@@ -3,24 +3,37 @@
 @if (Model.VideoCollection != null && Model.VideoCollection.Any())
 {
 
-    <div class="component-video-carousel @Model.Class">
+    <div class="component-video-carousel @Model.Class" aria-label="Clinic introduction video" role="region">
         <script>
             const videoFiles = [
                 @foreach (var video in @Model.VideoCollection)
                 {
-                    @: "@video.VideoPath",
+                    if (!video.IsMobile) {
+                        @: "@video.VideoPath",
+                    }
+                }
+            ];
+
+            const videoMobileFiles = [
+                @foreach (var video in @Model.VideoCollection)
+                {
+                    if (video.IsMobile) {
+                        @: "@video.VideoPath",
+                    }
                 }
             ];
         </script>
-        <video id="loopingVideo" autoplay muted></video>
+        <video id="loopingVideo" autoplay muted aria-label="Clinic introduction video" playsinline></video>
         <div class="video-overlay">
             <div class="copy">
-                <div class="large-text"><h1>@Model.Title1</h1></div>
-                <div class="spacer-100"></div>
-                <div class="large-text">@Model.Title2</div>
+                <div><h1>@Model.Title1</h1></div>
+                <div class="spacer-100" aria-hidden="true"></div>
+                <div><h2>@Model.Title2</h2></div>
+                <div class="spacer-50"></div>
+                <div class="large-text description">@Model.Description</div>
             </div>
             <div class="bottomnmpattern">
-                <img src="~/Areas/longevity/Content/img/bottomnmpattern.png" alt="Logo">
+                <img src="/Areas/longevity/Content/img/bottomnmpattern.png" alt="Decorative pattern" aria-hidden="true" />
             </div>
         </div>
     </div>

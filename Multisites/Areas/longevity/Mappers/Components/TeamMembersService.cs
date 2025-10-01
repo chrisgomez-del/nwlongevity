@@ -5,6 +5,7 @@ using NM_MultiSites.Areas.Longevity.Helpers;
 using Sitecore.Web.UI.WebControls;
 using NM_MultiSites.Areas.Innovation.Models.Components;
 using NM_MultiSites.Areas.Longevity.Models;
+using Sitecore.Collections;
 
 namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
@@ -22,12 +23,14 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 
             if (datasource != null)
             {
-                foreach (Sitecore.Data.Items.Item child in datasource.Children)
+                ChildList children = datasource.GetChildren();
+                foreach (Sitecore.Data.Items.Item child in children)
                 {
                     TeamMemberRow row = new TeamMemberRow();
                     row.Class = String.IsNullOrEmpty(child.Fields["Class"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Class");
-                    
-                    foreach (Sitecore.Data.Items.Item child2 in child.Children) {
+
+                    ChildList children2 = child.GetChildren();
+                    foreach (Sitecore.Data.Items.Item child2 in children2) {
 
                         TeamMember teamMember = new TeamMember();
                         teamMember.ProfileImagePath = String.IsNullOrEmpty(child2.Fields["Profile Image"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child2, "Profile Image");

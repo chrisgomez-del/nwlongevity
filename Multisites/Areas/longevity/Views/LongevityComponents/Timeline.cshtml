@@ -39,3 +39,69 @@
         }
     </div>
 </div>
+
+<div class="component-timeline-mobile" role="region" aria-label="Longevity Program Timeline">
+    <div class="timeline-title">
+        <h2>@Model.Title</h2>
+    </div>
+    <div class="images-container">
+
+        @{
+            counter1 = 1;
+            counter2 = 0;
+        }
+
+        @foreach (var timelineEvent in @Model.EventCollection)
+        {
+            <div class="image-container @(counter1 == 1 ? "active" : "")" data-event="event@(counter1++)"><img src="@timelineEvent.MobileImagePath" alt="@timelineEvent.NavTitle"></div>
+        }
+
+    </div>
+    @{
+        counter1 = 1;
+        counter2 = 0;
+    }
+    <div class="timeline-nav">
+        <div class="timeline-nav-items">
+            @foreach (var timelineEvent in @Model.EventCollection)
+            {
+                <div class="timeline-nav-item @(counter1 == 1 ? "active" : "")" data-event="event@(counter1)" data-index="@(counter1++)"><span>@timelineEvent.NavTitle</span></div>
+            }
+
+        </div>
+        <div class="timeline-nav-bottom">
+            <div class="timeline-nav-icons">
+                <div class="menu-icon" id="menuIcon" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <svg width="34" height="20" viewBox="0 0 34 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.07812 2H32.4679" stroke="#4E2A84" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M2 10H32.4678" stroke="#4E2A84" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M7.07812 18H32.4679" stroke="#4E2A84" stroke-width="3" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <div class="menu-close">
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 13H12.6092L7.50589 7.36936L2.33182 13H1L6.79873 6.76197L1.51859 1H2.89755L7.55304 6.16279L12.2439 1H13.5757L8.2602 6.75376L14 13Z" fill="#4E2A84" stroke="#4E2A84" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-info-container">
+                <div class="nav-info-item"><span class="nav-info-index">1/@Model.EventCollection.Count</span><span class="nav-info-title"> @(Model.EventCollection.Count > 0 ? Model.EventCollection[0].NavTitle.ToHtmlString() : "")</span></div>
+            </div>
+        </div>
+    </div>
+    @{
+        counter1 = 1;
+        counter2 = 0;
+    }
+    <div class="timeline-info-container">
+
+        @foreach (var timelineEvent in @Model.EventCollection)
+        {
+            <div class="info-item @(counter1 == 1 ? "active" : "")" data-event="event@(counter1++)">
+                <h2>@timelineEvent.Title</h2>
+                <div>@timelineEvent.Content</div>
+            </div>
+        }
+        
+    </div>
+</div>

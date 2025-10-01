@@ -4,6 +4,8 @@
     position: relative;
     width: 100%;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 
     .cards-container {
         display: flex;
@@ -16,7 +18,7 @@
         justify-content: center;
         gap: .5vw;
 
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: $tab-breakpoint) {
             width: 100%;
         }
         // Only show up to 5 cards
@@ -25,17 +27,17 @@
         }
 
         .flip-card {
-            width: 100%;
-            height: 380px;
+            height: 450px;
+            width: 300px;
             perspective: 1000px;
-            flex: 1 1 240px;
-            //min-width: 220px;
-            //max-width: 320px;
+            margin: 1vw 0;
+            flex: none;
 
-
-            @media screen and (min-width: 600px) {
-                height: 30vw;
+            @media screen and (min-width: $tab-breakpoint) {
+                height: 450px;
+                width: 300px;
                 margin: 1vw 0;
+                flex: none;
             }
 
             .flip-card-inner {
@@ -120,8 +122,14 @@
                         width: 200px;
 
                         h2 {
-                            color: #fff;
-                            text-transform: none;
+                            color: #FFF;
+                            text-align: center;
+                            font-family: "Open Sans";
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 110%; /* 35.2px */
+                            width: 100%;
                         }
                     }
                 }
@@ -137,26 +145,64 @@
 
                     .back-content {
                         padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
 
                         h2 {
-                            color: $NM-Purple-prp-110;
+                            color: var(--NM-Purple-prp-110, #482476);
+                            font-family: "Open Sans";
+                            font-size: 22px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 30px; /* 125% */
                             text-align: left;
-                            font-weight: 200;
+                            margin: 0px;
+                            //position: absolute;
+                            //top: 2vw;
                         }
 
                         .middle-text {
+                            color: var(--NM-Purple-prp-110, #482476);
+                            font-family: "Open Sans";
                             font-size: 18px;
-                            font-weight: 600;
-
-                            @media screen and (min-width: 600px) {
-                                margin: 80px 0;
-                            }
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 28px; /* 155.556% */
+                            letter-spacing: 0.18px;
+                            text-align: left;
+                            padding-top: 30px;
+                            //position: absolute;
+                            //top: 5vw;
                         }
 
                         .bottom-text {
-                            position: absolute;
-                            bottom: 30px;
+                            //position: absolute;
+                            //top: 15vw;
                             padding-right: 20px;
+                            color: var(--NM-Purple-prp-110, #482476);
+                            font-family: "Open Sans";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 22px; /* 137.5% */
+                            letter-spacing: 0.16px;
+                            text-align: left;
+                            padding-bottom: 10px;
+                        }
+
+                        @media screen and (min-width: 1200px) {
+                            h2 {
+                                //line-height: 40px;
+                            }
+
+                            .middle-text {
+                                //top: 8vw;
+                            }
+
+                            .bottom-text {
+                                //top: 30vw;
+                            }
                         }
                     }
                 }
@@ -165,6 +211,80 @@
             &:hover {
                 .flip-card-inner {
                     transform: rotateY(180deg);
+                    cursor: pointer;
+                }
+            }
+
+            &.is-cta {
+                .flip-card-front {
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-decoration: none;
+                        height: 100%;
+
+                        .title {
+                            position: unset;
+                            transform: none;
+                            display: block;
+                            z-index: 2;
+                            padding: 30px;
+
+                            h2 {
+                                color: #FFF;
+                                font-family: "Open Sans";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 300;
+                                line-height: 40px; /* 125% */
+                            }
+                        }
+
+                        .description {
+                            color: #FFF;
+                            font-family: "Open Sans";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 22px;
+                            letter-spacing: 0.16px;
+                            z-index: 2;
+                            text-align: left;
+                            padding: 30px;
+                        }
+
+                        .front-content-overlay {
+                            background: $NM-Purple-prp-MAIN;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .flip-card-inner {
+                        transform: none;
+                    }
+
+
+
+                    .flip-card-front {
+                        a {
+                            .title {
+                                h2 {
+                                    color: #4E2A84;
+                                }
+                            }
+
+                            .description {
+                                color: #4E2A84;
+                            }
+
+                            .front-content-overlay {
+                                background: $NM-Purple-prp-20;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -173,43 +293,68 @@
 
     .slides-nav {
         position: absolute;
-        top: 50%;
-        width: 100%;
+        bottom: -50px;
+        width: 150px;
         display: flex;
         justify-content: space-between;
         pointer-events: none;
         z-index: 2;
+        max-width: 1400px;
+        margin: auto;
+
+        @media screen and (min-width: $tab-breakpoint) {
+            //top: 50%;
+            //bottom: unset;
+        }
 
         .prev-button, .next-button {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             pointer-events: all;
-            cursor: pointer;
-            background-color: $NM-Purple-prp-MAIN;
+
 
             @media screen and (min-width: $tab-breakpoint) {
                 background-size: contain;
-                background-color: unset;
+                //background-color: unset;
+            }
+
+            svg {
+                path {
+                    fill: $NM-Purple-prp-MAIN;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    path {
+                        fill: #B6ACD1;
+                    }
+                }
             }
         }
 
         .prev-button {
             margin-left: 10px;
-            background-image: url('/Areas/longevity/Content/img/left-arrow.png');
-            background-repeat: no-repeat;
-            background-position: center;
+
+            &.hide {
+                //display: none;
+            }
+
+            svg {
+                transform: rotate(180deg);
+            }
         }
 
         .next-button {
             margin-right: 10px;
-            background-image: url('/Areas/longevity/Content/img/right-arrow.png');
-            background-repeat: no-repeat;
-            background-position: center;
+
+            &.hide {
+                //display: none;
+            }
+
+            svg {
+
+            }
         }
     }
 }
-
-
-
-

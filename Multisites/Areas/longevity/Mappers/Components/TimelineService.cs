@@ -3,7 +3,7 @@ using System.Web;
 using NM_MultiSites.Areas.Longevity.Models.Components;
 using NM_MultiSites.Areas.Longevity.Helpers;
 using Sitecore.Web.UI.WebControls;
-
+using Sitecore.Collections;
 
 namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
@@ -23,7 +23,8 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
             {
                 timeline.Title = new HtmlString(FieldRenderer.Render(datasource, "Title"));
 
-                foreach (Sitecore.Data.Items.Item child in datasource.Children)
+                ChildList children = datasource.GetChildren();
+                foreach (Sitecore.Data.Items.Item child in children)
                 {
                     TimelineEvent timelineEvent = new TimelineEvent();
 
@@ -36,7 +37,9 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
                     timelineEvent.ImageAlt = String.IsNullOrEmpty(child.Fields["Image Alt"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Image Alt");
                     timelineEvent.InfoBoxTop = String.IsNullOrEmpty(child.Fields["Info Box Top"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Info Box Top");
                     timelineEvent.InfoBoxLeft = String.IsNullOrEmpty(child.Fields["Info Box Left"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Info Box Left");
+                    timelineEvent.MobileImagePath = String.IsNullOrEmpty(child.Fields["Mobile Image"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child, "Mobile Image");
                     timeline.EventCollection.Add(timelineEvent);
+                    
                 }
             }
 

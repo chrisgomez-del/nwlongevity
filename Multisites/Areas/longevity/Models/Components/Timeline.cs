@@ -26,5 +26,6 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
         public string ImageAlt { get; set; }
         public string InfoBoxTop { get; set; }
         public string InfoBoxLeft { get; set; }
+        public string MobileImagePath { get; set; }
     }
 }

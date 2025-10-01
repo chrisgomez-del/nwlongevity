@@ -4,10 +4,12 @@
     position: relative;
     display: flex;
     overflow: hidden;
+    height: 100%;
+    max-height: 1000px;
 
     @media screen and (min-width: $tab-breakpoint) {
         //padding: 100px;
-        height: 55vw;
+        min-height: 900px;
     }    
 
     .title-text-container {
@@ -16,9 +18,10 @@
         margin: auto;
         margin-top: 12vw;
         padding: 20px;
-
+        max-width: 1300px;
+        position: relative;
         @media screen and (min-width: $tab-breakpoint) {
-            width: 1000px;
+            //width: 1000px;
         }         
         .title-content {
             margin-bottom: 50px;
@@ -27,9 +30,19 @@
             }   
 
             h2 {
-                color: $NM-Purple-prp-MAIN;
+                color: var(--NM-Purple-prp-MAIN, #4E2A84);
+                text-align: center;
+                font-family: "Open Sans";
+                font-size: 30px;
+                font-style: normal;
                 font-weight: 700;
-                font-size: 32px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                line-height: 120%;
+
+                @media screen and (min-width: $desktop-breakpoint) {
+                    line-height: 160%;
+                }
             }
 
 
@@ -40,10 +53,16 @@
             text-align: left;
             font-weight: 400;
             text-transform: none;
+            color: var(--Digital-Black, #262626);
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 450;
+            line-height: 160%; /* 32px */            
             @media screen and (min-width: $tab-breakpoint) {
-                //padding: 100px;
-                //position: absolute;
-                width: 800px;
+                left: 200px;
+                position: absolute;
+                width: 500px;
             } 
             
             ul, li {
@@ -60,7 +79,7 @@
                     height: 10px;
                     position: absolute;
                     left: -38px;
-                    top: -8px;
+                    top: 0px;
                     color: var(--NM-Purple-prp-MAIN, #4E2A84);
                     font-family: "Font Awesome 5 Free";
                     font-size: 26px;
@@ -81,8 +100,10 @@
     .video-content {
         position: absolute;
         right: -200px;
-        @media screen and (min-width: $tab-breakpoint) {
+        top: 300px;
+        @media screen and (min-width: $desktop-breakpoint) {
             right: -400px;
+            top: unset;
         }         
         video {
             width: 110%;
