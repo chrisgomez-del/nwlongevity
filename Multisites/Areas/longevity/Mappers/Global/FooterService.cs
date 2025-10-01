@@ -22,6 +22,7 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Global
 
             footer.Title1 = new HtmlString(FieldRenderer.Render(currentitem, "Title 1"));
             footer.Title2 = new HtmlString(FieldRenderer.Render(currentitem, "Title 2"));
+            footer.FormButtonLabel = new HtmlString(FieldRenderer.Render(currentitem, "Form Button Label"));
             GeneralLink policiesLink = new GeneralLink()
             {
                 Title = new HtmlString(SitecoreAccess.LinkTitle(currentitem.Fields["Policies Link"])),

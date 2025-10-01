@@ -14,6 +14,7 @@ namespace NM_MultiSites.Areas.Longevity.Models.Global
 
         public HtmlString Title1 { get; set; }
         public HtmlString Title2 { get; set; }
+        public HtmlString FormButtonLabel { get; set; }
         public GeneralLink PoliciesLink { get; set; }
         public GeneralLink AccessibilityLink { get; set; }
         public HtmlString Copyright { get; set; }
