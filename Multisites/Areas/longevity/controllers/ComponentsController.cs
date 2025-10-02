@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NM_MultiSites.Areas.Innovation.Controllers
+namespace NM_MultiSites.Areas.Longevity.Controllers
 {
     public class LongevityComponentsController : Controller
     {
