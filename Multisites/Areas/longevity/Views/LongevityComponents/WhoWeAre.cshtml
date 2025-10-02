@@ -46,7 +46,7 @@
                             @foreach (var timelineEvent in whosection.RightTimelineEvents)
                             {
                                 <div class="event">
-                                    <video autoplay muted loop aria-label="@timelineEvent.VideoAriaLabel" playsinline>
+                                    <video autoplay muted loop playsinline aria-label="@timelineEvent.VideoAriaLabel">
                                         <source src="@timelineEvent.VideoPath" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>

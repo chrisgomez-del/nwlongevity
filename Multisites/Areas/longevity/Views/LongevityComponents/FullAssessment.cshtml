@@ -8,6 +8,7 @@
         @{
             int counter1 = 1;
             int counter2 = 0;
+            int counter3 = 1;
         }
         <div class="slides-title-nav">
             @foreach (var assessment in @Model.AssessmentCollection)
@@ -17,7 +18,7 @@
                         <div class="title-container">@assessment.Title</div>
                         <div class="content-container left-inner-container">
                             <div class="video-container">
-                                <video autoplay="" muted="" loop="" playsinline="">
+                                <video autoplay muted loop playsinline class="assessment-video-@(counter3++)">
                                     <source src="@assessment.MobileVideoPath" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -32,6 +33,7 @@
             @{
                 counter1 = 1;
                 counter2 = 0;
+                counter3 = 1;
             }
             <div class="slides-container">
                 @foreach (var assessment in Model.AssessmentCollection)
@@ -43,7 +45,7 @@
                             </div>
                         </div>
                         <div class="right">
-                            <video autoplay muted loop aria-label="Self-assessment video" playsinline>
+                            <video autoplay muted loop playsinline aria-label="Self-assessment video" class="assessment-video-mobile-@(counter3++)" >
                                 <source src="@assessment.VideoPath" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>

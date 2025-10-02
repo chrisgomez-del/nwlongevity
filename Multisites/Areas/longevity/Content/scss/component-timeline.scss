@@ -1,9 +1,8 @@
 @import 'variables';
 
 .component-timeline-mobile {
-    margin: 20px;
-    position: relative;
-
+   margin: 20px;
+   position: relative;
     @media screen and (min-width: $desktop-breakpoint) {
         display: none;
     }
@@ -12,6 +11,7 @@
         h2 {
             color: var(--NM-Purple-prp-MAIN, #4E2A84);
             text-align: center;
+
             /* Mobile/H3 */
             font-family: "Open Sans";
             font-size: 18px;
@@ -19,14 +19,13 @@
             font-weight: 700;
             line-height: 24px; /* 133.333% */
             letter-spacing: 0.72px;
-            text-transform: uppercase;
+            text-transform: uppercase;            
         }
     }
 
     .images-container {
         position: relative;
         height: 95vw;
-
         .image-container {
             position: absolute;
             top: 0;
@@ -44,14 +43,12 @@
                         transform: translate(100%, -100%);
                         opacity: 0;
                     }
-
                     to {
                         transform: translate(0, 0);
                         opacity: 1;
                     }
                 }
             }
-
             img {
                 width: 100%;
                 height: auto;
@@ -110,7 +107,6 @@
 
             .timeline-nav-icons {
                 width: 50px;
-
                 .menu-icon {
                     svg {
                         path {
@@ -130,7 +126,6 @@
                     width: 100%;
                     color: $NM-Purple-prp-MAIN;
                     font-size: 14px;
-
                     .nav-info-index {
                         margin-right: 10px;
                     }
@@ -152,10 +147,9 @@
             bottom: 0;
             border-radius: 20px;
             background: rgba(228, 224, 238, 0.70);
-            box-shadow: 0 0.982px 98.25px 9.825px rgba(255, 255, 255, 0.20) inset;
+            box-shadow: 0 0.982px 98.25px 9.825px rgba(255, 255, 255, 0.20) inset;            
             display: none;
             padding: 20px;
-
             &.active {
                 display: block;
                 animation: fadeIn 0.7s ease-in-out;
@@ -164,7 +158,6 @@
                     from {
                         opacity: 0;
                     }
-
                     to {
                         opacity: 1;
                     }
@@ -173,6 +166,7 @@
 
             h2 {
                 color: var(--NM-Purple-prp-MAIN, #4E2A84);
+
                 /* Mobile/H5 */
                 font-family: "Open Sans";
                 font-size: 16px;
@@ -182,16 +176,20 @@
                 text-align: left;
             }
 
+            h3 {
+                font-size: 1.25em;
+                line-height: 140%;                
+            }
+
             p, div {
                 color: var(--NM-Purple-prp-MAIN, #4E2A84);
-                /* Mobile/P */
                 font-family: "Open Sans";
-                font-size: 11px;
+                font-size: .875em;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 150%; /* 16.5px */
-                letter-spacing: 0.11px;
-                text-align: left;
+                line-height: 160%;
+                letter-spacing: .11px;
+                text-align: left;                
             }
         }
     }
@@ -204,7 +202,6 @@
     @media screen and (min-width: $desktop-breakpoint) {
         display: block;
     }
-
     .timeline-title {
         width: 100%;
         text-align: center;
@@ -218,7 +215,7 @@
     .timeline-container {
         display: flex;
         position: relative;
-        height: 800px;
+        height: 700px;
         background-color: #fff;
         overflow: hidden;
         overflow-x: scroll;
@@ -235,7 +232,7 @@
             width: 400px;
             padding: 20px;
 
-
+            
             @media screen and (min-width: $tab-breakpoint) {
                 top: 50px;
                 left: 50px;
@@ -254,14 +251,15 @@
 
             p, div {
                 color: var(--NM-Purple-prp-MAIN, #4E2A84);
+
                 /* P */
                 font-family: "Open Sans";
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 28px; /* 155.556% */
-                letter-spacing: 0.18px;
-                text-align: left;
+                letter-spacing: 0.18px;    
+                text-align: left;            
             }
         }
 
@@ -320,6 +318,7 @@
         }
 
         .timeline-nav-item {
+
             padding: 8px;
             padding-left: 30px;
             color: var(--NM-Purple-prp-110, #482476);
@@ -344,7 +343,7 @@
             }
 
             &.active {
-                border-bottom: 1px solid var(--NM-Purple-prp-MAIN, #4E2A84);
+               border-bottom: 1px solid var(--NM-Purple-prp-MAIN, #4E2A84); 
             }
         }
     }

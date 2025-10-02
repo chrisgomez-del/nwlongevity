@@ -371,30 +371,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Animate arrows on SVG hover using GSAP
 document.addEventListener('DOMContentLoaded', function () {
-    var svg = document.getElementById('svg-chart');
-    var first = document.getElementById('svg-chart-first-arrow');
-    var firstLabel = document.getElementById('svg-chart-first-label');
-    var second = document.getElementById('svg-chart-middle-arrow');
-    var secondLabel = document.getElementById('svg-chart-middle-label');
-    var third = document.getElementById('svg-chart-last-arrow');
-    var thirdLabel = document.getElementById('svg-chart-last-label');
-    var fourthLabel = document.getElementById('svg-chart-last-description');
-    var secondBackground = document.getElementById('svg-chart-second-background');
+    const svg = document.getElementById('svg-chart');
+    const acceleratedLabel = document.getElementById('svg-chart-accelerated');
+    const acceleratedDesc = document.getElementById('svg-chart-accelerated-desc');
+    const acceleratedArrow = document.getElementById('svg-chart-accelerated-arrow');
+    const normalLabel = document.getElementById('svg-chart-normal');
+    const normalArrow = document.getElementById('svg-chart-normal-arrow');
+    const superLabel = document.getElementById('svg-chart-super');
+    const superDesc = document.getElementById('svg-chart-super-desc');
+    const superArrow = document.getElementById('svg-chart-super-arrow');
+    //var secondBackground = document.getElementById('svg-chart-second-background');
 
     // Set initial scale to 0
-    gsap.set([first, second, third], { transformOrigin: '50% 50%', scale: 0 });
+    gsap.set([acceleratedArrow, normalArrow, superArrow], { transformOrigin: '50% 50%', scale: 0 });
 
     // Animation function to be reused
     function animateChart() {
         gsap.timeline()
-            .to(first, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' })
-            .to(secondBackground, { opacity: 1, duration: 0.3, ease: 'back.out(1.7)' })
-            .to(firstLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
-            .to(second, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
-            .to(secondLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
-            .to(third, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
-            .to(thirdLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
-            .to(fourthLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' });
+            .to(normalArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
+            .to(normalLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(acceleratedArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(acceleratedLabel, { opacity: 1, duration: 0.3, ease: 'back.out(1.7)' })
+            .to(acceleratedDesc, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(normalArrow, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' }, "+=0.05")
+            .to(normalLabel, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' })
+            .to(superArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
+            .to(superLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(superDesc, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(acceleratedArrow, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' })
+            .to(acceleratedLabel, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' })
+            .to(acceleratedDesc, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' });
     }
 
     // Hover animation
@@ -418,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Modal logic for Movie Player
 function showMovieModal() {
     var overlay = document.getElementById('movieModalOverlay');
-    var player = document.getElementById('modalMoviePlayer');
+    //var player = document.getElementById('modalMoviePlayer');
     //player.pause();
     //player.querySelector('source').src = src;
     //player.load();
@@ -426,8 +432,8 @@ function showMovieModal() {
 }
 function hideMovieModal() {
     var overlay = document.getElementById('movieModalOverlay');
-    var player = document.getElementById('modalMoviePlayer');
-    player.pause();
+    //var player = document.getElementById('modalMoviePlayer');
+    //player.pause();
     overlay.style.display = 'none';
 }
 
@@ -525,6 +531,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $('.slides-nav-item').click(function () {
         if (window.innerWidth < 786) {
+            // Desktop: keep default slide switching behavior
+            $('.slides-nav-item').removeClass('active');
+            $(this).addClass('active');
             var $content = $(this).find('.content-container');
             // Close all others first
             $('.slides-nav-item .content-container').not($content).slideUp(200);
