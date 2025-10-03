@@ -368,7 +368,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 // Animate arrows on SVG hover using GSAP
 document.addEventListener('DOMContentLoaded', function () {
     const svg = document.getElementById('svg-chart');
@@ -376,6 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const acceleratedDesc = document.getElementById('svg-chart-accelerated-desc');
     const acceleratedArrow = document.getElementById('svg-chart-accelerated-arrow');
     const normalLabel = document.getElementById('svg-chart-normal');
+    const normalDesc = document.getElementById('svg-chart-normal-desc');
     const normalArrow = document.getElementById('svg-chart-normal-arrow');
     const superLabel = document.getElementById('svg-chart-super');
     const superDesc = document.getElementById('svg-chart-super-desc');
@@ -390,11 +390,13 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.timeline()
             .to(normalArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
             .to(normalLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
+            .to(normalDesc, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(acceleratedArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(acceleratedLabel, { opacity: 1, duration: 0.3, ease: 'back.out(1.7)' })
             .to(acceleratedDesc, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(normalArrow, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' }, "+=0.05")
             .to(normalLabel, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' })
+            .to(normalDesc, { opacity: .3, duration: 0.3, ease: 'back.out(1.7)' })
             .to(superArrow, { scale: 1, duration: 0.8, ease: 'back.out(1.7)' }, "+=0.05")
             .to(superLabel, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
             .to(superDesc, { opacity: 1, duration: 0.8, ease: 'back.out(1.7)' })
@@ -420,6 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //gsap.to([first, second, third], {scale: 0, duration: 0.3, stagger: 0.05, ease: 'power1.in'});
     });
 });
+
 
 // Modal logic for Movie Player
 function showMovieModal() {

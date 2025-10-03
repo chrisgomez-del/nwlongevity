@@ -18,7 +18,7 @@
                         <div class="title-container">@assessment.Title</div>
                         <div class="content-container left-inner-container">
                             <div class="video-container">
-                                <video autoplay muted loop playsinline class="assessment-video-@(counter3++)">
+                                <video autoplay muted playsinline class="assessment-video-@(counter3++)">
                                     <source src="@assessment.MobileVideoPath" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="right">
-                            <video autoplay muted loop playsinline aria-label="Self-assessment video" class="assessment-video-mobile-@(counter3++)" >
+                            <video autoplay muted playsinline aria-label="Self-assessment video" class="assessment-video-mobile-@(counter3++)" >
                                 <source src="@assessment.VideoPath" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
