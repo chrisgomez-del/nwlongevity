@@ -506,32 +506,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    $('.timeline-nav-item').click(function () {
-        console.log('clicked', $(this).data('event'));
-
-        // Remove active class from all timeline nav items
-        $('.timeline-nav-item').removeClass('active');
-        // Add active class to the clicked item
-        $(this).addClass('active');
-
-        const targetId = $(this).data('event');
-        const targetElement = $('#' + targetId);
-        if (targetElement.length) {
-            const parentOffset = $(targetElement)[0].offsetLeft;
-            const ctaOffset = $(targetElement).find('.inset-text-cta').position()?.left || 0;
-            const totalOffset = parentOffset + ctaOffset - 50;
-
-            console.log('scrolling to', totalOffset);
-            $('.timeline-container').animate({
-                scrollLeft: totalOffset
-            }, 800);
-        }
-
-    });
-
-
-
-
     $('.slides-nav-item').click(function () {
         if (window.innerWidth < 786) {
             // Desktop: keep default slide switching behavior
@@ -650,7 +624,7 @@ $('.timeline-nav-item').click(function () {
         console.log('scrolling to', totalOffset);
         $('.timeline-container').animate({
             scrollLeft: totalOffset
-        }, 800);
+        }, 3000);
     }
 
 });
