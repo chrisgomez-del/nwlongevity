@@ -223,7 +223,7 @@ footer .footer-content {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 @media screen and (min-width: 768px) {
   footer .footer-content {
@@ -231,18 +231,33 @@ footer .footer-content {
   }
 }
 footer .footer-content h2 {
-  color: #E4E0EE;
+  color: var(--NM-Purple-prp-10, #E4E0EE);
   text-align: center;
   font-family: "Open Sans";
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 34px;
-  /* 80% */
+  line-height: 160%;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 footer .footer-content p {
+  color: var(--White, #FFF);
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 160%;
+}
+footer .footer-content .subtitle {
+  color: var(--White, #FFF);
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 160%;
+}
+footer .footer-content .copyright {
   color: var(--NM-Purple-prp-10, #E4E0EE);
   text-align: center;
   font-family: "Open Sans";
@@ -252,14 +267,6 @@ footer .footer-content p {
   line-height: 20px;
   /* 142.857% */
   letter-spacing: 0.14px;
-}
-footer .footer-content .subtitle {
-  color: var(--White, #FFF);
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 450;
-  line-height: 160%;
 }
 footer .footer-content .disclaimer p {
   color: #A495C3;
@@ -621,7 +628,7 @@ footer .footer-content .footer-links a {
 }
 .component-transition-copy.mobile {
   display: flex;
-  height: 400px;
+  height: 450px;
 }
 @media screen and (min-width: 1024px) {
   .component-transition-copy.mobile {
@@ -677,15 +684,19 @@ footer .footer-content .footer-links a {
   font-style: normal;
   font-weight: 450;
   line-height: 160%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .component-transition-copy.mobile #intro-copy2b img {
-  width: 10vw;
+  width: 100px;
+  height: auto;
 }
 .component-transition-copy.mobile .cta {
   position: absolute;
-  bottom: 2vw;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+  width: max-content;
 }
 @media screen and (min-width: 1440px) {
   .component-transition-copy.mobile .cta {
@@ -1400,7 +1411,7 @@ footer .footer-content .footer-links a {
 }
 @media screen and (min-width: 768px) {
   .component-assessment {
-    height: 1000px;
+    height: 900px;
   }
 }
 .component-assessment .slides-title {
@@ -1750,7 +1761,7 @@ footer .footer-content .footer-links a {
     display: flex;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .component-who-we-are .section .section-inner-container {
     min-height: 80vh;
   }
@@ -1770,10 +1781,16 @@ footer .footer-content .footer-links a {
 }
 .component-who-we-are .section .section-inner-container .left .content {
   width: 100%;
+  text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .component-who-we-are .section .section-inner-container .left .content {
+    text-align: center;
+  }
 }
 .component-who-we-are .section .section-inner-container .left .content h2 {
   color: var(--NM-Purple-prp-MAIN, #4E2A84);
-  text-align: center;
+  text-align: left;
   font-family: "Open Sans";
   font-size: 24px;
   font-style: normal;
@@ -1781,10 +1798,13 @@ footer .footer-content .footer-links a {
   line-height: 160%;
   /* 38.4px */
   position: relative;
+  white-space: normal;
+  width: 90vw;
 }
 @media screen and (min-width: 1024px) {
   .component-who-we-are .section .section-inner-container .left .content h2 {
     text-align: right;
+    width: unset;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1822,7 +1842,7 @@ footer .footer-content .footer-links a {
   text-align: left;
 }
 .component-who-we-are .section .section-inner-container .right .content div {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .component-who-we-are .section.hide-mobile .section-inner-container {
   min-height: auto;
@@ -1842,7 +1862,7 @@ footer .footer-content .footer-links a {
 .component-who-we-are .section.section1 .component-title h2 {
   color: #4E2A84;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
 }
 @media screen and (min-width: 1024px) {
   .component-who-we-are .section.section1 .component-title h2 {
@@ -1868,7 +1888,6 @@ footer .footer-content .footer-links a {
 }
 .component-who-we-are .section.section1 .right .content {
   color: #000;
-  text-align: center;
   width: 100%;
   margin: auto;
 }
@@ -1885,7 +1904,12 @@ footer .footer-content .footer-links a {
   width: 100%;
 }
 .component-who-we-are .section.section1 .right .content p, .component-who-we-are .section.section1 .right .content div {
-  text-align: center;
+  text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .component-who-we-are .section.section1 .right .content p, .component-who-we-are .section.section1 .right .content div {
+    text-align: center;
+  }
 }
 .component-who-we-are .section.section1 .right .content .video {
   margin: 30px;
@@ -2018,6 +2042,9 @@ footer .footer-content .footer-links a {
     width: 46.5vw;
   }
 }
+.component-who-we-are .section.section4 .right .content .team-members .photo {
+  width: 181px;
+}
 .component-who-we-are .section.section4 .right .content .play-team-button {
   position: absolute;
   top: 100px;
@@ -2054,6 +2081,15 @@ footer .footer-content .footer-links a {
   margin-right: 5px;
   height: 360px;
   overflow-y: clip;
+}
+.component-who-we-are .component-footer {
+  position: relative;
+  bottom: -10px;
+}
+@media screen and (min-width: 768px) {
+  .component-who-we-are .component-footer {
+    bottom: unset;
+  }
 }
 .component-who-we-are .component-footer .footer-inner-container {
   width: 90%;
