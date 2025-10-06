@@ -12,6 +12,7 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
             EventCollection = new List<TimelineEvent>();
         }
         public HtmlString Title { get; set; }
+        public string Class { get; set; }
         public List<TimelineEvent> EventCollection { get; set; }
     }
 

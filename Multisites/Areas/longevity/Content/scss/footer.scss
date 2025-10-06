@@ -26,11 +26,11 @@ footer {
         padding: 20px;
         display: flex;
         flex-direction: column;
-        height: 100%;
         justify-content: space-around;
+        padding: 50px;
 
         @media screen and (min-width: $tab-breakpoint) {
-            height: 95%;
+            //height: 95%;
         }
 
         h2 {
@@ -96,6 +96,7 @@ footer {
                 font-weight: 700;
                 font-size: 20px;
                 text-decoration: none;
+                margin-bottom: 50px;
             }
 
             &:hover {

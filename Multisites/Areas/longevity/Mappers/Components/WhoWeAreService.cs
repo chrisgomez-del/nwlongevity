@@ -53,13 +53,22 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
                         
                         whoWeAreSection.RightComponent = new HtmlString(FieldRenderer.Render(child, "Component"));
                         
+
+
                         switch (whoWeAreSection.RightComponent.ToString())
                         {
                             case "Team Members":
-                                whoWeAreSection.RightTeamMembers = GetTeamMembers(componentDataSource);
+                                TeamMembersService teamMembersService = new TeamMembersService();
+
+                                whoWeAreSection.RightTeamMembers = teamMembersService.GetTeamMembersData(componentDataSource);
                                 break;
                             case "Timeline":
-                                whoWeAreSection.RightTimelineEvents = GetTimelineEvents(componentDataSource);
+                                TimelineService timelineService = new TimelineService();
+                                Models.Components.Timeline timeline = new Models.Components.Timeline();
+                                timeline = timelineService.GetTimelineData(componentDataSource);
+                                whoWeAreSection.RightComponentClass = String.IsNullOrEmpty(child.Fields["Component Class"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Component Class");
+                                timeline.Class = whoWeAreSection.RightComponentClass;
+                                whoWeAreSection.RightTimeline = timeline;
                                 break;
                             default: break;
                         }
@@ -75,59 +84,5 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
             return whoWeAre;
         }
 
-        public List<TeamMember> GetTeamMembers(Sitecore.Data.Items.Item componentDataSource) {
-            
-            List<TeamMember> teamMembers = new List<TeamMember>();
-            
-            TeamMemberRow memberrow = new TeamMemberRow();
-
-            ChildList children = componentDataSource.GetChildren();
-            foreach (Sitecore.Data.Items.Item row in children)
-            {
-                ChildList children2 = row.GetChildren();
-                foreach (Sitecore.Data.Items.Item child2 in children2)
-                {
-
-                    TeamMember teamMember = new TeamMember();
-                    teamMember.ProfileImagePath = String.IsNullOrEmpty(child2.Fields["Profile Image"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child2, "Profile Image");
-                    teamMember.Title = new HtmlString(FieldRenderer.Render(child2, "Title"));
-                    GeneralLink name = new GeneralLink()
-                    {
-                        Title = new HtmlString(SitecoreAccess.LinkTitle(child2.Fields["Name"])),
-                        CTALink = String.IsNullOrEmpty(child2.Fields["Name"].GetValue(true)) ? null : SitecoreAccess.LinkUrl(child2.Fields["Name"]),
-                    };
-                    teamMember.Name = name;
-                    teamMembers.Add(teamMember);
-                }
-
-            }
-
-            return teamMembers;
-        }
-
-        public List<TimelineEvent> GetTimelineEvents(Sitecore.Data.Items.Item componentDataSource)
-        {
-
-            List<TimelineEvent> timelineEvents = new List<TimelineEvent>();
-
-            ChildList children = componentDataSource.GetChildren();
-            foreach (Sitecore.Data.Items.Item child in children)
-            {
-                TimelineEvent timelineEvent = new TimelineEvent();
-
-                timelineEvent.Title = new HtmlString(FieldRenderer.Render(child, "Title"));
-                timelineEvent.Content = new HtmlString(FieldRenderer.Render(child, "Content"));
-                timelineEvent.NavTitle = new HtmlString(FieldRenderer.Render(child, "Nav Title"));
-                timelineEvent.VideoPath = String.IsNullOrEmpty(child.Fields["Video"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child, "Video");
-                timelineEvent.VideoAriaLabel = String.IsNullOrEmpty(child.Fields["Video Aria Label"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Video Aria Label");
-                timelineEvent.ImagePath = String.IsNullOrEmpty(child.Fields["Image"].GetValue(true)) ? null : SitecoreAccess.GetMediaUrl(child, "Image");
-                timelineEvent.ImageAlt = String.IsNullOrEmpty(child.Fields["Image Alt"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Image Alt");
-                timelineEvent.InfoBoxTop = String.IsNullOrEmpty(child.Fields["Info Box Top"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Info Box Top");
-                timelineEvent.InfoBoxLeft = String.IsNullOrEmpty(child.Fields["Info Box Left"].GetValue(true)) ? null : SitecoreAccess.GetFieldValue(child, "Info Box Left");
-                timelineEvents.Add(timelineEvent);
-            }
-
-            return timelineEvents;
-        }
     }
 }

@@ -11,15 +11,18 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
     public interface ITeamMembersService
     {
-        TeamMembers GetTeamMembersData();
+        TeamMembers GetTeamMembersData(Sitecore.Data.Items.Item datasource = null);
 
     }
     public class TeamMembersService : ITeamMembersService
     {
-        public TeamMembers GetTeamMembersData()
+        public TeamMembers GetTeamMembersData(Sitecore.Data.Items.Item datasource = null)
         {
             TeamMembers teamMembers = new TeamMembers();
-            Sitecore.Data.Items.Item datasource = SitecoreAccess.GetDataSourceItem();
+
+            if (datasource == null) {
+                datasource = SitecoreAccess.GetDataSourceItem();
+            }
 
             if (datasource != null)
             {

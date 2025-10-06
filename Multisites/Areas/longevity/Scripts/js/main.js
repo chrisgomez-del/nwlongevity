@@ -13,28 +13,36 @@ window.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', function () {
 
     const video = document.getElementById("loopingVideo");
-    let current = 0;
+    let videoCurrent = 0;
+    let isMobile = $(window).width() < 1024;
 
     function playNextVideo() {
         if ($(window).width() < 768) {
-            video.src = videoMobileFiles[current];
+            video.src = videoMobileFiles[videoCurrent];
             video.currentTime = 0;
             video.play();
-            current = (current + 1) % videoMobileFiles.length;
+            videoCurrent = (videoCurrent + 1) % videoMobileFiles.length;
         }
         else {
-            video.src = videoFiles[current];
+            video.src = videoFiles[videoCurrent];
             video.currentTime = 0;
             video.play();
-            current = (current + 1) % videoFiles.length;
+            videoCurrent = (videoCurrent + 1) % videoFiles.length;
         }
 
     }
 
     // Handle video ending - play next video or loop if only one
     video.addEventListener("ended", () => {
+
+
         if ($(window).width() < 768) {
             if (videoMobileFiles.length === 1) {
+                if (!isMobile) {
+                    videoCurrent = 0;
+                    playNextVideo();
+                }
+
                 // If only one video, just loop it
                 video.currentTime = 0;
                 video.play();
@@ -42,9 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Multiple videos - play the next one
                 playNextVideo();
             }
+            isMobile = true;
         }
         else {
+
             if (videoFiles.length === 1) {
+                if (isMobile) {
+                    videoCurrent = 0;
+                    playNextVideo();
+                }
+
                 // If only one video, just loop it
                 video.currentTime = 0;
                 video.play();
@@ -52,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Multiple videos - play the next one
                 playNextVideo();
             }
+
+            isMobile = false;
         }
 
     });
@@ -62,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
-
 
 // Transition Copy Component GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +92,7 @@ gsap.from("#svg3", {
     ease: "power2.out",
     visibility: "visible",
     scrollTrigger: {
-        trigger: "#component2",
+        trigger: ".component-transition-copy",
         start: "top 40%",
         toggleActions: "play none none none"
     }
@@ -85,7 +101,7 @@ gsap.from("#svg3", {
 // Timeline for #svg4 and #intro-copy1
 let tlSvg4Intro = gsap.timeline({
     scrollTrigger: {
-        trigger: "#component2",
+        trigger: ".component-transition-copy",
         start: "top 40%",
         toggleActions: "play none none none"
     }
@@ -113,14 +129,8 @@ tlSvg4Intro.from("#svg4", {
         visibility: "visible"
     });
 
+
 // Timeline for Flipping Cards Animation
-let tlCards = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".component-flipping-cards",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
 gsap.from("#card1", {
     x: -300,
     y: -600,
@@ -186,6 +196,9 @@ gsap.from("#card5", {
         toggleActions: "play none none none"
     }
 });
+
+
+
 
 // Flipping Cards slider logic with mobile support
 (function () {
@@ -383,6 +396,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //var secondBackground = document.getElementById('svg-chart-second-background');
 
     // Set initial scale to 0
+    if (acceleratedArrow == null && normalArrow == null && superArrow == null) return;
     gsap.set([acceleratedArrow, normalArrow, superArrow], { transformOrigin: '50% 50%', scale: 0 });
 
     // Animation function to be reused
@@ -437,6 +451,16 @@ function hideMovieModal() {
     var overlay = document.getElementById('movieModalOverlay');
     //var player = document.getElementById('modalMoviePlayer');
     //player.pause();
+    const iframe = document.getElementById('youtube-player'); // Or use another selector if you don't have an ID
+    if (iframe && iframe.contentWindow) {
+
+        const YT_ORIGIN = "https://www.youtube.com";
+        console.log('pausing video');
+        iframe.contentWindow.postMessage(
+            JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+            YT_ORIGIN
+        );
+    }
     overlay.style.display = 'none';
 }
 
@@ -482,8 +506,6 @@ if (window.gsap && window.ScrollTrigger) {
 
 //// About page, team members button
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM fully loaded and parsed');
-
     const btn = document.querySelector('.play-timeline-button');
     const container = document.querySelector('.timeline-container');
     if (btn && container) {

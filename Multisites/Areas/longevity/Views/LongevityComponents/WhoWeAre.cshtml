@@ -1,4 +1,5 @@
-﻿@model NM_MultiSites.Areas.Longevity.Models.Components.WhoWeAre
+﻿@using NM_MultiSites.Areas.Longevity.Models.Components;
+@model NM_MultiSites.Areas.Longevity.Models.Components.WhoWeAre
 
 <div class="component-who-we-are" role="region" aria-label="Who We Are">
     @{ 
@@ -28,33 +29,25 @@
                 </div>
                 <div class="right">
                     <div class="content">
-                        @if (whosection.RightTeamMembers.Count > 0)
+                        @if (whosection.RightTeamMembers.TeamMemberRowCollection.Count > 0)
                         {
                             <div class="team-members">
-                                @foreach (var member in whosection.RightTeamMembers)
+                                @foreach (var row in whosection.RightTeamMembers.TeamMemberRowCollection)
                                 {
-                                    <div class="member">
-                                        <img class="photo" src="@member.ProfileImagePath" alt="Photo of @member.Name.Title">
-                                    </div>
+                                    foreach (var member in row.TeamMemberCollection)
+                                    {
+                                        <div class="member">
+                                            <img class="photo" src="@member.ProfileImagePath" alt="Photo of @member.Name.Title">
+                                        </div>
+                                    }
                                 }
                             </div>
                         }
-                        else if (whosection.RightTimelineEvents.Count > 0)
+                        else if (whosection.RightTimeline.EventCollection.Count > 0)
                         {
-                    <div class="component-timeline short" role="region" aria-label="Longevity Program Timeline">
-                        <div class="timeline-container" tabindex="0" aria-label="Timeline days navigation">
-                            @foreach (var timelineEvent in whosection.RightTimelineEvents)
-                            {
-                                <div class="event">
-                                    <video autoplay muted loop playsinline aria-label="@timelineEvent.VideoAriaLabel">
-                                        <source src="@timelineEvent.VideoPath" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <img src="@timelineEvent.ImagePath" alt="@timelineEvent.ImageAlt" />
-                                </div>
-                            }
-                        </div>
-                    </div>
+                            Timeline timeline = new Timeline();
+                            timeline = whosection.RightTimeline;
+                            Html.RenderPartial("Timeline", timeline);
                         }
                         else
                         {

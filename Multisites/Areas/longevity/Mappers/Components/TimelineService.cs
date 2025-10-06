@@ -9,15 +9,18 @@ namespace NM_MultiSites.Areas.Longevity.Mappers.Components
 {
     public interface ITimelineService
     {
-        Timeline GetTimelineData();
+        Timeline GetTimelineData(Sitecore.Data.Items.Item datasource = null);
 
     }
     public class TimelineService : ITimelineService
     {
-        public Timeline GetTimelineData()
+        public Timeline GetTimelineData(Sitecore.Data.Items.Item datasource = null)
         {
             Timeline timeline = new Timeline();
-            Sitecore.Data.Items.Item datasource = SitecoreAccess.GetDataSourceItem();
+            if (datasource == null)
+            {
+                datasource = SitecoreAccess.GetDataSourceItem();
+            } 
 
             if (datasource != null)
             {

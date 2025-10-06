@@ -21,16 +21,17 @@ namespace NM_MultiSites.Areas.Longevity.Models.Components
     {
         public WhoWeAreSection()
         {
-            RightTeamMembers = new List<TeamMember>();
-            RightTimelineEvents = new List<TimelineEvent>();
+            RightTeamMembers = new TeamMembers();
+            RightTimeline = new Timeline();
         }
         public string Class { get; set; }
         public HtmlString LeftDescription { get; set; }
         public GeneralLink LeftCTA { get; set; }
         public HtmlString RightContent { get; set; }
         public HtmlString RightComponent { get; set; }
+        public string RightComponentClass { get; set; }
         public string RightComponentDatasource { get; set; }
-        public List<TeamMember> RightTeamMembers { get; set; }
-        public List<TimelineEvent> RightTimelineEvents { get; set; }
+        public TeamMembers RightTeamMembers { get; set; }
+        public Timeline RightTimeline { get; set; }
     }
 }

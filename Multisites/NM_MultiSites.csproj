@@ -611,7 +611,10 @@
     <Content Include="Areas\longevity\Content\img\header\logo.png" />
     <Content Include="Areas\longevity\Content\img\left-arrow.png" />
     <Content Include="Areas\longevity\Content\img\right-arrow.png" />
+    <Content Include="Areas\longevity\Scripts\js\gsap.min.js" />
+    <Content Include="Areas\longevity\Scripts\js\jquery-3.7.1.min.js" />
     <Content Include="Areas\longevity\Scripts\js\main.js" />
+    <Content Include="Areas\longevity\Scripts\js\ScrollTrigger.min.js" />
     <Content Include="Areas\westhealth\Content\dist\**\*.*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

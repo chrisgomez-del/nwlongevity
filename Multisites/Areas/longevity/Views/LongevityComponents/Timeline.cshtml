@@ -5,7 +5,7 @@
     int counter2 = 0;
 }
 
-<div class="component-timeline" role="region" aria-label="Longevity Program Timeline">
+<div class="component-timeline @Model.Class" role="region" aria-label="Longevity Program Timeline">
     <div class="timeline-title">
         <h2>@Model.Title</h2>
     </div>
@@ -35,12 +35,12 @@
 
         @foreach (var timelineEvent in @Model.EventCollection)
         {
-            <div class="timeline-nav-item" data-event="event@(counter1++)">@timelineEvent.NavTitle</div>
+            <div class="timeline-nav-item @(counter1 == 1 ? "active" : "")" data-event="event@(counter1++)">@timelineEvent.NavTitle</div>
         }
     </div>
 </div>
 
-<div class="component-timeline-mobile" role="region" aria-label="Longevity Program Timeline">
+<div class="component-timeline-mobile @Model.Class" role="region" aria-label="Longevity Program Timeline">
     <div class="timeline-title">
         <h2>@Model.Title</h2>
     </div>

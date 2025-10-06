@@ -1,37 +1,39 @@
 ﻿@model NM_MultiSites.Areas.Longevity.Models.Components.TransitionCopy
 
-<div id="component2" class="component-transition-copy" role="region" aria-label="Evidence-based approach">
-    <svg viewBox="0 0 1513 1075" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="svg3" opacity="0.5">
-            <path d="M116.737 162.046L608.53 1075H881.659L313.661 0H0V1075H116.737V162.046Z" fill="#E4E0EE" />
-        </g>
-        <g id="svg4" opacity="0.5">
-            <path d="M1271.13 1075H1512.96V0H1271.52L987.247 511.302L716.825 0H440.351L911.678 890.578L1271.52 241.517L1271.13 1075Z" fill="#E4E0EE" />
-        </g>
-    </svg>
-    <div id="intro-copy1"><h2>@Model.TransitionContent1</h2></div>
-    <div id="intro-copy2">
-        @Model.TransitionContent2
+    <div class="component-transition-copy" role="region" aria-label="Evidence-based approach">
+        <svg viewBox="0 0 1513 1075" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="svg3" opacity="0.5">
+                <path d="M116.737 162.046L608.53 1075H881.659L313.661 0H0V1075H116.737V162.046Z" fill="#E4E0EE" />
+            </g>
+            <g id="svg4" opacity="0.5">
+                <path d="M1271.13 1075H1512.96V0H1271.52L987.247 511.302L716.825 0H440.351L911.678 890.578L1271.52 241.517L1271.13 1075Z" fill="#E4E0EE" />
+            </g>
+        </svg>
+        <div class="inner-container">
+            <div id="intro-copy1"><h2>@Model.TransitionContent1</h2></div>
+            <div id="intro-copy2">
+                @Model.TransitionContent2
+            </div>
+            <div class="cta">
+                <a href="@Model.CTA.CTALink" class="button">@Model.CTA.Title</a>
+            </div>
+        </div>
     </div>
-    <div class="cta">
-        <a href="@Model.CTA.CTALink" class="button">@Model.CTA.Title</a>
-    </div>
-</div>
 
-<div class="component-transition-copy mobile" role="region" aria-label="Evidence-based approach mobile">
-    <svg viewBox="0 0 1513 1075" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="svg3b" opacity="0.5">
-            <path d="M116.737 162.046L608.53 1075H881.659L313.661 0H0V1075H116.737V162.046Z" fill="#E4E0EE" />
-        </g>
-        <g id="svg4b" opacity="0.5">
-            <path d="M1271.13 1075H1512.96V0H1271.52L987.247 511.302L716.825 0H440.351L911.678 890.578L1271.52 241.517L1271.13 1075Z" fill="#E4E0EE" />
-        </g>
-    </svg>
-    <div id="intro-copy1b"><h2>@Model.TransitionContent1</h2></div>
-    <div id="intro-copy2b">
-        @Model.TransitionContent2
+    <div class="component-transition-copy mobile" role="region" aria-label="Evidence-based approach mobile">
+        <svg viewBox="0 0 1513 1075" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="svg3b" opacity="0.5">
+                <path d="M116.737 162.046L608.53 1075H881.659L313.661 0H0V1075H116.737V162.046Z" fill="#E4E0EE" />
+            </g>
+            <g id="svg4b" opacity="0.5">
+                <path d="M1271.13 1075H1512.96V0H1271.52L987.247 511.302L716.825 0H440.351L911.678 890.578L1271.52 241.517L1271.13 1075Z" fill="#E4E0EE" />
+            </g>
+        </svg>
+        <div id="intro-copy1b"><h2>@Model.TransitionContent1</h2></div>
+        <div id="intro-copy2b">
+            @Model.TransitionContent2
+        </div>
+        <div class="cta">
+            <a href="@Model.CTA.CTALink" class="button">@Model.CTA.Title</a>
+        </div>
     </div>
-    <div class="cta">
-        <a href="@Model.CTA.CTALink" class="button">@Model.CTA.Title</a>
-    </div>
-</div>
