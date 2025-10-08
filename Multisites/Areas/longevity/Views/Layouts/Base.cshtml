@@ -9,6 +9,8 @@
     var pageurl_lowercase = Request.Url.AbsoluteUri.ToLower().Replace(port, String.Empty).Replace("/en/", "/");
     var pageId = Request.Url.Segments.Last();
     var head = NM_MultiSites.Areas.longevity.Helpers.Head.GetTags(Sitecore.Context.Item);
+    var htmlTop = NM_MultiSites.Areas.longevity.Helpers.Layout.GetHtmlTop();
+    var htmlBottom = NM_MultiSites.Areas.longevity.Helpers.Layout.GetHtmlBottom();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +52,7 @@
     <link rel="stylesheet" href="~/Areas/longevity/Content/dist/css/style.min.css?v=@version">
 
 
-
+    @Html.Raw(htmlTop)
 </head>
 <body>
     <!-- Modal Overlay and Form -->
@@ -171,6 +173,7 @@
         })(window, document, 'dataLayer', window.PPROappID);
     </script>
 
+    @Html.Raw(htmlBottom)
 
 </body>
 </html>

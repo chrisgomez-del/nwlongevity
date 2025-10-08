@@ -373,6 +373,7 @@
     <Compile Include="Areas\longevity\Controllers\ComponentsController.cs" />
     <Compile Include="Areas\longevity\Controllers\GlobalComponentsController.cs" />
     <Compile Include="Areas\longevity\Helpers\Head.cs" />
+    <Compile Include="Areas\longevity\Helpers\Layout.cs" />
     <Compile Include="Areas\longevity\Helpers\SitecoreAccess.cs" />
     <Compile Include="Areas\longevity\longevityAreaRegistration.cs" />
     <Compile Include="Areas\longevity\Mappers\Components\FullAssessmentService.cs" />
