@@ -24,12 +24,14 @@
     video {
         height: -webkit-fill-available;
         width: -webkit-fill-available;
+        max-height: 440px;
         display: block;
 
         @media screen and (min-width: $desktop-breakpoint) {
             width: -webkit-fill-available;
             height: auto;
             //min-height: 860px;
+            max-height: unset;
 
         }
     }
